@@ -1,30 +1,26 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 
-import { Box, Container, Group, Title } from "@mantine/core";
+import { Box, Container, Group, Stack, Title } from "@mantine/core";
 
 import Breadcrumbs from "@src/components/breadcrumbs";
 import hook from "@src/hooks";
+
+import classes from "./Route.module.scss";
 
 export default function Route() {
 	const location = useLocation();
 	const crumbs = hook.useCrumbs(location.pathname);
 
 	return (
-		<Box
-			component="section"
-			style={(theme) => ({
-				backgroundColor: theme.colors.sec[0],
-				padding: `${theme.spacing.lg} 0`,
-			})}
-		>
+		<Box component="section" className={classes.hero}>
 			<Container>
-				<Group align="center" justify="space-between">
-					<Breadcrumbs.Hero data={crumbs} />
-					<Title order={1} fw={500} fz={24}>
+				<Stack align="center" gap={"md"}>
+					<Title order={1} fw={500} fz={40}>
 						{crumbs[crumbs.length - 1].label}
 					</Title>
-				</Group>
+					<Breadcrumbs.Hero data={crumbs} />
+				</Stack>
 			</Container>
 		</Box>
 	);
