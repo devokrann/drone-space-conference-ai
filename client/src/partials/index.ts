@@ -1,19 +1,20 @@
 // import aside from "./asides";
-// import footer from "./footers";
+import footer from "./footers";
 import email from "./email";
 import form from "./forms";
-// import header from "./headers";
-// import navbar from "./navbars";
+import header from "./headers";
+import navbar from "./navs";
 
 // import Cta from "./Cta";
 
 const Partial = {
-	// Head: header,
+	Header: header,
 	// Navbar: navbar,
-	// Footer: footer,
+	Footer: footer,
 	// Aside: aside,
 	Form: form,
 	Email: email,
+	Navbar: navbar,
 
 	// Cta: Cta,
 };
