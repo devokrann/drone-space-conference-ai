@@ -1,0 +1,23 @@
+.footer {
+	padding: var(--mantine-spacing-xl) 0;
+	border-top: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-3));
+}
+
+.groups {
+	display: flex;
+	flex-wrap: wrap;
+
+	@media (max-width: $mantine-breakpoint-sm) {
+		display: none;
+	}
+}
+
+.link {
+	color: inherit;
+	text-decoration: none;
+	transition: 0.25s all ease;
+
+	&:hover {
+		color: var(--mantine-color-pri-4);
+	}
+}
