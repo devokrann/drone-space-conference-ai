@@ -1,0 +1,23 @@
+.box {
+	background-color: var(--mantine-color-body);
+	// border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-3));
+	padding: var(--mantine-spacing-xs) 0;
+}
+
+.link {
+	padding: var(--mantine-spacing-md) 0;
+	text-decoration: none;
+	color: light-dark(var(--mantine-color-dark-3), var(--mantine-color-dark-0));
+	font-size: var(--mantine-font-size-sm);
+	font-weight: 500;
+	transition: 0.25s all ease;
+
+	@media (max-width: $mantine-breakpoint-md) {
+		padding: var(--mantine-spacing-xs);
+		text-align: center;
+	}
+
+	&:hover {
+		color: light-dark(var(--mantine-color-pri-4), var(--mantine-color-pri-4));
+	}
+}
