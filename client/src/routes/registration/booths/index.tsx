@@ -4,7 +4,7 @@ import { useLoaderData } from "react-router-dom";
 import Layout from "@src/layouts";
 import Partial from "@src/partials";
 import Card from "@src/components/card";
-import { Container, Grid, Stack, Text, Title } from "@mantine/core";
+import { Grid, Stack, Text, Title } from "@mantine/core";
 
 import data from "@src/data";
 
@@ -12,7 +12,7 @@ import data from "@src/data";
 // 	return sponsorship.packages;
 // }
 
-export default function Sponsors() {
+export default function Booths() {
 	// const data = useLoaderData();
 
 	return (
@@ -21,16 +21,19 @@ export default function Sponsors() {
 				<Layout.Section containerized margined>
 					<Stack ta={"center"} gap={"xl"}>
 						<Title order={2} fz={40} c={"pri.4"}>
-							Sponsorship Opportunities
+							Book Your Space
 						</Title>
-						<Text>Select a sponsorship package from our list and become one of our proud affiliates.</Text>
+						<Text>
+							Additional tickets to the quantity listed in each package will have to be purchased
+							separately; i.e. Additional participants will have to purchase a ticket.
+						</Text>
 					</Stack>
 				</Layout.Section>
 				<Layout.Section containerized margined>
-					<Grid justify="center" gutter={"xl"}>
-						{data.sponsorship.packages.map(item => (
-							<Grid.Col span={{ base: 12, md: 6 }} key={item.title}>
-								<Card.Sponsorship data={item} />
+					<Grid justify="center">
+						{data.exhibition.booths.map(booth => (
+							<Grid.Col key={booth.title} span={{ base: 12, md: 6 }}>
+								<Card.Booth data={booth} />
 							</Grid.Col>
 						))}
 					</Grid>

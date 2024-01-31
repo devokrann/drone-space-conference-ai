@@ -4,8 +4,7 @@ import email from "./email";
 import form from "./forms";
 import header from "./headers";
 import navbar from "./navs";
-
-// import Cta from "./Cta";
+import cta from "./cta";
 
 const Partial = {
 	Header: header,
@@ -16,7 +15,7 @@ const Partial = {
 	Email: email,
 	Navbar: navbar,
 
-	// Cta: Cta,
+	Cta: cta,
 };
 
 export default Partial;

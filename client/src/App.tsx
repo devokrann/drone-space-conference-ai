@@ -3,12 +3,14 @@ import React from "react";
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
 
 import Error from "./routes/error";
-import Home, { loader as loaderHome } from "./routes/home";
+import Home from "./routes/home";
 import About from "./routes/about";
 import Exhibit from "./routes/exhibit";
 import Agenda from "./routes/agenda";
 import Speakers from "./routes/speakers";
 import Sponsors from "./routes/sponsors";
+import Tickets from "./routes/registration/tickets";
+import Booths from "./routes/registration/booths";
 // import Contact from "./routes/contact";
 // import Signup from "./routes/auth/signup";
 // import Login from "./routes/auth/login";
@@ -20,12 +22,16 @@ import Sponsors from "./routes/sponsors";
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route path="/" errorElement={<Error />}>
-			<Route index element={<Home />} loader={loaderHome} />
+			<Route index element={<Home />} />
 			{/* <Route path="about" element={<About />} /> */}
 			<Route path="exhibit" element={<Exhibit />} />
 			<Route path="agenda" element={<Agenda />} />
 			<Route path="speakers" element={<Speakers />} />
 			<Route path="sponsors" element={<Sponsors />} />
+			<Route path="registration">
+				<Route path="tickets" element={<Tickets />} />
+				<Route path="booths" element={<Booths />} />
+			</Route>
 
 			{/* <Route path="contact" element={<Contact />} /> */}
 

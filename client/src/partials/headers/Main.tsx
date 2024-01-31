@@ -21,7 +21,7 @@ export default function Main() {
 					<Group>
 						<Group gap={"xs"}>
 							{data.links.social.map(link => (
-								<Link to={link.link}>
+								<Link key={link.link} to={link.link}>
 									<Image src={link.icon} w={24} />
 								</Link>
 							))}
