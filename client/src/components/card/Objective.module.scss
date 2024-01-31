@@ -1,0 +1,14 @@
+.card {
+	background-color: var(--mantine-color-dark-6);
+	border-radius: var(--mantine-radius-md);
+	padding: var(--mantine-spacing-xl);
+	box-shadow: var(--mantine-shadow-xs);
+	height: 100%;
+	border: 2px dashed var(--mantine-color-dark-3);
+	transition: 0.25s all ease;
+
+	&:hover {
+		cursor: pointer;
+		border: 2px dashed var(--mantine-color-pri-4);
+	}
+}

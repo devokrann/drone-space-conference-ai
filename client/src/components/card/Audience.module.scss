@@ -1,0 +1,22 @@
+.card {
+	padding: var(--mantine-spacing-xl);
+	border-bottom: 2px solid var(--mantine-color-pri-4);
+	height: 100%;
+	transition: 0.25s all ease;
+
+	&:hover {
+		background-color: var(--mantine-color-pri-4);
+		color: var(--mantine-color-white);
+		border-bottom: 2px solid var(--mantine-color-white);
+		cursor: pointer;
+
+		.icon {
+			color: var(--mantine-color-white);
+		}
+	}
+}
+
+.icon {
+	color: var(--mantine-color-pri-4);
+	transition: 0.25s all ease;
+}

@@ -5,7 +5,7 @@ import { Box, Button, Divider, Group, List, Stack, Text, Title } from "@mantine/
 import classes from "./Sponsorship.module.scss";
 import { IconCheck, IconChevronRight } from "@tabler/icons-react";
 
-export default function Sponsorship({ data }: { data: { title: string; price: string; desc: string[] } }) {
+export default function Ticket({ data }: { data: { title: string; price: string; desc: string } }) {
 	return (
 		<Stack className={classes.card} gap={"xl"} justify="space-between">
 			<Stack gap={"xl"}>
@@ -21,23 +21,9 @@ export default function Sponsorship({ data }: { data: { title: string; price: st
 					</Title>
 				</Stack>
 				<Divider color="pri.4" />
-				<Stack fz="sm">
-					{data.desc.map(item => (
-						<Group key={item} wrap="nowrap" align="start">
-							<Text component="span" c={"pri.4"}>
-								<IconCheck size={16} />
-							</Text>
-							<Text key={item} inherit>
-								{item}
-							</Text>
-						</Group>
-					))}
-				</Stack>
+				<Text ta={"center"}>{data.desc}</Text>
 			</Stack>
-			<Stack gap={"xl"}>
-				<Divider color="pri.4" />
-				<Button fullWidth>Register</Button>
-			</Stack>
+			<Button fullWidth>Register</Button>
 		</Stack>
 	);
 }
