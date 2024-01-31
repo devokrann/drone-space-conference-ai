@@ -1,0 +1,17 @@
+.control {
+	background-color: var(--mantine-color-dark-6);
+	transition: 0.25s all ease;
+
+	&:hover {
+		color: var(--mantine-color-pri-4);
+	}
+}
+
+.label {
+	font-weight: 500;
+}
+
+.content {
+	padding: var(--mantine-spacing-md) 0;
+	background-color: var(--mantine-color-pri-4);
+}
