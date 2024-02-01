@@ -41,7 +41,9 @@ export default function Booth({
 			</Stack>
 			<Stack gap={"xl"}>
 				<Divider color="pri" />
-				<Button fullWidth>Book Now</Button>
+				<Button fullWidth component="a" href="mailto:info@aiconference.co.ke">
+					Book {data.title} Booth
+				</Button>
 			</Stack>
 		</Stack>
 	);

@@ -36,7 +36,9 @@ export default function Sponsorship({ data }: { data: { title: string; price: st
 			</Stack>
 			<Stack gap={"xl"}>
 				<Divider color="pri" />
-				<Button fullWidth>Register</Button>
+				<Button fullWidth component="a" href="mailto:info@aiconference.co.ke">
+					Apply For {data.title} Sponsorship
+				</Button>
 			</Stack>
 		</Stack>
 	);

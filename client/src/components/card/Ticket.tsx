@@ -17,13 +17,15 @@ export default function Ticket({ data }: { data: { title: string; price: string;
 						{data.price}
 					</Text>
 					<Title order={3} fz={24} ta={"center"}>
-						{data.title} Sponsorship Package
+						{data.title} Ticket
 					</Title>
 				</Stack>
 				<Divider color="pri" />
 				<Text ta={"center"}>{data.desc}</Text>
 			</Stack>
-			<Button fullWidth>Register</Button>
+			<Button fullWidth component="a" href="mailto:info@aiconference.co.ke">
+				Buy {data.title} Ticket
+			</Button>
 		</Stack>
 	);
 }
