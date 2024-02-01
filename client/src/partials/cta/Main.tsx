@@ -12,7 +12,7 @@ export default function Main() {
 		<Box className={classes.cta} py={"xl"}>
 			<Container size={"md"}>
 				<Stack gap={48}>
-					<Title order={6} fz={32} ta={"center"} c={"pri"}>
+					<Title order={6} fz={32} ta={"center"} c={"sec"}>
 						Don't Wait Too Long!
 					</Title>
 					<Counter.Countdown />
@@ -20,7 +20,7 @@ export default function Main() {
 						<Button component={Link} to={"/registration/tickets"}>
 							Buy Ticket
 						</Button>
-						<Button component={Link} to={"/registration/booths"} variant="white">
+						<Button component={Link} to={"/registration/booths"} color="sec" c={"dark.9"}>
 							Book Booth
 						</Button>
 					</Group>

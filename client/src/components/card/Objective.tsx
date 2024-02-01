@@ -11,10 +11,10 @@ export default function Objective({ data }: { data: { icon: Icon; title: string;
 		<Stack className={classes.card} gap={"xl"}>
 			<Stack gap={"xl"}>
 				<Group gap={"xs"} justify="space-between">
-					<Title order={3} fz={24} ta={"center"}>
+					<Title order={3} fz={24} ta={"center"} c={"pri"}>
 						{data.title}
 					</Title>
-					<data.icon size={48} color="var(--mantine-color-pri-6)" />
+					<data.icon size={48} color="var(--mantine-color-sec-6)" />
 				</Group>
 				<Text ta={{ base: "center", md: "start" }}>{data.desc}</Text>
 			</Stack>

@@ -15,7 +15,7 @@ export default function Route() {
 	return (
 		<Box component="section" className={classes.hero}>
 			<Container>
-				<Stack align="center" gap={"md"}>
+				<Stack align="center" gap={"md"} c={"white"}>
 					<Title order={1} fw={500} fz={40}>
 						{crumbs[crumbs.length - 1].label}
 					</Title>

@@ -10,7 +10,14 @@ export default function Why({ data }: { data: { icon: Icon; title: string; desc:
 	return (
 		<Stack className={classes.card} gap={"xl"} justify="space-between">
 			<Stack gap={"xl"}>
-				<Title order={3} fz={24} ta={{ base: "center", md: "start" }} h={56} className={classes.title}>
+				<Title
+					order={3}
+					fz={24}
+					ta={{ base: "center", md: "start" }}
+					h={56}
+					className={classes.title}
+					c={"pri"}
+				>
 					{data.title}
 				</Title>
 				<Text ta={{ base: "center", md: "start" }}>{data.desc}</Text>

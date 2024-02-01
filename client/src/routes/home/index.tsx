@@ -24,19 +24,8 @@ export default function Home() {
 				<Layout.Section containerized margined>
 					<Stack gap={48}>
 						<Stack ta={"center"} gap={"xl"}>
-							<Title order={2} fz={40} c={"pri"}>
-								Explore The Fusion of{" "}
-								<Text component="span" inherit c={"white"}>
-									Drones
-								</Text>
-								,{" "}
-								<Text component="span" inherit c={"white"}>
-									AI
-								</Text>{" "}
-								and{" "}
-								<Text component="span" inherit c={"white"}>
-									Data Analytics
-								</Text>
+							<Title order={2} fz={40} c={"sec"}>
+								Explore The Fusion of Drones, AI and Data Analytics
 							</Title>
 							<Text>
 								The AI conference in Nairobi is a cutting-edge conference that will bring together

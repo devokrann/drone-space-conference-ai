@@ -4,4 +4,10 @@
 	padding: var(--mantine-spacing-xl);
 	box-shadow: var(--mantine-shadow-xs);
 	height: 100%;
+
+	transition: 0.25s all ease;
+
+	&:hover {
+		background-color: var(--mantine-color-pri-light);
+	}
 }

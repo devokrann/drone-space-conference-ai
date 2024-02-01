@@ -19,7 +19,7 @@ export default function Main() {
 						<Text component="span" inherit visibleFrom="xs">
 							|
 						</Text>
-						<Text inherit>Sarit expo Centre, Westlands</Text>
+						<Text inherit>Sarit Expo Centre, Westlands</Text>
 					</Flex>
 					<Group>
 						<Group gap={"xs"}>

@@ -1,6 +1,7 @@
 import {
 	IconBadgeTm,
 	IconBrandAirtable,
+	IconBuildingFactory,
 	IconBulb,
 	IconCpu,
 	IconDatabaseSearch,
@@ -49,7 +50,7 @@ const content = {
 			title: "Technology enthusiasts and professionals",
 		},
 		{
-			icon: IconCpu,
+			icon: IconBuildingFactory,
 			title: "Industry leaders and decision – Makers",
 		},
 		{

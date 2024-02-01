@@ -1,11 +1,11 @@
 const tickets = [
 	{
-		title: "Regular",
+		title: "Early Bird Regular",
 		price: "2,500",
 		desc: "This ticket includes admission to the Ai Conference and Expo for one day.",
 	},
 	{
-		title: "Regular Season",
+		title: "Early Bird Regular Season",
 		price: "4,500",
 		desc: "This ticket includes admission to the AI Conference and Expo for two days.",
 	},

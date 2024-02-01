@@ -14,7 +14,6 @@
 		}
 
 		.icon {
-			color: var(--mantine-color-pri-6);
 			opacity: 1;
 		}
 	}
@@ -25,6 +24,7 @@
 }
 
 .icon {
+	color: var(--mantine-color-sec-6);
 	opacity: 0.25;
 	transition: 0.25s all ease;
 }

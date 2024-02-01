@@ -20,7 +20,7 @@ export default function Sponsorship({ data }: { data: { title: string; price: st
 						{data.title} Sponsorship Package
 					</Title>
 				</Stack>
-				<Divider color="pri" />
+				<Divider color="sec" />
 				<Stack fz="sm">
 					{data.desc.map(item => (
 						<Group key={item} wrap="nowrap" align="start">
@@ -34,12 +34,9 @@ export default function Sponsorship({ data }: { data: { title: string; price: st
 					))}
 				</Stack>
 			</Stack>
-			<Stack gap={"xl"}>
-				<Divider color="pri" />
-				<Button fullWidth component="a" href="mailto:info@aiconference.co.ke">
-					Apply For {data.title} Sponsorship
-				</Button>
-			</Stack>
+			<Button fullWidth color="sec" c={"dark.9"} component="a" href="mailto:info@aiconference.co.ke">
+				Apply For {data.title} Sponsorship
+			</Button>
 		</Stack>
 	);
 }

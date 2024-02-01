@@ -26,24 +26,26 @@ export default function Main() {
 									direction={"column"}
 									align={{ base: "center", md: "start" }}
 									ta={{ base: "center", md: "start" }}
-									w={{ md: "75%" }}
+									w={{ md: "90%" }}
 									gap={"xl"}
 								>
 									<Image src={image.brand.landscape} w={200} />
-									<Text inherit size="sm">
-										The AI conference in Nairobi is a cutting-edge conference that will bring
-										together thought leaders, innovators, and enthusiasts in the fields of
-										Artificial Intelligence, Drone Technology, and Data Analytics. The event aims to
-										explore the synergies between these rapidly evolving technologies, fostering
-										collaboration, and inspiring the next wave of breakthroughs.
-									</Text>
-									<Group>
-										{data.links.social.map(link => (
-											<Text component="a" href={link.link} target="_blank">
-												<Image src={link.icon} w={32} />
-											</Text>
-										))}
-									</Group>
+									<Stack gap={"xs"}>
+										<Text inherit size="sm">
+											The AI conference in Nairobi is a cutting-edge conference that will bring
+											together thought leaders, innovators, and enthusiasts in the fields of
+											Artificial Intelligence, Drone Technology, and Data Analytics. The event
+											aims to explore the synergies between these rapidly evolving technologies,
+											fostering collaboration, and inspiring the next wave of breakthroughs.
+										</Text>
+										<Group>
+											{data.links.social.map(link => (
+												<Text component="a" href={link.link} target="_blank">
+													<Image src={link.icon} w={32} />
+												</Text>
+											))}
+										</Group>
+									</Stack>
 								</Flex>
 							</Grid.Col>
 							<Grid.Col span={7} visibleFrom="md">
@@ -69,7 +71,7 @@ export default function Main() {
 								</Grid>
 							</Grid.Col>
 						</Grid>
-						<Divider color="pri" />
+						<Divider color="sec" />
 						<Group justify="center" c="dimmed" fz="sm" fw={500}>
 							<Text inherit>
 								© 2024{" "}
