@@ -40,7 +40,7 @@ export default function Main() {
 										</Text>
 										<Group>
 											{data.links.social.map(link => (
-												<Text component="a" href={link.link} target="_blank">
+												<Text key={link.link} component="a" href={link.link} target="_blank">
 													<Image src={link.icon} w={32} />
 												</Text>
 											))}
