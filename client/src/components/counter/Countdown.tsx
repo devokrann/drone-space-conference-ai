@@ -29,10 +29,10 @@ export default function Countdown() {
 			{values.map(value => (
 				<Grid.Col key={value.label} span={"auto"}>
 					<Stack gap={0} align="center">
-						<Text fz={40} fw={"bold"}>
+						<Text fz={{ base: 24, md: 40 }} fw={"bold"}>
 							{value.value}
 						</Text>
-						<Text fz={24} fw={500} ta={"center"}>
+						<Text fz={{ base: 16, md: 24 }} fw={500} ta={"center"}>
 							{value.label}
 						</Text>
 					</Stack>

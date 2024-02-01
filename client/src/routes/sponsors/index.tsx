@@ -29,7 +29,7 @@ export default function Sponsors() {
 				<Layout.Section containerized margined>
 					<Grid justify="center" gutter={"xl"}>
 						{data.sponsorship.packages.map(item => (
-							<Grid.Col span={{ base: 12, md: 6 }} key={item.title}>
+							<Grid.Col span={{ base: 12, sm: 6 }} key={item.title}>
 								<Card.Sponsorship data={item} />
 							</Grid.Col>
 						))}

@@ -20,24 +20,28 @@ export default function Home() {
 							<Text inherit fw={500} fz={24} lh={1}>
 								Tuesday 26<sup>th</sup> - Wednesday 27<sup>th</sup> March, 2024
 							</Text>
-							<Group fz={"sm"}>
+							<Flex direction={{ base: "column", sm: "row" }} fz={"sm"} gap={{ sm: "md", md: "xl" }}>
 								<Text inherit fw={500}>
 									info@aiconference.co.ke
 								</Text>
-								|
+								<Text component="span" inherit c={"pri"} visibleFrom="sm">
+									|
+								</Text>
 								<Text inherit fw={500}>
 									+254712656565
 								</Text>
-								|
+								<Text component="span" inherit c={"pri"} visibleFrom="sm">
+									|
+								</Text>
 								<Text inherit fw={500}>
 									www.aiconference.co.ke
 								</Text>
-							</Group>
+							</Flex>
 						</Stack>
 					</Stack>
 				</Container>
 			</Center>
-			<Box bg={"pri"} pb={"lg"}>
+			<Box bg={"pri.7"} pb={"lg"}>
 				<Container size={"md"}>
 					<Counter.Countdown />
 				</Container>

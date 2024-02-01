@@ -35,14 +35,14 @@ export default function Exhibit() {
 				</Layout.Section>
 				<Layout.Section containerized margined>
 					<Grid gutter={"xl"}>
-						<Grid.Col span={{ base: 12, md: 6 }}>
-							<Center px={"xl"}>
+						<Grid.Col span={{ base: 12, sm: 6 }}>
+							<Center>
 								<Image src={image.poster.poster1} w={"100%"} />
 							</Center>
 						</Grid.Col>
-						<Grid.Col span={{ base: 12, md: 6 }}>
+						<Grid.Col span={{ base: 12, sm: 6 }}>
 							<Stack gap={"xl"}>
-								<Text>
+								<Text ta={{ base: "center", sm: "start" }}>
 									The two-day event is an ideal platform to penetrate the market of Unmanned Aircraft
 									Systems (UAS) or Drones, Big Data and AI that will put products and Services in
 									front of an audience of decision-makers, investors and organizations looking for
@@ -56,6 +56,7 @@ export default function Exhibit() {
 								<Button component={"a"} href={"#booths"}>
 									Book A Booth
 								</Button>
+								<Image src={image.brand.landscape} w={"100%"} px={"xl"} visibleFrom="md" />
 							</Stack>
 						</Grid.Col>
 					</Grid>
@@ -73,7 +74,7 @@ export default function Exhibit() {
 						</Stack>
 						<Grid justify="center">
 							{data.exhibition.booths.map(booth => (
-								<Grid.Col key={booth.title} span={{ base: 12, md: 6 }}>
+								<Grid.Col key={booth.title} span={{ base: 12, sm: 6 }}>
 									<Card.Booth data={booth} />
 								</Grid.Col>
 							))}

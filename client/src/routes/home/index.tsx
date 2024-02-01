@@ -70,7 +70,7 @@ export default function Home() {
 						</Stack>
 						<Grid justify="center">
 							{data.content.objectives.map(objective => (
-								<Grid.Col key={objective.title} span={{ base: 12, md: 4 }}>
+								<Grid.Col key={objective.title} span={{ base: 12, sm: 6, md: 4 }}>
 									<Card.Objective data={objective} />
 								</Grid.Col>
 							))}
@@ -90,7 +90,7 @@ export default function Home() {
 						</Stack>
 						<Grid justify="center">
 							{data.content.whoAttends.map(item => (
-								<Grid.Col key={item.title} span={{ base: 12, md: 4 }}>
+								<Grid.Col key={item.title} span={{ base: 12, sm: 6, md: 4 }}>
 									<Card.Audience data={item} />
 								</Grid.Col>
 							))}
@@ -113,7 +113,7 @@ export default function Home() {
 						</Stack>
 						<Grid justify="center">
 							{data.content.whyAttend.map(item => (
-								<Grid.Col key={item.title} span={{ base: 12, md: 4 }}>
+								<Grid.Col key={item.title} span={{ base: 12, sm: 6, md: 4 }}>
 									<Card.Why data={item} />
 								</Grid.Col>
 							))}

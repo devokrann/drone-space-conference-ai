@@ -51,7 +51,7 @@ export default function Main() {
 									{data.links.footer.map(link => (
 										<Grid.Col key={link.title} span={6}>
 											<Stack gap={"xl"} align="end" ta={"end"}>
-												<Title order={4} fz={24}>
+												<Title order={4} fz={24} c={"pri"}>
 													{link.title}
 												</Title>
 												<List spacing={"xs"} listStyleType="none">
@@ -71,7 +71,13 @@ export default function Main() {
 						</Grid>
 						<Divider color="pri" />
 						<Group justify="center" c="dimmed" fz="sm" fw={500}>
-							<Text inherit>© 2024 AI Conference. All rights reserved.</Text>
+							<Text inherit>
+								© 2024{" "}
+								<Text component="span" inherit c={"pri"}>
+									AI Conference
+								</Text>
+								. All rights reserved.
+							</Text>
 							{/* <Group>
 							{data.links.navbar.map(link => (
 								<Link to={link.link} className={classes.link}>

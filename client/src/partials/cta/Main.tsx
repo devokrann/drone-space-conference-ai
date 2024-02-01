@@ -5,19 +5,24 @@ import { Box, Button, Container, Grid, Group, Stack, Title } from "@mantine/core
 import Counter from "@src/components/counter";
 
 import classes from "./Main.module.scss";
+import { Link } from "react-router-dom";
 
 export default function Main() {
 	return (
 		<Box className={classes.cta} py={"xl"}>
 			<Container size={"md"}>
 				<Stack gap={48}>
-					<Title order={6} fz={24} ta={"center"}>
+					<Title order={6} fz={32} ta={"center"} c={"pri"}>
 						Don't Wait Too Long!
 					</Title>
 					<Counter.Countdown />
 					<Group gap={"xl"} justify="center">
-						<Button>Buy Ticket</Button>
-						<Button variant="white">book Booth</Button>
+						<Button component={Link} to={"/registration/tickets"}>
+							Buy Ticket
+						</Button>
+						<Button component={Link} to={"/registration/booths"} variant="white">
+							Book Booth
+						</Button>
 					</Group>
 				</Stack>
 			</Container>

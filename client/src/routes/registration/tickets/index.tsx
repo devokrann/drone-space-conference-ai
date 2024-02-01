@@ -29,7 +29,7 @@ export default function Tickets() {
 				<Layout.Section containerized margined>
 					<Grid justify="center">
 						{data.tickets.map(ticket => (
-							<Grid.Col key={ticket.title} span={{ base: 12, md: 6 }}>
+							<Grid.Col key={ticket.title} span={{ base: 12, sm: 6 }}>
 								<Card.Ticket data={ticket} />
 							</Grid.Col>
 						))}
