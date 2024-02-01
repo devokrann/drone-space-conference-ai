@@ -4,7 +4,7 @@ import { Grid, Stack, Text } from "@mantine/core";
 import useCountdown from "@src/hooks/timers/countdown";
 
 export default function Countdown() {
-	const targetDate = new Date(2024, 9, 14, 23, 59, 59);
+	const targetDate = new Date(2024, 2, 25, 23, 59, 59);
 
 	const [time, setTime] = useState(useCountdown(targetDate));
 
@@ -17,8 +17,8 @@ export default function Countdown() {
 	}, []);
 
 	const values = [
-		{ label: "Months", value: time.months },
-		{ label: "Days", value: time.days },
+		// { label: "Months", value: time.months },
+		{ label: "Days", value: time.days + time.months * 30 },
 		{ label: "Hours", value: time.hours },
 		{ label: "Minutes", value: time.minutes },
 		{ label: "Seconds", value: time.seconds },
