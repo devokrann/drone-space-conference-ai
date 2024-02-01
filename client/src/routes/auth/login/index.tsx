@@ -17,19 +17,9 @@ export default function Login() {
 						<Stack align="center" gap={"xs"}>
 							{/* <Title order={2}>Sign Up</Title> */}
 							<Partial.Form.Login />
-							<Text
-								component="small"
-								inherit
-								fz={"sm"}
-								c={"dimmed"}
-							>
+							<Text component="small" inherit fz={"sm"} c={"dimmed"}>
 								Don't have an account yet?{" "}
-								<Anchor
-									component={Link}
-									inherit
-									to={"/auth/sign-up"}
-									c={"pri.8"}
-								>
+								<Anchor component={Link} inherit to={"/auth/sign-up"} c={"pri"}>
 									Sign Up
 								</Anchor>
 								.

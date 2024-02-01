@@ -1,5 +1,5 @@
 .box {
-	background-color: var(--mantine-color-pri-4);
+	background-color: var(--mantine-color-pri-6);
 	color: var(--mantine-color-white);
 	padding: calc(var(--mantine-spacing-xs) / 2) 0;
 	font-size: var(--mantine-font-size-sm);
@@ -12,7 +12,7 @@
 	padding: 0 var(--mantine-spacing-xs);
 
 	&:hover {
-		color: var(--mantine-color-pri-4);
+		color: var(--mantine-color-pri-6);
 		background-color: var(--mantine-color-white);
 	}
 }

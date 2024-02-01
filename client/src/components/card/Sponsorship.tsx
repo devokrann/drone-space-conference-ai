@@ -10,7 +10,7 @@ export default function Sponsorship({ data }: { data: { title: string; price: st
 		<Stack className={classes.card} gap={"xl"} justify="space-between">
 			<Stack gap={"xl"}>
 				<Stack gap={"xs"} align="center">
-					<Text ta={"center"} fw={500} fz={32} c={"pri.4"}>
+					<Text ta={"center"} fw={500} fz={32} c={"pri"}>
 						<Text component="span" inherit fz={"md"} c={"white"}>
 							Kshs.{" "}
 						</Text>
@@ -20,11 +20,11 @@ export default function Sponsorship({ data }: { data: { title: string; price: st
 						{data.title} Sponsorship Package
 					</Title>
 				</Stack>
-				<Divider color="pri.4" />
+				<Divider color="pri" />
 				<Stack fz="sm">
 					{data.desc.map(item => (
 						<Group key={item} wrap="nowrap" align="start">
-							<Text component="span" c={"pri.4"}>
+							<Text component="span" c={"pri"}>
 								<IconCheck size={16} />
 							</Text>
 							<Text key={item} inherit>
@@ -35,7 +35,7 @@ export default function Sponsorship({ data }: { data: { title: string; price: st
 				</Stack>
 			</Stack>
 			<Stack gap={"xl"}>
-				<Divider color="pri.4" />
+				<Divider color="pri" />
 				<Button fullWidth>Register</Button>
 			</Stack>
 		</Stack>

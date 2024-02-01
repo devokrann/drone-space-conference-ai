@@ -1,3 +1,4 @@
+import { Box, Center, Stack, Text, Title } from "@mantine/core";
 import { useRouteError } from "react-router-dom";
 
 export default function Error() {
@@ -5,13 +6,19 @@ export default function Error() {
 	console.error(error);
 
 	return (
-		<div id="error-page">
-			<h1>Oops!</h1>
-			<p>Sorry, an unexpected error has occurred.</p>
-			<p>
-				<i>{error.status}</i>
-				<i>{error.statusText || error.message}</i>
-			</p>
-		</div>
+		<Box id="error-page">
+			<Center mih={"100vh"}>
+				<Stack gap={"xs"} ta={"center"}>
+					<Title order={1} ta={"center"}>
+						Oops!
+					</Title>
+					<Text>Sorry, an unexpected error has occurred.</Text>
+					<Text>
+						<i>{error.status}</i>
+						<i>{error.statusText || error.message}</i>
+					</Text>
+				</Stack>
+			</Center>
+		</Box>
 	);
 }

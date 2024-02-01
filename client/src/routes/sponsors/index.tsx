@@ -20,7 +20,7 @@ export default function Sponsors() {
 			<Layout.Page hero={<Layout.Hero.Route />}>
 				<Layout.Section containerized margined>
 					<Stack ta={"center"} gap={"xl"}>
-						<Title order={2} fz={40} c={"pri.4"}>
+						<Title order={2} fz={40} c={"pri"}>
 							Sponsorship Opportunities
 						</Title>
 						<Text>Select a sponsorship package from our list and become one of our proud affiliates.</Text>

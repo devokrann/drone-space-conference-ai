@@ -17,7 +17,7 @@ export default function Speakers() {
 			<Layout.Page hero={<Layout.Hero.Route />}>
 				<Layout.Section containerized margined>
 					<Stack ta={"center"} gap={"xl"}>
-						<Title order={2} fz={40} c={"pri.4"}>
+						<Title order={2} fz={40} c={"pri"}>
 							Speakers Coming Soon
 						</Title>
 						<Text>Our best speakers will be added soon</Text>

@@ -3,18 +3,7 @@ import ReactDOMServer from "react-dom/server";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-import {
-	Anchor,
-	Box,
-	Button,
-	Checkbox,
-	Grid,
-	Input,
-	Select,
-	Text,
-	TextInput,
-	Textarea,
-} from "@mantine/core";
+import { Anchor, Box, Button, Checkbox, Grid, Input, Select, Text, TextInput, Textarea } from "@mantine/core";
 import { isNotEmpty, useForm } from "@mantine/form";
 import { notifications } from "@mantine/notifications";
 
@@ -41,20 +30,12 @@ export default function Contact() {
 		},
 
 		validate: {
-			fname: (value) =>
-				value.trim().length < 2 ? "At least 2 letters" : null,
-			lname: (value) =>
-				value.trim().length < 2 ? "At least 2 letters" : null,
-			email: (value) =>
-				/^\S+@\S+$/.test(value.trim()) ? null : "Invalid email",
-			phone: (value) =>
-				value && value.trim().length < 18
-					? "Invalid Phone Number"
-					: null,
-			subject: (value) =>
-				value.trim().length < 1 ? "Please select a topic" : null,
-			message: (value) =>
-				value.trim().length < 10 ? "Message Too Short" : null,
+			fname: value => (value.trim().length < 2 ? "At least 2 letters" : null),
+			lname: value => (value.trim().length < 2 ? "At least 2 letters" : null),
+			email: value => (/^\S+@\S+$/.test(value.trim()) ? null : "Invalid email"),
+			phone: value => (value && value.trim().length < 18 ? "Invalid Phone Number" : null),
+			subject: value => (value.trim().length < 1 ? "Please select a topic" : null),
+			message: value => (value.trim().length < 10 ? "Message Too Short" : null),
 			policy: isNotEmpty("You must accept to proceed"),
 		},
 	});
@@ -65,25 +46,14 @@ export default function Contact() {
 
 			const templateParams = {
 				fname:
-					form.values.fname
-						.trim()
-						.toLowerCase()
-						.charAt(0)
-						.toUpperCase() +
+					form.values.fname.trim().toLowerCase().charAt(0).toUpperCase() +
 					form.values.fname.trim().slice(1).toLowerCase(),
 				lname:
-					form.values.lname
-						.trim()
-						.toLowerCase()
-						.charAt(0)
-						.toUpperCase() +
+					form.values.lname.trim().toLowerCase().charAt(0).toUpperCase() +
 					form.values.lname.trim().slice(1).toLowerCase(),
 				email: form.values.email.trim().toLowerCase(),
 				phone: form.values.phone,
-				subject:
-					form.values.subject == "Other"
-						? "General"
-						: `${form.values.subject}`,
+				subject: form.values.subject == "Other" ? "General" : `${form.values.subject}`,
 				message: form.values.message.trim(),
 			};
 
@@ -94,9 +64,7 @@ export default function Contact() {
 				to: "kibochi.thuku@gmail.com",
 				subject: `${templateParams.subject}`,
 				text: "This is some text",
-				html: ReactDOMServer.renderToString(
-					<email.Contact formValues={templateParams} />
-				),
+				html: ReactDOMServer.renderToString(<email.Contact formValues={templateParams} />),
 			};
 
 			await postContact(templateParams, mailOptions)
@@ -104,12 +72,12 @@ export default function Contact() {
 					notifications.show({
 						id: "contact-form-success",
 						withCloseButton: false,
-						color: "pri.6",
+						color: "pri",
 						icon: <IconCheck size={16} stroke={1.5} />,
 						autoClose: 5000,
 						title: "Inquiry Sent",
 						message: "Someone will get back to you within 24 hours",
-						styles: (theme) => ({
+						styles: theme => ({
 							icon: {
 								color: theme.colors.sec[4],
 							},
@@ -120,7 +88,7 @@ export default function Contact() {
 					})
 				)
 				.then(() => form.reset())
-				.catch((error) =>
+				.catch(error =>
 					notifications.show({
 						id: "contact-form-fail",
 						color: "red",
@@ -128,7 +96,7 @@ export default function Contact() {
 						autoClose: 5000,
 						title: "Send Failed",
 						message: `Error: ${error.message}`,
-						styles: (theme) => ({
+						styles: theme => ({
 							closeButton: {
 								color: theme.colors.red[6],
 							},
@@ -136,7 +104,7 @@ export default function Contact() {
 					})
 				);
 
-				setSubmitted(false)
+			setSubmitted(false);
 		}
 	};
 
@@ -144,20 +112,10 @@ export default function Contact() {
 		<Box component="form" onSubmit={form.onSubmit(handleSubmit)} noValidate>
 			<Grid pb={"md"}>
 				<Grid.Col span={{ base: 12, sm: 6 }}>
-					<TextInput
-						required
-						label={"First Name"}
-						placeholder="Your Name"
-						{...form.getInputProps("fname")}
-					/>
+					<TextInput required label={"First Name"} placeholder="Your Name" {...form.getInputProps("fname")} />
 				</Grid.Col>
 				<Grid.Col span={{ base: 12, sm: 6 }}>
-					<TextInput
-						required
-						label={"Last Name"}
-						placeholder="Your Name"
-						{...form.getInputProps("lname")}
-					/>
+					<TextInput required label={"Last Name"} placeholder="Your Name" {...form.getInputProps("lname")} />
 				</Grid.Col>
 				<Grid.Col span={{ base: 12, sm: 6 }}>
 					<Input.Wrapper label={"Email"} id="email" required>
@@ -232,12 +190,7 @@ export default function Contact() {
 						label={
 							<Text inherit>
 								I have read and accept the{" "}
-								<Anchor
-									component={Link}
-									to={"/policy/terms-and-conditions"}
-									inherit
-									fw={500}
-								>
+								<Anchor component={Link} to={"/policy/terms-and-conditions"} inherit fw={500}>
 									terms of use
 								</Anchor>
 								.

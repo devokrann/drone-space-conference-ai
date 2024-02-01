@@ -3,7 +3,7 @@
 	transition: 0.25s all ease;
 
 	&:hover {
-		color: var(--mantine-color-pri-4);
+		color: var(--mantine-color-pri-6);
 	}
 }
 
@@ -13,5 +13,5 @@
 
 .content {
 	padding: var(--mantine-spacing-md) 0;
-	background-color: var(--mantine-color-pri-4);
+	background-color: var(--mantine-color-pri-light);
 }

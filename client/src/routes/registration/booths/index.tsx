@@ -20,7 +20,7 @@ export default function Booths() {
 			<Layout.Page hero={<Layout.Hero.Route />}>
 				<Layout.Section containerized margined>
 					<Stack ta={"center"} gap={"xl"}>
-						<Title order={2} fz={40} c={"pri.4"}>
+						<Title order={2} fz={40} c={"pri"}>
 							Book Your Space
 						</Title>
 						<Text>

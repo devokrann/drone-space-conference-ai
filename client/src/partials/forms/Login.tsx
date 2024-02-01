@@ -88,7 +88,7 @@ export default function Login() {
 							notifications.show({
 								id: "valid-login",
 								withCloseButton: false,
-								color: "pri.6",
+								color: "pri",
 								icon: <IconCheck size={16} stroke={1.5} />,
 								autoClose: 5000,
 								title: "Authenticated",
@@ -170,7 +170,7 @@ export default function Login() {
 								component={Link}
 								inherit
 								to={"/auth/password-reset"}
-								c={"pri.8"}
+								c={"pri"}
 							>
 								Lost your password?
 							</Anchor>
@@ -181,7 +181,7 @@ export default function Login() {
 							<Button
 								type="submit"
 								w={{ base: "100%", sm: "50%" }}
-								color="pri.8"
+								color="pri"
 								loading={submitted}
 							>
 								{submitted ? "Loggin In" : "Login"}

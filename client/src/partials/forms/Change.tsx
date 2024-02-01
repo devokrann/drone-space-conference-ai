@@ -101,7 +101,7 @@ export default function Change({
 								notifications.show({
 									id: "password-valid",
 									withCloseButton: false,
-									color: "pri.6",
+									color: "pri",
 									icon: <IconCheck size={16} stroke={1.5} />,
 									autoClose: 5000,
 									title: "Password Changed",
@@ -182,7 +182,7 @@ export default function Change({
 							<Button
 								type="submit"
 								w={{ base: "100%", sm: "50%" }}
-								color="pri.8"
+								color="pri"
 								loading={submitted}
 							>
 								{submitted ? "Updating" : "Update"}

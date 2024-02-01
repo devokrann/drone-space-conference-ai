@@ -69,7 +69,7 @@ export default function Main() {
 								</Grid>
 							</Grid.Col>
 						</Grid>
-						<Divider color="pri.4" />
+						<Divider color="pri" />
 						<Group justify="center" c="dimmed" fz="sm" fw={500}>
 							<Text inherit>© 2024 AI Conference. All rights reserved.</Text>
 							{/* <Group>

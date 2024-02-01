@@ -2,19 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-import {
-	Anchor,
-	Box,
-	Button,
-	Center,
-	Checkbox,
-	Grid,
-	PinInput,
-	Stack,
-	Text,
-	TextInput,
-	Title,
-} from "@mantine/core";
+import { Anchor, Box, Button, Center, Checkbox, Grid, PinInput, Stack, Text, TextInput, Title } from "@mantine/core";
 import { isNotEmpty, matchesField, useForm } from "@mantine/form";
 import { notifications } from "@mantine/notifications";
 
@@ -38,7 +26,7 @@ export default function Reset() {
 		},
 
 		validate: {
-			email: (value) => utility.validator.form.special.email(value),
+			email: value => utility.validator.form.special.email(value),
 		},
 	});
 
@@ -47,7 +35,7 @@ export default function Reset() {
 			setSubmitted(true);
 
 			await postEmail(form.values.email)
-				.then((response) => {
+				.then(response => {
 					if (response.exists == false) {
 						notifications.show({
 							id: "account-invalid",
@@ -56,7 +44,7 @@ export default function Reset() {
 							autoClose: 5000,
 							title: "Invalid Email",
 							message: `No account with the provided email has been found.`,
-							styles: (theme) => ({
+							styles: theme => ({
 								closeButton: {
 									color: theme.colors.red[6],
 								},
@@ -67,12 +55,12 @@ export default function Reset() {
 							notifications.show({
 								id: "otl-sent",
 								withCloseButton: false,
-								color: "pri.6",
+								color: "pri",
 								icon: <IconCheck size={16} stroke={1.5} />,
 								autoClose: 5000,
 								title: "One-time Link Sent",
 								message: `A reset link has been sent to the provided email.`,
-								styles: (theme) => ({
+								styles: theme => ({
 									icon: {
 										color: theme.colors.sec[4],
 									},
@@ -86,12 +74,12 @@ export default function Reset() {
 								notifications.show({
 									id: "otl-resent",
 									withCloseButton: false,
-									color: "pri.6",
+									color: "pri",
 									icon: <IconCheck size={16} stroke={1.5} />,
 									autoClose: 5000,
 									title: "New One-time Link Sent",
 									message: `A new reset link has been sent to the provided email.`,
-									styles: (theme) => ({
+									styles: theme => ({
 										icon: {
 											color: theme.colors.sec[4],
 										},
@@ -108,7 +96,7 @@ export default function Reset() {
 									autoClose: 5000,
 									title: "Link Already Sent",
 									message: `Remember to check your spam/junk folder(s).`,
-									styles: (theme) => ({
+									styles: theme => ({
 										closeButton: {
 											color: theme.colors.red[6],
 										},
@@ -121,7 +109,7 @@ export default function Reset() {
 					}
 				})
 				.then(() => form.reset())
-				.catch((error) => {
+				.catch(error => {
 					notifications.show({
 						id: "otp-verify-fail",
 						color: "red",
@@ -129,7 +117,7 @@ export default function Reset() {
 						autoClose: 5000,
 						title: `Send Failed`,
 						message: `Error: ${error.message}`,
-						styles: (theme) => ({
+						styles: theme => ({
 							closeButton: {
 								color: theme.colors.red[6],
 							},
@@ -148,16 +136,10 @@ export default function Reset() {
 					Password Reset
 				</Title>
 				<Text ta={"center"}>
-					Enter the email you used to create your account and we'll
-					send you a link to reset your password.
+					Enter the email you used to create your account and we'll send you a link to reset your password.
 				</Text>
 			</Stack>
-			<Box
-				component="form"
-				onSubmit={form.onSubmit(handleSubmit)}
-				noValidate
-				w={"100%"}
-			>
+			<Box component="form" onSubmit={form.onSubmit(handleSubmit)} noValidate w={"100%"}>
 				<Grid pb={"md"}>
 					<Grid.Col span={{ base: 12 }}>
 						<TextInput
@@ -172,12 +154,7 @@ export default function Reset() {
 					</Grid.Col>
 					<Grid.Col span={{ base: 12 }}>
 						<Center py={"md"}>
-							<Button
-								type="submit"
-								color="pri.8"
-								w={{ base: "100%", sm: "50%" }}
-								loading={submitted}
-							>
+							<Button type="submit" color="pri" w={{ base: "100%", sm: "50%" }} loading={submitted}>
 								{submitted ? "Sending" : "Send"}
 							</Button>
 						</Center>
@@ -186,10 +163,8 @@ export default function Reset() {
 			</Box>
 			<Stack display={time ? "block" : "none"}>
 				<Text c={"dimmed"} inherit ta={"center"} fz={"sm"}>
-					The last link that was sent to the provided email hasn't
-					expired yet. To limit the number of times a user can change
-					their password, you can't request another link until the
-					existing one expires (in{" "}
+					The last link that was sent to the provided email hasn't expired yet. To limit the number of times a
+					user can change their password, you can't request another link until the existing one expires (in{" "}
 					<Text component="span" inherit c={"pri"} fw={500}>
 						{`${time && time.minutes} minutes`}
 					</Text>

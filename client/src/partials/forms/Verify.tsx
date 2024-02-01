@@ -42,7 +42,7 @@ export default function Verify({ userEmail }: { userEmail: string }) {
 		},
 
 		validate: {
-			otp: (value) => value.length < 4,
+			otp: value => value.length < 4,
 		},
 	});
 
@@ -56,7 +56,7 @@ export default function Verify({ userEmail }: { userEmail: string }) {
 			};
 
 			await postOtp(templateParams)
-				.then((response) => {
+				.then(response => {
 					if (response.exists == false) {
 						notifications.show({
 							id: "otp-invalid",
@@ -65,7 +65,7 @@ export default function Verify({ userEmail }: { userEmail: string }) {
 							autoClose: 5000,
 							title: "Invalid OTP",
 							message: `The email doesn't exist or has already been verified`,
-							styles: (theme) => ({
+							styles: theme => ({
 								closeButton: {
 									color: theme.colors.red[6],
 								},
@@ -80,7 +80,7 @@ export default function Verify({ userEmail }: { userEmail: string }) {
 								autoClose: 5000,
 								title: "Wrong OTP",
 								message: `You have entered the wrong OTP for this email.`,
-								styles: (theme) => ({
+								styles: theme => ({
 									closeButton: {
 										color: theme.colors.red[6],
 									},
@@ -95,7 +95,7 @@ export default function Verify({ userEmail }: { userEmail: string }) {
 									autoClose: 5000,
 									title: "OTP Expired",
 									message: `Request another in the link provided on this page`,
-									styles: (theme) => ({
+									styles: theme => ({
 										closeButton: {
 											color: theme.colors.red[6],
 										},
@@ -105,12 +105,12 @@ export default function Verify({ userEmail }: { userEmail: string }) {
 								notifications.show({
 									id: "otp-match",
 									withCloseButton: false,
-									color: "pri.6",
+									color: "pri",
 									icon: <IconCheck size={16} stroke={1.5} />,
 									autoClose: 5000,
 									title: "Email Verified",
 									message: `You can now log in to your account.`,
-									styles: (theme) => ({
+									styles: theme => ({
 										icon: {
 											color: theme.colors.sec[4],
 										},
@@ -126,7 +126,7 @@ export default function Verify({ userEmail }: { userEmail: string }) {
 					}
 				})
 				.then(() => form.reset())
-				.catch((error) => {
+				.catch(error => {
 					notifications.show({
 						id: "otp-verify-fail",
 						color: "red",
@@ -134,7 +134,7 @@ export default function Verify({ userEmail }: { userEmail: string }) {
 						autoClose: 5000,
 						title: `Send Failed`,
 						message: `Error: ${error.message}`,
-						styles: (theme) => ({
+						styles: theme => ({
 							closeButton: {
 								color: theme.colors.red[6],
 							},
@@ -149,7 +149,7 @@ export default function Verify({ userEmail }: { userEmail: string }) {
 	const handleRequest = async () => {
 		setRequested(true);
 
-		await resendOtp(userEmail).then((response) => {
+		await resendOtp(userEmail).then(response => {
 			if (response.exists == false) {
 				notifications.show({
 					id: "otp-request-error",
@@ -158,7 +158,7 @@ export default function Verify({ userEmail }: { userEmail: string }) {
 					autoClose: 5000,
 					title: "Not Found",
 					message: `The email doesn't exist or has already been verified`,
-					styles: (theme) => ({
+					styles: theme => ({
 						closeButton: {
 							color: theme.colors.red[6],
 						},
@@ -174,7 +174,7 @@ export default function Verify({ userEmail }: { userEmail: string }) {
 							autoClose: 5000,
 							title: "Already Sent",
 							message: `Remember to check the spam or junk folder.`,
-							styles: (theme) => ({
+							styles: theme => ({
 								closeButton: {
 									color: theme.colors.red[6],
 								},
@@ -186,12 +186,12 @@ export default function Verify({ userEmail }: { userEmail: string }) {
 						notifications.show({
 							id: "otp-resent",
 							withCloseButton: false,
-							color: "pri.6",
+							color: "pri",
 							icon: <IconCheck size={16} stroke={1.5} />,
 							autoClose: 5000,
 							title: "New OTP Sent",
 							message: `A new code has been sent to the provided email.`,
-							styles: (theme) => ({
+							styles: theme => ({
 								icon: {
 									color: theme.colors.sec[4],
 								},
@@ -205,12 +205,12 @@ export default function Verify({ userEmail }: { userEmail: string }) {
 					notifications.show({
 						id: "user-verified",
 						withCloseButton: false,
-						color: "pri.6",
+						color: "pri",
 						icon: <IconCheck size={16} stroke={1.5} />,
 						autoClose: 5000,
 						title: "User Verified",
 						message: `The email has already been verified.`,
-						styles: (theme) => ({
+						styles: theme => ({
 							icon: {
 								color: theme.colors.sec[4],
 							},
@@ -227,12 +227,7 @@ export default function Verify({ userEmail }: { userEmail: string }) {
 	};
 
 	return (
-		<Box
-			component="form"
-			onSubmit={form.onSubmit(handleSubmit)}
-			noValidate
-			w={"100%"}
-		>
+		<Box component="form" onSubmit={form.onSubmit(handleSubmit)} noValidate w={"100%"}>
 			<Stack gap={"xl"} ta={"center"}>
 				<Stack gap={"xs"}>
 					<Title order={1} ta={"center"}>
@@ -262,20 +257,14 @@ export default function Verify({ userEmail }: { userEmail: string }) {
 						<Center py={"md"}>
 							<Group grow w={"100%"}>
 								<Button
-									color="pri.8"
+									color="pri"
 									loading={requested}
 									variant="outline"
 									onClick={() => handleRequest()}
 								>
-									{requested
-										? "Requesting"
-										: "Request Another"}
+									{requested ? "Requesting" : "Request Another"}
 								</Button>
-								<Button
-									type="submit"
-									color="pri.8"
-									loading={submitted}
-								>
+								<Button type="submit" color="pri" loading={submitted}>
 									{submitted ? "Verifying" : "Verify"}
 								</Button>
 							</Group>
@@ -284,8 +273,8 @@ export default function Verify({ userEmail }: { userEmail: string }) {
 				</Grid>
 				<Stack display={time ? "block" : "none"}>
 					<Text c={"dimmed"} inherit fz={"sm"}>
-						If the email you provided is valid, you should have
-						received it. You can otherwise request another code in{" "}
+						If the email you provided is valid, you should have received it. You can otherwise request
+						another code in{" "}
 						<Text component="span" inherit c={"pri"} fw={500}>
 							{`${time && time.minutes} minute(s)`}
 						</Text>

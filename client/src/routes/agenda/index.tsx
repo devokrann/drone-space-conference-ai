@@ -19,7 +19,7 @@ export default function Agenda() {
 			<Layout.Page hero={<Layout.Hero.Route />}>
 				<Layout.Section containerized margined>
 					<Stack ta={"center"} gap={"xl"}>
-						<Title order={2} fz={40} c={"pri.4"}>
+						<Title order={2} fz={40} c={"pri"}>
 							Event Programs
 						</Title>
 						<Text>
@@ -42,7 +42,7 @@ export default function Agenda() {
 									</Grid.Col>
 									<Grid.Col span={21}>
 										<Divider
-											color="pri.4"
+											color="pri"
 											label="Attendees Diverge to Respective Platforms"
 											my={"xl"}
 										/>
@@ -99,7 +99,7 @@ export default function Agenda() {
 										</Stack>
 									</Grid.Col>
 									<Grid.Col span={21}>
-										<Divider color="pri.4" label="Attendees Converge to One Platform" my={"xl"} />
+										<Divider color="pri" label="Attendees Converge to One Platform" my={"xl"} />
 									</Grid.Col>
 									<Grid.Col span={21}>
 										<Accordion.Program data={data.program.schedule.common.day2} />

@@ -24,7 +24,7 @@ export default function Home() {
 				<Layout.Section containerized margined>
 					<Stack gap={48}>
 						<Stack ta={"center"} gap={"xl"}>
-							<Title order={2} fz={40} c={"pri.4"}>
+							<Title order={2} fz={40} c={"pri"}>
 								Explore The Fusion of{" "}
 								<Text component="span" inherit c={"white"}>
 									Drones
@@ -60,7 +60,7 @@ export default function Home() {
 				<Layout.Section containerized margined id="objectives">
 					<Stack gap={48}>
 						<Stack ta={"center"} gap={"xl"}>
-							<Title order={2} fz={40} c={"pri.4"}>
+							<Title order={2} fz={40} c={"pri"}>
 								Objectives
 							</Title>
 							<Text>
@@ -80,7 +80,7 @@ export default function Home() {
 				<Layout.Section containerized margined id="who">
 					<Stack gap={48}>
 						<Stack ta={"center"} gap={"xl"}>
-							<Title order={2} fz={40} c={"pri.4"}>
+							<Title order={2} fz={40} c={"pri"}>
 								Who Attends?
 							</Title>
 							<Text>
@@ -100,7 +100,7 @@ export default function Home() {
 				<Layout.Section containerized margined id="why">
 					<Stack gap={48}>
 						<Stack ta={"center"} gap={"xl"}>
-							<Title order={2} fz={40} c={"pri.4"}>
+							<Title order={2} fz={40} c={"pri"}>
 								Why Attend?
 							</Title>
 							<Text>

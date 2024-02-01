@@ -10,7 +10,7 @@ export default function Ticket({ data }: { data: { title: string; price: string;
 		<Stack className={classes.card} gap={"xl"} justify="space-between">
 			<Stack gap={"xl"}>
 				<Stack gap={"xs"} align="center">
-					<Text ta={"center"} fw={500} fz={32} c={"pri.4"}>
+					<Text ta={"center"} fw={500} fz={32} c={"pri"}>
 						<Text component="span" inherit fz={"md"} c={"white"}>
 							Kshs.{" "}
 						</Text>
@@ -20,7 +20,7 @@ export default function Ticket({ data }: { data: { title: string; price: string;
 						{data.title} Sponsorship Package
 					</Title>
 				</Stack>
-				<Divider color="pri.4" />
+				<Divider color="pri" />
 				<Text ta={"center"}>{data.desc}</Text>
 			</Stack>
 			<Button fullWidth>Register</Button>

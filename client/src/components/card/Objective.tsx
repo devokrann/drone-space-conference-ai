@@ -14,7 +14,7 @@ export default function Objective({ data }: { data: { icon: Icon; title: string;
 					<Title order={3} fz={24} ta={"center"}>
 						{data.title}
 					</Title>
-					<data.icon size={48} color="var(--mantine-color-pri-4)" />
+					<data.icon size={48} color="var(--mantine-color-pri-6)" />
 				</Group>
 				<Text ta={{ base: "center", md: "start" }}>{data.desc}</Text>
 			</Stack>

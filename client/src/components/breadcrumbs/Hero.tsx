@@ -16,7 +16,7 @@ export default function Hero({ data }: { data: { label: string; link: string }[]
 					to={crumb.link}
 					key={crumb.link}
 					className={classes.link}
-					// c={data.indexOf(crumb) == data.length - 1 ? "pri.8" : ""}
+					// c={data.indexOf(crumb) == data.length - 1 ? "pri" : ""}
 				>
 					{crumb.label}
 				</Box>
