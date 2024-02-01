@@ -28,9 +28,9 @@ export default function Countdown() {
 		<Grid>
 			{values.map(value => (
 				<Grid.Col key={value.label} span={"auto"}>
-					<Stack gap={0} align="center">
+					<Stack gap={0} align="center" c={"white"}>
 						<Text fz={{ base: 24, md: 40 }} fw={"bold"}>
-							{value.value}
+							{value.value < 10 ? `0${value.value}` : value.value}
 						</Text>
 						<Text fz={{ base: 16, md: 24 }} fw={500} ta={"center"}>
 							{value.label}

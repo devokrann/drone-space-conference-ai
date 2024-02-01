@@ -23,7 +23,7 @@ export default function Main() {
 			<Button fullWidth component={Link} to={"/registration/tickets"}>
 				Tickets
 			</Button>
-			<Button fullWidth variant="white" component={Link} to={"/registration/booths"}>
+			<Button fullWidth color="sec" c={"dark.9"} component={Link} to={"/registration/booths"}>
 				Booths
 			</Button>
 		</ButtonGroup>

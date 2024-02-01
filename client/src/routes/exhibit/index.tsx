@@ -61,7 +61,7 @@ export default function Exhibit() {
 						</Grid.Col>
 					</Grid>
 				</Layout.Section>
-				<Layout.Section containerized margined id="booths">
+				<Layout.Section containerized margined padded id="booths">
 					<Stack gap={48}>
 						<Stack ta={"center"} gap={"xl"}>
 							<Title order={2} fz={40} c={"pri"}>

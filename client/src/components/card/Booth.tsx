@@ -29,7 +29,7 @@ export default function Booth({
 				<Stack fz="sm">
 					{data.desc.list.map(item => (
 						<Group key={item} wrap="nowrap" align="start">
-							<Text component="span" c={"pri"}>
+							<Text component="span" c={"sec"}>
 								<IconCheck size={16} />
 							</Text>
 							<Text key={item} inherit>
@@ -39,12 +39,9 @@ export default function Booth({
 					))}
 				</Stack>
 			</Stack>
-			<Stack gap={"xl"}>
-				<Divider color="pri" />
-				<Button fullWidth component="a" href="mailto:info@aiconference.co.ke">
-					Book {data.title} Booth
-				</Button>
-			</Stack>
+			<Button fullWidth color="sec" c={"dark.9"} component="a" href="mailto:info@aiconference.co.ke">
+				Book {data.title} Booth
+			</Button>
 		</Stack>
 	);
 }
