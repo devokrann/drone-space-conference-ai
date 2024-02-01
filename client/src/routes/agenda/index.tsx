@@ -43,7 +43,7 @@ export default function Agenda() {
 							</Button>
 						</Stack>
 						<Grid columns={21}>
-							<Grid.Col span={{ base: 21, sm: 10 }}>
+							<Grid.Col span={{ base: 21, md: 10 }}>
 								<Stack gap={"xl"}>
 									<Title ta={"center"} order={3} fz={24}>
 										AI Platform
@@ -51,8 +51,8 @@ export default function Agenda() {
 									<Divider color="pri" />
 									<Grid>
 										<Grid.Col span={{ base: 12, sm: 6 }}>
-											<Stack>
-												<Title ta={{ base: "center", sm: "start" }} order={4} fz={16}>
+											<Stack ta={{ base: "center", sm: "start" }}>
+												<Title order={4} fz={16}>
 													26<sup>th</sup> March
 												</Title>
 												<List spacing={"xs"} listStyleType="none" size="sm">
@@ -63,8 +63,8 @@ export default function Agenda() {
 											</Stack>
 										</Grid.Col>
 										<Grid.Col span={{ base: 12, sm: 6 }}>
-											<Stack>
-												<Title ta={{ base: "center", sm: "start" }} order={4} fz={16}>
+											<Stack ta={{ base: "center", sm: "start" }}>
+												<Title order={4} fz={16}>
 													27<sup>th</sup> March
 												</Title>
 												<List spacing={"xs"} listStyleType="none" size="sm">
@@ -82,7 +82,7 @@ export default function Agenda() {
 									<Divider orientation="vertical" color="sec" />
 								</Group>
 							</Grid.Col>
-							<Grid.Col span={{ base: 21, sm: 10 }}>
+							<Grid.Col span={{ base: 21, md: 10 }}>
 								<Stack gap={"xl"}>
 									<Title ta={"center"} order={3} fz={24}>
 										Drone Platform
@@ -90,8 +90,8 @@ export default function Agenda() {
 									<Divider color="pri" />
 									<Grid>
 										<Grid.Col span={{ base: 12, sm: 6 }}>
-											<Stack>
-												<Title ta={{ base: "center", sm: "start" }} order={4} fz={16}>
+											<Stack ta={{ base: "center", sm: "start" }}>
+												<Title order={4} fz={16}>
 													26<sup>th</sup> March
 												</Title>
 												<List spacing={"xs"} listStyleType="none" size="sm">
@@ -102,8 +102,8 @@ export default function Agenda() {
 											</Stack>
 										</Grid.Col>
 										<Grid.Col span={{ base: 12, sm: 6 }}>
-											<Stack>
-												<Title ta={{ base: "center", sm: "start" }} order={4} fz={16}>
+											<Stack ta={{ base: "center", sm: "start" }}>
+												<Title order={4} fz={16}>
 													27<sup>th</sup> March
 												</Title>
 												<List spacing={"xs"} listStyleType="none" size="sm">
@@ -126,7 +126,7 @@ export default function Agenda() {
 								Tracks
 							</Title>
 						</Stack>
-						<Grid gutter={96}>
+						<Grid>
 							<Grid.Col span={12}>
 								<Stack gap={"xl"}>
 									<Title ta={"center"} order={2} fz={24}>
