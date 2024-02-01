@@ -16,6 +16,9 @@ export default function Main() {
 				<Flex direction={{ base: "column", xs: "row" }} align={"center"} justify="space-between" gap={"sm"}>
 					<Flex align={"center"} direction={{ base: "column", xs: "row" }} gap={"xs"}>
 						<Text inherit>26 - 27 March, 2024</Text>
+						<Text component="span" inherit visibleFrom="xs">
+							|
+						</Text>
 						<Text inherit>Sarit expo Centre, Westlands</Text>
 					</Flex>
 					<Group>
