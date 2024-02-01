@@ -19,7 +19,7 @@ const exhibition = {
 		},
 		{
 			title: "SME",
-			price: "50,000",
+			price: "55,000",
 			desc: {
 				list: [
 					`2 x Regular Tickets ${additional}`,
