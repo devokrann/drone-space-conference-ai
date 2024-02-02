@@ -5,6 +5,7 @@ import { Box, Button, Divider, Group, List, Stack, Text, Title } from "@mantine/
 import { IconCheck, IconChevronRight } from "@tabler/icons-react";
 
 import classes from "./Booth.module.scss";
+import Modal from "../modals";
 
 export default function Booth({
 	data,
@@ -39,9 +40,7 @@ export default function Booth({
 					))}
 				</Stack>
 			</Stack>
-			<Button fullWidth color="sec" c={"dark.9"} component="a" href="mailto:info@aiconference.co.ke">
-				Book {data.title} Booth
-			</Button>
+			<Modal.Booth label={data.title} />
 		</Stack>
 	);
 }

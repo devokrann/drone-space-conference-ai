@@ -4,6 +4,7 @@ import { Box, Button, Divider, Group, List, Stack, Text, Title } from "@mantine/
 
 import classes from "./Sponsorship.module.scss";
 import { IconCheck, IconChevronRight } from "@tabler/icons-react";
+import Modal from "../modals";
 
 export default function Sponsorship({ data }: { data: { title: string; price: string; desc: string[] } }) {
 	return (
@@ -34,9 +35,7 @@ export default function Sponsorship({ data }: { data: { title: string; price: st
 					))}
 				</Stack>
 			</Stack>
-			<Button fullWidth color="sec" c={"dark.9"} component="a" href="mailto:info@aiconference.co.ke">
-				Apply For {data.title} Sponsorship
-			</Button>
+			<Modal.Sponsorship label={data.title} />
 		</Stack>
 	);
 }
