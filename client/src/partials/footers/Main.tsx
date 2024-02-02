@@ -30,7 +30,7 @@ export default function Main() {
 									gap={"xl"}
 								>
 									<Image src={image.brand.landscape} w={200} />
-									<Stack gap={"xs"}>
+									<Flex direction={"column"} align={{ base: "center", md: "start" }} gap={"xs"}>
 										<Text inherit size="sm">
 											The AI conference in Nairobi is a cutting-edge conference that will bring
 											together thought leaders, innovators, and enthusiasts in the fields of
@@ -45,7 +45,7 @@ export default function Main() {
 												</Text>
 											))}
 										</Group>
-									</Stack>
+									</Flex>
 								</Flex>
 							</Grid.Col>
 							<Grid.Col span={7} visibleFrom="md">
