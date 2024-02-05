@@ -12,9 +12,9 @@ export default function Main() {
 		<Box className={classes.cta} py={"xl"}>
 			<Container size={"md"}>
 				<Stack gap={48}>
-					<Title order={6} fz={32} ta={"center"} c={"sec"}>
+					{/* <Title order={6} fz={32} ta={"center"} c={"sec"}>
 						Don't Wait Too Long!
-					</Title>
+					</Title> */}
 					<Counter.Countdown />
 					<Group gap={"xl"} justify="center">
 						<Button component={Link} to={"/registration/tickets"}>

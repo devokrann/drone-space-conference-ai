@@ -17,7 +17,7 @@ import postContact from "@src/apis/postContact";
 
 import email from "../email";
 
-export default function Sponsorship() {
+export default function Speaker() {
 	const [submitted, setSubmitted] = useState(false);
 	const [message, setMessage] = useState("");
 
@@ -27,7 +27,7 @@ export default function Sponsorship() {
 			lname: "",
 			email: "",
 			phone: "",
-			subject: "",
+			subject: "Speaker Registration",
 			message: "",
 			policy: false,
 		},
@@ -123,28 +123,16 @@ export default function Sponsorship() {
 		}
 	};
 
-	useEffect(() => {
-		if (form.values.subject == "Booth Registration") {
-			setMessage("Kindly include the booth type in your message");
-		} else if (form.values.subject == "Sponsorship Application") {
-			setMessage(
-				"Kindly include the organization you represent and the sponsorship package of choice in your message"
-			);
-		} else {
-			setMessage("");
-		}
-	}, [form.values.subject]);
-
 	return (
 		<Box component="form" onSubmit={form.onSubmit(handleSubmit)} noValidate>
 			<Grid pb={"md"}>
-				<Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
+				<Grid.Col span={{ base: 12, sm: 6 }}>
 					<TextInput required label={"First Name"} placeholder="Your Name" {...form.getInputProps("fname")} />
 				</Grid.Col>
-				<Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
+				<Grid.Col span={{ base: 12, sm: 6 }}>
 					<TextInput required label={"Last Name"} placeholder="Your Name" {...form.getInputProps("lname")} />
 				</Grid.Col>
-				<Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
+				<Grid.Col span={{ base: 12, sm: 6 }}>
 					<Input.Wrapper label={"Phone"} id="phone">
 						<Input
 							component={IMaskInput}
@@ -156,29 +144,7 @@ export default function Sponsorship() {
 					</Input.Wrapper>
 				</Grid.Col>
 				<Grid.Col span={{ base: 12, sm: 6 }}>
-					<Select
-						label="Inquiry"
-						description="What are you inquiring about?"
-						placeholder="Select an inquiry"
-						// defaultValue={null}
-						data={[
-							{ label: "Select an Inquiry", value: "" },
-							{
-								label: "Booth Registration",
-								value: "Booth Registration",
-							},
-							{
-								label: "Sponsorship Application",
-								value: "Sponsorship Application",
-							},
-							{ label: "Other", value: "other" },
-						]}
-						required
-						{...form.getInputProps("subject")}
-					/>
-				</Grid.Col>
-				<Grid.Col span={{ base: 12, sm: 6 }}>
-					<Input.Wrapper label={"Email"} description="We will never share your email" id="email" required>
+					<Input.Wrapper label={"Email"} id="email" required>
 						<Input
 							id="email"
 							component={IMaskInput}
@@ -191,11 +157,13 @@ export default function Sponsorship() {
 				<Grid.Col span={12}>
 					<Textarea
 						label={"Message"}
-						description={message}
+						description={
+							"Kindly include the organization you represent and the topic you would like to discuss"
+						}
 						required
 						placeholder={"Write your message here..."}
 						autosize
-						minRows={2}
+						minRows={3}
 						maxRows={10}
 						{...form.getInputProps("message")}
 					/>

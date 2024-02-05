@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 
 import Layout from "@src/layouts";
 import Partial from "@src/partials";
-import { Stack, Text, Title } from "@mantine/core";
+import { Divider, Stack, Text, Title } from "@mantine/core";
 
 // export async function loader() {
 // 	return "data";
@@ -21,6 +21,16 @@ export default function Speakers() {
 							Speakers Coming Soon
 						</Title>
 						<Text>Our best speakers will be added soon</Text>
+					</Stack>
+				</Layout.Section>
+				<Divider />
+				<Layout.Section containerized containerSize="sm" margined>
+					<Stack gap={"xl"}>
+						<Title order={3} ta={"center"} fz={32} c={"pri"}>
+							Call to Speakers
+						</Title>
+						<Text ta={"center"}>Fill the form below and request to speak</Text>
+						<Partial.Form.Speaker />
 					</Stack>
 				</Layout.Section>
 			</Layout.Page>

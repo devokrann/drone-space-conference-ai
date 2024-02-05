@@ -25,7 +25,7 @@ export default function Home() {
 					<Stack gap={48}>
 						<Stack ta={"center"} gap={"xl"}>
 							<Title order={2} fz={40} c={"sec"}>
-								Explore The Fusion of Drones, AI and Data Analytics
+								Explore The Fusion of AI, Drone Tech and Data Analytics
 							</Title>
 							<Text>
 								The AI conference in Nairobi is a cutting-edge conference that will bring together
