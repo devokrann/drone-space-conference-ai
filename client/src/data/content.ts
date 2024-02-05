@@ -24,7 +24,7 @@ const content = {
 		{
 			icon: IconInputAi,
 			title: "Artificial Intelligence: Transformative Power",
-			desc: "Artificial Intelligence empowers drones to go beyond simple automation, enabling them to make intelligent decisions based on the data they collect. AI enhances the capabilities of drones enabling them to process and analyze data in real-time, recognize patters, navigate autonomously and optimize their missions for various applications which makes drones more efficient and adaptable capable of performing a wide range of tasks across different industries.",
+			desc: "Artificial Intelligence empowers drones to go beyond simple automation, enabling them to make intelligent decisions based on the data they collect. AI enhances the capabilities of drones enabling them to process and analyze data in real-time, recognize patterns, navigate autonomously and optimize their missions for various applications which makes drones more efficient and adaptable capable of performing a wide range of tasks across different industries.",
 		},
 		{
 			icon: IconDrone,
