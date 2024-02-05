@@ -5,6 +5,7 @@ import Login from "./Login";
 import Newsletter from "./Newsletter";
 import Reset from "./Reset";
 import Signup from "./Signup";
+import Speaker from "./Speaker";
 import Sponsorship from "./Sponsorship";
 import Verify from "./Verify";
 
@@ -18,6 +19,7 @@ const form = {
 
 	Booth: Booth,
 	Sponsorship: Sponsorship,
+	Speaker: Speaker,
 
 	// Newsletter: Newsletter,
 };
