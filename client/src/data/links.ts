@@ -2,10 +2,10 @@ import image from "@src/assets/images";
 
 const links = {
 	social: [
-		// {
-		// 	icon: image.icon.social.facebook,
-		// 	link: "#",
-		// },
+		{
+			icon: image.icon.social.facebook,
+			link: "https://www.facebook.com/profile.php?id=61555858636752&mibextid=ZbWKwL",
+		},
 		{
 			icon: image.icon.social.twitter,
 			link: "https://x.com/aiconference_ke?t=vH9rLLLgruVtU64zJy34vA&s=09",
