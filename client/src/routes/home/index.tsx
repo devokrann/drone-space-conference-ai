@@ -10,6 +10,7 @@ import Partial from "@src/partials";
 import { Button, Divider, Grid, Group, Stack, Text, Title } from "@mantine/core";
 import data from "@src/data";
 import Card from "@src/components/card";
+import image from "@src/assets/images";
 
 // export async function loader() {
 // 	return list;
@@ -126,6 +127,36 @@ export default function Home() {
 									<Card.Why data={item} />
 								</Grid.Col>
 							))}
+						</Grid>
+					</Stack>
+				</Layout.Section>
+				<Layout.Section containerized padded id="partners">
+					<Stack gap={48}>
+						<Stack ta={"center"} gap={"xl"}>
+							<Title order={2} fz={40} c={"pri"}>
+								Our Media Partners
+							</Title>
+							<Text></Text>
+						</Stack>
+						<Grid justify="center">
+							{data.partners.map(item => (
+								<Grid.Col key={item.title} span={{ base: 12, xs: 6, sm: 4 }}>
+									<Card.Partner data={item} />
+								</Grid.Col>
+							))}
+							<Grid.Col span={{ base: 12 }} mx={"auto"}>
+								<Grid>
+									<Grid.Col span={{ base: 3, xs: 5, sm: 3 }} mx={"auto"}>
+										<Card.Partner
+											data={{
+												image: image.partners.media.image3,
+												title: "Radio Africa Events",
+												width: "60%",
+											}}
+										/>
+									</Grid.Col>
+								</Grid>
+							</Grid.Col>
 						</Grid>
 					</Stack>
 				</Layout.Section>
