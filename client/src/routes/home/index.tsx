@@ -141,7 +141,7 @@ export default function Home() {
 						<Grid justify="center">
 							<Grid.Col span={{ base: 12 }} mx={"auto"}>
 								<Grid>
-									<Grid.Col span={{ base: 3, xs: 5, sm: 3 }} mx={"auto"}>
+									<Grid.Col span={{ base: 8, xs: 5, sm: 4 }} mx={"auto"}>
 										<Card.Partner
 											data={{
 												image: image.partners.media.image3,
@@ -162,7 +162,7 @@ export default function Home() {
 									<Grid.Col span={{ base: 12 }} mx={"auto"}>
 										<Divider label={"powered by"} w={"50%"} mx={"auto"} />
 									</Grid.Col>
-									<Grid.Col span={{ base: 3, xs: 5, sm: 3 }} mx={"auto"}>
+									<Grid.Col span={{ base: 8, xs: 5, sm: 4 }} mx={"auto"}>
 										<Card.Partner
 											data={{
 												image: image.partners.other.partner1,
