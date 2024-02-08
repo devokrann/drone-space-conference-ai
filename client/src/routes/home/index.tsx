@@ -139,11 +139,6 @@ export default function Home() {
 							<Text></Text>
 						</Stack>
 						<Grid justify="center">
-							{data.partners.map(item => (
-								<Grid.Col key={item.title} span={{ base: 12, xs: 6, sm: 4 }}>
-									<Card.Partner data={item} />
-								</Grid.Col>
-							))}
 							<Grid.Col span={{ base: 12 }} mx={"auto"}>
 								<Grid>
 									<Grid.Col span={{ base: 3, xs: 5, sm: 3 }} mx={"auto"}>
@@ -157,7 +152,34 @@ export default function Home() {
 									</Grid.Col>
 								</Grid>
 							</Grid.Col>
+							{data.partners.map(item => (
+								<Grid.Col key={item.title} span={{ base: 12, xs: 6, sm: 4 }}>
+									<Card.Partner data={item} />
+								</Grid.Col>
+							))}
+							<Grid.Col span={{ base: 12 }} mx={"auto"}>
+								<Grid>
+									<Grid.Col span={{ base: 12 }} mx={"auto"}>
+										<Divider label={"powered by"} w={"50%"} mx={"auto"} />
+									</Grid.Col>
+									<Grid.Col span={{ base: 3, xs: 5, sm: 3 }} mx={"auto"}>
+										<Card.Partner
+											data={{
+												image: image.partners.other.partner1,
+												title: "Drone Space",
+											}}
+											noPadding
+										/>
+									</Grid.Col>
+								</Grid>
+							</Grid.Col>
 						</Grid>
+						<Text ta={"center"} fz={"xl"} tt={"uppercase"}>
+							Powered by{" "}
+							<Text component="span" inherit fw={"bold"} c={"sec.6"}>
+								Drone Space!
+							</Text>
+						</Text>
 					</Stack>
 				</Layout.Section>
 			</Layout.Page>
