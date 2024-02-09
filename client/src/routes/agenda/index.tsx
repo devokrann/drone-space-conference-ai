@@ -31,11 +31,11 @@ export default function Agenda() {
 						</Stack>
 						<Stack align="center">
 							<Button
-								color="sec.6"
+								color="pri.6"
 								variant="outline"
 								size="lg"
 								radius={"xl"}
-								c={"dark.0"}
+								c={"inherit"}
 								component="a"
 								href="#tracks"
 							>

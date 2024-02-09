@@ -44,7 +44,7 @@ export default function Home() {
 					</Grid>
 				</Container>
 			</Center>
-			<Box bg={"pri.7"} pb={"lg"}>
+			<Box bg={"pri.6"} pb={"lg"}>
 				<Container size={"md"}>
 					<Counter.Countdown />
 				</Container>

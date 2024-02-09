@@ -53,7 +53,7 @@ export default function Main() {
 									{data.links.footer.map(link => (
 										<Grid.Col key={link.title} span={6}>
 											<Stack gap={"xl"} align="end" ta={"end"}>
-												<Title order={4} fz={24} c={"pri"}>
+												<Title order={4} fz={24} className={classes.title}>
 													{link.title}
 												</Title>
 												<List spacing={"xs"} listStyleType="none">
@@ -72,10 +72,10 @@ export default function Main() {
 							</Grid.Col>
 						</Grid>
 						<Divider color="sec" />
-						<Group justify="center" c="dimmed" fz="sm" fw={500}>
+						<Group justify="center" fz="sm" fw={500}>
 							<Text inherit>
 								© 2024{" "}
-								<Text component="span" inherit c={"pri"}>
+								<Text component="span" inherit c={"sec"}>
 									AI Conference
 								</Text>
 								. All rights reserved.

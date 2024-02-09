@@ -26,11 +26,16 @@ const partners = [
 		title: "Radio Africa Events",
 		width: "30%",
 	},
-	// {
-	// 	image: image.partners.media.image6,
-	// 	title: "Ticket Yetu",
-	// 	width: "50%",
-	// },
+	{
+		image: image.partners.media.image7,
+		title: "Ticket Yetu",
+		width: "50%",
+	},
+	{
+		image: image.brand.dronespace.landscape.light,
+		title: "Drone Space",
+		width: "50%",
+	},
 ];
 
 export default partners;

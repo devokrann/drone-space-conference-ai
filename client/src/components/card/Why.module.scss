@@ -1,5 +1,6 @@
 .card {
-	background-color: var(--mantine-color-dark-6);
+	background-color: light-dark(var(--mantine-color-pri-6), var(--mantine-color-dark-6));
+	color: light-dark(var(--mantine-color-body), inherit);
 	border-radius: var(--mantine-radius-md);
 	padding: var(--mantine-spacing-xl);
 	box-shadow: var(--mantine-shadow-xs);
@@ -10,7 +11,7 @@
 		cursor: pointer;
 
 		.title {
-			color: var(--mantine-color-pri-6);
+			color: light-dark(var(--mantine-color-body), var(--mantine-color-pri-6));
 		}
 
 		.icon {
@@ -21,6 +22,7 @@
 
 .title {
 	transition: 0.25s all ease;
+	color: light-dark(var(--mantine-color-sec-6), var(--mantine-color-pri-6));
 }
 
 .icon {

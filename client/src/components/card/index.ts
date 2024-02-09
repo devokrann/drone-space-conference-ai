@@ -7,7 +7,7 @@ import Sponsorship from "./Sponsorship";
 import Ticket from "./Ticket";
 import Why from "./Why";
 
-const Card = {
+const card = {
 	Sponsorship: Sponsorship,
 	Booth: Booth,
 	Ticket: Ticket,
@@ -18,4 +18,4 @@ const Card = {
 	Partner: Partner,
 };
 
-export default Card;
+export default card;

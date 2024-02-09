@@ -8,6 +8,7 @@ import { IconPointFilled } from "@tabler/icons-react";
 import classes from "./Main.module.scss";
 
 import data from "@src/data";
+import Switch from "@src/components/switches";
 
 export default function Main() {
 	return (
@@ -22,12 +23,15 @@ export default function Main() {
 						<Text inherit>Sarit Expo Centre, Westlands</Text>
 					</Flex>
 					<Group>
-						<Group gap={"xs"}>
-							{data.links.social.map(link => (
-								<Text key={link.link} component="a" href={link.link} target="_blank">
-									<Image src={link.icon} w={24} />
-								</Text>
-							))}
+						<Group>
+							<Group gap={"xs"}>
+								{data.links.social.map(link => (
+									<Text key={link.link} component="a" href={link.link} target="_blank">
+										<Image src={link.icon} w={24} />
+									</Text>
+								))}
+							</Group>
+							<Switch.Theme />
 						</Group>
 					</Group>
 				</Flex>

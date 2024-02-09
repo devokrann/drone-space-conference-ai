@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Button, Divider, Group, List, Stack, Text, Title } from "@mantine/core";
+import { Box, Button, Divider, Group, List, Stack, Text, ThemeIcon, Title } from "@mantine/core";
 
 import { Icon, IconCheck, IconChevronRight } from "@tabler/icons-react";
 
@@ -10,9 +10,9 @@ export default function Audience({ data }: { data: { icon: Icon; title: string }
 	return (
 		<Stack className={classes.card} gap={"xl"}>
 			<Stack gap={"xl"} align="center">
-				<div className={classes.icon}>
+				<ThemeIcon size={48} variant="transparent" className={classes.icon}>
 					<data.icon size={48} />
-				</div>
+				</ThemeIcon>
 				<Title order={3} fz={"xl"} ta={"center"}>
 					{data.title}
 				</Title>

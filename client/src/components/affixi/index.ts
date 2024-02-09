@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 
-const Affix = {
+const affix = {
 	Navbar: Navbar,
 };
 
-export default Affix;
+export default affix;

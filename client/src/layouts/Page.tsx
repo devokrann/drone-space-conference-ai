@@ -5,7 +5,7 @@ import { Box, Stack } from "@mantine/core";
 import Section from "./Section";
 
 import typePage from "@src/types/page";
-import Affix from "@src/components/affixi";
+import Component from "@src/components";
 
 export default function Page({ padded, stacked, hero, children, ...restProps }: typePage) {
 	return (
@@ -21,7 +21,7 @@ export default function Page({ padded, stacked, hero, children, ...restProps }: 
 					>
 						{children}
 					</Stack>
-					<Affix.Navbar />
+					<Component.Affix.Navbar />
 				</>
 			) : (
 				<>
@@ -33,7 +33,7 @@ export default function Page({ padded, stacked, hero, children, ...restProps }: 
 					>
 						{children}
 					</Box>
-					<Affix.Navbar />
+					<Component.Affix.Navbar />
 				</>
 			)}
 		</Section>

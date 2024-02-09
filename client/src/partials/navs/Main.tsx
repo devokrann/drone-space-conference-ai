@@ -20,11 +20,11 @@ export default function Main() {
 
 	const cta = (
 		<ButtonGroup>
-			<Button fullWidth component={Link} to={"/registration/tickets"}>
-				Tickets
-			</Button>
-			<Button fullWidth color="sec" c={"dark.9"} component={Link} to={"/registration/booths"}>
+			<Button fullWidth variant="outline" color="sec" component={Link} to={"/registration/booths"}>
 				Booths
+			</Button>
+			<Button fullWidth color="sec" c={"dark.9"} component={Link} to={"/registration/tickets"}>
+				Tickets
 			</Button>
 		</ButtonGroup>
 	);

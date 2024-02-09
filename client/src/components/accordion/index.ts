@@ -1,7 +1,7 @@
 import Program from "./Program";
 
-const Accordion = {
+const accordion = {
 	Program: Program,
 };
 
-export default Accordion;
+export default accordion;

@@ -7,7 +7,7 @@ import list from "@src/data/list";
 
 import typeList from "@src/types/list";
 import Partial from "@src/partials";
-import { Button, Divider, Grid, Group, Stack, Text, Title } from "@mantine/core";
+import { Button, Divider, Grid, Group, Stack, Text, Title, useMantineColorScheme } from "@mantine/core";
 import data from "@src/data";
 import Card from "@src/components/card";
 import image from "@src/assets/images";
@@ -18,6 +18,9 @@ import image from "@src/assets/images";
 
 export default function Home() {
 	// const data: typeList[] = useLoaderData();
+	const { colorScheme } = useMantineColorScheme();
+	const droneSpaceImage =
+		colorScheme == "dark" ? image.brand.dronespace.landscape.light : image.brand.dronespace.landscape.light;
 
 	return (
 		<Layout.Body header={<Partial.Header.Main />} nav={<Partial.Navbar.Main />} footer={<Partial.Footer.Main />}>
@@ -131,15 +134,15 @@ export default function Home() {
 					</Stack>
 				</Layout.Section>
 				<Layout.Section containerized padded>
-					<Stack gap={48}>
+					<Stack gap={"xs"}>
 						<Stack ta={"center"} gap={"xl"}>
 							<Title order={2} fz={40} c={"pri"}>
 								Powered By{" "}
-								<Text component="span" inherit c={"sec.6"}>
+								{/* <Text component="span" inherit c={"sec.6"}>
 									Drone Space!
-								</Text>
+								</Text> */}
 							</Title>
-							<Text></Text>
+							{/* <Text></Text> */}
 						</Stack>
 						<Grid justify="center">
 							<Grid.Col span={{ base: 12 }} mx={"auto"}>
@@ -150,7 +153,7 @@ export default function Home() {
 									<Grid.Col span={{ base: 8, xs: 5, sm: 4 }} mx={"auto"}>
 										<Card.Partner
 											data={{
-												image: image.partners.other.partner1,
+												image: droneSpaceImage,
 												title: "Drone Space",
 											}}
 											noPadding

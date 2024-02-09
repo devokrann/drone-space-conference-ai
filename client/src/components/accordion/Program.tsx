@@ -93,7 +93,7 @@ export default function Program({
 	return (
 		<Accordion
 			defaultValue={data[0].title}
-			classNames={{ control: clases.control, content: clases.content, label: clases.label }}
+			classNames={{ control: clases.control, content: clases.content, label: clases.label, item: clases.item }}
 		>
 			{items}
 		</Accordion>

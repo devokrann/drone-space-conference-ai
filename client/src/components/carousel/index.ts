@@ -1,7 +1,7 @@
 import Partners from "./Partners";
 
-const Carousel = {
+const carousel = {
 	Partners: Partners,
 };
 
-export default Carousel;
+export default carousel;
