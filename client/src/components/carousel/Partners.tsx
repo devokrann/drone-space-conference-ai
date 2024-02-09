@@ -13,7 +13,7 @@ export default function Partners() {
 
 	const imgSelector = () => {
 		const { colorScheme } = useMantineColorScheme();
-		return colorScheme == "dark" ? image.partners.media.image7 : image.partners.media.image8;
+		return colorScheme == "dark" ? image.partners.media.image7 : null;
 	};
 
 	const partners = [
@@ -47,29 +47,32 @@ export default function Partners() {
 			title: "Startinev",
 			width: "50%",
 		},
-		{
-			image: image.brand.dronespace.landscape.light,
-			title: "Drone Space",
-			width: "50%",
-		},
+		// {
+		// 	image: image.brand.dronespace.landscape.light,
+		// 	title: "Drone Space",
+		// 	width: "50%",
+		// },
 	];
 
 	const slides = partners
 		.concat(partners)
 		.concat(partners)
-		.map(item => (
-			<Carousel.Slide key={Math.random()}>
-				<AspectRatio ratio={2 / 1}>
-					<Box w={item.width} mx={"auto"}>
-						<Image src={item.image} alt={item.title} w={"100%"} />
-					</Box>
-				</AspectRatio>
-			</Carousel.Slide>
-		));
+		.map(
+			item =>
+				item.image && (
+					<Carousel.Slide key={Math.random()}>
+						<AspectRatio ratio={2 / 1}>
+							<Box w={item.width} mx={"auto"}>
+								<Image src={item.image} alt={item.title} w={"100%"} />
+							</Box>
+						</AspectRatio>
+					</Carousel.Slide>
+				)
+		);
 
 	return (
 		<Carousel
-			loop
+			loop={true}
 			slidesToScroll={1}
 			slideGap={"xl"}
 			withIndicators={false}

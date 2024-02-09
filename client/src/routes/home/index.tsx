@@ -133,23 +133,23 @@ export default function Home() {
 						</Grid>
 					</Stack>
 				</Layout.Section>
-				<Layout.Section containerized padded>
+				{/* <Layout.Section containerized padded>
 					<Stack gap={"xs"}>
 						<Stack ta={"center"} gap={"xl"}>
 							<Title order={2} fz={40} c={"pri"}>
 								Powered By{" "}
-								{/* <Text component="span" inherit c={"sec.6"}>
+								<Text component="span" inherit c={"sec.6"}>
 									Drone Space!
-								</Text> */}
+								</Text>
 							</Title>
-							{/* <Text></Text> */}
+							<Text></Text>
 						</Stack>
 						<Grid justify="center">
 							<Grid.Col span={{ base: 12 }} mx={"auto"}>
 								<Grid>
-									{/* <Grid.Col span={{ base: 12 }} mx={"auto"}>
+									<Grid.Col span={{ base: 12 }} mx={"auto"}>
 											<Divider label={"powered by"} w={"50%"} mx={"auto"} />
-										</Grid.Col> */}
+										</Grid.Col>
 									<Grid.Col span={{ base: 8, xs: 5, sm: 4 }} mx={"auto"}>
 										<Card.Partner
 											data={{
@@ -163,7 +163,7 @@ export default function Home() {
 							</Grid.Col>
 						</Grid>
 					</Stack>
-				</Layout.Section>
+				</Layout.Section> */}
 				<Partial.Cta.Partners />
 			</Layout.Page>
 		</Layout.Body>
