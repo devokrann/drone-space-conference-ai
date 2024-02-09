@@ -39,6 +39,12 @@ export default function Booth({
 						</Group>
 					))}
 				</Stack>
+				<Text ta={"center"} fw={500} fz={"sm"} c={"pri"}>
+					<Text component="span" inherit c={"white"}>
+						Dimentions:{" "}
+					</Text>
+					{data.desc.dimentions}
+				</Text>
 			</Stack>
 			<Modal.Booth label={data.title} />
 		</Stack>
