@@ -19,14 +19,15 @@ export default function Sponsors() {
 	return (
 		<Layout.Body header={<Partial.Header.Main />} nav={<Partial.Navbar.Main />} footer={<Partial.Footer.Main />}>
 			<Layout.Page hero={<Layout.Hero.Route />}>
-				<Layout.Section containerized padded id="partners">
+				<Partial.Cta.Partners />
+				{/* <Layout.Section containerized padded id="partners">
 					<Stack gap={48}>
-						{/* <Stack ta={"center"} gap={"xl"}>
+						<Stack ta={"center"} gap={"xl"}>
 							<Title order={2} fz={40} c={"pri"}>
 								Our Media Partners
 							</Title>
 							<Text></Text>
-						</Stack> */}
+						</Stack>
 						<Grid justify="center">
 							<Grid.Col span={{ base: 12 }} mx={"auto"}>
 								<Grid>
@@ -70,7 +71,7 @@ export default function Sponsors() {
 							</Text>
 						</Text>
 					</Stack>
-				</Layout.Section>
+				</Layout.Section> */}
 				<Layout.Section containerized margined>
 					<Stack ta={"center"} gap={"xl"}>
 						<Title order={2} fz={40} c={"pri"}>

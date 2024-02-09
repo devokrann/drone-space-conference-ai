@@ -47,12 +47,12 @@ export default function Home() {
 						</Group>
 					</Stack>
 				</Layout.Section>
-				<Layout.Section containerized id="significance">
+				{/* <Layout.Section containerized id="significance">
 					<Stack gap={48}>
 						<Stack ta={"center"} gap={"xl"}>
-							{/* <Title order={2} fz={40} c={"pri"}>
+							<Title order={2} fz={40} c={"pri"}>
 								Fusion Significance
-							</Title> */}
+							</Title>
 							<Text>
 								AI, Drones and Data collectively play a significant role in various fields, contributing
 								to advancements and innovations in technology, business and society.
@@ -66,7 +66,7 @@ export default function Home() {
 							))}
 						</Grid>
 					</Stack>
-				</Layout.Section>
+				</Layout.Section> */}
 				<Layout.Section containerized padded id="objectives">
 					<Stack gap={48}>
 						<Stack ta={"center"} gap={"xl"}>
@@ -130,38 +130,23 @@ export default function Home() {
 						</Grid>
 					</Stack>
 				</Layout.Section>
-				<Layout.Section containerized padded id="partners">
+				<Layout.Section containerized padded>
 					<Stack gap={48}>
 						<Stack ta={"center"} gap={"xl"}>
 							<Title order={2} fz={40} c={"pri"}>
-								Our Media Partners
+								Powered By{" "}
+								<Text component="span" inherit c={"sec.6"}>
+									Drone Space!
+								</Text>
 							</Title>
 							<Text></Text>
 						</Stack>
 						<Grid justify="center">
 							<Grid.Col span={{ base: 12 }} mx={"auto"}>
 								<Grid>
-									<Grid.Col span={{ base: 8, xs: 5, sm: 4 }} mx={"auto"}>
-										<Card.Partner
-											data={{
-												image: image.partners.media.image3,
-												title: "Radio Africa Events",
-												width: "60%",
-											}}
-										/>
-									</Grid.Col>
-								</Grid>
-							</Grid.Col>
-							{data.partners.map(item => (
-								<Grid.Col key={item.title} span={{ base: 12, xs: 6, sm: 4 }}>
-									<Card.Partner data={item} />
-								</Grid.Col>
-							))}
-							<Grid.Col span={{ base: 12 }} mx={"auto"}>
-								<Grid>
-									<Grid.Col span={{ base: 12 }} mx={"auto"}>
-										<Divider label={"powered by"} w={"50%"} mx={"auto"} />
-									</Grid.Col>
+									{/* <Grid.Col span={{ base: 12 }} mx={"auto"}>
+											<Divider label={"powered by"} w={"50%"} mx={"auto"} />
+										</Grid.Col> */}
 									<Grid.Col span={{ base: 8, xs: 5, sm: 4 }} mx={"auto"}>
 										<Card.Partner
 											data={{
@@ -174,14 +159,9 @@ export default function Home() {
 								</Grid>
 							</Grid.Col>
 						</Grid>
-						<Text ta={"center"} fz={"xl"} tt={"uppercase"}>
-							Powered by{" "}
-							<Text component="span" inherit fw={"bold"} c={"sec.6"}>
-								Drone Space!
-							</Text>
-						</Text>
 					</Stack>
 				</Layout.Section>
+				<Partial.Cta.Partners />
 			</Layout.Page>
 		</Layout.Body>
 	);
