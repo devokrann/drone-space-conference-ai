@@ -8,7 +8,7 @@ import data from "@src/data";
 export default function Partners() {
 	return (
 		<Layout.Section id="partners" bg={"var(--mantine-color-gray-light)"}>
-			<Carousel.Partners data={data.partners.concat(data.partners).concat(data.partners)} />
+			<Carousel.Partners />
 		</Layout.Section>
 	);
 }

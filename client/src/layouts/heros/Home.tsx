@@ -13,7 +13,7 @@ export default function Home() {
 				<Container py={64}>
 					<Grid>
 						<Grid.Col span={12}>
-							<Image src={image.brand.landscape} w={{ base: "100%", md: "66%" }} mx={"auto"} />
+							<Image src={image.brand.landscape} alt="Logo" w={{ base: "100%", md: "66%" }} mx={"auto"} />
 						</Grid.Col>
 						<Grid.Col span={{ md: 5 }}></Grid.Col>
 						<Grid.Col span={{ md: 6 }}>

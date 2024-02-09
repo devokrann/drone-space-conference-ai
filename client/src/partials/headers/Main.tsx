@@ -27,7 +27,11 @@ export default function Main() {
 							<Group gap={"xs"}>
 								{data.links.social.map(link => (
 									<Text key={link.link} component="a" href={link.link} target="_blank">
-										<Image src={link.icon} w={24} />
+										<Image
+											src={link.icon}
+											alt={`social icon ${data.links.social.indexOf(link)}`}
+											w={24}
+										/>
 									</Text>
 								))}
 							</Group>

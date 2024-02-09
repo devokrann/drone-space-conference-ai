@@ -38,7 +38,7 @@ export default function Exhibit() {
 					<Grid gutter={"xl"} align="center">
 						<Grid.Col span={{ base: 12, sm: 6 }}>
 							<Center>
-								<Image src={image.poster.poster1} w={"100%"} />
+								<Image src={image.poster.poster1} alt="poster" w={"100%"} />
 							</Center>
 						</Grid.Col>
 						<Grid.Col span={{ base: 12, sm: 6 }}>

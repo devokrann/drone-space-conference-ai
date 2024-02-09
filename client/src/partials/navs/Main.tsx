@@ -36,7 +36,7 @@ export default function Main() {
 					<Grid.Col span={{ base: 9, md: 3 }}>
 						<Box w={200}>
 							<Link to={"/"}>
-								<Image src={image.brand.landscape} w={"100%"} />
+								<Image src={image.brand.landscape} alt="Logo" w={"100%"} />
 							</Link>
 						</Box>
 					</Grid.Col>
@@ -55,7 +55,13 @@ export default function Main() {
 					</Grid.Col>
 				</Grid>
 
-				<Drawer opened={opened} onClose={close} withCloseButton={false} size={240}>
+				<Drawer
+					opened={opened}
+					onClose={close}
+					withCloseButton={false}
+					size={240}
+					classNames={{ content: classes.drawerBody }}
+				>
 					<Stack>
 						<Stack gap={0}>{anchors}</Stack>
 						{cta}

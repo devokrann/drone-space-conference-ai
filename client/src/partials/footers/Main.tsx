@@ -29,7 +29,7 @@ export default function Main() {
 									w={{ md: "90%" }}
 									gap={"xl"}
 								>
-									<Image src={image.brand.landscape} w={200} />
+									<Image src={image.brand.landscape} alt="Logo" w={200} />
 									<Flex direction={"column"} align={{ base: "center", md: "start" }} gap={"xs"}>
 										<Text inherit size="sm">
 											The AI conference in Nairobi is a cutting-edge conference that will bring
@@ -41,7 +41,11 @@ export default function Main() {
 										<Group>
 											{data.links.social.map(link => (
 												<Text key={link.link} component="a" href={link.link} target="_blank">
-													<Image src={link.icon} w={32} />
+													<Image
+														src={link.icon}
+														alt={`social icon ${data.links.social.indexOf(link)}`}
+														w={32}
+													/>
 												</Text>
 											))}
 										</Group>

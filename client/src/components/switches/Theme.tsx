@@ -32,6 +32,7 @@ export default function Theme() {
 			offLabel={moonIcon}
 			checked={value}
 			onChange={() => toggleColorScheme()}
+			aria-label="Switch theme"
 		/>
 	);
 }

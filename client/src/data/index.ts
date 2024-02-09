@@ -1,7 +1,6 @@
 import content from "./content";
 import exhibition from "./exhibition";
 import links from "./links";
-import partners from "./partners";
 import program from "./program";
 import sponsorship from "./sponsorship";
 import tickets from "./tickets";
@@ -13,7 +12,6 @@ const data = {
 	exhibition: exhibition,
 	program: program,
 	tickets: tickets,
-	partners: partners,
 };
 
 export default data;

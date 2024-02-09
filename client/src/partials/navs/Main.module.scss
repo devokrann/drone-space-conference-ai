@@ -22,3 +22,7 @@
 		color: light-dark(var(--mantine-color-sec-6), var(--mantine-color-pri-6));
 	}
 }
+
+.drawerBody {
+	background-color: light-dark(var(--mantine-color-pri-6), var(--mantine-color-dark-6));
+}
