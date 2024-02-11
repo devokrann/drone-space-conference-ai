@@ -125,6 +125,25 @@ export default function Agenda() {
 							<Title order={2} fz={40} c={"pri"}>
 								Tracks
 							</Title>
+							<Text>
+								Discover the latest trends, advancements, and best practices shaping the future of AI,
+								Drone Tech and Data Analytics as industry experts, government organizations, disruptive
+								startups, investors, research labs take the stage.
+							</Text>
+						</Stack>
+						<Stack ta={"center"} gap={"xl"}>
+							<Title order={2} fz={40} c={"pri"}>
+								Hackathon / Innovation Stage
+							</Title>
+							<Text>
+								This track is designed to showcase the industry's leading startups and provide an
+								opportunity for Venture Capitalists (VCs) on industry trends. All startups that will be
+								participating on this track are hand picked by Startinev and AI Conference Nairobi Team
+								as the up-and-comers to be on the lookout for. These sessions of Hackathon (building
+								models) and preparing presentations will be conducted in 48 hours and a showdown session
+								of the finalists will each conduct a 10 minute pitch style format of their idea with the
+								winner being awarded Kshs 100,000.
+							</Text>
 						</Stack>
 						<Grid>
 							<Grid.Col span={12}>
