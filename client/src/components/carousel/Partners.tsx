@@ -39,6 +39,14 @@ export default function Partners() {
 			width: "30%",
 		},
 		{
+			image:
+				colorScheme == "dark"
+					? image.brand.dronespace.white.landscape.logo
+					: image.brand.dronespace.original.landscape.logo,
+			title: "Drone Space",
+			width: "90%",
+		},
+		{
 			image: colorScheme == "dark" ? image.partners.media.image7 : null,
 			title: "Startinev",
 			width: "50%",
