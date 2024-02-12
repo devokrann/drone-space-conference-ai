@@ -7,7 +7,7 @@ import list from "@src/data/list";
 
 import typeList from "@src/types/list";
 import Partial from "@src/partials";
-import { Button, Divider, Grid, Group, Stack, Text, Title, useMantineColorScheme } from "@mantine/core";
+import { Button, Divider, Grid, Group, Image, Stack, Text, Title, useMantineColorScheme } from "@mantine/core";
 import data from "@src/data";
 import Card from "@src/components/card";
 import image from "@src/assets/images";
@@ -20,7 +20,9 @@ export default function Home() {
 	// const data: typeList[] = useLoaderData();
 	const { colorScheme } = useMantineColorScheme();
 	const droneSpaceImage =
-		colorScheme == "dark" ? image.brand.dronespace.landscape.light : image.brand.dronespace.landscape.light;
+		colorScheme == "dark"
+			? image.brand.dronespace.white.portrait.full
+			: image.brand.dronespace.original.portrait.full;
 
 	return (
 		<Layout.Body header={<Partial.Header.Main />} nav={<Partial.Navbar.Main />} footer={<Partial.Footer.Main />}>
@@ -133,7 +135,7 @@ export default function Home() {
 						</Grid>
 					</Stack>
 				</Layout.Section>
-				{/* <Layout.Section containerized padded>
+				<Layout.Section containerized padded>
 					<Stack gap={"xs"}>
 						<Stack ta={"center"} gap={"xl"}>
 							<Title order={2} fz={40} c={"pri"}>
@@ -146,24 +148,25 @@ export default function Home() {
 						</Stack>
 						<Grid justify="center">
 							<Grid.Col span={{ base: 12 }} mx={"auto"}>
-								<Grid>
+								<Grid gutter={"xl"}>
 									<Grid.Col span={{ base: 12 }} mx={"auto"}>
-											<Divider label={"powered by"} w={"50%"} mx={"auto"} />
-										</Grid.Col>
+										<Divider label={"powered by"} w={"50%"} mx={"auto"} />
+									</Grid.Col>
 									<Grid.Col span={{ base: 8, xs: 5, sm: 4 }} mx={"auto"}>
-										<Card.Partner
+										{/* <Card.Partner
 											data={{
 												image: droneSpaceImage,
 												title: "Drone Space",
 											}}
 											noPadding
-										/>
+										/> */}
+										<Image src={droneSpaceImage} alt="Drone Space" />
 									</Grid.Col>
 								</Grid>
 							</Grid.Col>
 						</Grid>
 					</Stack>
-				</Layout.Section> */}
+				</Layout.Section>
 				<Partial.Cta.Partners />
 			</Layout.Page>
 		</Layout.Body>
