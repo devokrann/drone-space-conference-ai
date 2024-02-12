@@ -10,11 +10,7 @@ import image from "@src/assets/images";
 
 export default function Partners() {
 	const autoplay = useRef(Autoplay({ delay: 2000 }));
-
-	const imgSelector = () => {
-		const { colorScheme } = useMantineColorScheme();
-		return colorScheme == "dark" ? image.partners.media.image7 : null;
-	};
+	const { colorScheme } = useMantineColorScheme();
 
 	const partners = [
 		{
@@ -43,15 +39,18 @@ export default function Partners() {
 			width: "30%",
 		},
 		{
-			image: imgSelector(),
+			image:
+				colorScheme == "dark"
+					? image.brand.dronespace.white.landscape.logo
+					: image.brand.dronespace.original.landscape.logo,
+			title: "Drone Space",
+			width: "90%",
+		},
+		{
+			image: colorScheme == "dark" ? image.partners.media.image7 : null,
 			title: "Startinev",
 			width: "50%",
 		},
-		// {
-		// 	image: image.brand.dronespace.landscape.light,
-		// 	title: "Drone Space",
-		// 	width: "50%",
-		// },
 	];
 
 	const slides = partners

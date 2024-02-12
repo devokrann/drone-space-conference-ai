@@ -1,10 +1,11 @@
-import dronespace from "./dronespace";
+import dronespace from "./drone-space";
+
 import landscape from "./landscape.png";
 
 const brand = {
-	landscape: landscape,
-
 	dronespace: dronespace,
+
+	landscape: landscape,
 };
 
 export default brand;
