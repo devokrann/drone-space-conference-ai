@@ -137,7 +137,7 @@ export default function Home() {
 				</Layout.Section>
 				<Layout.Section containerized padded>
 					<Stack gap={"xs"}>
-						<Stack ta={"center"} gap={"xl"}>
+						{/* <Stack ta={"center"} gap={"xl"}>
 							<Title order={2} fz={40} c={"pri"}>
 								Powered By{" "}
 								<Text component="span" inherit c={"sec.6"}>
@@ -145,7 +145,7 @@ export default function Home() {
 								</Text>
 							</Title>
 							<Text></Text>
-						</Stack>
+						</Stack> */}
 						<Grid justify="center">
 							<Grid.Col span={{ base: 12 }} mx={"auto"}>
 								<Grid gutter={"xl"}>
