@@ -5,6 +5,8 @@ import { Box, Button, Divider, Group, List, Stack, Text, Title } from "@mantine/
 import classes from "./Ticket.module.scss";
 import { IconCheck, IconChevronRight } from "@tabler/icons-react";
 
+const link = "https://ticketyetu.com/event/ai-conference-62/register";
+
 export default function Ticket({ data }: { data: { title: string; price: string; desc: string } }) {
 	return (
 		<Stack className={classes.card} gap={"xl"} justify="space-between">
@@ -23,7 +25,7 @@ export default function Ticket({ data }: { data: { title: string; price: string;
 				<Divider color="pri" />
 				<Text ta={"center"}>{data.desc}</Text>
 			</Stack>
-			<Button fullWidth color="sec" c={"dark.9"} component="a" href="mailto:info@aiconference.co.ke">
+			<Button fullWidth color="sec" c={"dark.9"} component="a" href={link} target="_blank">
 				Buy {data.title} Ticket
 			</Button>
 		</Stack>
