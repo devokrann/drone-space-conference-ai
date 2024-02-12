@@ -6,6 +6,7 @@ import image5 from "./media-5.png";
 import image6 from "./media-6.png";
 import image7 from "./media-7.png";
 import image8 from "./media-8.jpg";
+import image9 from "./media-9.png";
 
 const media = {
 	image1: image1,
@@ -16,6 +17,7 @@ const media = {
 	image6: image6,
 	image7: image7,
 	image8: image8,
+	image9: image9,
 };
 
 export default media;

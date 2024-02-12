@@ -51,6 +51,11 @@ export default function Partners() {
 			title: "Startinev",
 			width: "50%",
 		},
+		{
+			image: image.partners.media.image9,
+			title: "Arcrayon",
+			width: "80%",
+		},
 	];
 
 	const slides = partners
