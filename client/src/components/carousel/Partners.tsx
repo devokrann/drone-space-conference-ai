@@ -41,10 +41,10 @@ export default function Partners() {
 		{
 			image:
 				colorScheme == "dark"
-					? image.brand.dronespace.white.landscape.logo
-					: image.brand.dronespace.original.landscape.logo,
+					? image.brand.dronespace.original.portrait.full
+					: image.brand.dronespace.original.portrait.full,
 			title: "Drone Space",
-			width: "90%",
+			width: "50%",
 		},
 		{
 			image: colorScheme == "dark" ? image.partners.media.image7 : null,
