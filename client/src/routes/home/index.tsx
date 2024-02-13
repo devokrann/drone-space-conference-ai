@@ -21,7 +21,7 @@ export default function Home() {
 	const { colorScheme } = useMantineColorScheme();
 	const droneSpaceImage =
 		colorScheme == "dark"
-			? image.brand.dronespace.original.portrait.full
+			? image.brand.dronespace.white.portrait.full
 			: image.brand.dronespace.original.portrait.full;
 
 	return (

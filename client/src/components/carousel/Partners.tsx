@@ -39,9 +39,14 @@ export default function Partners() {
 			width: "30%",
 		},
 		{
+			image: image.partners.media.image6,
+			title: "Ticket Yetu",
+			width: "50%",
+		},
+		{
 			image:
 				colorScheme == "dark"
-					? image.brand.dronespace.original.portrait.full
+					? image.brand.dronespace.white.portrait.full
 					: image.brand.dronespace.original.portrait.full,
 			title: "Drone Space",
 			width: "50%",
