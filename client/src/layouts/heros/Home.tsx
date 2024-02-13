@@ -5,12 +5,16 @@ import { Box, Center, Container, Flex, Grid, Group, Image, Stack, Text, Title } 
 import classes from "./Home.module.scss";
 import image from "@src/assets/images";
 import Counter from "@src/components/counter";
+import { useMediaQuery } from "@mantine/hooks";
 
 export default function Home() {
+	const mobile = useMediaQuery("(max-width: 36em)");
+	const heroImage = mobile ? image.poster.poster1 : image.poster.poster2;
+
 	return (
 		<Box component="section" className={classes.hero}>
-			<Center h={"100%"}>
-				<Container py={64}>
+			{/* <Center h={"100%"}>
+				<Container py={96}>
 					<Grid>
 						<Grid.Col span={12}>
 							<Image src={image.brand.landscape} alt="Logo" w={{ base: "100%", md: "66%" }} mx={"auto"} />
@@ -39,11 +43,15 @@ export default function Home() {
 										+254712656565
 									</Text>
 								</Flex>
+								<Group>
+									<Image src={image.brand.dronespace.white.portrait.full} />
+								</Group>
 							</Stack>
 						</Grid.Col>
 					</Grid>
 				</Container>
-			</Center>
+			</Center> */}
+			<Image src={heroImage} w={"100%"} alt="banner" />
 			<Box bg={"pri.6"} pb={"lg"}>
 				<Container size={"md"}>
 					<Counter.Countdown />
