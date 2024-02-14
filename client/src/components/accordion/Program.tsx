@@ -26,7 +26,9 @@ export default function Program({
 						{item.desc.agenda && (
 							<>
 								{/* <Divider variant="dashed" label="Agenda" labelPosition="left" /> */}
-								<Text inherit>{item.desc.agenda}</Text>
+								<Text inherit fw={500}>
+									{item.desc.agenda}
+								</Text>
 							</>
 						)}
 
