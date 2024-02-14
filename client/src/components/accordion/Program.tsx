@@ -13,7 +13,7 @@ export default function Program({
 	}[];
 }) {
 	const items = data.map(item => (
-		<Accordion.Item key={item.title} value={item.title.duration}>
+		<Accordion.Item key={item.title.duration} value={item.title.duration}>
 			<Accordion.Control>
 				<Group>
 					<Text component="span">{item.title.duration}</Text>-
@@ -25,7 +25,7 @@ export default function Program({
 					<Stack>
 						{item.desc.agenda && (
 							<>
-								<Divider variant="dashed" label="Agenda" labelPosition="left" />
+								{/* <Divider variant="dashed" label="Agenda" labelPosition="left" /> */}
 								<Text inherit>{item.desc.agenda}</Text>
 							</>
 						)}
@@ -75,7 +75,7 @@ export default function Program({
 
 	return (
 		<Accordion
-			defaultValue={data[0].title}
+			defaultValue={data[0].title.duration}
 			classNames={{ control: clases.control, content: clases.content, label: clases.label, item: clases.item }}
 		>
 			{items}
