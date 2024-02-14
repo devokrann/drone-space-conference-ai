@@ -1,15 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-import { Accordion, Container, Divider, Grid, Group, Stack, Text } from "@mantine/core";
+import { Accordion, Anchor, Container, Divider, Group, Stack, Text } from "@mantine/core";
+
+import { typeModerator } from "@src/types/people";
+
+import card from "../card";
 
 import clases from "./Program.module.scss";
+import hook from "@src/hooks";
 
 export default function Program({
 	data,
 }: {
 	data: {
 		title: { duration: string; heading: string };
-		desc: { agenda: string; questions?: string[]; participants?: string[]; moderator?: string };
+		desc: { agenda: string; questions?: string[]; participants?: string[]; moderator?: typeModerator };
 	}[];
 }) {
 	const items = data.map(item => (
@@ -24,16 +30,16 @@ export default function Program({
 				<Container>
 					<Stack>
 						{item.desc.agenda && (
-							<>
+							<Stack gap={"xs"}>
 								{/* <Divider variant="dashed" label="Agenda" labelPosition="left" /> */}
 								<Text inherit fw={500}>
 									{item.desc.agenda}
 								</Text>
-							</>
+							</Stack>
 						)}
 
 						{item.desc.questions && (
-							<>
+							<Stack gap={"xs"}>
 								<Divider variant="dashed" label="Questions" labelPosition="left" />
 								<Stack gap={"xs"}>
 									{item.desc.questions?.map(question => (
@@ -42,11 +48,11 @@ export default function Program({
 										</Text>
 									))}
 								</Stack>
-							</>
+							</Stack>
 						)}
 
 						{item.desc.participants && (
-							<>
+							<Stack gap={"xs"}>
 								<Divider variant="dashed" label="Participants" labelPosition="left" />
 								<Stack gap={"xs"}>
 									{item.desc.participants?.map(participant => (
@@ -55,19 +61,23 @@ export default function Program({
 										</Text>
 									))}
 								</Stack>
-							</>
+							</Stack>
 						)}
 
 						{item.desc.moderator && (
-							<>
+							<Stack gap={"xs"}>
 								<Divider variant="dashed" label="Moderator" labelPosition="left" />
-								<Text inherit>
-									<Text component="span" inherit fw={500}>
-										Moderator
-									</Text>{" "}
-									: {item.desc.moderator}
-								</Text>
-							</>
+								<Group>
+									<Anchor
+										underline="never"
+										w={"fit-content"}
+										component={Link}
+										to={`/people/moderators/${hook.useLinkify(item.desc.moderator.name)}`}
+									>
+										<card.People.Moderator data={item.desc.moderator} />
+									</Anchor>
+								</Group>
+							</Stack>
 						)}
 					</Stack>
 				</Container>

@@ -1,3 +1,5 @@
+import people from "./people";
+
 const program = {
 	schedule: {
 		common: {
@@ -207,7 +209,7 @@ const program = {
 						// 	"Mutembei Kariuki (First Fastagger)",
 						// 	"Beniah Wepundi (Cyphonia)",
 						// ],
-						// moderator: "Moses Kemibaro",
+						moderator: people.moderators.find(m => m.name == "Moses Kemibaro"),
 					},
 				},
 				{

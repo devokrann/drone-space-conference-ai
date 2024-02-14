@@ -7,7 +7,9 @@ import Home from "./routes/home";
 import About from "./routes/about";
 import Exhibit from "./routes/exhibit";
 import Agenda from "./routes/agenda";
-import Speakers from "./routes/speakers";
+import Speakers from "./routes/people/speakers";
+import Moderators from "./routes/people/moderators";
+import Moderator from "./routes/people/moderators/moderator";
 import Sponsors from "./routes/sponsors";
 import Tickets from "./routes/registration/tickets";
 import Booths from "./routes/registration/booths";
@@ -26,7 +28,16 @@ const router = createBrowserRouter(
 			{/* <Route path="about" element={<About />} /> */}
 			<Route path="exhibit" element={<Exhibit />} />
 			<Route path="agenda" element={<Agenda />} />
-			<Route path="speakers" element={<Speakers />} />
+			<Route path="people">
+				<Route path="speakers">
+					<Route index element={<Speakers />} />
+					{/* <Route path=":speaker" element={<Speakers />} /> */}
+				</Route>
+				<Route path="moderators">
+					<Route index element={<Moderators />} />
+					<Route path=":moderator" element={<Moderator />} />
+				</Route>
+			</Route>
 			<Route path="sponsors" element={<Sponsors />} />
 			<Route path="registration">
 				<Route path="tickets" element={<Tickets />} />
