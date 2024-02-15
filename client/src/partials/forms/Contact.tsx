@@ -25,7 +25,17 @@ import notificationSuccess from "@src/styles/notifications/Success.module.scss";
 import notificationFail from "@src/styles/notifications/Fail.module.scss";
 import Component from "@src/components";
 
-export default function Contact({ defaultInquiry = "" }: { defaultInquiry?: string }) {
+export default function Contact({
+	defaultInquiry = "",
+	defaultPackage = "",
+	defaultBooth = "",
+	defaultBoothSize = "",
+}: {
+	defaultInquiry?: string;
+	defaultPackage?: string;
+	defaultBooth?: string;
+	defaultBoothSize?: string;
+}) {
 	const [submitted, setSubmitted] = useState(false);
 
 	const form = useForm({
@@ -42,8 +52,10 @@ export default function Contact({ defaultInquiry = "" }: { defaultInquiry?: stri
 			contactEmail: "",
 			contactPhoneNumber: "",
 
-			boothPackage: "",
-			boothSize: "",
+			sponsorshipPackage: defaultPackage,
+
+			boothPackage: defaultBooth,
+			boothSize: defaultBoothSize,
 
 			message: "",
 			policy: false,
@@ -55,7 +67,7 @@ export default function Contact({ defaultInquiry = "" }: { defaultInquiry?: stri
 			email: value => utility.validator.form.special.email(value),
 
 			companyName: (value, values) =>
-				(values.boothPackage == "Corporates Booth" || values.subject == "Sponsorship Application") &&
+				(values.boothPackage == "Corporate" || values.subject == "Sponsorship Application") &&
 				utility.validator.form.special.text(value, 2, 24),
 
 			universityName: (value, values) =>
@@ -70,6 +82,10 @@ export default function Contact({ defaultInquiry = "" }: { defaultInquiry?: stri
 			contactPhoneNumber: (value, values) =>
 				(values.subject == "University Pavilion Application" || values.subject == "Sponsorship Application") &&
 				utility.validator.form.special.phone(value),
+
+			sponsorshipPackage: (value, values) =>
+				values.subject == "Sponsorship Application" &&
+				(value.trim().length < 1 ? "Please select a package" : null),
 
 			boothPackage: (value, values) =>
 				values.subject == "Booth Registration" && (value.trim().length < 1 ? "Please select a package" : null),
@@ -87,53 +103,49 @@ export default function Contact({ defaultInquiry = "" }: { defaultInquiry?: stri
 			fname,
 			lname,
 			email,
+			subject,
+			message,
+			policy,
 
 			companyName,
-
 			universityName,
 			contactPerson,
 			contactEmail,
 			contactPhoneNumber,
-
+			sponsorshipPackage,
 			boothPackage,
 			boothSize,
-
-			subject,
-			message,
-			policy,
 		} = rawData;
 
-		// fname = utility.parser.string.capitalize.word(fname);
-		// lname = utility.parser.string.capitalize.word(lname);
-		// email = email.toLowerCase();
-
+		fname = utility.parser.string.capitalize.word(fname);
+		lname = utility.parser.string.capitalize.word(lname);
+		email = email.toLowerCase();
 		companyName = utility.parser.string.capitalize.words(companyName);
-
 		universityName = utility.parser.string.capitalize.words(universityName);
 		contactPerson = utility.parser.string.capitalize.words(contactPerson);
 		contactEmail = contactEmail.toLowerCase();
 
-		const parsedData = {
-			fname: utility.parser.string.capitalize.word(fname),
-			lname: utility.parser.string.capitalize.word(lname),
-			email: email.toLowerCase(),
-
-			companyName: companyName.length > 1 ? `Company Name: ${companyName}` : "",
-
-			universityName: universityName.length > 1 ? `University Name: ${universityName}` : "",
-			contactPerson: contactPerson.length > 1 ? `Contact Person: ${contactPerson}` : "",
-			contactEmail: contactEmail.length > 1 ? `Contact Email: ${contactEmail}` : "",
-			contactPhoneNumber: contactPhoneNumber.length > 1 ? `Contact PhoneNumber: ${contactPhoneNumber}` : "",
-
-			boothPackage: boothPackage.length > 1 ? `Booth Package: ${boothPackage}` : "",
-			boothSize: boothSize.length > 1 ? `Booth Size: ${boothSize}` : "",
-
-			subject: subject == "Other" ? "Drone Expo" : subject,
+		return {
+			fname,
+			lname,
+			email,
+			subject: subject == "Other" ? "AI Conference" : subject,
 			message,
 			policy,
-		};
 
-		return parsedData;
+			companyName: subject != "Other" && companyName.length > 1 ? `Company Name: ${companyName}` : "",
+			universityName: subject != "Other" && universityName.length > 1 ? `University Name: ${universityName}` : "",
+			contactPerson: subject != "Other" && contactPerson.length > 1 ? `Contact Person: ${contactPerson}` : "",
+			contactEmail: subject != "Other" && contactEmail.length > 1 ? `Contact Email: ${contactEmail}` : "",
+			contactPhoneNumber:
+				subject != "Other" && contactPhoneNumber.length > 1
+					? `Contact Phone Number: ${contactPhoneNumber}`
+					: "",
+			sponsorshipPackage:
+				subject != "Other" && sponsorshipPackage.length > 1 ? `Sponsorship Package: ${sponsorshipPackage}` : "",
+			boothPackage: subject != "Other" && boothPackage.length > 1 ? `Booth Package: ${boothPackage}` : "",
+			boothSize: subject != "Other" && boothSize.length > 1 ? `Booth Size: ${boothSize}` : "",
+		};
 	};
 
 	const messageContent = () => {
@@ -167,74 +179,44 @@ export default function Contact({ defaultInquiry = "" }: { defaultInquiry?: stri
 
 			// console.log(parse(formValues));
 
-			// await emailjs
-			// 	.send("gmail_service", "general_inquiries", parse(formValues), "WIhPTsJnYGDJDfdIP")
-			// 	.then(() =>
-			// 		notifications.show({
-			// 			id: "send-success",
-			// 			withCloseButton: false,
-			// 			icon: <IconCheck size={16} stroke={1.5} />,
-			// 			autoClose: 5000,
-			// 			title: "Sent",
-			// 			message: "Someone will get back to you within 24 hours",
-			// 			classNames: {
-			// 				root: notificationSuccess.root,
-			// 				icon: notificationSuccess.icon,
-			// 				description: notificationSuccess.description,
-			// 				title: notificationSuccess.title,
-			// 			},
-			// 		})
-			// 	)
-			// 	.then(() => form.reset())
-			// 	.then(() => setSubmitted(false))
-			// 	.catch(error =>
-			// 		notifications.show({
-			// 			id: "send-fail",
-			// 			withCloseButton: false,
-			// 			icon: <IconX size={16} stroke={1.5} />,
-			// 			autoClose: 5000,
-			// 			title: "Send Failed",
-			// 			message: `Error: ${error.message}`,
-			// 			classNames: {
-			// 				root: notificationFail.root,
-			// 				icon: notificationFail.icon,
-			// 				description: notificationFail.description,
-			// 				title: notificationFail.title,
-			// 			},
-			// 		})
-			// 	);
+			await emailjs
+				.send("gmail_service", "general_inquiries", parse(formValues), "WIhPTsJnYGDJDfdIP")
+				.then(() =>
+					notifications.show({
+						id: "send-success",
+						withCloseButton: false,
+						icon: <IconCheck size={16} stroke={1.5} />,
+						autoClose: 5000,
+						title: "Sent",
+						message: "Someone will get back to you within 24 hours",
+						classNames: {
+							root: notificationSuccess.root,
+							icon: notificationSuccess.icon,
+							description: notificationSuccess.description,
+							title: notificationSuccess.title,
+						},
+					})
+				)
+				.then(() => form.reset())
+				.then(() => setSubmitted(false))
+				.catch(error =>
+					notifications.show({
+						id: "send-fail",
+						withCloseButton: false,
+						icon: <IconX size={16} stroke={1.5} />,
+						autoClose: 5000,
+						title: "Send Failed",
+						message: `Error: ${error.message}`,
+						classNames: {
+							root: notificationFail.root,
+							icon: notificationFail.icon,
+							description: notificationFail.description,
+							title: notificationFail.title,
+						},
+					})
+				);
 
 			setSubmitted(false);
-
-			notifications.show({
-				id: "send-success",
-				withCloseButton: false,
-				icon: <IconCheck size={16} stroke={1.5} />,
-				autoClose: 5000,
-				title: "Sent",
-				message: "Someone will get back to you within 24 hours",
-				classNames: {
-					root: notificationSuccess.root,
-					icon: notificationSuccess.icon,
-					description: notificationSuccess.description,
-					title: notificationSuccess.title,
-				},
-			});
-
-			notifications.show({
-				id: "send-fail",
-				withCloseButton: false,
-				icon: <IconX size={16} stroke={1.5} />,
-				autoClose: 5000,
-				title: "Send Failed",
-				message: `Error: {error.message}`,
-				classNames: {
-					root: notificationFail.root,
-					icon: notificationFail.icon,
-					description: notificationFail.description,
-					title: notificationFail.title,
-				},
-			});
 		}
 	};
 
@@ -283,7 +265,7 @@ export default function Contact({ defaultInquiry = "" }: { defaultInquiry?: stri
 						label="Inquiry"
 						description="What are you inquiring about?"
 						// placeholder="Select an inquiry"
-						defaultValue={""}
+						defaultValue={defaultInquiry}
 						data={[
 							{
 								label: "Select an inquiry",
@@ -297,16 +279,63 @@ export default function Contact({ defaultInquiry = "" }: { defaultInquiry?: stri
 								label: "Sponsorship Application",
 								value: "Sponsorship Application",
 							},
-							// {
-							// 	label: "University Pavilion Application",
-							// 	value: "University Pavilion Application",
-							// },
+							{
+								label: "Speaker Registration",
+								value: "Speaker Registration",
+							},
 							{ label: "Other", value: "Other" },
 						]}
 						required
 						{...form.getInputProps("subject")}
 					/>
 				</Grid.Col>
+
+				{form.values.subject == "Sponsorship Application" && (
+					<Grid.Col span={{ base: 12, sm: 6 }}>
+						<Component.Input.Select
+							label="Sponsorship Package"
+							description="The package you intend to purchase"
+							// placeholder="Select an inquiry"
+							defaultValue={defaultPackage}
+							data={[
+								{
+									label: "Select a package",
+									value: "",
+								},
+								{
+									label: "Title Sponsorship Package",
+									value: "Title",
+								},
+								{
+									label: "Platinum Sponsorship Package",
+									value: "Platinum",
+								},
+								{
+									label: "Gold Sponsorship Package",
+									value: "Gold",
+								},
+								{
+									label: "Silver Sponsorship Package",
+									value: "Silver",
+								},
+								{
+									label: "Bronze Sponsorship Package",
+									value: "Bronze",
+								},
+								{
+									label: "Coffee Break Sponsorship Package",
+									value: "Coffee Break",
+								},
+								{
+									label: "5G Wi-Fi Sponsorship Package",
+									value: "5G Wi-Fi",
+								},
+							]}
+							required
+							{...form.getInputProps("sponsorshipPackage")}
+						/>
+					</Grid.Col>
+				)}
 
 				{form.values.subject == "Sponsorship Application" && companyNameInput}
 
@@ -387,19 +416,23 @@ export default function Contact({ defaultInquiry = "" }: { defaultInquiry?: stri
 				>
 					<Component.Input.Select
 						label="Booth Package"
-						defaultValue={""}
+						defaultValue={defaultPackage}
 						data={[
 							{
 								label: "Select a booth type",
 								value: "",
 							},
 							{
-								label: "SME'S Booth",
-								value: "SME'S Booth",
+								label: "Startup Booth",
+								value: "Startup",
 							},
 							{
-								label: "Corporates Booth",
-								value: "Corporates Booth",
+								label: "SME Booth",
+								value: "SME",
+							},
+							{
+								label: "Corporate Booth",
+								value: "Corporate",
 							},
 						]}
 						required
@@ -412,19 +445,23 @@ export default function Contact({ defaultInquiry = "" }: { defaultInquiry?: stri
 				>
 					<Component.Input.Select
 						label="Booth Size"
-						defaultValue={""}
+						defaultValue={defaultBoothSize}
 						data={[
 							{
 								label: "Select a booth size",
 								value: "",
 							},
 							{
-								label: "3m by 3m (9 sqm)",
-								value: "3m by 3m (9 sqm)",
+								label: "3M by 2M (6 sqm)",
+								value: "3M by 2M",
 							},
 							{
-								label: "6m by 3m (18 sqm)",
-								value: "6m by 3m (18 sqm)",
+								label: "3M by 3M (9 sqm)",
+								value: "3M by 3M",
+							},
+							{
+								label: "6M by 3M (18 sqm)",
+								value: "6M by 3M",
 							},
 						]}
 						required
@@ -432,7 +469,7 @@ export default function Contact({ defaultInquiry = "" }: { defaultInquiry?: stri
 					/>
 				</Grid.Col>
 
-				{form.values.boothPackage == "Corporates Booth" && companyNameInput}
+				{form.values.boothPackage == "Corporate" && companyNameInput}
 
 				<Grid.Col span={12}>
 					<Component.Input.Textarea
@@ -484,7 +521,7 @@ export default function Contact({ defaultInquiry = "" }: { defaultInquiry?: stri
 							</Button>
 						</Grid.Col>
 						<Grid.Col span={{ base: 12, sm: 6 }}>
-							<Button type="submit" color={"sec"} fullWidth loading={submitted}>
+							<Button type="submit" color={"sec"} c={"dark.6"} fullWidth loading={submitted}>
 								{submitted ? "Submitting" : "Submit"}
 							</Button>
 						</Grid.Col>

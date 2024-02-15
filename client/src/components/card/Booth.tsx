@@ -50,7 +50,12 @@ export default function Booth({
 
 			{/* <Modal.Booth label={data.title} /> */}
 
-			<modal.Contact title={`${data.title} Booth`} inquiry="Booth Registration">
+			<modal.Contact
+				title={`${data.title} Booth`}
+				inquiry="Booth Registration"
+				booth={data.title}
+				boothSize={data.desc.dimentions}
+			>
 				Book {data.title} Booth
 			</modal.Contact>
 		</Stack>

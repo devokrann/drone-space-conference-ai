@@ -11,6 +11,8 @@ export interface typeContact {
 	contactEmail: string;
 	contactPhoneNumber: string;
 
+	sponsorshipPackage: string;
+
 	boothPackage: string;
 	boothSize: string;
 

@@ -39,7 +39,11 @@ export default function Sponsorship({ data }: { data: { title: string; price: st
 
 			{/* <Modal.Sponsorship label={data.title} /> */}
 
-			<modal.Contact title={`${data.title} Sponsorship`} inquiry="Sponsorship Application">
+			<modal.Contact
+				title={`${data.title} Sponsorship`}
+				inquiry="Sponsorship Application"
+				sponsorPackage={data.title}
+			>
 				Apply For {data.title} Sponsorship
 			</modal.Contact>
 		</Stack>
