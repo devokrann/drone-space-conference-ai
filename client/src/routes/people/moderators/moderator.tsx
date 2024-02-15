@@ -47,7 +47,7 @@ export default function Moderator() {
 			<Layout.Page hero={<Layout.Hero.Route />}>
 				<Layout.Section containerized margined>
 					<Grid gutter={48}>
-						<Grid.Col span={{ base: 12, sm: 5 }}>
+						<Grid.Col span={{ base: 12, sm: 6, md: 5 }}>
 							<Stack gap={"xl"} className={classes.card}>
 								<Image src={person?.image} w={"100%"} className={classes.image} />
 								<Stack px={"xl"}>
@@ -64,7 +64,7 @@ export default function Moderator() {
 										</Anchor>
 									</Group>
 									{person?.contact.phone.map(item => (
-										<Group justify="space-between">
+										<Group key={item} justify="space-between">
 											<Text key={item} component="span" fw={500} className={classes.label}>
 												Phone{" "}
 												{person?.contact.phone.length > 1 &&
@@ -97,7 +97,7 @@ export default function Moderator() {
 								</Stack>
 							</Stack>
 						</Grid.Col>
-						<Grid.Col span={{ base: 12, sm: 7 }}>
+						<Grid.Col span={{ base: 12, sm: 6, md: 7 }}>
 							<Stack gap={"xl"}>
 								<Stack gap={0}>
 									<Title order={2} fz={40} c={"pri"}>
