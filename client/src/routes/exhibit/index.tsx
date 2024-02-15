@@ -85,7 +85,7 @@ export default function Exhibit() {
 						</Stack>
 						<Grid justify="center">
 							{data.exhibition.booths.map(booth => (
-								<Grid.Col key={booth.title} span={{ base: 12, sm: 6 }}>
+								<Grid.Col key={booth.price} span={{ base: 12, sm: 6 }}>
 									<Card.Booth data={booth} />
 								</Grid.Col>
 							))}
