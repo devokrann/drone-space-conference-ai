@@ -30,7 +30,7 @@ export default function Speakers() {
 							Call to Speakers
 						</Title>
 						<Text ta={"center"}>Fill the form below and request to speak</Text>
-						<Partial.Form.Speaker />
+						<Partial.Form.Contact defaultInquiry="Speaker Registration" />
 					</Stack>
 				</Layout.Section>
 			</Layout.Page>

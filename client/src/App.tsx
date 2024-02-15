@@ -34,7 +34,7 @@ const router = createBrowserRouter(
 					{/* <Route path=":speaker" element={<Speakers />} /> */}
 				</Route>
 				<Route path="moderators">
-					<Route index element={<Moderators />} />
+					{/* <Route index element={<Moderators />} /> */}
 					<Route path=":moderator" element={<Moderator />} />
 				</Route>
 			</Route>
