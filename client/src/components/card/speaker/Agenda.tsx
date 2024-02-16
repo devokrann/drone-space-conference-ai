@@ -1,12 +1,12 @@
 import React from "react";
 
-import { AspectRatio, Card, Grid, Group, Image, Stack, Text } from "@mantine/core";
+import { Card, Group, Image, Stack, Text } from "@mantine/core";
 
-import { typeModerator } from "@src/types/people";
+import { typeSpeaker } from "@src/types/people";
 
-import classes from "./Moderator.module.scss";
+import classes from "./Agenda.module.scss";
 
-export default function Moderator({ data }: { data: typeModerator }) {
+export default function Agenda({ data }: { data: typeSpeaker }) {
 	return (
 		<Card className={classes.card}>
 			<Group gap={"xs"}>

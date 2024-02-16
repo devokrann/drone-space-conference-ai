@@ -7,7 +7,7 @@ import Sponsorship from "./Sponsorship";
 import Ticket from "./Ticket";
 import Why from "./Why";
 
-import people from "./people";
+import speaker from "./speaker";
 
 const card = {
 	Sponsorship: Sponsorship,
@@ -19,7 +19,7 @@ const card = {
 	Significance: Significance,
 	Partner: Partner,
 
-	People: people,
+	Speaker: speaker,
 };
 
 export default card;

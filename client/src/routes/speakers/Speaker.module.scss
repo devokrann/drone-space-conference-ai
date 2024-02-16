@@ -2,14 +2,21 @@
 	font-weight: 500;
 	font-size: var(--mantine-font-size-md);
 	text-align: center;
-	background-color: light-dark(var(--mantine-color-pri-6), var(--mantine-color-sec-light));
+	background-color: light-dark(var(--mantine-color-pri-6), var(--mantine-color-gray-light));
 	// color: light-dark(var(--mantine-color-pri-6), var(--mantine-color-sec-6));
 	border-radius: var(--mantine-radius-md);
 	padding-bottom: var(--mantine-spacing-xl);
 }
 
 .image {
+	border-top-right-radius: var(--mantine-radius-md);
+	border-top-left-radius: var(--mantine-radius-md);
+}
+
+.logo {
 	border-radius: var(--mantine-radius-md);
+	padding: var(--mantine-spacing-xs);
+	background-color: light-dark(var(--mantine-color-white));
 }
 
 .link {

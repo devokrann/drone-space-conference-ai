@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { Accordion, Anchor, Container, Divider, Group, Stack, Text } from "@mantine/core";
 
-import { typeModerator } from "@src/types/people";
+import { typeSpeaker } from "@src/types/people";
 
 import card from "../card";
 
@@ -15,7 +15,7 @@ export default function Program({
 }: {
 	data: {
 		title: { duration: string; heading: string };
-		desc: { agenda: string; questions?: string[]; participants?: string[]; moderator?: typeModerator };
+		desc: { agenda: string; questions?: string[]; participants?: typeSpeaker[]; moderator?: typeSpeaker };
 	}[];
 }) {
 	const items = data.map(item => (
@@ -51,16 +51,29 @@ export default function Program({
 							</Stack>
 						)}
 
-						{item.desc.participants && (
+						{item.desc.participants && item.desc.participants?.filter(p => p != undefined).length > 0 && (
 							<Stack gap={"xs"}>
-								<Divider variant="dashed" label="Participants" labelPosition="left" />
-								<Stack gap={"xs"}>
+								<Divider variant="dashed" label={`Participants`} labelPosition="left" />
+								{/* <Stack gap={"xs"}>
 									{item.desc.participants?.map(participant => (
 										<Text inherit key={participant}>
 											{participant}
 										</Text>
 									))}
-								</Stack>
+								</Stack> */}
+								<Group>
+									{item.desc.participants.map(participant => (
+										<Anchor
+											key={participant.name}
+											underline="never"
+											w={"fit-content"}
+											component={Link}
+											to={`/speakers/${hook.useLinkify(participant.name)}`}
+										>
+											<card.Speaker.Agenda data={participant} />
+										</Anchor>
+									))}
+								</Group>
 							</Stack>
 						)}
 
@@ -72,9 +85,9 @@ export default function Program({
 										underline="never"
 										w={"fit-content"}
 										component={Link}
-										to={`/people/moderators/${hook.useLinkify(item.desc.moderator.name)}`}
+										to={`/speakers/${hook.useLinkify(item.desc.moderator.name)}`}
 									>
-										<card.People.Moderator data={item.desc.moderator} />
+										<card.Speaker.Agenda data={item.desc.moderator} />
 									</Anchor>
 								</Group>
 							</Stack>

@@ -19,7 +19,7 @@ const links = {
 		{ link: "/", label: "Overview" },
 		{ link: "/exhibit", label: "Exhibit" },
 		{ link: "/agenda", label: "Agenda" },
-		{ link: "/people/speakers", label: "Speakers" },
+		{ link: "/speakers", label: "Speakers" },
 		{ link: "/sponsors", label: "Sponsors" },
 	],
 	footer: [
@@ -30,7 +30,7 @@ const links = {
 				{ link: "/exhibit", label: "Exhibiting & Booths" },
 				{ link: "/", label: "Event Overview" },
 				{ link: "/agenda", label: "Event Program" },
-				{ link: "/people/speakers", label: "Speakers" },
+				{ link: "/speakers", label: "Speakers" },
 			],
 		},
 		{

@@ -1,4 +1,4 @@
-export interface typeModerator {
+export interface typeSpeaker {
 	name: string;
 	bio: string[];
 	occupation: { position: string; pow: string; image: string };
@@ -8,4 +8,5 @@ export interface typeModerator {
 		phone: string[];
 		socials: { label: string; link: string }[];
 	};
+	category: string[];
 }

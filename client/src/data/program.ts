@@ -1,5 +1,8 @@
 import people from "./people";
 
+const selectorPerson = (category: string, name: string) =>
+	people.filter(p => p.category.find(c => c == category)).find(m => m.name == name);
+
 const program = {
 	schedule: {
 		common: {
@@ -204,12 +207,12 @@ const program = {
 						// 	"What industries are showing the most significant uptake of AI solutions in Kenya/Malawi/South Africa, and what use cases are proving to be particularly impactful?",
 						// 	"What are the major challenges facing AI adoption and what steps are being taken to address these obstacles?",
 						// ],
-						// participants: [
-						// 	"Michael Zimba (Malawi Institute of Tech)",
-						// 	"Mutembei Kariuki (First Fastagger)",
-						// 	"Beniah Wepundi (Cyphonia)",
-						// ],
-						moderator: people.moderators.find(m => m.name == "Moses Kemibaro"),
+						participants: [
+							selectorPerson("speaker", "Michael Zimba"),
+							// "Mutembei Kariuki (First Fastagger)",
+							// "Beniah Wepundi (Cyphonia)",
+						],
+						moderator: selectorPerson("moderator", "Moses Kemibaro"),
 					},
 				},
 				{
