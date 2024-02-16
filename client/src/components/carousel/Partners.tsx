@@ -15,31 +15,37 @@ export default function Partners() {
 	const partners = [
 		{
 			image: image.partners.media.image5,
+			link: "https://kiss100.co.ke/",
 			title: "Kiss",
 			width: "80%",
 		},
 		{
 			image: image.partners.media.image4,
+			link: "https://classic105.com/",
 			title: "Classic",
 			width: "80%",
 		},
 		{
 			image: image.partners.media.image2,
+			link: "https://eastfm.com/",
 			title: "East",
 			width: "80%",
 		},
 		{
 			image: image.partners.media.image1,
+			link: "https://mpasho.co.ke/",
 			title: "Mpasho",
 			width: "80%",
 		},
 		{
 			image: image.partners.media.image3,
+			link: "https://intranet.radioafricagroup.co.ke/about-us/",
 			title: "Radio Africa Events",
 			width: "30%",
 		},
 		{
 			image: image.partners.media.image6,
+			link: "https://ticketyetu.com/",
 			title: "Ticket Yetu",
 			width: "50%",
 		},
@@ -48,16 +54,19 @@ export default function Partners() {
 				colorScheme == "dark"
 					? image.brand.dronespace.white.portrait.full
 					: image.brand.dronespace.original.portrait.full,
+			link: "https://dronespace.co.ke/",
 			title: "Drone Space",
 			width: "50%",
 		},
 		{
 			image: colorScheme == "dark" ? image.partners.media.image7 : null,
+			link: "https://startinev.com/",
 			title: "Startinev",
 			width: "50%",
 		},
 		{
 			image: image.partners.media.image9,
+			link: "http://www.thearcrayon.com/",
 			title: "Arcrayon",
 			width: "80%",
 		},
@@ -71,7 +80,7 @@ export default function Partners() {
 				item.image && (
 					<Carousel.Slide key={Math.random()}>
 						<AspectRatio ratio={2 / 1}>
-							<Box w={item.width} mx={"auto"}>
+							<Box w={item.width} mx={"auto"} component="a" href={item.link} target="_blank">
 								<Image src={item.image} alt={item.title} w={"100%"} />
 							</Box>
 						</AspectRatio>

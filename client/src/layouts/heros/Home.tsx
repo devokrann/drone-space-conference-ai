@@ -52,7 +52,7 @@ export default function Home() {
 				</Container>
 			</Center> */}
 			<Image src={heroImage} w={"100%"} alt="banner" />
-			<Box bg={"pri.6"} pb={"lg"}>
+			<Box bg={"pri.6"} pt={"xs"} pb={"lg"}>
 				<Container size={"md"}>
 					<Counter.Countdown />
 				</Container>
