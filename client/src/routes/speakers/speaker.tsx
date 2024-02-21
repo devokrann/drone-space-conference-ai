@@ -56,32 +56,34 @@ export default function Speaker() {
 										</Group>
 									))} */}
 									{/* <Divider color="sec.6" /> */}
-									<Group justify="center">
-										{personDetails?.contact.socials.map(social => (
-											<Anchor
-												key={social.link}
-												inherit
-												href={social.link}
-												target="_blank"
-												className={classes.link}
-											>
-												<Image
-													src={data.icons.social.find(i => i.label == social.label)?.icon}
-													w={36}
-													h={36}
-													alt={social.label}
-												/>
-											</Anchor>
-										))}
-									</Group>
+									{personDetails?.contact.socials && (
+										<Group justify="center">
+											{personDetails?.contact.socials.map(social => (
+												<Anchor
+													key={social.link}
+													inherit
+													href={social.link}
+													target="_blank"
+													className={classes.link}
+												>
+													<Image
+														src={data.icons.social.find(i => i.label == social.label)?.icon}
+														w={36}
+														h={36}
+														alt={social.label}
+													/>
+												</Anchor>
+											))}
+										</Group>
+									)}
 								</Stack>
 							</Stack>
 						</Grid.Col>
-						<Grid.Col span={{ base: 12, sm: 6, md: 7 }}>
+						<Grid.Col span={{ base: 12, sm: 6, md: 7 }} ta={{ base: "center", xs: "start" }}>
 							<Stack gap={"xl"}>
 								<Stack gap={0}>
 									<Grid align="end">
-										<Grid.Col span={{ base: 6, md: 9 }}>
+										<Grid.Col span={{ base: 12, xs: 6, sm: 12, md: 9 }}>
 											<Title order={2} fz={40} c={"pri"}>
 												{personDetails?.name}
 											</Title>
@@ -89,7 +91,7 @@ export default function Speaker() {
 												{personDetails?.occupation.position}, {personDetails?.occupation.pow}
 											</Text>
 										</Grid.Col>
-										<Grid.Col span={{ base: 6, md: 3 }}>
+										<Grid.Col span={{ base: 12, xs: 6, sm: 12, md: 3 }}>
 											<Image
 												src={personDetails?.occupation.image}
 												alt={personDetails?.occupation.pow}
