@@ -125,6 +125,24 @@ const people = [
 		},
 		category: ["speaker"],
 	},
+	{
+		name: "Benaiah Wepundi",
+		bio: [
+			"Benaiah Wepundi is a serial entreprenuer with a focus on fintech and AI. He is currently the Founder and Chief Maverick (CEO) at PaydHQ, building a virtual financial assistant for gig workers in Africa. He is also the Chief Operating Officer at CyphonAI, a US-based AI automation and consultancy agency and a subsidiary of Precision Consulting, a statistical consulting and academic research firm featured in inc 500 with over 16 years experience in the edtech space, where he serves as the Chief Technology Officer. Benaiah is passionate about building African solutions to perennial global problems.",
+		],
+		occupation: {
+			position: "CEO",
+			pow: "PaydHQ",
+			image: null,
+		},
+		image: image.people.speakers.benaiahWepundi,
+		contact: {
+			email: "ben@paydhq.com",
+			phone: [],
+			socials: [],
+		},
+		category: ["speaker"],
+	},
 ];
 
 export default people;
