@@ -1,11 +1,13 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 
+import { Divider, Grid, List, Stack, Text, Title } from "@mantine/core";
+
 import Layout from "@src/layouts";
 import Partial from "@src/partials";
-import { Divider, Grid, List, Stack, Text, Title } from "@mantine/core";
-import data from "@src/data";
 import Component from "@src/components";
+
+import data from "@src/data";
 
 // export async function loader() {
 // 	return "data";
@@ -54,7 +56,7 @@ const tc = [
 	},
 	{
 		label: "Governing Law",
-		value: "These terms and conditions shall be governed by and construed in accordance with the laws of Kenya",
+		value: "These terms and conditions shall be governed by and construed in accordance with the laws of Kenya.",
 	},
 ];
 
@@ -89,7 +91,7 @@ export default function Hackathon() {
 						<List size="sm" spacing={"md"} ta={"start"} listStyleType="ordered">
 							{tc.map(term => (
 								<List.Item key={term.label}>
-									<Text component="span" inherit fw={500}>
+									<Text component="span" inherit fw={"bold"}>
 										{term.label}
 									</Text>
 									: {term.value}
