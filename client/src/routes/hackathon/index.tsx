@@ -52,10 +52,10 @@ const tc = [
 		label: "Changes to Terms and Conditions",
 		value: "The organizers reserve the right to make changes to these terms and conditions at any time. Participants will be notified of any changes via email or through the official hackathon website.",
 	},
-	// {
-	// 	label: "Governing Law",
-	// 	value: "These terms and conditions shall be governed by and construed in accordance with the laws of [insert governing jurisdiction]",
-	// },
+	{
+		label: "Governing Law",
+		value: "These terms and conditions shall be governed by and construed in accordance with the laws of Kenya",
+	},
 ];
 
 export default function Hackathon() {
