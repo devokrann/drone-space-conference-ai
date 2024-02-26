@@ -1,6 +1,6 @@
 import dronespace from "./drone-space";
 
-import landscape from "./landscape.png";
+import landscape from "./landscape.webp";
 
 const brand = {
 	dronespace: dronespace,

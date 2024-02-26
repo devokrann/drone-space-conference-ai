@@ -36,6 +36,7 @@
 
 .imageContainer {
 	border-radius: 999px;
+	border: 4px solid light-dark(var(--mantine-color-sec-6), var(--mantine-color-pri-6));
 	overflow: hidden;
 	position: relative;
 }

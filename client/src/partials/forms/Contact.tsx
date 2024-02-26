@@ -3,11 +3,23 @@ import ReactDOMServer from "react-dom/server";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-import { Anchor, Box, Button, Checkbox, Grid, Input, Select, Text, TextInput, Textarea } from "@mantine/core";
+import {
+	Anchor,
+	Box,
+	Button,
+	Checkbox,
+	Grid,
+	Input,
+	Select,
+	TagsInput,
+	Text,
+	TextInput,
+	Textarea,
+} from "@mantine/core";
 import { hasLength, isNotEmpty, useForm } from "@mantine/form";
 import { notifications } from "@mantine/notifications";
 
-import { IconCheck, IconX } from "@tabler/icons-react";
+import { IconCheck, IconWorld, IconX } from "@tabler/icons-react";
 
 import { IMaskInput } from "react-imask";
 
@@ -24,6 +36,11 @@ import utility from "@src/utilities";
 import notificationSuccess from "@src/styles/notifications/Success.module.scss";
 import notificationFail from "@src/styles/notifications/Fail.module.scss";
 import Component from "@src/components";
+
+const templates = {
+	general: "general_inquiries",
+	hackathon: "hackathon_inquiry",
+};
 
 export default function Contact({
 	defaultInquiry = "",
@@ -57,8 +74,14 @@ export default function Contact({
 			boothPackage: defaultBooth,
 			boothSize: defaultBoothSize,
 
+			websiteLink: "",
+			teamMember1: "",
+			teamMember2: "",
+			teamMember3: "",
+			teamMember4: "",
+
 			message: "",
-			policy: false,
+			// policy: false,
 		},
 
 		validate: {
@@ -80,7 +103,10 @@ export default function Contact({
 				(values.subject == "University Pavilion Application" || values.subject == "Sponsorship Application") &&
 				utility.validator.form.special.email(value),
 			contactPhoneNumber: (value, values) =>
-				(values.subject == "University Pavilion Application" || values.subject == "Sponsorship Application") &&
+				(values.subject == "University Pavilion Application" ||
+					values.subject == "Sponsorship Application" ||
+					values.subject == "Speaker Registration") &&
+				value.trim().length > 0 &&
 				utility.validator.form.special.phone(value),
 
 			sponsorshipPackage: (value, values) =>
@@ -92,9 +118,38 @@ export default function Contact({
 			boothSize: (value, values) =>
 				values.subject == "Booth Registration" && (value.trim().length < 1 ? "Please select a size" : null),
 
+			websiteLink: (value, values) =>
+				values.subject == "Hackathon Registration" &&
+				value.trim().length > 0 &&
+				utility.validator.form.special.text(value, 2, 24),
+
+			teamMember1: (value, values) =>
+				values.subject == "Hackathon Registration" &&
+				(value.trim().length > 0
+					? utility.validator.form.special.text(value, 2, 24)
+					: "At least 1 team member"),
+			teamMember2: (value, values) =>
+				values.subject == "Hackathon Registration" &&
+				value.trim().length > 0 &&
+				(values.teamMember1.trim().length > 0
+					? utility.validator.form.special.text(value, 2, 24)
+					: "Please add team member 1 first"),
+			teamMember3: (value, values) =>
+				values.subject == "Hackathon Registration" &&
+				value.trim().length > 0 &&
+				(values.teamMember2.trim().length > 0
+					? utility.validator.form.special.text(value, 2, 24)
+					: "Please add team member 2 first"),
+			teamMember4: (value, values) =>
+				values.subject == "Hackathon Registration" &&
+				value.trim().length > 0 &&
+				(values.teamMember3.trim().length > 0
+					? utility.validator.form.special.text(value, 2, 24)
+					: "Please add team member 3 first"),
+
 			subject: value => (value.trim().length < 1 ? "Please select a line of inquiry" : null),
 			message: hasLength({ min: 10 }, "At least 10 characters"),
-			policy: isNotEmpty("You must accept to proceed"),
+			// policy: isNotEmpty("You must accept to proceed"),
 		},
 	});
 
@@ -105,7 +160,6 @@ export default function Contact({
 			email,
 			subject,
 			message,
-			policy,
 
 			companyName,
 			universityName,
@@ -115,23 +169,33 @@ export default function Contact({
 			sponsorshipPackage,
 			boothPackage,
 			boothSize,
+			websiteLink,
+			teamMember1,
+			teamMember2,
+			teamMember3,
+			teamMember4,
 		} = rawData;
 
 		fname = utility.parser.string.capitalize.word(fname);
 		lname = utility.parser.string.capitalize.word(lname);
 		email = email.toLowerCase();
+
 		companyName = utility.parser.string.capitalize.words(companyName);
 		universityName = utility.parser.string.capitalize.words(universityName);
 		contactPerson = utility.parser.string.capitalize.words(contactPerson);
 		contactEmail = contactEmail.toLowerCase();
+		websiteLink = websiteLink.toLowerCase();
 
+		teamMember1 = utility.parser.string.capitalize.words(teamMember1);
+		teamMember2 = utility.parser.string.capitalize.words(teamMember2);
+		teamMember3 = utility.parser.string.capitalize.words(teamMember3);
+		teamMember4 = utility.parser.string.capitalize.words(teamMember4);
 		return {
 			fname,
 			lname,
 			email,
 			subject: subject == "Other" ? "AI Conference" : subject,
 			message,
-			policy,
 
 			companyName: subject != "Other" && companyName.length > 1 ? `Company Name: ${companyName}` : "",
 			universityName: subject != "Other" && universityName.length > 1 ? `University Name: ${universityName}` : "",
@@ -145,6 +209,15 @@ export default function Contact({
 				subject != "Other" && sponsorshipPackage.length > 1 ? `Sponsorship Package: ${sponsorshipPackage}` : "",
 			boothPackage: subject != "Other" && boothPackage.length > 1 ? `Booth Package: ${boothPackage}` : "",
 			boothSize: subject != "Other" && boothSize.length > 1 ? `Booth Size: ${boothSize}` : "",
+			websiteLink: subject != "Other" && websiteLink.length > 1 ? `Link to Website: ${websiteLink}` : "",
+
+			teamMember1:
+				subject != "Other" && teamMember1.length > 1
+					? `Team Member ${(teamMember2 || teamMember3 || teamMember4) && " 1"}: ${teamMember1}`
+					: "",
+			teamMember2: subject != "Other" && teamMember2.length > 1 ? `Team Member 2: ${teamMember2}` : "",
+			teamMember3: subject != "Other" && teamMember3.length > 1 ? `Team Member 3: ${teamMember3}` : "",
+			teamMember4: subject != "Other" && teamMember4.length > 1 ? `Team Member 4: ${teamMember4}` : "",
 		};
 	};
 
@@ -168,6 +241,12 @@ export default function Contact({
 					desc: "Brief description of what you would like to showcase and any other relevant information.",
 				};
 
+			case "Hackathon Registration":
+				return {
+					label: "Startup Description",
+					desc: "Brief description of your startup and any other relevant information.",
+				};
+
 			default:
 				return { label: "Message", desc: "" };
 		}
@@ -180,7 +259,12 @@ export default function Contact({
 			// console.log(parse(formValues));
 
 			await emailjs
-				.send("gmail_service", "general_inquiries", parse(formValues), "WIhPTsJnYGDJDfdIP")
+				.send(
+					"service_gmail",
+					form.values.subject == "Hackathon Registration" ? templates.hackathon : templates.general,
+					parse(formValues),
+					"WIhPTsJnYGDJDfdIP"
+				)
 				.then(() =>
 					notifications.show({
 						id: "send-success",
@@ -221,7 +305,7 @@ export default function Contact({
 	};
 
 	const companyNameInput = (
-		<Grid.Col span={{ base: 12, xs: 6, sm: 12, md: 6 }}>
+		<Grid.Col span={{ base: 12, sm: 6 }}>
 			<Component.Input.Text
 				required
 				label="Company Name"
@@ -283,6 +367,10 @@ export default function Contact({
 								label: "Speaker Registration",
 								value: "Speaker Registration",
 							},
+							{
+								label: "Hackathon Registration",
+								value: "Hackathon Registration",
+							},
 							{ label: "Other", value: "Other" },
 						]}
 						required
@@ -337,8 +425,6 @@ export default function Contact({
 					</Grid.Col>
 				)}
 
-				{form.values.subject == "Sponsorship Application" && companyNameInput}
-
 				<Grid.Col
 					span={{ base: 12, xs: 6, sm: 12, md: 6 }}
 					display={form.values.subject == "University Pavilion Application" ? "block" : "none"}
@@ -354,7 +440,7 @@ export default function Contact({
 					/>
 				</Grid.Col>
 				<Grid.Col
-					span={{ base: 12, xs: 6, sm: 12, md: 6 }}
+					span={{ base: 12, sm: 6 }}
 					display={
 						form.values.subject == "University Pavilion Application" ||
 						form.values.subject == "Sponsorship Application"
@@ -373,7 +459,91 @@ export default function Contact({
 					/>
 				</Grid.Col>
 				<Grid.Col
-					span={{ base: 12, xs: 6, sm: 12, md: 6 }}
+					span={{ base: 12, sm: 6 }}
+					display={
+						form.values.subject == "University Pavilion Application" ||
+						form.values.subject == "Sponsorship Application" ||
+						form.values.subject == "Speaker Registration" ||
+						form.values.subject == "Hackathon Registration"
+							? "block"
+							: "none"
+					}
+				>
+					<Component.Input.Text
+						label="Contact Phone Number"
+						description={`The ${
+							form.values.subject == "University Pavilion Application"
+								? "university"
+								: form.values.subject == "Hackathon Registration"
+								? "team leader"
+								: "organization"
+						}'s contact number`}
+						placeholder="Enter your phone number here"
+						{...form.getInputProps("contactPhoneNumber")}
+					/>
+				</Grid.Col>
+				<Grid.Col
+					span={{ base: 12, xs: 6 }}
+					display={form.values.subject == "Hackathon Registration" ? "block" : "none"}
+				>
+					<Component.Input.Text
+						label="Website Link"
+						leftSection={<IconWorld size={16} />}
+						styles={{ input: { paddingLeft: "var(--mantine-spacing-xl)" } }}
+						description={`The link to your website`}
+						placeholder="Enter link here"
+						{...form.getInputProps("websiteLink")}
+					/>
+				</Grid.Col>
+
+				<Grid.Col
+					span={{ base: 12 }}
+					display={form.values.subject == "Hackathon Registration" ? "block" : "none"}
+				>
+					<Component.Input.Text
+						required
+						label={"Team Member 1"}
+						description={"The member's full name"}
+						placeholder="Enter name here"
+						{...form.getInputProps("teamMember1")}
+					/>
+				</Grid.Col>
+				<Grid.Col
+					span={{ base: 12 }}
+					display={form.values.subject == "Hackathon Registration" ? "block" : "none"}
+				>
+					<Component.Input.Text
+						label={"Team Member 2"}
+						description={"The member's full name"}
+						placeholder="Enter name here"
+						{...form.getInputProps("teamMember2")}
+					/>
+				</Grid.Col>
+				<Grid.Col
+					span={{ base: 12 }}
+					display={form.values.subject == "Hackathon Registration" ? "block" : "none"}
+				>
+					<Component.Input.Text
+						label={"Team Member 3"}
+						description={"The member's full name"}
+						placeholder="Enter name here"
+						{...form.getInputProps("teamMember3")}
+					/>
+				</Grid.Col>
+				<Grid.Col
+					span={{ base: 12 }}
+					display={form.values.subject == "Hackathon Registration" ? "block" : "none"}
+				>
+					<Component.Input.Text
+						label={"Team Member 4"}
+						description={"The member's full name"}
+						placeholder="Enter name here"
+						{...form.getInputProps("teamMember4")}
+					/>
+				</Grid.Col>
+
+				<Grid.Col
+					span={{ base: 12, sm: 6 }}
 					display={
 						form.values.subject == "University Pavilion Application" ||
 						form.values.subject == "Sponsorship Application"
@@ -392,30 +562,12 @@ export default function Contact({
 					/>
 				</Grid.Col>
 				<Grid.Col
-					span={{ base: 12, xs: 6, sm: 12, md: 6 }}
-					display={
-						form.values.subject == "University Pavilion Application" ||
-						form.values.subject == "Sponsorship Application"
-							? "block"
-							: "none"
-					}
-				>
-					<Component.Input.Text
-						required
-						label="Contact Phone Number"
-						description={`The ${
-							form.values.subject == "University Pavilion Application" ? "university" : "organization"
-						}'s contact number`}
-						placeholder="Enter your phone number here"
-						{...form.getInputProps("contactPhoneNumber")}
-					/>
-				</Grid.Col>
-				<Grid.Col
-					span={{ base: 12, xs: 6, sm: 12, md: 6 }}
+					span={{ base: 12, sm: 6 }}
 					display={form.values.subject == "Booth Registration" ? "block" : "none"}
 				>
 					<Component.Input.Select
 						label="Booth Package"
+						description="The package you intend to purchase"
 						defaultValue={defaultPackage}
 						data={[
 							{
@@ -440,11 +592,12 @@ export default function Contact({
 					/>
 				</Grid.Col>
 				<Grid.Col
-					span={{ base: 12, xs: 6, sm: 12, md: 6 }}
+					span={{ base: 12, sm: 6 }}
 					display={form.values.subject == "Booth Registration" ? "block" : "none"}
 				>
 					<Component.Input.Select
 						label="Booth Size"
+						description={"Dimentions of the booth"}
 						defaultValue={defaultBoothSize}
 						data={[
 							{
@@ -469,7 +622,8 @@ export default function Contact({
 					/>
 				</Grid.Col>
 
-				{form.values.boothPackage == "Corporate" && companyNameInput}
+				{(form.values.boothPackage == "Corporate" || form.values.subject == "Sponsorship Application") &&
+					companyNameInput}
 
 				<Grid.Col span={12}>
 					<Component.Input.Textarea
@@ -483,7 +637,7 @@ export default function Contact({
 						{...form.getInputProps("message")}
 					/>
 				</Grid.Col>
-				<Grid.Col span={{ base: 12, sm: 12 }}>
+				{/* <Grid.Col span={{ base: 12, sm: 12 }}>
 					<Checkbox
 						radius={"xl"}
 						ml={"md"}
@@ -506,7 +660,7 @@ export default function Contact({
 						}
 						{...form.getInputProps("policy", { type: "checkbox" })}
 					/>
-				</Grid.Col>
+				</Grid.Col> */}
 				<Grid.Col span={{ base: 12 }} mt={"xl"}>
 					<Grid>
 						<Grid.Col span={{ base: 12, sm: 6 }}>

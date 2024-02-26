@@ -18,7 +18,14 @@ const links = {
 	navbar: [
 		{ link: "/", label: "Overview" },
 		{ link: "/exhibit", label: "Exhibit" },
-		{ link: "/agenda", label: "Agenda" },
+		{
+			link: "/agenda",
+			label: "Agenda",
+			subLinks: [
+				{ link: "/agenda", label: "Agenda" },
+				{ link: "/hackathon", label: "Hackathon" },
+			],
+		},
 		{ link: "/speakers", label: "Speakers" },
 		{ link: "/sponsors", label: "Sponsors" },
 	],

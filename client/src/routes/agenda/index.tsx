@@ -181,8 +181,8 @@ export default function Agenda() {
 								participating on this track are hand picked by Startinev and AI Conference Nairobi Team
 								as the up-and-comers to be on the lookout for. These sessions of Hackathon (building
 								models) and preparing presentations will be conducted in 48 hours and a showdown session
-								of the finalists will each conduct a 10 minute pitch style format of their idea with the
-								winner being awarded Kshs 100,000.
+								of the finalists will each conduct a 10 minute pitch style format of their idea with
+								prize totals of up to Kshs. 200,000.
 							</Text>
 						</Stack>
 						<Grid gutter={96}>

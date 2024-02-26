@@ -27,7 +27,7 @@ export default function Speaker() {
 			<Layout.Page hero={<Layout.Hero.Route />}>
 				<Layout.Section containerized margined>
 					<Grid gutter={48}>
-						<Grid.Col span={{ base: 12, sm: 6, md: 5 }}>
+						<Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
 							<Stack gap={"xl"} className={classes.card}>
 								<Image src={personDetails?.image} w={"100%"} className={classes.image} />
 								<Stack px={"xl"}>
@@ -79,7 +79,7 @@ export default function Speaker() {
 								</Stack>
 							</Stack>
 						</Grid.Col>
-						<Grid.Col span={{ base: 12, sm: 6, md: 7 }} ta={{ base: "center", xs: "start" }}>
+						<Grid.Col span={{ base: 12, sm: 6, md: 8 }} ta={{ base: "center", xs: "start" }}>
 							<Stack gap={"xl"}>
 								<Stack gap={0}>
 									<Grid align="end">
@@ -91,13 +91,15 @@ export default function Speaker() {
 												{personDetails?.occupation.position}, {personDetails?.occupation.pow}
 											</Text>
 										</Grid.Col>
-										<Grid.Col span={{ base: 12, xs: 6, sm: 12, md: 3 }}>
-											<Image
-												src={personDetails?.occupation.image}
-												alt={personDetails?.occupation.pow}
-												className={classes.logo}
-											/>
-										</Grid.Col>
+										{personDetails?.occupation.image && (
+											<Grid.Col span={{ base: 12, xs: 6, sm: 12, md: 3 }}>
+												<Image
+													src={personDetails?.occupation.image}
+													alt={personDetails?.occupation.pow}
+													className={classes.logo}
+												/>
+											</Grid.Col>
+										)}
 									</Grid>
 								</Stack>
 								<Divider />

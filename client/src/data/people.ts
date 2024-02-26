@@ -80,6 +80,51 @@ const people = [
 		},
 		category: ["speaker"],
 	},
+	{
+		name: "Joel Onditi",
+		bio: [
+			"Mr. Onditi is a Kenyan American and the CEO and President of Pathways Technologies LTD, a US and Africa innovation and technology company with offices in Denver, Colorado and Nairobi, Kenya. He is a professor of practice at The University of Denver, where he teaches Data Analytics and Emerging Trends in Technology. He also sits on the advisory board of the Analytics Department for the Daniels College of Business, University of Denver.",
+			"He has a bachelor's degree in computer science from Jomo Kenyatta University of Agriculture and Technology, and a master's degree in data Analytics and AI from The University of Denver. He also has a post-graduate certificate in Corporate Innovation from Massachusetts Institute of Technology (MIT) as well as an executive certificate in Public Policy with a focus on Governance in Technology Innovation from Harvard Kennedy School.",
+			"Mr. Onditi has over 15 years of experience delivering innovative technology and digital transformation solutions in Fintech, Manufacturing, Retail, E-commerce, Government and Not-For-Profit sectors. His experience spans the US, Africa, Canada, and Europe working with organizations in digital transformation initiatives. He has also been a contractor for the US government over the last 7 years, where his assignments include advising on emerging technology projects including open banking, data privacy and protection, as well as cloud use for government. He started his career building banking software solutions and later moved to work for one of the largest banks in the region.",
+			"Beyond his passion for technology and innovation, he is dedicated to empowering youth with modern data and tech employable skills. His commitment has led him to forge partnerships and work closely with the Kenyan government and the US Embassy, which has been instrumental in actualizing the Silicon Savanna initiative.",
+		],
+		occupation: {
+			position: "CEO",
+			pow: "Pathways Technologies",
+			image: image.companies.pathawaysTech,
+		},
+		image: image.people.speakers.joelOnditi,
+		contact: {
+			email: "joel.onditi@pathwaystechnologies.com",
+			phone: ["+254722540328", "+17204688895"],
+			socials: [
+				{ label: "facebook", link: "https://www.facebook.com/PathwaysKe" },
+				{ label: "twitter", link: "https://twitter.com/PathwaysInt" },
+				{ label: "linkedin", link: "https://www.linkedin.com/company/pathwaystechnologies" },
+			],
+		},
+		category: ["speaker"],
+	},
+	{
+		name: "Laban Cliff Onserio",
+		bio: [
+			"Laban-Cliff Onserio is the First Chief of Staff in the Office of the Group CEO at Standard Media Group in Kenya. He previously worked at Kenya's Office of the President in the President's Delivery Unit; a government project execution arm supported by the Former British Prime Minister Tony Blair's Institute. His career highlights include working with General Electric (GE) Africa as a management trainee to help the conglomerate in setting up shop in Nairobi as its Africa headquarters.",
+			"Laban Cliff is also a News Anchor on KTN News and KTN Home. He has previously interviewed Africa's business and government leaders on CNBC Africa and Nation Media Group, East Africa's Largest integrated media house. In 2012, He was named Africa's Best Newcomer in business journalism at the Diageo Africa Awards held in London.",
+			"Out of work he enjoys motorsports and is a rally co-driver in the World Rally Championship and assists in handling communications for the East African Safari Classic Rally. He is the East Africa Regional Director of the Chief of Staff Association, UK the World's representative body of Chiefs of Staff in government, private sector, and military circles.",
+		],
+		occupation: {
+			position: "Emcee",
+			pow: "AI Platform",
+			image: null,
+		},
+		image: image.people.moderators.labanCliff,
+		contact: {
+			email: "labancliff@gmail.com",
+			phone: [],
+			socials: [],
+		},
+		category: ["speaker"],
+	},
 ];
 
 export default people;

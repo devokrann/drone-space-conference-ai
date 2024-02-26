@@ -18,19 +18,19 @@ export default function Speakers() {
 		<Layout.Body header={<Partial.Header.Main />} nav={<Partial.Navbar.Main />} footer={<Partial.Footer.Main />}>
 			<Layout.Page hero={<Layout.Hero.Route />}>
 				<Layout.Section containerized margined>
-					{/* <Stack ta={"center"} gap={"xl"}>
+					<Stack ta={"center"} gap={"xl"}>
 						<Title order={2} fz={40} c={"pri"}>
 							Speakers Coming Soon
 						</Title>
 						<Text>Our best Speakers will be added soon</Text>
-					</Stack> */}
-					<Grid>
+					</Stack>
+					{/* <Grid>
 						{data.people.map(person => (
 							<Grid.Col key={person.name} span={{ base: 12, xs: 6, sm: 4, md: 3 }}>
 								<Component.Card.Speaker.Listing data={person} />
 							</Grid.Col>
 						))}
-					</Grid>
+					</Grid> */}
 				</Layout.Section>
 				<Divider />
 				<Layout.Section containerized containerSize="sm" margined>

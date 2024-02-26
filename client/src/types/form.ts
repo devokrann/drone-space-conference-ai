@@ -16,8 +16,14 @@ export interface typeContact {
 	boothPackage: string;
 	boothSize: string;
 
+	websiteLink: string;
+	teamMember1: string;
+	teamMember2: string;
+	teamMember3: string;
+	teamMember4: string;
+
 	message: string;
-	policy: boolean;
+	// policy: boolean;
 }
 
 export interface typeSignup {
