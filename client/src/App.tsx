@@ -31,7 +31,7 @@ const router = createBrowserRouter(
 			<Route path="hackathon" element={<Hackathon />} />
 			<Route path="speakers">
 				<Route index element={<Speakers />} />
-				<Route path=":speaker" element={<Speaker />} />
+				{/* <Route path=":speaker" element={<Speaker />} /> */}
 			</Route>
 			<Route path="sponsors" element={<Sponsors />} />
 			<Route path="registration">
