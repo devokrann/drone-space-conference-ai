@@ -88,7 +88,8 @@ export default function Speaker() {
 												{personDetails?.name}
 											</Title>
 											<Text fw={"bold"}>
-												{personDetails?.occupation.position}, {personDetails?.occupation.pow}
+												{personDetails?.occupation.position}
+												{personDetails?.occupation.pow && `, ${personDetails?.occupation.pow}`}
 											</Text>
 										</Grid.Col>
 										{personDetails?.occupation.image && (

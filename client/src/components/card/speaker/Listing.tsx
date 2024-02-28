@@ -37,7 +37,8 @@ export default function Listing({ data }: { data: typeSpeaker }) {
 					{data.name}
 				</Anchor>
 				<Text fz={"xs"} fw={500}>
-					{data.occupation.position}, {data.occupation.pow}
+					{data.occupation.position}
+					{data.occupation.pow && `, ${data.occupation.pow}`}
 				</Text>
 			</Stack>
 		</Card>

@@ -143,6 +143,74 @@ const people = [
 		},
 		category: ["speaker"],
 	},
+	{
+		name: "Lyela Mutisya",
+		bio: [
+			"Lyela Mutisya graduated from Lewis University in 2017 with a B.S. in Aviation Administration and a minor in Unmanned Aircraft Systems (UAS). In 2015 during Lyela's junior year in college she took an elective that sparked her love for Uncrewed Aircraft Systems (UAS). As a result of her newfound passion for drones Lyela ended up minoring in UAS.",
+			"Over the years Lyela has been featured in several publications both local and international. She has also participated in several speaking engagements including the 2016 Drone World Expo's Women in Drones Panel.",
+			"In 2021 Lyela joined LifeBank as the Drone Pilot Lead. During her time at LifeBank Lyela learned how to fly Vertical Takeoff & Landing (VTOL) drones. She underwent trainings both in Germany and London. Lyela assisted LifeBank with establishing drone operations for last mile medical delivery in Ethiopia.",
+			"She has vast experience in BVLOS operations from assessing suitable areas for BVLOS operations, preflight planning, risk assessment, flight operations, cargo loading and unloading, communication, and post-flight procedures.",
+			"She is currently on the forefront of using drone technology for last mile medical delivery here in Kenya. As an entrepreneur Lyela's goal is to not only inspire young women and men but to empower them as well through drone education and employment.",
+		],
+		occupation: {
+			position: null,
+			pow: null,
+			image: null,
+		},
+		image: image.people.speakers.lyelaMutisya,
+		contact: {
+			email: "lyela.mutisya@gmail.com",
+			phone: null,
+			socials: null,
+		},
+		category: ["speaker"],
+	},
+	{
+		name: "Solomon Wanjiru",
+		bio: [
+			"Mr. Solomon is a multi-talented professional excelling as a Land Surveyor, Drone Pilot Instructor and Cartographer. With a degree in surveying technology and a diploma in cartography, Solomon brings over 11 years of extensive experience to his craft.",
+			"He holds a license as a Drone Pilot Instructor and approved KCAA examiner, boasting over 5 years of expertise in aerial mapping. Currently serving as the chief drone pilot at Geoid Technologies Ltd, Solomon's work transcends various industries, including real estate, agriculture, construction, and thermal inspections.",
+			"Renowned for his proficiency in flying diverse drone models and capturing captivating aerial shots, seamlessly extending his expertise into various surveying projects, where he consistently delivers precision and innovation.",
+		],
+		occupation: {
+			position: "Director",
+			pow: "Geoid Technologies",
+			image: image.companies.geoid,
+		},
+		image: image.people.speakers.solomonWanjiru,
+		contact: {
+			email: "solomon@geoidtechnologies.com",
+			phone: ["+254726945420", "+254726884224"],
+			socials: [
+				{ label: "facebook", link: "https://www.facebook.com/geoidtechnologies" },
+				{ label: "twitter", link: "https://twitter.com/GeoidL" },
+				{ label: "linkedin", link: "https://www.linkedin.com/company/geoidtechnologies-ltd/" },
+				{ label: "instagram", link: "https://www.instagram.com/geoidtechnologies_ltd/" },
+			],
+		},
+		category: ["speaker"],
+	},
+	{
+		name: "Violet Ochieng",
+		bio: [
+			"Violet Ochieng, the STEM advocate and KCAA-Certified Remote Pilot, is also the winner of the Carol Ellison Science Award for 2021. She is an early-career researcher with interest in the use of digital technology in pest detection and management. She holds the position of Research Officer-Drone Technology at CABI where she utilizes her research capacity to address societal challenges while creating opportunities for innovation.",
+			"Motivated by her passion for environmental conservation and agricultural innovation, she pursued a Bachelor of Science in Environmental Conservation and Natural Resource Management, and a Master's of Science in Agricultural Entomology at the University of Nairobi, Kenya. During her master's program, she developed, designed, implemented and pioneered a project with the Centre for Agriculture and Bioscience International (CABI) focusing on piloting the use of drone technology for surveillance and control of Desert Locusts.",
+			"In addition to her  outstanding academic and research achievements, Violet is an active member of several  prestigious organizations, including the African Association of Insect Scientists (AAIS), Association of Kenyan Entomologists, Entomological Society of America (ESA), International Association of Black Entomologists (IABE), International Society of Precision  Agriculture, Nature Kenya, Greenpeace Africa, and the Global Locusts Initiative",
+			"With her unique blend of academic expertise, hands-on experience, and commitment to innovation, Violet is poised to make a meaningful impact in the field of precision agriculture. She is dedicated to advancing scientific and technological innovations that contribute to poverty alleviation and enhanced food security through agricultural research and innovation. She is intentionally dedicated to empowering youths to take a leading role in agriculture.",
+		],
+		occupation: {
+			position: null,
+			pow: null,
+			image: null,
+		},
+		image: image.people.speakers.violetOchieng,
+		contact: {
+			email: "v.ochieng@cabi.org",
+			phone: null,
+			socials: null,
+		},
+		category: ["speaker"],
+	},
 ];
 
 export default people;
