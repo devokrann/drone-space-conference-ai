@@ -1,7 +1,9 @@
 import Navbar from "./Navbar";
+import Chat from "./Chat";
 
 const affix = {
-	Navbar: Navbar,
+	Navbar,
+	Chat,
 };
 
 export default affix;

@@ -22,6 +22,7 @@ export default function Page({ padded, stacked, hero, children, ...restProps }: 
 						{children}
 					</Stack>
 					<Component.Affix.Navbar />
+					<Component.Affix.Chat />
 				</>
 			) : (
 				<>
@@ -34,6 +35,7 @@ export default function Page({ padded, stacked, hero, children, ...restProps }: 
 						{children}
 					</Box>
 					<Component.Affix.Navbar />
+					<Component.Affix.Chat />
 				</>
 			)}
 		</Section>

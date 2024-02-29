@@ -7,6 +7,7 @@ import instagram from "./icons8-instagram.svg";
 import linkedin from "./icons8-linkedin.svg";
 import medium from "./icons8-medium.svg";
 import twitter from "./icons8-twitter.svg";
+import whatsapp from "./icons8-whatsapp.svg";
 
 const social = {
 	behance: behance,
@@ -18,6 +19,7 @@ const social = {
 	linkedin: linkedin,
 	medium: medium,
 	twitter: twitter,
+	whatsapp: whatsapp,
 };
 
 export default social;
