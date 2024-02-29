@@ -16,7 +16,7 @@ export default function Listing({ data }: { data: typeSpeaker }) {
 		<Card className={classes.card}>
 			<Box className={classes.imageContainer}>
 				<Image src={data.image} alt={data.name} className={classes.image} />
-				{data.contact.socials && (
+				{data.contact && data.contact.socials && (
 					<Group justify="center" gap={"xs"} className={classes.socials}>
 						{data.contact.socials.map(social => (
 							<Anchor key={social.link} inherit href={social.link} target="_blank">

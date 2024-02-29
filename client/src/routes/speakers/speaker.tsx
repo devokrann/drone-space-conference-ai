@@ -28,55 +28,47 @@ export default function Speaker() {
 				<Layout.Section containerized margined>
 					<Grid gutter={48}>
 						<Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
-							<Stack gap={"xl"} className={classes.card}>
+							<Stack gap={"xl"} pb={personDetails?.contact ? "xl" : undefined} className={classes.card}>
 								<Image src={personDetails?.image} w={"100%"} className={classes.image} />
-								<Stack px={"xl"}>
-									<Group justify="center">
-										{/* <Text component="span" inherit fw={500} className={classes.label}>
-											Email
-										</Text> */}
-										<Anchor
-											href={`mailto:${personDetails?.contact.email}`}
-											inherit
-											className={classes.link}
-										>
-											{personDetails?.contact.email}
-										</Anchor>
-									</Group>
-									{/* {personDetails?.contact.phone.map(item => (
-										<Group key={item} justify="space-between">
-											<Text key={item} component="span" fw={500} className={classes.label}>
-												Phone{" "}
-												{personDetails?.contact.phone.length > 1 &&
-													personDetails?.contact.phone.indexOf(item) + 1}
-											</Text>
-											<Anchor href={`tel:${item}`} inherit className={classes.link}>
-												{item}
-											</Anchor>
-										</Group>
-									))} */}
-									{/* <Divider color="sec.6" /> */}
-									{personDetails?.contact.socials && (
-										<Group justify="center">
-											{personDetails?.contact.socials.map(social => (
+
+								{personDetails?.contact && (
+									<Stack px={"xl"}>
+										{personDetails?.contact.email && (
+											<Group justify="center">
 												<Anchor
-													key={social.link}
+													href={`mailto:${personDetails?.contact.email}`}
 													inherit
-													href={social.link}
-													target="_blank"
 													className={classes.link}
 												>
-													<Image
-														src={data.icons.social.find(i => i.label == social.label)?.icon}
-														w={36}
-														h={36}
-														alt={social.label}
-													/>
+													{personDetails?.contact.email}
 												</Anchor>
-											))}
-										</Group>
-									)}
-								</Stack>
+											</Group>
+										)}
+										{personDetails?.contact.socials && (
+											<Group justify="center">
+												{personDetails?.contact.socials.map(social => (
+													<Anchor
+														key={social.link}
+														inherit
+														href={social.link}
+														target="_blank"
+														className={classes.link}
+													>
+														<Image
+															src={
+																data.icons.social.find(i => i.label == social.label)
+																	?.icon
+															}
+															w={36}
+															h={36}
+															alt={social.label}
+														/>
+													</Anchor>
+												))}
+											</Group>
+										)}
+									</Stack>
+								)}
 							</Stack>
 						</Grid.Col>
 						<Grid.Col span={{ base: 12, sm: 6, md: 8 }} ta={{ base: "center", xs: "start" }}>
