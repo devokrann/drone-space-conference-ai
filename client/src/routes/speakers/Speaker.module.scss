@@ -16,6 +16,10 @@
 	border-radius: var(--mantine-radius-md);
 	padding: var(--mantine-spacing-xs);
 	background-color: light-dark(var(--mantine-color-white));
+	max-height: 96px;
+	max-width: 160px;
+	width: auto;
+	margin: auto;
 }
 
 .link {

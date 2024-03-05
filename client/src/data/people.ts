@@ -22,7 +22,30 @@ const people = [
 		category: ["moderator"],
 	},
 	{
+		name: "Lyela Mutisya",
+		bio: [
+			"Lyela Mutisya graduated from Lewis University in 2017 with a B.S. in Aviation Administration and a minor in Unmanned Aircraft Systems (UAS). In 2015 during Lyela's junior year in college she took an elective that sparked her love for Uncrewed Aircraft Systems (UAS). As a result of her newfound passion for drones Lyela ended up minoring in UAS.",
+			"Over the years Lyela has been featured in several publications both local and international. She has also participated in several speaking engagements including the 2016 Drone World Expo's Women in Drones Panel.",
+			"In 2021 Lyela joined LifeBank as the Drone Pilot Lead. During her time at LifeBank Lyela learned how to fly Vertical Takeoff & Landing (VTOL) drones. She underwent trainings both in Germany and London. Lyela assisted LifeBank with establishing drone operations for last mile medical delivery in Ethiopia.",
+			"She has vast experience in BVLOS operations from assessing suitable areas for BVLOS operations, preflight planning, risk assessment, flight operations, cargo loading and unloading, communication, and post-flight procedures.",
+			"She is currently on the forefront of using drone technology for last mile medical delivery here in Kenya. As an entrepreneur Lyela's goal is to not only inspire young women and men but to empower them as well through drone education and employment.",
+		],
+		occupation: {
+			position: "Drone Expert",
+			pow: null,
+			image: null,
+		},
+		image: image.people.speakers.lyelaMutisya,
+		contact: {
+			email: "lyela.mutisya@gmail.com",
+			phone: null,
+			socials: null,
+		},
+		category: ["speaker"],
+	},
+	{
 		name: "Michael Zimba",
+		nationality: "Malawi",
 		bio: [
 			"Michael Zimba is the Executive Dean of the Malawi Institute of Technology, Lead of the Center for Artificial Intelligence and STEAM (CAIST) and Associate Professor of Artificial Intelligence and Data Science at the Malawi University of Science and Technology.",
 			"He is an Oxford University Press' Unit Editor for AI in Society Series. He is an EDSAFE AI Catalyst Fellow on Safe AI in Education under the USA's EDSAFE AI Alliance. He is an African Union Commission's Contributing Expert to STISA, and African Union High Level Panel on Emerging Technologies' (APET's) Contributing Expert on AI.",
@@ -42,28 +65,6 @@ const people = [
 		category: ["speaker"],
 	},
 	{
-		name: "Lyela Mutisya",
-		bio: [
-			"Lyela Mutisya graduated from Lewis University in 2017 with a B.S. in Aviation Administration and a minor in Unmanned Aircraft Systems (UAS). In 2015 during Lyela's junior year in college she took an elective that sparked her love for Uncrewed Aircraft Systems (UAS). As a result of her newfound passion for drones Lyela ended up minoring in UAS.",
-			"Over the years Lyela has been featured in several publications both local and international. She has also participated in several speaking engagements including the 2016 Drone World Expo's Women in Drones Panel.",
-			"In 2021 Lyela joined LifeBank as the Drone Pilot Lead. During her time at LifeBank Lyela learned how to fly Vertical Takeoff & Landing (VTOL) drones. She underwent trainings both in Germany and London. Lyela assisted LifeBank with establishing drone operations for last mile medical delivery in Ethiopia.",
-			"She has vast experience in BVLOS operations from assessing suitable areas for BVLOS operations, preflight planning, risk assessment, flight operations, cargo loading and unloading, communication, and post-flight procedures.",
-			"She is currently on the forefront of using drone technology for last mile medical delivery here in Kenya. As an entrepreneur Lyela's goal is to not only inspire young women and men but to empower them as well through drone education and employment.",
-		],
-		occupation: {
-			position: null,
-			pow: null,
-			image: null,
-		},
-		image: image.people.speakers.lyelaMutisya,
-		contact: {
-			email: "lyela.mutisya@gmail.com",
-			phone: null,
-			socials: null,
-		},
-		category: ["speaker"],
-	},
-	{
 		name: "Mwangi Kirubi",
 		bio: [
 			"Mwangi Kirubi aka Mwarv has been telling stories through photography and film for over 20 years. Starting off as an advertising copywriter, Mwarv transitioned into creating photo and video documentaries for clients across the globe.",
@@ -79,23 +80,25 @@ const people = [
 		category: ["speaker"],
 	},
 	{
-		name: "George Ogada",
+		name: "Sahil Patel",
+		nationality: "SA",
 		bio: [
-			"George Ogada specializes in Planning, Program Management, and Providing Crucial Support to startups and innovation initiatives. With a wealth of experience in the FMCG planning space, George has developed the skills needed to navigate the intricate landscape of program management. His skills extend beyond traditional planning, encompassing a keen focus on startup ecosystems and fostering innovation.",
-			"George's expertise lies in developing and implementing strategies that drive both operational efficiency and creative problem-solving. His commitment to the realms of program management, coupled with a passion for people, supporting startups and fostering innovation, positions him as a valuable asset capable of steering projects toward success in dynamic and evolving environments.",
+			"Sahil Patel is a Data Scientist at Matogen Applied Insights - South Africa, where he harnesses artificial intelligence to enhance business operations and efficiency. He earned his Master of Science in Computer Science, with a specialization in Artificial Intelligence, from the University of Nottingham in 2022, graduating with Distinction.",
+			"At Matogen Applied Insights since December 2022, Sahil has been instrumental in automating business processes and developing machine learning models that provide valuable insights across various sectors, including banking, telecommunications, and agriculture.",
+			"As a participant at the AI conference in Nairobi, Sahil aims to share practical approaches to data monetization and discuss AI's role in creating new job opportunities. His work demonstrates a focused commitment to leveraging technology in addressing complex business challenges and contributing positively to the AI field.",
 		],
 		occupation: {
-			position: "Programme Associate",
-			pow: "HiiL Innovation Hub, EA",
-			image: image.companies.hiil,
+			position: "Data Scientist",
+			pow: "Matogen Applied Insights",
+			image: image.companies.matogen,
 		},
-		image: image.people.moderators.georgeOgada,
+		image: image.people.speakers.sahilPatel,
 		contact: {
-			email: "george.ogada@hill.org",
-			phone: ["+254706298677"],
-			socials: [{ label: "linkedin", link: "https://www.linkedin.com/in/georgeogada" }],
+			email: "sahil.patel@ai.matogen.com",
+			phone: null,
+			socials: null,
 		},
-		category: ["speaker", "moderator"],
+		category: ["speaker"],
 	},
 	{
 		name: "Michael Michie",
@@ -146,15 +149,15 @@ const people = [
 			"Out of work he enjoys motorsports and is a rally co-driver in the World Rally Championship and assists in handling communications for the East African Safari Classic Rally. He is the East Africa Regional Director of the Chief of Staff Association, UK the World's representative body of Chiefs of Staff in government, private sector, and military circles.",
 		],
 		occupation: {
-			position: null,
-			pow: null,
+			position: "Regional Director",
+			pow: "Chief of Staff Association",
 			image: null,
 		},
 		image: image.people.moderators.labanCliff,
 		contact: {
 			email: "labancliff@gmail.com",
-			phone: [],
-			socials: [],
+			phone: null,
+			socials: null,
 		},
 		category: ["speaker"],
 	},
@@ -196,8 +199,8 @@ const people = [
 		image: image.people.speakers.benaiahWepundi,
 		contact: {
 			email: "ben@paydhq.com",
-			phone: [],
-			socials: [],
+			phone: null,
+			socials: null,
 		},
 		category: ["speaker"],
 	},
@@ -227,7 +230,8 @@ const people = [
 		category: ["speaker"],
 	},
 	{
-		name: "Nathan Ross",
+		name: "Nathan-Ross Adams",
+		nationality: "SA",
 		bio: [
 			"Nathan-Ross Adams is the Trustworthy AI programme director for Michalsons and helps organizations leverage AI (law)fully. He has presented many times to governing bodies, executive committees, and many other audiences. He has facilitated many public and private workshops and he has written extensively on the topic. He is currently an advisory board member of SAAIA.",
 			"In a world where everyone is suddenly an AI law expert, Nathan-Ross has been quietly working away at AI law and regulation since 2018. He is currently finishing his Doctor of Laws in AI after having completed a Master of Laws in AI in 2021. In 2022 he completed the GIZ AI pilot programme.",
@@ -243,6 +247,93 @@ const people = [
 			phone: null,
 			socials: null,
 		},
+		category: ["speaker"],
+	},
+	{
+		name: "Robinson Muiru",
+		bio: [
+			"Robinson is a Computer Engineer by profession majoring in cryptography, and also a software engineer and innovation researcher. Currently, a Topcoder Ambassador in Africa and West Asia with experience in software development and data science solving NASA software problems under the NASA Tournament Lab partnership with Topcoder. ",
+			"Been a globally ranked competitive programmer for 6+ years, solving global challenges and delivering outstanding outcomes for tech companies. Currently working at NASA SPACE APPS challenges for the global participants.",
+		],
+		occupation: {
+			position: "Co-Director",
+			pow: "CodeVista",
+			image: null,
+		},
+		image: image.people.speakers.robinsonMuiru,
+		contact: {
+			email: "robinsonrokit@protonmail.com",
+			phone: null,
+			socials: [
+				{ label: "linkedin", link: "https://www.linkedin.com/in/robinson-muiru-710399115/" },
+				{ label: "instagram", link: "https://www.instagram.com/robinsonrokit/" },
+				{ label: "twitter", link: "https://twitter.com/RobinsonMuiru1/" },
+			],
+		},
+		category: ["speaker"],
+	},
+	{
+		name: "Bright Gameli Mawudor",
+		bio: [
+			"Dr. Bright Gameli Mawudor is a trailblazing CEO of CyberGuard Africa LTD, Africa's vanguard in Cyber resilience services organization. With a strong commitment to shaping Africa's CyberSecurity landscape, he is the visionary founder of Africahackon, a Cyber Security collective dedicated to nurturing excellence through capacity building and fostering a vibrant community of experts across the continent",
+			"A world-class academic, Dr. Bright earned his PhD in IT Convergence and Application Engineering with a specialization in Information Security from Pukyong National University, South Korea. His outstanding professionalism has earned him prestigious positions on Advisory Boards, including EC-Council Global Advisory Board Member for CTIA, Cybersafe Foundation, Moringa School, and AfCAA – the African council for accreditation and accountability.",
+			"With over a decade of experience in the Cyber Security industry, Dr. Mawudor possesses profound expertise in Cyber Security Strategy, Resilience, and system penetration testing. A seasoned speaker, he has captivated audiences at more than 315 Cyber Security conferences, and his wisdom has been shared with students at various universities and through contributions to prominent Cyber Security publications.",
+			"Recognition has been no stranger to him, as he was honored by Tribe of Hackers: Blue Team 2020 and acknowledged among the Top 40 Under 40 young entrepreneurs in Kenya for his exceptional achievements.",
+			"Having worked with esteemed organizations such as Dimension Data/NTT, Cellulant, and Ushahidi, Dr. Mawudor has conducted numerous evaluations and selections of Cyber Security tools, successfully implementing cutting-edge IT security systems to safeguard critical business environments and mitigate risks.",
+			"A technically skilled expert, especially within the Cyber Security space, Dr. Bright is dedicated, collaborative, and exhibits excellent leadership qualities. His indomitable spirit drives him to shape a more secure digital future for Africa and beyond.",
+		],
+		occupation: {
+			position: "CEO",
+			pow: "CyberGuard Africa Ltd",
+			image: null,
+		},
+		image: image.people.speakers.brightGameli,
+		contact: {
+			email: "bright.gameli@africahackon.com",
+			phone: null,
+			socials: null,
+		},
+		category: ["speaker"],
+	},
+	{
+		name: "Koyundi Bryan",
+		bio: [
+			"In the dynamic realm of AI, one name stands out - Koyundi Bryan, a distinguished AI researcher, passionate ethicist, and the visionary founder of a groundbreaking AI startup. With over a decade of experience, Koyundi is an influential force, contributing to the field of AI, particularly in the fascinating domain of computer vision.",
+			"As an AI researcher, Koyundi has left an indelible mark on the landscape of artificial intelligence. His journey is marked by groundbreaking contributions in the realms of natural language processing, computer vision, and machine learning. He has delved deep into the intricate web of AI algorithms and models, advancing the boundaries of what AI can achieve. His impressive portfolio includes numerous papers published in leading academic journals, each offering innovative solutions to complex problems. His unrelenting commitment to pushing the frontiers of AI has not gone unnoticed, as he's garnered several prestigious awards and accolades for his pioneering work.",
+			"Koyundi is not merely a researcher but also a hands-on practitioner. His expertise has been instrumental in the private and public sectors, where he's led teams of data scientists, engineers, and analysts. Together, they've designed and implemented AI solutions that have transformed industries. From enhancing efficiency and productivity to elevating customer satisfaction, Koyundi's practical insights into AI applications have sparked remarkable progress.",
+			"Ethics are at the heart of Koyundi's AI journey. He's a tireless advocate for the ethical and responsible use of AI. His thought leadership has resonated across international conferences and events, where he has delivered impassioned talks, shedding light on the potential risks and benefits of AI. Koyundi emphasizes the imperative of a collaborative approach to AI development and deployment, acknowledging that the power of AI must be wielded responsibly to avoid harm and ensure fairness.",
+			"What sets Koyundi apart is his multifaceted role as a policy maker. He's been pivotal in shaping the regulatory framework for AI in Kenya, collaborating with governments and international organizations to craft policies and guidelines. These guidelines are not merely bureaucratic but reflect Koyundi's deeply held belief in ethical and responsible AI. They strike a balance between fostering innovation and progress and ensuring that AI is harnessed for the greater good of society. But Koyundi's journey doesn't stop here. He's a founder, an innovator, and a trailblazer. He's brought all his expertise, insights, and passion together to establish an AI startup. This startup is not just another player in the AI landscape; it's a visionary endeavor, driven by Koyundi's commitment to making AI work for the greater good.",
+			"Koyundi Bryan is not just an AI expert; he's a visionary who combines technical prowess with a profound understanding of the social, economic, and ethical implications of AI. His mission is clear: to ensure that AI benefits everyone. He believes in the transformative power of AI, and through his research, advocacy, and entrepreneurship, he's paving the way for an AI future that is both brilliant and benevolent.",
+		],
+		occupation: {
+			position: "Founder",
+			pow: "Cybertech Labs & Systems",
+			image: image.companies.aiStartup,
+		},
+		image: image.people.speakers.koyundiBryan,
+		contact: {
+			email: "koyundibryan@gmail.com",
+			phone: null,
+			socials: null,
+		},
+		category: ["speaker"],
+	},
+	{
+		name: "Tawanda Chihambakwe",
+		bio: [
+			"Tawanda is an award-winning technology entrepreneur and Founder of PRECISION AERIAL GROUP, a drone service, consultancy, and training group of companies based in Zimbabwe and operating across Southern Africa.",
+			"Tawanda is a Certified Drone Pilot Instructor with Multirotor, Fixed Wing and BVLOS ratings and a Drone Systems Integration Consultant. Through Precision Aerial Group, he successfully secured the country license for Zimbabwe Flying Labs, the first drone technology hub in Zimbabwe, and the local country chapter of the global Flying Labs Network.",
+			"He is also the Director of Precision Drone Training, Africa's first integrated Professional Pilot training school that specializes in delivering Advanced Industry Specific Drone Training courses Eg. Drones for Agriculture, Wildlife Management, Medical Drone Deliveries, and Disaster Risk Reduction.",
+			"Tawanda is also the Founder of the Zimbabwe International Drone Conference, southern Africa's premier gathering of Drone Professionals, the Civil Aviation Authority, and Public and Private sector key stakeholders.",
+			"As an International Speaker on Drone Technology and STEM education, Tawanda has spoken at over 35 speaking events and conferences in Kenya, Nigeria, South Africa, the USA, Zambia, and Zimbabwe.",
+		],
+		occupation: {
+			position: "Managing Director & Chief Drone Pilot",
+			pow: "Zimbabwe Flying Labs",
+			image: null,
+		},
+		image: image.people.speakers.tawandaChihambakwe,
+		contact: null,
 		category: ["speaker"],
 	},
 ];

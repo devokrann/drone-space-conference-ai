@@ -36,10 +36,17 @@ export default function Listing({ data }: { data: typeSpeaker }) {
 				<Anchor className={classes.title} component={Link} to={`${hook.useLinkify(data.name)}`}>
 					{data.name}
 				</Anchor>
-				<Text fz={"xs"} fw={500}>
-					{data.occupation.position}
-					{data.occupation.pow && `, ${data.occupation.pow}`}
-				</Text>
+				<Stack gap={0}>
+					<Text fz={"sm"} fw={"bold"}>
+						{data.occupation.position}
+					</Text>
+					{data.occupation.pow && (
+						<Text fz={"xs"} fw={500}>
+							{data.occupation.pow}
+							{data.nationality && `, ${data.nationality}`}
+						</Text>
+					)}
+				</Stack>
 			</Stack>
 		</Card>
 	);

@@ -98,7 +98,9 @@ export default function Speaker() {
 								<Divider />
 								<Stack gap={"xs"}>
 									{personDetails?.bio.map(item => (
-										<Text key={item}>{item}</Text>
+										<Text key={item} fz={"sm"}>
+											{item}
+										</Text>
 									))}
 								</Stack>
 							</Stack>
