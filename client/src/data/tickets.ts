@@ -1,7 +1,7 @@
 const tickets = [
 	{
-		title: "Early Bird",
-		price: "2,000",
+		title: "Regular",
+		price: "2,500",
 		desc: "This ticket includes admission to the Ai Conference and Expo for one day.",
 	},
 	{
