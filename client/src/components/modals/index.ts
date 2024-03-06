@@ -1,9 +1,11 @@
-import Booth from "./Booth";
-import Sponsorship from "./Sponsorship";
+// import Booth from "./Booth";
+import Contact from "./Contact";
+// import Sponsorship from "./Sponsorship";
 
-const Modal = {
-	Booth: Booth,
-	Sponsorship: Sponsorship,
+const modal = {
+	// Booth: Booth,
+	// Sponsorship: Sponsorship,
+	Contact: Contact,
 };
 
-export default Modal;
+export default modal;

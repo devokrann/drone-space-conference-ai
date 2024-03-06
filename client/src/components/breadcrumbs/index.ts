@@ -1,7 +1,7 @@
 import Hero from "./Hero";
 
-const Breadcrumbs = {
+const breadcrumb = {
 	Hero: Hero,
 };
 
-export default Breadcrumbs;
+export default breadcrumb;

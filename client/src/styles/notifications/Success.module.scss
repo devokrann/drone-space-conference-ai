@@ -1,0 +1,16 @@
+.root {
+	background-color: light-dark(var(--mantine-color-pri-6), var(--mantine-color-body));
+}
+
+.icon {
+	background-color: light-dark(var(--mantine-color-sec-6), var(--mantine-color-pri-6));
+	color: light-dark(var(--mantine-color-dark-6), var(--mantine-color-dark-6));
+}
+
+.title {
+	color: light-dark(var(--mantine-color-white), var(--mantine-color-gray-3));
+}
+
+.description {
+	color: light-dark(var(--mantine-color-white), var(--mantine-color-gray-3));
+}

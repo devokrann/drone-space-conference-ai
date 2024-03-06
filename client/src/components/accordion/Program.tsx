@@ -1,88 +1,96 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-import { Accordion, Container, Divider, Group, Stack, Text } from "@mantine/core";
+import { Accordion, Anchor, Container, Divider, Group, Stack, Text } from "@mantine/core";
+
+import { typeSpeaker } from "@src/types/people";
+
+import card from "../card";
 
 import clases from "./Program.module.scss";
+import hook from "@src/hooks";
 
 export default function Program({
 	data,
 }: {
 	data: {
-		title: string;
-		desc: { agenda: string[]; speakers?: string[]; panelists?: string[]; moderator?: string[] };
+		title: { duration: string; heading: string };
+		desc: { agenda: string; questions?: string[]; participants?: typeSpeaker[]; moderator?: typeSpeaker };
 	}[];
 }) {
 	const items = data.map(item => (
-		<Accordion.Item key={item.title} value={item.title}>
-			<Accordion.Control>{item.title}</Accordion.Control>
+		<Accordion.Item key={item.title.duration} value={item.title.duration}>
+			<Accordion.Control>
+				<Group>
+					<Text component="span">{item.title.duration}</Text>-
+					<Text component="span">{item.title.heading}</Text>
+				</Group>
+			</Accordion.Control>
 			<Accordion.Panel fz={"sm"}>
 				<Container>
 					<Stack>
 						{item.desc.agenda && (
 							<Stack gap={"xs"}>
-								{item.desc.agenda.map(agend => (
-									<Text inherit key={agend}>
-										<Text component="span" inherit fw={500}>
-											Agenda {item.desc.agenda.length > 1 && item.desc.agenda.indexOf(agend) + 1}
-										</Text>{" "}
-										: {agend}
-									</Text>
-								))}
+								{/* <Divider variant="dashed" label="Agenda" labelPosition="left" /> */}
+								<Text inherit fw={500}>
+									{item.desc.agenda}
+								</Text>
 							</Stack>
 						)}
-						{item.desc.speakers && (
-							<>
-								{/* <Divider variant="dashed" /> */}
+
+						{item.desc.questions && (
+							<Stack gap={"xs"}>
+								<Divider variant="dashed" label="Questions" labelPosition="left" />
+								<Stack gap={"xs"}>
+									{item.desc.questions?.map(question => (
+										<Text inherit key={question}>
+											{question}
+										</Text>
+									))}
+								</Stack>
+							</Stack>
+						)}
+
+						{item.desc.participants && item.desc.participants?.filter(p => p != undefined).length > 0 && (
+							<Stack gap={"xs"}>
+								<Divider variant="dashed" label={`Participants`} labelPosition="left" />
+								{/* <Stack gap={"xs"}>
+									{item.desc.participants?.map(participant => (
+										<Text inherit key={participant}>
+											{participant}
+										</Text>
+									))}
+								</Stack> */}
 								<Group>
-									{item.desc.speakers?.map(speaker => (
-										<Text inherit key={speaker}>
-											<Text component="span" inherit fw={500}>
-												Speaker{" "}
-												{item.desc.speakers &&
-													item.desc.speakers?.length > 1 &&
-													item.desc.speakers?.indexOf(speaker) + 1}
-											</Text>{" "}
-											: {speaker}
-										</Text>
+									{item.desc.participants.map(participant => (
+										<Anchor
+											key={participant.name}
+											underline="never"
+											w={"fit-content"}
+											component={Link}
+											to={`/speakers/${hook.useLinkify(participant.name)}`}
+										>
+											<card.Speaker.Agenda data={participant} />
+										</Anchor>
 									))}
 								</Group>
-							</>
+							</Stack>
 						)}
-						{item.desc.panelists && (
-							<>
-								{/* <Divider variant="dashed" /> */}
-								<Group gap={"xl"}>
-									{item.desc.panelists?.map(panelist => (
-										<Text inherit key={panelist}>
-											<Text component="span" inherit fw={500}>
-												Panelist{" "}
-												{item.desc.panelists &&
-													item.desc.panelists?.length > 1 &&
-													item.desc.panelists?.indexOf(panelist) + 1}
-											</Text>{" "}
-											: {panelist}
-										</Text>
-									))}
-								</Group>
-							</>
-						)}
+
 						{item.desc.moderator && (
-							<>
-								{/* <Divider variant="dashed" /> */}
-								<Group gap={"xl"}>
-									{item.desc.moderator?.map(moderat => (
-										<Text inherit key={moderat}>
-											<Text component="span" inherit fw={500}>
-												Moderator{" "}
-												{item.desc.moderator &&
-													item.desc.moderator?.length > 1 &&
-													item.desc.moderator?.indexOf(moderat) + 1}
-											</Text>{" "}
-											: {moderat}
-										</Text>
-									))}
+							<Stack gap={"xs"}>
+								<Divider variant="dashed" label="Moderator" labelPosition="left" />
+								<Group>
+									<Anchor
+										underline="never"
+										w={"fit-content"}
+										component={Link}
+										to={`/speakers/${hook.useLinkify(item.desc.moderator.name)}`}
+									>
+										<card.Speaker.Agenda data={item.desc.moderator} />
+									</Anchor>
 								</Group>
-							</>
+							</Stack>
 						)}
 					</Stack>
 				</Container>
@@ -92,8 +100,8 @@ export default function Program({
 
 	return (
 		<Accordion
-			defaultValue={data[0].title}
-			classNames={{ control: clases.control, content: clases.content, label: clases.label }}
+			defaultValue={data[0].title.duration}
+			classNames={{ control: clases.control, content: clases.content, label: clases.label, item: clases.item }}
 		>
 			{items}
 		</Accordion>

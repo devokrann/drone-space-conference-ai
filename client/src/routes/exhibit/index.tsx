@@ -7,6 +7,7 @@ import { Button, Center, Grid, Image, Stack, Text, Title } from "@mantine/core";
 import image from "@src/assets/images";
 import data from "@src/data";
 import Card from "@src/components/card";
+import { IconArrowDown } from "@tabler/icons-react";
 
 // export async function loader() {
 // 	return "data";
@@ -34,29 +35,39 @@ export default function Exhibit() {
 					</Stack>
 				</Layout.Section>
 				<Layout.Section containerized margined>
-					<Grid gutter={"xl"}>
+					<Grid gutter={"xl"} align="center">
 						<Grid.Col span={{ base: 12, sm: 6 }}>
 							<Center>
-								<Image src={image.poster.poster1} w={"100%"} />
+								<Image src={image.poster.poster4} alt="poster" w={"100%"} />
 							</Center>
 						</Grid.Col>
 						<Grid.Col span={{ base: 12, sm: 6 }}>
-							<Stack gap={"xl"}>
-								<Text ta={{ base: "center", sm: "start" }}>
+							<Stack gap={"xl"} ta={{ base: "center", sm: "start" }}>
+								<Text>
 									The two-day event is an ideal platform to penetrate the market of Unmanned Aircraft
 									Systems (UAS) or Drones, Big Data and AI that will put products and Services in
 									front of an audience of decision-makers, investors and organizations looking for
-									solutions that will increase efficiency, mitigate risk and improve safety. As an
-									exhibitor you will gain unprecedented exposure to each and every one of our
-									pre-qualified visitors, all of whom are looking to find the latest products and
-									solutions that are revolutionizing Drones, data and AI sectors. By placing yourself
-									in front of these potential clients, you have the chance to pitch to them first hand
-									with the ability to achieve a direct line to market all in one place.
+									solutions that will increase efficiency, mitigate risk and improve safety.
 								</Text>
-								<Button component={"a"} href={"#booths"}>
+								<Text>
+									As an exhibitor you will gain unprecedented exposure to each and every one of our
+									pre-qualified visitors, all of whom are looking to find the latest products and
+									solutions that are revolutionizing Drones, data and AI sectors.
+								</Text>
+								<Text>
+									By placing yourself in front of these potential clients, you have the chance to
+									pitch to them first hand with the ability to achieve a direct line to market all in
+									one place.
+								</Text>
+								{/* <Image src={image.brand.landscape} w={"100%"} px={"xl"} visibleFrom="md" /> */}
+								<Button
+									component={"a"}
+									href={"#booths"}
+									leftSection={<IconArrowDown size={20} />}
+									rightSection={<IconArrowDown size={20} />}
+								>
 									Book A Booth
 								</Button>
-								<Image src={image.brand.landscape} w={"100%"} px={"xl"} visibleFrom="md" />
 							</Stack>
 						</Grid.Col>
 					</Grid>
@@ -74,7 +85,7 @@ export default function Exhibit() {
 						</Stack>
 						<Grid justify="center">
 							{data.exhibition.booths.map(booth => (
-								<Grid.Col key={booth.title} span={{ base: 12, sm: 6 }}>
+								<Grid.Col key={booth.price} span={{ base: 12, sm: 6 }}>
 									<Card.Booth data={booth} />
 								</Grid.Col>
 							))}

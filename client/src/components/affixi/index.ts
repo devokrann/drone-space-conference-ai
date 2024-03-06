@@ -1,7 +1,9 @@
 import Navbar from "./Navbar";
+import Chat from "./Chat";
 
-const Affix = {
-	Navbar: Navbar,
+const affix = {
+	Navbar,
+	Chat,
 };
 
-export default Affix;
+export default affix;

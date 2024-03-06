@@ -3,7 +3,7 @@ const additional = "(Additional participants have to purchase ticket)";
 const exhibition = {
 	booths: [
 		{
-			title: "Startups",
+			title: "Startup",
 			price: "15,000",
 			desc: {
 				list: [
@@ -14,7 +14,7 @@ const exhibition = {
 					"1 x 13-amp power point",
 					"2 x venue chairs",
 				],
-				dimentions: "3M by 3M",
+				dimentions: "3M by 2M",
 			},
 		},
 		{
@@ -77,7 +77,7 @@ const exhibition = {
 					"3 x venue chairs",
 					"1 x Dustbin",
 				],
-				dimentions: "3M by 3M",
+				dimentions: "6M by 3M",
 			},
 		},
 	],

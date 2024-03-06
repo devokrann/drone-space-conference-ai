@@ -1,7 +1,7 @@
 import Countdown from "./Countdown";
 
-const Counter = {
+const counter = {
 	Countdown: Countdown,
 };
 
-export default Counter;
+export default counter;

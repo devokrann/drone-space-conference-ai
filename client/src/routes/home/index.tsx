@@ -7,9 +7,10 @@ import list from "@src/data/list";
 
 import typeList from "@src/types/list";
 import Partial from "@src/partials";
-import { Button, Grid, Group, Stack, Text, Title } from "@mantine/core";
+import { Button, Divider, Grid, Group, Image, Stack, Text, Title, useMantineColorScheme } from "@mantine/core";
 import data from "@src/data";
 import Card from "@src/components/card";
+import image from "@src/assets/images";
 
 // export async function loader() {
 // 	return list;
@@ -17,11 +18,16 @@ import Card from "@src/components/card";
 
 export default function Home() {
 	// const data: typeList[] = useLoaderData();
+	const { colorScheme } = useMantineColorScheme();
+	const droneSpaceImage =
+		colorScheme == "dark"
+			? image.brand.dronespace.white.portrait.full
+			: image.brand.dronespace.original.portrait.full;
 
 	return (
 		<Layout.Body header={<Partial.Header.Main />} nav={<Partial.Navbar.Main />} footer={<Partial.Footer.Main />}>
 			<Layout.Page hero={<Layout.Hero.Home />}>
-				<Layout.Section containerized margined>
+				<Layout.Section containerized padded>
 					<Stack gap={48}>
 						<Stack ta={"center"} gap={"xl"}>
 							<Title order={2} fz={40} c={"sec"}>
@@ -34,19 +40,39 @@ export default function Home() {
 							</Text>
 						</Stack>
 						<Group justify="center" gap={48}>
-							<Button component="a" href="#objectives">
+							<Button leftSection={"1"} component="a" href="#objectives">
 								Objectives
 							</Button>
-							<Button component="a" href="#who">
+							<Button leftSection={"2"} component="a" href="#who">
 								Who Attends
 							</Button>
-							<Button component="a" href="#why">
+							<Button leftSection={"3"} component="a" href="#why">
 								Why Attend
 							</Button>
 						</Group>
 					</Stack>
 				</Layout.Section>
-				<Layout.Section containerized margined id="objectives">
+				{/* <Layout.Section containerized id="significance">
+					<Stack gap={48}>
+						<Stack ta={"center"} gap={"xl"}>
+							<Title order={2} fz={40} c={"pri"}>
+								Fusion Significance
+							</Title>
+							<Text>
+								AI, Drones and Data collectively play a significant role in various fields, contributing
+								to advancements and innovations in technology, business and society.
+							</Text>
+						</Stack>
+						<Grid justify="center">
+							{data.content.significance.map(objective => (
+								<Grid.Col key={objective.title} span={{ base: 12, sm: 6 }}>
+									<Card.Significance data={objective} />
+								</Grid.Col>
+							))}
+						</Grid>
+					</Stack>
+				</Layout.Section> */}
+				<Layout.Section containerized padded id="objectives">
 					<Stack gap={48}>
 						<Stack ta={"center"} gap={"xl"}>
 							<Title order={2} fz={40} c={"pri"}>
@@ -66,7 +92,7 @@ export default function Home() {
 						</Grid>
 					</Stack>
 				</Layout.Section>
-				<Layout.Section containerized margined id="who">
+				<Layout.Section containerized padded id="who">
 					<Stack gap={48}>
 						<Stack ta={"center"} gap={"xl"}>
 							<Title order={2} fz={40} c={"pri"}>
@@ -86,7 +112,7 @@ export default function Home() {
 						</Grid>
 					</Stack>
 				</Layout.Section>
-				<Layout.Section containerized margined id="why">
+				<Layout.Section containerized padded id="why">
 					<Stack gap={48}>
 						<Stack ta={"center"} gap={"xl"}>
 							<Title order={2} fz={40} c={"pri"}>
@@ -109,6 +135,39 @@ export default function Home() {
 						</Grid>
 					</Stack>
 				</Layout.Section>
+				<Layout.Section containerized padded>
+					<Stack gap={"xs"}>
+						{/* <Stack ta={"center"} gap={"xl"}>
+							<Title order={2} fz={40} c={"pri"}>
+								Powered By{" "}
+								<Text component="span" inherit c={"sec.6"}>
+									Drone Space!
+								</Text>
+							</Title>
+							<Text></Text>
+						</Stack> */}
+						<Grid justify="center">
+							<Grid.Col span={{ base: 12 }} mx={"auto"}>
+								<Grid gutter={"xl"}>
+									<Grid.Col span={{ base: 12 }} mx={"auto"}>
+										<Divider label={"powered by"} w={"50%"} mx={"auto"} />
+									</Grid.Col>
+									<Grid.Col span={{ base: 8, xs: 5, sm: 4 }} mx={"auto"}>
+										{/* <Card.Partner
+											data={{
+												image: droneSpaceImage,
+												title: "Drone Space",
+											}}
+											noPadding
+										/> */}
+										<Image src={droneSpaceImage} alt="Drone Space" />
+									</Grid.Col>
+								</Grid>
+							</Grid.Col>
+						</Grid>
+					</Stack>
+				</Layout.Section>
+				<Partial.Cta.Partners />
 			</Layout.Page>
 		</Layout.Body>
 	);

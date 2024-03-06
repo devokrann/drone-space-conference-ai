@@ -1,11 +1,12 @@
 import React from "react";
 
-import { Box, Button, Divider, Group, List, Stack, Text, Title } from "@mantine/core";
+import { Box, Button, Divider, Group, List, Stack, Text, ThemeIcon, Title } from "@mantine/core";
 
-import { IconCheck, IconChevronRight } from "@tabler/icons-react";
+import { IconCheck } from "@tabler/icons-react";
 
 import classes from "./Booth.module.scss";
-import Modal from "../modals";
+
+import modal from "../modals";
 
 export default function Booth({
 	data,
@@ -16,11 +17,11 @@ export default function Booth({
 		<Stack className={classes.card} gap={"xl"} justify="space-between">
 			<Stack gap={"xl"}>
 				<Stack gap={"xs"} align="center">
-					<Text ta={"center"} fw={500} fz={32} c={"pri"}>
-						<Text component="span" inherit fz={"md"} c={"white"}>
-							Kshs.{" "}
+					<Text ta={"center"}>
+						Kshs.{" "}
+						<Text component="span" inherit c={"pri"} fw={500} fz={32}>
+							{data.price}
 						</Text>
-						{data.price}
 					</Text>
 					<Title order={3} fz={24} ta={"center"}>
 						{data.title} Booth
@@ -30,17 +31,33 @@ export default function Booth({
 				<Stack fz="sm">
 					{data.desc.list.map(item => (
 						<Group key={item} wrap="nowrap" align="start">
-							<Text component="span" c={"sec"}>
+							<ThemeIcon variant="transparent" size={"xs"} className={classes.icon}>
 								<IconCheck size={16} />
-							</Text>
+							</ThemeIcon>
 							<Text key={item} inherit>
 								{item}
 							</Text>
 						</Group>
 					))}
 				</Stack>
+				<Text ta={"center"} fw={500} fz={"sm"}>
+					Dimentions:{" "}
+					<Text component="span" inherit c={"pri"}>
+						{data.desc.dimentions}
+					</Text>
+				</Text>
 			</Stack>
-			<Modal.Booth label={data.title} />
+
+			{/* <Modal.Booth label={data.title} /> */}
+
+			<modal.Contact
+				title={`${data.title} Booth`}
+				inquiry="Booth Registration"
+				booth={data.title}
+				boothSize={data.desc.dimentions}
+			>
+				Book {data.title} Booth
+			</modal.Contact>
 		</Stack>
 	);
 }

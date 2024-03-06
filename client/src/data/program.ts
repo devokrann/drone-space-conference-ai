@@ -1,48 +1,115 @@
+import people from "./people";
+
+const selectorPerson = (category: string, name: string) =>
+	people.filter(p => p.category.find(c => c == category)).find(m => m.name == name);
+
 const program = {
 	schedule: {
 		common: {
 			day1: [
 				{
-					title: "9.00AM – 9.50AM : Welcome & Opening Keynote",
+					title: {
+						duration: "09.00 AM – 09.50 AM",
+						heading: "Welcome & Opening Keynote",
+					},
 					desc: {
-						agenda: ["Welcome & Opening Keynote"],
-						speakers: ["TBC"],
+						agenda: "Welcome and opening of the expo.",
+						// participants: [
+						// 	"Laban Cliff (MC, Overall and AI Platform)",
+						// 	"Faith Maina (MC, Drone Platform)",
+						// 	"Drone Space (Opening Remarks)",
+						// 	"Title Sponsor (Opening Remarks)",
+						// 	"PS Eng. John Tanui (Opening Remarks and Keynote)",
+						// ],
 					},
 				},
 				{
-					title: "9.50AM – 10.30AM: Panel session",
+					title: {
+						duration: "09.50 AM – 10.30 AM",
+						heading: "Panel Session",
+					},
 					desc: {
-						agenda: ["How will AI transform the future of Businesses?"],
-						panelists: ["TBC"],
-						moderator: ["TBC"],
+						agenda: "How will AI transform the Future (Man vs AI)?",
+						// participants: ["Google (Kenya)", "Microsoft", "Samsung", "Oracle (Kenya)", "Meta"],
+						// moderator: "Brian George",
 					},
 				},
 				{
-					title: "10.30AM – 11.00: Coffee Break",
+					title: {
+						duration: "10.30 AM – 11.00 AM",
+						heading: "Coffee Break",
+					},
 					desc: {
-						agenda: ["Official opening of the expo.", "Attendees split to various platforms."],
+						agenda: "Official opening of the expo. Attendees split to respective platforms.",
 					},
 				},
 			],
 			day2: [
 				{
-					title: "3.30PM – 3.50PM: Coffee Break",
+					title: {
+						duration: "01.00 PM – 02.00 PM",
+						heading: "Lunch Break",
+					},
 					desc: {
-						agenda: ["Coffee break"],
+						agenda: "Lunch break",
 					},
 				},
 				{
-					title: "3.50pm – 4.40PM: Panel session",
+					title: {
+						duration: "02.00 PM – 02.40 PM",
+						heading: "Panel Session",
+					},
 					desc: {
-						agenda: [" AI Job opportunities."],
-						panelists: ["TBC"],
-						moderator: ["TBC"],
+						agenda: "AI job opportunities.",
+						// participants: ["Microsoft", "Google", "Intel", "Meta"],
+						// moderator: "Zee Gitahi",
 					},
 				},
 				{
-					title: "4.40PM – 4.55PM: Vote of thanks",
+					title: {
+						duration: "02.40 PM – 03.00 PM",
+						heading: "Demonstration Session",
+					},
 					desc: {
-						agenda: ["Vote of thanks."],
+						agenda: "Drone Demonstration using AI and hand gestures - Hacking Session with Drone Space & Bright Gameli",
+						// participants: ["Drone Space", "Bright Gameli"],
+					},
+				},
+				{
+					title: {
+						duration: "03.00 PM – 03.40 PM",
+						heading: "Hackathon Session",
+					},
+					desc: {
+						agenda: "Hackathon pitching and Judging (5 Teams)",
+						// participants: [
+						// 	"Mary Ndinda (Judge)",
+						// 	"Sandeep (Judge)",
+						// 	"Mbakaya Weever (Judge)",
+						// 	"Laban Cliff (MC)",
+						// ],
+					},
+				},
+				{
+					title: {
+						duration: "03.40 PM – 04.00 PM",
+						heading: "Coffee Break",
+					},
+					desc: {
+						agenda: "Coffee break",
+					},
+				},
+				{
+					title: { duration: "04.00 PM – 04.40 PM", heading: "Hackathon Winner Announcement Session" },
+					desc: {
+						agenda: "Announcement of hackathon winner.",
+					},
+				},
+				{
+					title: { duration: "04.40 PM – 05.00 PM", heading: "Vote of Thanks" },
+					desc: {
+						agenda: "Official closing of the expo.",
+						// participants: ["Faith Maina"],
 					},
 				},
 			],
@@ -50,160 +117,146 @@ const program = {
 		ai: {
 			day1: [
 				{
-					title: "11.00AM – 11.30AM: Plenary Session Speaker",
+					title: { duration: "11.00 AM – 11.30 AM", heading: "Plenary Session" },
 					desc: {
-						agenda: ["AI and climate change."],
-						speakers: ["TBC"],
+						agenda: "AI and climate change.",
+						// participants: ["Ministry of Environment", "Climate Change Summit Organizers"],
 					},
 				},
 				{
-					title: "11.30AM – 12.00PM: Plenary Session",
+					title: { duration: "11.30 AM – 12.10 PM", heading: "Panel Session" },
 					desc: {
-						agenda: ["Using Technology and innovation to address Health care."],
-						speakers: ["TBC"],
+						agenda: "How will the integration of AI in healthcare manage insurance claims, incorporate patient data from various providers, and facilitate the continuous flow of data for healthcare operations?",
+						// participants: [
+						// 	"Aga Khan Hospital",
+						// 	"Nairobi Hospital",
+						// 	"Britam Insurance",
+						// 	"CIC Insurance",
+						// 	"NHIF",
+						// 	"Zuri Health",
+						// 	"Cirga Health",
+						// ],
+						// moderator: "Dr. Shiku Gitau",
 					},
 				},
 				{
-					title: "12.00PM – 12.20PM: Plenary Session",
+					title: { duration: "12.10 PM – 01.00 PM", heading: "Panel Session" },
 					desc: {
-						agenda: ["Data protection."],
-						speakers: ["TBC"],
+						agenda: "Data protection and regulation policy.",
+						// participants: [
+						// 	"Immaculate Kassait (Data Commissioner)",
+						// 	"Nathan Ross (Michalsons, SA)",
+						// 	"Alfred Ongere (AI Kenya)",
+						// 	"Peter Walubengo (MMU)",
+						// ],
+						// moderator: selectorPerson("moderator", "George Ogada"),
 					},
 				},
 				{
-					title: "12.20PM – 1.00PM: Panel Session",
+					title: { duration: "01.00 PM – 02.00 PM", heading: "Lunch Break" },
 					desc: {
-						agenda: [
-							"How can we regulate responsible Artificial Intelligence and policy development in Africa and globally as a whole?",
-						],
-						panelists: ["TBC"],
-						moderator: ["TBC"],
+						agenda: "Lunch Break",
 					},
 				},
 				{
-					title: "1.00PM – 2.00PM: Lunch Break",
+					title: { duration: "02.00 PM – 02.30 PM", heading: "Plenary Session" },
 					desc: {
-						agenda: ["Lunch Break"],
+						agenda: "Masterclass on Leveraging on AI Lawfully.",
+						// participants: ["Nathan Ross (Michalsons, SA)"],
 					},
 				},
 				{
-					title: "2.00PM – 2.30PM: Plenary Session Speaker",
+					title: { duration: "02.30 PM – 03.10 PM", heading: "Plenary / Panel" },
 					desc: {
-						agenda: ["Masterclass on Leveraging on AI Lawfully."],
-						speakers: ["TBC"],
+						agenda: "How can organizations successfully navigate the era of AI powered automation? or Exploring emerging AI Market trends.",
+						// participants: [
+						// 	selectorPerson("speaker", "Michael Zimba"),
+						// 	"Mutembei Kariuki (First Fastagger)",
+						// 	"Beniah Wepundi (Cyphonia)",
+						// ],
+						// moderator: selectorPerson("moderator", "Moses Kemibaro"),
 					},
 				},
 				{
-					title: "2.30PM – 3.00PM: Plenary Session",
+					title: { duration: "03.10 PM – 03.40 PM", heading: "Plenary Session" },
 					desc: {
-						agenda: ["How can organizations successfully navigate the era of AI powered automation?"],
-						speakers: ["TBC"],
+						agenda: "Understanding the Difference between ChatGPT and Microsoft Copilot, and Advantages of Azuri AI.",
+						// participants: ["Microsoft (Kenya)"],
 					},
 				},
 				{
-					title: "3.00PM – 3.40PM: Panel Session",
+					title: { duration: "03.40 PM – 04.00 PM", heading: "Coffee Break" },
 					desc: {
-						agenda: ["Exploring emerging AI Market trends."],
+						agenda: "Coffee Break",
 					},
 				},
 				{
-					title: "3.40PM – 4.00PM: Coffee Break",
+					title: { duration: "04.00PM – 05.00PM", heading: "Panel Session" },
 					desc: {
-						agenda: ["Coffee break"],
-					},
-				},
-				{
-					title: "4.00PM – 4.40PM: Panel Session",
-					desc: {
-						agenda: [
-							"Chatbots for Change: Using conversational AI to transform rural communities in Kenya?",
-						],
-						panelists: ["TBC"],
-						moderator: ["TBC"],
+						agenda: "Chatbots for Change: Using Conversational AI to transform rural communities in Kenya?",
+						// participants: ["Strathmore School", "Google (Kenya)", "Safaricom", "Britam Insurance"],
+						// moderator: "TBC",
 					},
 				},
 			],
 			day2: [
 				{
-					title: "9.00AM – 9.40AM: Panel Session",
+					title: { duration: "09.00 AM – 09.40 AM", heading: "Panel Session" },
 					desc: {
-						agenda: ["Exploring data centres in the context of AI"],
-						panelists: ["TBC"],
-						moderator: ["TBC"],
+						agenda: "Exploring data centres in the context of AI",
+						// participants: [
+						// 	"Safaricom",
+						// 	"Oracle Kenya",
+						// 	"Africa Data Centre",
+						// 	"IXAfrica Data Centre",
+						// 	"Icolo",
+						// 	"PAIX Nairobi",
+						// 	"AWS",
+						// ],
+						// moderator: "Mbugua Njihia",
 					},
 				},
 				{
-					title: "9.40AM – 10.10AM: Plenary Session Speaker",
+					title: { duration: "09.40 AM – 10.10 AM", heading: "Panel Session" },
 					desc: {
-						agenda: ["The future with generative AI."],
-						panelists: ["TBC"],
-						moderator: ["TBC"],
+						agenda: "The future with generative AI.",
+						// participants: [selectorPerson("speaker", "Michael Michie")],
+						// moderator: "TBC",
 					},
 				},
 				{
-					title: "10.10AM – 10.30AM: Plenary Session Speaker",
+					title: { duration: "10.10 AM – 10.30 AM", heading: "Plenary Session" },
 					desc: {
-						agenda: ["A data monetization framework for AI."],
-						speakers: ["TBC"],
+						agenda: "A data monetization framework for AI.",
+						// participants: ["TBC"],
 					},
 				},
 				{
-					title: "10:30AM – 11.00AM: Coffee Break",
+					title: { duration: "10:30 AM – 11.00 AM", heading: "Coffee Break" },
 					desc: {
-						agenda: ["Official opening of the expo.", "Attendees split to various platforms."],
+						agenda: "Official opening of the expo. Attendees split to various platforms.",
 					},
 				},
 				{
-					title: "11.00AM – 11:40PM: Panel Session",
+					title: { duration: "11.00 AM – 11:40 PM", heading: "Panel Session" },
 					desc: {
-						agenda: ["How can AI features empower banks to stay competitive and provide better services?"],
-						panelists: ["TBC"],
-						moderator: ["TBC"],
+						agenda: "How can AI features empower financial institutions stay competitive and provide better services?",
+						// participants: ["ABSA Bank", "Stanbic Bank", "Wapi Pay", "KPMG", "PWC", "KRA", "CMA"],
+						// moderator: "Dean Gichuki",
 					},
 				},
 				{
-					title: "11:40AM – 12.10PM: Plenary Session",
+					title: { duration: "11:40 AM – 12.10 PM", heading: "Plenary Session" },
 					desc: {
-						agenda: ["Leveraging AI to monitor, address and Prevent fraud."],
-						speakers: ["TBC"],
+						agenda: "Leveraging AI to monitor, address and prevent fraud (Cyber Security).",
+						// participants: ["Bright Gameli"],
 					},
 				},
 				{
-					title: "12:10 – 12.40PM: Plenary Session",
+					title: { duration: "12:10 PM – 12.50 PM", heading: "Plenary Session" },
 					desc: {
-						agenda: ["Integration AI for Junior Schools."],
-						speakers: ["Moringa School/Hubs"],
-					},
-				},
-				{
-					title: "12:40 – 1.00PM: Plenary Session",
-					desc: {
-						agenda: ["Empowering teens in AI"],
-						speakers: ["TBC"],
-					},
-				},
-				{
-					title: "1.00PM – 2.00PM: Lunch Break",
-					desc: {
-						agenda: ["All attendees transition to AI platform."],
-					},
-				},
-				{
-					title: "2.00PM – 2.40PM: Panel Session",
-					desc: {
-						agenda: [
-							"Women in AI &amp; Drone Tech – Are we making progress and inspiring others to grow their career prospects?",
-						],
-						panelists: ["TBC"],
-						moderator: ["TBC"],
-					},
-				},
-				{
-					title: "2.40PM – 3.30PM: Panel Session",
-					desc: {
-						agenda: ["Data security in Data centres"],
-						panelists: ["TBC"],
-						moderator: ["TBC"],
+						agenda: "Integration AI for Education.",
+						// participants: ["Moringa School"],
 					},
 				},
 			],
@@ -211,153 +264,117 @@ const program = {
 		drone: {
 			day1: [
 				{
-					title: "11.00AM – 11.30AM: Plenary Session Speaker",
+					title: { duration: "11.00 AM – 11.50 AM", heading: "Panel Session" },
 					desc: {
-						agenda: ["AI and climate change."],
-						speakers: ["TBC"],
+						agenda: "Drone regulation and policy",
+						// participants: [
+						// 	"Lynette Shalwa (KCAA)",
+						// 	"Cleopa Otieno (Kenya Flying Labs)",
+						// 	"Craig (Kendrone)",
+						// 	"Drone Space",
+						// ],
+						// moderator: "Robert Yawe",
 					},
 				},
 				{
-					title: "10.30AM – 11.00: Coffee Break",
+					title: { duration: "11.50 AM – 12.50 PM", heading: "Panel Session" },
 					desc: {
-						agenda: ["Official opening of the expo.", "Attendees split to various platforms."],
+						agenda: "How can UTM Systems enhance airspace safety for Unmanned Aircraft Systems (UAS) in Kenya?",
+						// participants: ["Thales Group", "KCAA", "Airbus", "ndra"],
+						// moderator: "TBC",
 					},
 				},
 				{
-					title: "11.50AM – 12.50PM: Panel Session",
+					title: { duration: "01.00 PM – 02.00 PM", heading: "Lunch Break" },
 					desc: {
-						agenda: [
-							"What are the current advancements and developments for UAS Traffic Management (UTM) Systems from Industry stakeholders and Air Navigation Service Providers (ANSPs) and UTM service providers?",
-						],
-						speakers: ["TBC"],
+						agenda: "Lunch Break",
 					},
 				},
 				{
-					title: "1.00PM – 2.00PM: Lunch Break",
+					title: { duration: "02.00 PM – 02.40 PM", heading: "Plenary Session" },
 					desc: {
-						agenda: ["Lunch Break"],
+						agenda: "Drones for early detection of pests and diseases.",
+						// participants: ["Violet Ochieng"],
 					},
 				},
 				{
-					title: "2.00PM – 2.40PM: Plenary Session Speaker",
+					title: { duration: "02.40 PM – 03.20 PM", heading: "Panel Session" },
 					desc: {
-						agenda: ["Drones for early detection of pests and diseases."],
-						speakers: ["Violet Ochieng"],
+						agenda: "Drone deployment in agriculture and the challenges in crop spraying and data collection.",
+						// participants: [
+						// 	"Kush Gadhia (Astral Aviation)",
+						// 	"Geoffrey Nyaga",
+						// 	"Fahari Aviation",
+						// 	"Tawanda Chihambakwe (Precision Zimbabwe)",
+						// ],
+						// moderator: "TBC",
 					},
 				},
 				{
-					title: "2.40PM – 3.20PM: Plenary Session Speaker",
+					title: { duration: "03.20 PM – 03.40 PM", heading: "Plenary Session" },
 					desc: {
-						agenda: [
-							"Drone deployment in agriculture and the challenges in crop spraying and data collection.",
-						],
-						panel: ["TBC"],
-						moderator: ["TBC"],
+						agenda: "Precision Farming for high yields.",
+						// participants: ["Tawanda Chihambakwe"],
 					},
 				},
 				{
-					title: "3.20PM – 3.40PM: Plenary Session Speaker",
+					title: { duration: "03.40 PM – 04.00 PM", heading: "Coffee Break" },
 					desc: {
-						agenda: ["Precision Farming for high yields."],
-						speakers: ["Tawanda Chihambakwe"],
+						agenda: "Coffee Break",
 					},
 				},
 				{
-					title: "3.40PM – 4.00PM: Coffee Break",
+					title: { duration: "04.00 PM – 05.00 PM", heading: "Panel Session" },
 					desc: {
-						agenda: ["Coffee break"],
-					},
-				},
-				{
-					title: "4.00PM – 5.00PM: Panel Session",
-					desc: {
-						agenda: ["How can Drone pilot leverage on Jobs and operations opportunity?"],
-						panelists: ["TBC"],
-						moderator: ["TBC"],
+						agenda: "How can Drone pilots leverage on Jobs and operations opportunity?",
+						// participants: ["Drone Space", "Fahari Aviation", "Kenya Flying Labs", "Geiod Technologies"],
+						// moderator: "TBC",
 					},
 				},
 			],
 			day2: [
 				{
-					title: "9.00AM – 9.40AM: Panel Session",
+					title: { duration: "09.00 AM – 09.50 AM", heading: "Panel Session" },
 					desc: {
-						agenda: ["Exploring data centres in the context of AI"],
-						panelists: ["TBC"],
-						moderator: ["TBC"],
+						agenda: "Geospatial professionals using drones for Surveying with Lidar and software.",
+						// participants: [
+						// 	"Fred Wekesa (Kengen)",
+						// 	"Denis Mumo (Geocart)",
+						// 	"Fred Onyango (Eco Space)",
+						// 	"Peter Onyango (TUK)",
+						// 	"Martin (Regional Centre for Mapping)",
+						// ],
+						// moderator: "Kimeu",
 					},
 				},
 				{
-					title: "9.40AM – 10.10AM: Plenary Session Speaker",
+					title: { duration: "09.50 AM – 10.30 AM", heading: "Panel Session" },
 					desc: {
-						agenda: [" The future with generative AI."],
-						speakers: ["TBC"],
+						agenda: "The safety aspects and lessons learned in Beyond Visual Line of Sight (BVLOS) operations across the continent.",
+						// participants: ["Drone Space", "Zipline", " Astral"],
+						// moderator: "Captain Hastings",
 					},
 				},
 				{
-					title: "10.10AM – 10.30AM: Plenary Session Speaker",
+					title: { duration: "10.30 AM – 11.00 AM", heading: "Coffee Break" },
 					desc: {
-						agenda: ["A data monetization framework for AI."],
-						speakers: ["TBC"],
+						agenda: "Coffee break.",
 					},
 				},
 				{
-					title: "10.30AM – 11.00: Coffee Break",
+					title: { duration: "11.00 AM – 11:50 PM", heading: "Panel Session" },
 					desc: {
-						agenda: ["Coffee break."],
+						agenda: "Drones in Filming",
+						// participants: ["Mwangi Kirubi", "Tosh Gitonga", "Ezekiel Onyango", "Appie Materi"],
+						// moderator: "Martin Munyua",
 					},
 				},
 				{
-					title: "11.00AM – 11:40PM: Panel Session",
+					title: { duration: "11:50 AM – 12.50 PM", heading: "Panel Session" },
 					desc: {
-						agenda: ["How can AI features empower banks to stay competitive and provide better services?"],
-						panelists: ["TBC"],
-						moderator: ["TBC"],
-					},
-				},
-				{
-					title: "11:40AM – 12.10PM: Plenary Session",
-					desc: {
-						agenda: ["Leveraging AI to monitor, address and Prevent fraud."],
-						speakers: ["TBC"],
-					},
-				},
-				{
-					title: "12:10 – 12.40PM: Plenary Session",
-					desc: {
-						agenda: ["Integration AI for Junior Schools."],
-						speakers: ["Moringa School/Hubs"],
-					},
-				},
-				{
-					title: "12:40 – 1.00PM: Plenary Session",
-					desc: {
-						agenda: ["Empowering teens in AI."],
-						speakers: ["TBC"],
-					},
-				},
-				{
-					title: "1.00PM – 2.00PM: Lunch Break",
-					desc: {
-						agenda: ["All attendees transition to AI platform."],
-					},
-				},
-				{
-					title: "2.00PM – 2.40PM: Panel Session",
-					desc: {
-						agenda: [
-							"Women in AI and Drone Tech.",
-							"Are we making progress and inspiring others to grow their career prospects?",
-						],
-						panelists: ["TBC"],
-						moderator: ["TBC"],
-					},
-				},
-				{
-					title: "2.40PM – 3.30PM: Panel Session",
-					desc: {
-						agenda: ["Data security in Data centres."],
-						panel: ["TBC"],
-						moderator: ["TBC"],
+						agenda: "Women in AI and Drone Tech - Are we making progress and inspiring others to grow their career prospects?",
+						// participants: ["Loise Mwangi (KCAA)", "Priscah Kinyanjui (Drone Space)", "Lyela Mutisya"],
+						// moderator: "Mercy Makau",
 					},
 				},
 			],

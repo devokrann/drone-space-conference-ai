@@ -1,5 +1,5 @@
 .box {
-	background-color: var(--mantine-color-pri-6);
+	background-color: light-dark(var(--mantine-color-sec-6), var(--mantine-color-pri-6));
 	color: var(--mantine-color-dark-9);
 	padding: calc(var(--mantine-spacing-xs) / 2) 0;
 	font-size: var(--mantine-font-size-sm);

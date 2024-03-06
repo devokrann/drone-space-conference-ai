@@ -31,11 +31,11 @@ export default function Agenda() {
 						</Stack>
 						<Stack align="center">
 							<Button
-								color="sec.6"
+								color="pri.6"
 								variant="outline"
 								size="lg"
 								radius={"xl"}
-								c={"dark.0"}
+								c={"inherit"}
 								component="a"
 								href="#tracks"
 							>
@@ -57,7 +57,17 @@ export default function Agenda() {
 												</Title>
 												<List spacing={"xs"} listStyleType="none" size="sm">
 													{data.program.schedule.ai.day1.map(item => (
-														<List.Item key={item.title}>{item.title}</List.Item>
+														<List.Item key={item.title.duration}>
+															<Group gap={"xs"} fz={{ base: "xs", lg: "sm" }}>
+																<Text component="span" inherit>
+																	{item.title.duration}
+																</Text>
+																-
+																<Text component="span" inherit>
+																	{item.title.heading}
+																</Text>
+															</Group>
+														</List.Item>
 													))}
 												</List>
 											</Stack>
@@ -69,7 +79,17 @@ export default function Agenda() {
 												</Title>
 												<List spacing={"xs"} listStyleType="none" size="sm">
 													{data.program.schedule.ai.day2.map(item => (
-														<List.Item key={item.title}>{item.title}</List.Item>
+														<List.Item key={item.title.duration}>
+															<Group gap={"xs"} fz={{ base: "xs", lg: "sm" }}>
+																<Text component="span" inherit>
+																	{item.title.duration}
+																</Text>
+																-
+																<Text component="span" inherit>
+																	{item.title.heading}
+																</Text>
+															</Group>
+														</List.Item>
 													))}
 												</List>
 											</Stack>
@@ -96,7 +116,17 @@ export default function Agenda() {
 												</Title>
 												<List spacing={"xs"} listStyleType="none" size="sm">
 													{data.program.schedule.drone.day1.map(item => (
-														<List.Item key={item.title}>{item.title}</List.Item>
+														<List.Item key={item.title.duration}>
+															<Group gap={"xs"} fz={{ base: "xs", lg: "sm" }}>
+																<Text component="span" inherit>
+																	{item.title.duration}
+																</Text>
+																-
+																<Text component="span" inherit>
+																	{item.title.heading}
+																</Text>
+															</Group>
+														</List.Item>
 													))}
 												</List>
 											</Stack>
@@ -108,7 +138,17 @@ export default function Agenda() {
 												</Title>
 												<List spacing={"xs"} listStyleType="none" size="sm">
 													{data.program.schedule.drone.day2.map(item => (
-														<List.Item key={item.title}>{item.title}</List.Item>
+														<List.Item key={item.title.duration}>
+															<Group gap={"xs"} fz={{ base: "xs", lg: "sm" }}>
+																<Text component="span" inherit>
+																	{item.title.duration}
+																</Text>
+																-
+																<Text component="span" inherit>
+																	{item.title.heading}
+																</Text>
+															</Group>
+														</List.Item>
 													))}
 												</List>
 											</Stack>
@@ -125,8 +165,27 @@ export default function Agenda() {
 							<Title order={2} fz={40} c={"pri"}>
 								Tracks
 							</Title>
+							<Text>
+								Discover the latest trends, advancements, and best practices shaping the future of AI,
+								Drone Tech and Data Analytics as industry experts, government organizations, disruptive
+								startups, investors, research labs take the stage.
+							</Text>
 						</Stack>
-						<Grid>
+						<Stack ta={"center"} gap={"xl"}>
+							<Title order={2} fz={40} c={"pri"}>
+								Hackathon / Innovation Stage
+							</Title>
+							<Text>
+								This track is designed to showcase the industry's leading startups and provide an
+								opportunity for Venture Capitalists (VCs) on industry trends. All startups that will be
+								participating on this track are hand picked by Startinev and AI Conference Nairobi Team
+								as the up-and-comers to be on the lookout for. These sessions of Hackathon (building
+								models) and preparing presentations will be conducted in 48 hours and a showdown session
+								of the finalists will each conduct a 10 minute pitch style format of their idea with
+								prize totals of up to Kshs. 200,000.
+							</Text>
+						</Stack>
+						<Grid gutter={96}>
 							<Grid.Col span={12}>
 								<Stack gap={"xl"}>
 									<Title ta={"center"} order={2} fz={24}>
