@@ -12,6 +12,7 @@ import robinsonMuiru from "./speaker-11.webp";
 import brightGameli from "./speaker-12.webp";
 import koyundiBryan from "./speaker-13.webp";
 import tawandaChihambakwe from "./speaker-14.webp";
+import tolgaOrs from "./speaker-15.webp";
 
 const moderators = {
 	michaelZimba,
@@ -28,6 +29,7 @@ const moderators = {
 	brightGameli,
 	koyundiBryan,
 	tawandaChihambakwe,
+	tolgaOrs,
 };
 
 export default moderators;

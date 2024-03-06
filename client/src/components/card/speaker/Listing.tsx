@@ -32,16 +32,14 @@ export default function Listing({ data }: { data: typeSpeaker }) {
 					</Group>
 				)}
 			</Box>
-			<Stack gap={"xs"} mt={"md"} align="center" ta={"center"}>
+			<Stack gap={0} mt={"xl"} align="center" ta={"center"}>
 				<Anchor className={classes.title} component={Link} to={`${hook.useLinkify(data.name)}`}>
 					{data.name}
 				</Anchor>
 				<Stack gap={0}>
-					<Text fz={"sm"} fw={"bold"}>
-						{data.occupation.position}
-					</Text>
+					<Text fz={"sm"}>{data.occupation.position}</Text>
 					{data.occupation.pow && (
-						<Text fz={"xs"} fw={500}>
+						<Text fz={"xs"}>
 							{data.occupation.pow}
 							{data.nationality && `, ${data.nationality}`}
 						</Text>

@@ -162,6 +162,26 @@ const people = [
 		category: ["speaker"],
 	},
 	{
+		name: "George Ogada",
+		nationality: "EA",
+		bio: [
+			" George Ogada specializes in Planning, Program Management, and Providing Crucial Support to startups and innovation initiatives. With a wealth of experience in the FMCG planning space, George has developed the skills needed to navigate the intricate landscape of program management. His skills extend beyond traditional planning, encompassing a keen focus on startup ecosystems and fostering innovation.",
+			"George's expertise lies in developing and implementing strategies that drive both operational efficiency and creative problem solving. His commitment to the realms of program management, coupled with a passion for people, supporting startups and fostering innovation, positions him as a valuable asset capable of steering projects toward success in dynamic and evolving environments.",
+		],
+		occupation: {
+			position: "Programme Associate",
+			pow: "HiiL Innovation Hub",
+			image: image.companies.hiil,
+		},
+		image: image.people.moderators.georgeOgada,
+		contact: {
+			email: "george.ogada@hiil.org",
+			phone: null,
+			socials: null,
+		},
+		category: ["speaker"],
+	},
+	{
 		name: "Joel Onditi",
 		bio: [
 			"Mr. Onditi is a Kenyan American and the CEO and President of Pathways Technologies LTD, a US and Africa innovation and technology company with offices in Denver, Colorado and Nairobi, Kenya. He is a professor of practice at The University of Denver, where he teaches Data Analytics and Emerging Trends in Technology. He also sits on the advisory board of the Analytics Department for the Daniels College of Business, University of Denver.",
@@ -183,6 +203,26 @@ const people = [
 				{ label: "twitter", link: "https://twitter.com/PathwaysInt" },
 				{ label: "linkedin", link: "https://www.linkedin.com/company/pathwaystechnologies" },
 			],
+		},
+		category: ["speaker"],
+	},
+	{
+		name: "Tolga Ors",
+		bio: [
+			"Dr. Tolga Ors has over 15 years experience leveraging technology for the improvement of human lives. As the former Innovation Manager of the Future Artificial Intelligence and Robotics for Space (FAIR SPACE) programme, Dr. Ors ensured that cutting edge university research is applicable to industrial applications.",
+			"Dr. Ors then did Programme Management at the prestigious Alan Turing Institute, which is UK's national institute for data science and AI. Driven by a passion for leveraging technology to address pressing global challenges, Dr. Ors turned his attention towards emerging markets, including Kenya, where he managed UK Space Agency co-fund innovative programs aimed at alleviating poverty and enhancing disaster response capabilities using drones.",
+			"Tolga holds a PhD in Telecommunications and an MSc in Project Management from George Washington University in Washington DC. He completed a MSc with Distinction in Computational Cognitive Neuroscience with applications to AI at the University of London. After completing the International Space University Space Studies Programme in 2023, Dr. Ors joined Team Tumbleweed, which plans to send a swarm of fast-moving rovers to Mars, as Director of R&D.",
+		],
+		occupation: {
+			position: "Head of Software Engineering",
+			pow: "Team Tumbleweed",
+			image: null,
+		},
+		image: image.people.speakers.tolgaOrs,
+		contact: {
+			email: "tolga@teamtumbleweed.eu",
+			phone: null,
+			socials: [{ label: "linkedin", link: "https://www.linkedin.com/in/tolgaors/" }],
 		},
 		category: ["speaker"],
 	},
@@ -306,8 +346,8 @@ const people = [
 			"Koyundi Bryan is not just an AI expert; he's a visionary who combines technical prowess with a profound understanding of the social, economic, and ethical implications of AI. His mission is clear: to ensure that AI benefits everyone. He believes in the transformative power of AI, and through his research, advocacy, and entrepreneurship, he's paving the way for an AI future that is both brilliant and benevolent.",
 		],
 		occupation: {
-			position: "Founder",
-			pow: "Cybertech Labs & Systems",
+			position: "AI Strategist & Researcher",
+			pow: "Pdfaind",
 			image: image.companies.aiStartup,
 		},
 		image: image.people.speakers.koyundiBryan,
