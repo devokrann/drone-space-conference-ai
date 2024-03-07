@@ -214,7 +214,7 @@ const people = [
 			"Tolga holds a PhD in Telecommunications and an MSc in Project Management from George Washington University in Washington DC. He completed a MSc with Distinction in Computational Cognitive Neuroscience with applications to AI at the University of London. After completing the International Space University Space Studies Programme in 2023, Dr. Ors joined Team Tumbleweed, which plans to send a swarm of fast-moving rovers to Mars, as Director of R&D.",
 		],
 		occupation: {
-			position: "Head of Software Engineering",
+			position: "Director of R&D",
 			pow: "Team Tumbleweed",
 			image: null,
 		},
@@ -374,6 +374,94 @@ const people = [
 		},
 		image: image.people.speakers.tawandaChihambakwe,
 		contact: null,
+		category: ["speaker"],
+	},
+	{
+		name: "Robert Blair",
+		bio: [
+			"Robert Blair is a fourth generation Kendrick, Idaho farmer, entrepreneur, and Idaho State Senator. The farm is situated on the edge of the rolling hills of the Palouse and not far from his Alma Mater the University of Idaho where he received his B.S. in Agriculture Business.",
+			"His journey with precision agriculture started in 2003 using a PDA for simple mapping. That evolved into all different types of equipment, including Unmanned Air Systems (UAS) in 2006. Robert is the first U.S. farmer to own and use a UAS. His vision and advocacy of these technologies helped him become the first Precision Ag Institute International Farmer of the Year in 2009. Robert has been on the leading edge of the precision agriculture utilization and is recognized as a domestic and global leader.",
+			"Robert received an Eisenhower Fellowship in 2011, taking him to South America for six weeks focusing on drones and precision agriculture. During the fall of 2012 he spent three weeks in Germany on a McCloy Fellowship for agriculture. In Idaho he was recognized as one of the most influential U of I College of Agriculture and Life Science (CALS) alumni, received the 2013 Governor’s Award for Agriculture Technology and Innovation and was honored as a 2015 U of I CALS Distinguished Alumni.",
+			"Robert’s vision and leadership ability has been recognized by the positions he has held including president of the Idaho Grain Producers Association, chairman of the National Association of Wheat Growers (NAWG) Research & Tech Committee, chairman of the U.S. Wheat/NAWG Joint Biotech Committee, Idaho Farm Bureau Federation county president, an initial member of Idaho’s UAS steering committee, an initial advisory board member of the Drone World Expo, and a member of the AGree Conservation and Crop Insurance Task Force. ",
+			"In 2020, Robert was named to the Federal Communications Commission’s Precision Agriculture Task Force Working Group “Encouraging Adoption of Precision Agriculture and Availability of High-Quality Jobs on Connected Farms.” In 2022 Robert served as an Idaho State Senator for the 2022 Legislative Session representing Idaho Legislative District Six (6).",
+		],
+		occupation: {
+			position: "",
+			pow: "",
+			image: null,
+		},
+		image: image.people.speakers.robertBlair,
+		contact: null,
+		category: ["speaker"],
+	},
+	{
+		name: "Denis Mumo",
+		bio: [""],
+		occupation: {
+			position: "Geospatial Specialist",
+			pow: "GeoCart Survey & Mapping Limited",
+			image: null,
+		},
+		image: image.people.speakers.denisMumo,
+		contact: null,
+		category: ["speaker"],
+	},
+	{
+		name: "Pamela Adede",
+		bio: [
+			"Pamela is a computer and data scientist, skilled in the acquisition, integration, storage, management, protection, use and extraction of data. She holds a BSC degree in Computer Science. Her professional goal is to leverage her expertise and skills to advance the field of data operations and support the utilization of high-quality data in making precise inferences. To this end, her current role is within a global CRO that offers statistical consulting, clinical trial reporting, data management, and data science services.",
+			"Pamela is an avid STEM advocate who is keen on sharing her knowledge by helping people understand new technologies to manage data intelligently, effectively, and safely. With the belief that technology affects all (regardless of industry) in this information age, she simplifies high-tech concepts and articulates complex ideas in an easy-to-understand manner.",
+			"She has been interviewed and featured on Women in Science by Outsourcing Pharma, a leading news source for the pharma industry. She enjoys writing and has had her latest article titled ‘Addressing Missing Data in Clinical Trials – The Data Science Approach’ published in the European Journal for Clinical Studies. The article discussed why the regular monitoring of real-time metrics is highly effective at preventing costly missing data in Clinical Trials.",
+			// "Pamela is looking forward to an exciting and inspirational time at the AI Conference in Nairobi, where she will speak on Data Protection.",
+		],
+		occupation: {
+			position: "Computer & Data Scientist",
+			pow: "",
+			image: null,
+		},
+		image: image.people.speakers.pamelaAdede,
+		contact: {
+			email: "adedejnr@gmail.com",
+			socials: [{ label: "linkedin", link: "https://www.linkedin.com/in/pamela-adede-40a28228/" }],
+		},
+		category: ["speaker"],
+	},
+	{
+		name: "Washington Ogol",
+		bio: [
+			"Washington Ogol, CEO of Statsspeak and a seasoned data and technology leader with over 8 years of experience, has played an instrumental role in driving companies and consultancy projects towards operational excellence and innovation. Under his leadership, Statsspeak has become a leader in analytics and deployment of practical AI solutions.",
+			"Washington's expertise spans strategic data analysis, consultancy, and deploying machine learning technologies to drive smarter decision-making. His notable work includes developing the Primary care network Observatory for AMREF Health Africa and strategizing the go-to-market plan for tax industry clients.",
+			"Moreover, his previous roles at organizations like Johnson & Johnson saw him contribute significantly to global health initiatives, such as introducing new vaccines and advancing healthcare analytics.",
+		],
+		occupation: {
+			position: "CEO",
+			pow: "Statsspeak",
+			image: image.companies.statsspeak,
+		},
+		image: image.people.speakers.washingtonOgol,
+		contact: {
+			email: "wokumu@statsspeak.co.ke",
+			socials: null,
+		},
+		category: ["speaker"],
+	},
+	{
+		name: "Antony Ngatia",
+		bio: [
+			"Dr. Antony Ngatia is a health innovator and a former Director at the Clinton Health Access Initiative (CHAI). He has spearheaded transformative efforts to integrate artificial intelligence (AI) and digital health solutions into healthcare systems across Africa.",
+			"With a medical background from the University of Nairobi and the University of Oxford, coupled with over 15 years of experience in public health, Dr. Ngatia possesses a unique ability to bridge the gap between medical expertise and cutting-edge digital innovations.",
+			"Dr. Ngatia has demonstrated the potential of AI and digital technologies in enhancing healthcare delivery and decision-making processes. He has played a pivotal role in leveraging digital tools, data science, and AI to streamline vaccine distribution, manage healthcare financing, and tackle the challenges of COVID-19 vaccine hesitancy.",
+		],
+		occupation: {
+			position: "AI strategist",
+			pow: "Statsspeak",
+			image: image.companies.statsspeak,
+		},
+		image: image.people.speakers.antonyNgatia,
+		contact: {
+			email: "angatia@statsspeak.co.ke",
+			socials: null,
+		},
 		category: ["speaker"],
 	},
 ];
