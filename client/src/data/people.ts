@@ -270,6 +270,26 @@ const people = [
 		category: ["speaker"],
 	},
 	{
+		name: "Pamela Adede",
+		bio: [
+			"Pamela is a computer and data scientist, skilled in the acquisition, integration, storage, management, protection, use and extraction of data. She holds a BSC degree in Computer Science. Her professional goal is to leverage her expertise and skills to advance the field of data operations and support the utilization of high-quality data in making precise inferences. To this end, her current role is within a global CRO that offers statistical consulting, clinical trial reporting, data management, and data science services.",
+			"Pamela is an avid STEM advocate who is keen on sharing her knowledge by helping people understand new technologies to manage data intelligently, effectively, and safely. With the belief that technology affects all (regardless of industry) in this information age, she simplifies high-tech concepts and articulates complex ideas in an easy-to-understand manner.",
+			"She has been interviewed and featured on Women in Science by Outsourcing Pharma, a leading news source for the pharma industry. She enjoys writing and has had her latest article titled ‘Addressing Missing Data in Clinical Trials – The Data Science Approach’ published in the European Journal for Clinical Studies. The article discussed why the regular monitoring of real-time metrics is highly effective at preventing costly missing data in Clinical Trials.",
+			// "Pamela is looking forward to an exciting and inspirational time at the AI Conference in Nairobi, where she will speak on Data Protection.",
+		],
+		occupation: {
+			position: "Computer & Data Scientist",
+			pow: "",
+			image: null,
+		},
+		image: image.people.speakers.pamelaAdede,
+		contact: {
+			email: "adedejnr@gmail.com",
+			socials: [{ label: "linkedin", link: "https://www.linkedin.com/in/pamela-adede-40a28228/" }],
+		},
+		category: ["speaker"],
+	},
+	{
 		name: "Nathan-Ross Adams",
 		nationality: "SA",
 		bio: [
@@ -394,38 +414,18 @@ const people = [
 		contact: null,
 		category: ["speaker"],
 	},
-	{
-		name: "Denis Mumo",
-		bio: [""],
-		occupation: {
-			position: "Geospatial Specialist",
-			pow: "GeoCart Survey & Mapping Limited",
-			image: null,
-		},
-		image: image.people.speakers.denisMumo,
-		contact: null,
-		category: ["speaker"],
-	},
-	{
-		name: "Pamela Adede",
-		bio: [
-			"Pamela is a computer and data scientist, skilled in the acquisition, integration, storage, management, protection, use and extraction of data. She holds a BSC degree in Computer Science. Her professional goal is to leverage her expertise and skills to advance the field of data operations and support the utilization of high-quality data in making precise inferences. To this end, her current role is within a global CRO that offers statistical consulting, clinical trial reporting, data management, and data science services.",
-			"Pamela is an avid STEM advocate who is keen on sharing her knowledge by helping people understand new technologies to manage data intelligently, effectively, and safely. With the belief that technology affects all (regardless of industry) in this information age, she simplifies high-tech concepts and articulates complex ideas in an easy-to-understand manner.",
-			"She has been interviewed and featured on Women in Science by Outsourcing Pharma, a leading news source for the pharma industry. She enjoys writing and has had her latest article titled ‘Addressing Missing Data in Clinical Trials – The Data Science Approach’ published in the European Journal for Clinical Studies. The article discussed why the regular monitoring of real-time metrics is highly effective at preventing costly missing data in Clinical Trials.",
-			// "Pamela is looking forward to an exciting and inspirational time at the AI Conference in Nairobi, where she will speak on Data Protection.",
-		],
-		occupation: {
-			position: "Computer & Data Scientist",
-			pow: "",
-			image: null,
-		},
-		image: image.people.speakers.pamelaAdede,
-		contact: {
-			email: "adedejnr@gmail.com",
-			socials: [{ label: "linkedin", link: "https://www.linkedin.com/in/pamela-adede-40a28228/" }],
-		},
-		category: ["speaker"],
-	},
+	// {
+	// 	name: "Denis Mumo",
+	// 	bio: [""],
+	// 	occupation: {
+	// 		position: "Geospatial Specialist",
+	// 		pow: "GeoCart Survey & Mapping Limited",
+	// 		image: null,
+	// 	},
+	// 	image: image.people.speakers.denisMumo,
+	// 	contact: null,
+	// 	category: ["speaker"],
+	// },
 	{
 		name: "Washington Ogol",
 		bio: [
