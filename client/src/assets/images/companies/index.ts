@@ -8,6 +8,7 @@ import geoid from "./logo-7.webp";
 import matogen from "./logo-8.png";
 import topCoder from "./logo-9.svg";
 import aiStartup from "./logo-10.jpg";
+import statsspeak from "./logo-11.jpg";
 
 const companies = {
 	dotsavvy,
@@ -20,6 +21,7 @@ const companies = {
 	matogen,
 	topCoder,
 	aiStartup,
+	statsspeak,
 };
 
 export default companies;
