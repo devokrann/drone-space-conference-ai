@@ -9,6 +9,7 @@ import matogen from "./logo-8.png";
 import topCoder from "./logo-9.svg";
 import aiStartup from "./logo-10.jpg";
 import statsspeak from "./logo-11.jpg";
+import kendrone from "./logo-12.png";
 
 const companies = {
 	dotsavvy,
@@ -22,6 +23,7 @@ const companies = {
 	topCoder,
 	aiStartup,
 	statsspeak,
+	kendrone,
 };
 
 export default companies;

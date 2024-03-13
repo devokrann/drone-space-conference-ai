@@ -33,7 +33,11 @@ export default function Listing({ data }: { data: typeSpeaker }) {
 				)}
 			</Box>
 			<Stack gap={0} mt={"xl"} align="center" ta={"center"}>
-				<Anchor className={classes.title} component={Link} to={`${hook.useLinkify(data.name)}`}>
+				<Anchor
+					className={classes.title}
+					component={Link}
+					to={data.bio ? `${hook.useLinkify(data.name)}` : `#`}
+				>
 					{data.name}
 				</Anchor>
 				<Stack gap={0}>

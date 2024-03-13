@@ -14,10 +14,11 @@ import koyundiBryan from "./speaker-13.webp";
 import tawandaChihambakwe from "./speaker-14.webp";
 import tolgaOrs from "./speaker-15.webp";
 import robertBlair from "./speaker-16.webp";
-import denisMumo from "./speaker-17.webp";
+import denisMutua from "./speaker-17.webp";
 import pamelaAdede from "./speaker-18.webp";
 import washingtonOgol from "./speaker-19.webp";
 import antonyNgatia from "./speaker-20.webp";
+import craigCleave from "./speaker-21.webp";
 
 const moderators = {
 	michaelZimba,
@@ -36,10 +37,11 @@ const moderators = {
 	tawandaChihambakwe,
 	tolgaOrs,
 	robertBlair,
-	denisMumo,
+	denisMutua,
 	pamelaAdede,
 	washingtonOgol,
 	antonyNgatia,
+	craigCleave,
 };
 
 export default moderators;
