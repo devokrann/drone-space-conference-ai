@@ -1,28 +1,38 @@
 const tickets = [
+	// {
+	// 	title: "Student",
+	// 	price: "1,500",
+	// 	desc: ["1-Day Ticket (In Person)", "Access to AI Conference & Expo"],
+	// },
 	{
 		title: "Regular",
 		price: "2,500",
-		desc: "This ticket includes admission to the Ai Conference and Expo for one day.",
+		desc: ["1-Day Ticket (In Person)", "Access to AI Conference & Expo"],
 	},
 	{
 		title: "Regular (Season)",
 		price: "4,500",
-		desc: "This ticket includes admission to the AI Conference and Expo for two days.",
+		desc: ["2-Day Ticket (In Person)", "Access to AI Conference & Expo"],
 	},
 	{
 		title: "VIP",
 		price: "6,000",
-		desc: "This ticket includes admission to the AI Conference and Expo. This will also include coffee breaks and snacks for one day.",
+		desc: ["1 Day Ticket (In Person)", "Access to AI Conference &Expo", "Coffee Breaks & Snacks"],
 	},
 	{
 		title: "VIP (Season)",
 		price: "11,000",
-		desc: "This ticket includes admission to the AI Conference and Expo. This will also include coffee breaks and snacks for two days.",
+		desc: ["2 Day Ticket (In Person)", "Access to AI Conference & Expo ", "Coffee Breaks & Snacks"],
 	},
+	// {
+	// 	title: "HOD's & Lecturers (10 Pax)",
+	// 	price: "20,000",
+	// 	desc: ["1-Day Ticket (In Person)", "Access to AI Conference & Expo"],
+	// },
 	{
-		title: "Corporate Regular (Season)",
+		title: "Corporate (10 Pax)",
 		price: "40,000",
-		desc: "This includes 10 regular corporate tickets for the two-day event. Admission to the AI Conference and Expo.",
+		desc: ["2-Day Ticket (In Person)", "Access to AI Conference & Expo"],
 	},
 ];
 
