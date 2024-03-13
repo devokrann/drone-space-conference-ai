@@ -162,6 +162,42 @@ const people = [
 		category: ["speaker"],
 	},
 	{
+		name: "Dennis Mutua",
+		bio: [
+			"As the Founder & Managing Director of Geo Cart Surveys & Engineering Solutions Ltd, Dennis Mutua boasts a decade of experience in Geospatial Engineering and over 8 years as a specialist in providing Unmanned Aerial Systems (UAS) solutions. Dennis possesses an in-depth understanding of various aerial mapping methodologies and excels in analyzing and presenting data using various software. His expertise spans across a variety of UAS platforms, sensors, and the proficient management of associated datasets.",
+			"Dennis actively engages in numerous survey and UAS mapping projects within the region, showcasing his hands-on experience and dedication to advancing the industry. He champions the adoption of UAS technology by providing consulting services and organizing training seminars for both government organizations and private entities seeking to incorporate UAS technology into their workflows.",
+			"Under Dennis's leadership and entrepreneurial prowess, Geo Cart Surveys & Engineering Solutions Ltd has emerged as a prominent spatial solutions company. The company, guided by Dennis's vision, has successfully integrated emerging technologies, adding value and diversifying its product portfolio to stay at the forefront of the industry.",
+		],
+		occupation: {
+			position: "Geospatial Specialist",
+			pow: "GeoCart Survey & Mapping Limited",
+			image: null,
+		},
+		image: image.people.speakers.denisMutua,
+		contact: {
+			email: "mutuadns@gmail.com",
+			phone: null,
+			socials: null,
+		},
+		category: ["speaker"],
+	},
+	{
+		name: "Craig Cleave",
+		bio: [
+			"Craig Cleave is an aviator with diverse experience and a passion for the growth and development of the Kenya drone sector. His aviation career began over 20 years ago as a Hanggliding instructor and he went on to attain a ATPL and fly for Kenyans national carrier. He has been a training captain, chief pilot and head of operation in the manned aviation sector in Kenya and is the founder and CEO of the 1st ever KCAA approved drone organization: Kendrone.",
+			"As a Kenya drone pioneer his achievements include becoming the 1st KCAA UAS Designated Flight Examiner, conducting the 1st RPL Multirotor and Fixed wing UAS training in Kenya as well as being nominated as the chair of the Kenya Stakeholders Committee and recently as the chair of the newly formed Kenya Uncrewed Aircraft Systems Association.",
+			"Craig is an established drone videographer having filmed for the likes of National Geographic, BBC, Meta, Adidas and other internationally distributed productions. His FPV flying and cinematic skillset is unique in Kenya. As a UAS instructor his course development and experience of training in several countries has assisted the Kenya UAS sector grow and diversify.",
+		],
+		occupation: {
+			position: "CEO",
+			pow: "Kendrone Limited",
+			image: image.companies.kendrone,
+		},
+		image: image.people.speakers.craigCleave,
+		contact: { email: "craig@kendrone.co.ke" },
+		category: ["speaker"],
+	},
+	{
 		name: "George Ogada",
 		nationality: "EA",
 		bio: [
@@ -275,7 +311,6 @@ const people = [
 			"Pamela is a computer and data scientist, skilled in the acquisition, integration, storage, management, protection, use and extraction of data. She holds a BSC degree in Computer Science. Her professional goal is to leverage her expertise and skills to advance the field of data operations and support the utilization of high-quality data in making precise inferences. To this end, her current role is within a global CRO that offers statistical consulting, clinical trial reporting, data management, and data science services.",
 			"Pamela is an avid STEM advocate who is keen on sharing her knowledge by helping people understand new technologies to manage data intelligently, effectively, and safely. With the belief that technology affects all (regardless of industry) in this information age, she simplifies high-tech concepts and articulates complex ideas in an easy-to-understand manner.",
 			"She has been interviewed and featured on Women in Science by Outsourcing Pharma, a leading news source for the pharma industry. She enjoys writing and has had her latest article titled ‘Addressing Missing Data in Clinical Trials – The Data Science Approach’ published in the European Journal for Clinical Studies. The article discussed why the regular monitoring of real-time metrics is highly effective at preventing costly missing data in Clinical Trials.",
-			// "Pamela is looking forward to an exciting and inspirational time at the AI Conference in Nairobi, where she will speak on Data Protection.",
 		],
 		occupation: {
 			position: "Computer & Data Scientist",
@@ -406,26 +441,14 @@ const people = [
 			"In 2020, Robert was named to the Federal Communications Commission’s Precision Agriculture Task Force Working Group “Encouraging Adoption of Precision Agriculture and Availability of High-Quality Jobs on Connected Farms.” In 2022 Robert served as an Idaho State Senator for the 2022 Legislative Session representing Idaho Legislative District Six (6).",
 		],
 		occupation: {
-			position: "",
-			pow: "",
+			position: "Idaho Senator & Farmer",
+			pow: "Co-Founder, ADT",
 			image: null,
 		},
 		image: image.people.speakers.robertBlair,
 		contact: null,
 		category: ["speaker"],
 	},
-	// {
-	// 	name: "Denis Mumo",
-	// 	bio: [""],
-	// 	occupation: {
-	// 		position: "Geospatial Specialist",
-	// 		pow: "GeoCart Survey & Mapping Limited",
-	// 		image: null,
-	// 	},
-	// 	image: image.people.speakers.denisMumo,
-	// 	contact: null,
-	// 	category: ["speaker"],
-	// },
 	{
 		name: "Washington Ogol",
 		bio: [

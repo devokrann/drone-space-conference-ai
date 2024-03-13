@@ -18,7 +18,12 @@ export default function Chat() {
 					<Box style={transitionStyles}>
 						<Box className={classes.chat}>
 							<Anchor href="https://wa.me/254712656565" target="_blank" title="Chat on WhatsApp">
-								<Image src={image.icon.social.whatsapp} w={36} className={classes.icon} />
+								<Image
+									src={image.icon.social.whatsapp}
+									alt="whatsapp chat"
+									w={36}
+									className={classes.icon}
+								/>
 							</Anchor>
 						</Box>
 					</Box>

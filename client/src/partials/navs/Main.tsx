@@ -101,7 +101,7 @@ export default function Main() {
 					</Grid.Col>
 					<Grid.Col span={3} hiddenFrom="md">
 						<Group justify="end" gap={0}>
-							<Burger opened={opened} onClick={open} size="sm	" />
+							<Burger opened={opened} onClick={open} size="sm	" aria-label="toggle navigation" />
 						</Group>
 					</Grid.Col>
 				</Grid>

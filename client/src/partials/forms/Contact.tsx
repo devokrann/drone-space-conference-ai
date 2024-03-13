@@ -94,7 +94,7 @@ export default function Contact({
 				utility.validator.form.special.text(value, 2, 24),
 
 			universityName: (value, values) =>
-				values.subject == "University Pavilion Application" &&
+				(values.subject == "University Pavilion Application" || values.boothPackage == "University") &&
 				utility.validator.form.special.text(value, 2, 24),
 			contactPerson: (value, values) =>
 				(values.subject == "University Pavilion Application" || values.subject == "Sponsorship Application") &&
@@ -206,8 +206,10 @@ export default function Contact({
 					? `Contact Phone Number: ${contactPhoneNumber}`
 					: "",
 			sponsorshipPackage:
-				subject != "Other" && sponsorshipPackage.length > 1 ? `Sponsorship Package: ${sponsorshipPackage}` : "",
-			boothPackage: subject != "Other" && boothPackage.length > 1 ? `Booth Package: ${boothPackage}` : "",
+				subject != "Other" && sponsorshipPackage.length > 1
+					? `Sponsorship Package: ${sponsorshipPackage} Sponsorship`
+					: "",
+			boothPackage: subject != "Other" && boothPackage.length > 1 ? `Booth Package: ${boothPackage} Booth` : "",
 			boothSize: subject != "Other" && boothSize.length > 1 ? `Booth Size: ${boothSize}` : "",
 			websiteLink: subject != "Other" && websiteLink.length > 1 ? `Link to Website: ${websiteLink}` : "",
 
@@ -418,6 +420,10 @@ export default function Contact({
 									label: "5G Wi-Fi Sponsorship Package",
 									value: "5G Wi-Fi",
 								},
+								{
+									label: "Hackathon Sponsorship Package",
+									value: "Hackathon",
+								},
 							]}
 							required
 							{...form.getInputProps("sponsorshipPackage")}
@@ -427,7 +433,12 @@ export default function Contact({
 
 				<Grid.Col
 					span={{ base: 12, xs: 6, sm: 12, md: 6 }}
-					display={form.values.subject == "University Pavilion Application" ? "block" : "none"}
+					display={
+						form.values.subject == "University Pavilion Application" ||
+						form.values.boothPackage == "University"
+							? "block"
+							: "none"
+					}
 				>
 					<Component.Input.Text
 						required
@@ -577,6 +588,10 @@ export default function Contact({
 							{
 								label: "Startup Booth",
 								value: "Startup",
+							},
+							{
+								label: "University Booth",
+								value: "University",
 							},
 							{
 								label: "SME Booth",
