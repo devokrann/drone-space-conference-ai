@@ -14,6 +14,10 @@ const links = {
 			icon: image.icon.social.instagram,
 			link: "https://www.instagram.com/aiconference_ke?igsh=cjRheXZzdDc1N2Fw",
 		},
+		{
+			icon: image.icon.social.linkedin,
+			link: "https://www.linkedin.com/showcase/aiconference-nairobi/?viewAsMember=true",
+		},
 	],
 	navbar: [
 		{ link: "/", label: "Overview" },
@@ -21,10 +25,10 @@ const links = {
 		{
 			link: "/agenda",
 			label: "Agenda",
-			subLinks: [
-				{ link: "/agenda", label: "Agenda" },
-				{ link: "/hackathon", label: "Hackathon" },
-			],
+			// subLinks: [
+			// 	{ link: "/agenda", label: "Agenda" },
+			// 	{ link: "/hackathon", label: "Hackathon" },
+			// ],
 		},
 		{ link: "/speakers", label: "Speakers" },
 		{ link: "/sponsors", label: "Sponsors" },

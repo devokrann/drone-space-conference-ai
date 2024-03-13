@@ -28,7 +28,7 @@ const router = createBrowserRouter(
 			{/* <Route path="about" element={<About />} /> */}
 			<Route path="exhibit" element={<Exhibit />} />
 			<Route path="agenda" element={<Agenda />} />
-			<Route path="hackathon" element={<Hackathon />} />
+			{/* <Route path="hackathon" element={<Hackathon />} /> */}
 			<Route path="speakers">
 				<Route index element={<Speakers />} />
 				<Route path=":speaker" element={<Speaker />} />
