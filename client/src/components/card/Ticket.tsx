@@ -23,11 +23,15 @@ export default function Ticket({ data }: { data: { title: string; price: string;
 					</Title>
 				</Stack>
 				<Divider color="pri" />
-				<Stack gap={"xs"} align="center">
-					{data.desc.map(item => (
-						<Text key={item}>{item}</Text>
-					))}
-				</Stack>
+				{typeof data.desc == "string" ? (
+					<Text>{data.desc}</Text>
+				) : (
+					<Stack gap={"xs"} align="center">
+						{data.desc.map(item => (
+							<Text key={item}>{item}</Text>
+						))}
+					</Stack>
+				)}
 			</Stack>
 			<Button fullWidth color="sec" c={"dark.9"} component="a" href={link} target="_blank">
 				Buy {data.title} Ticket
