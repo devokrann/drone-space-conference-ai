@@ -71,7 +71,7 @@ const program = {
 						heading: "Demonstration Session",
 					},
 					desc: {
-						agenda: "Drone Demonstration using AI and hand gestures - Hacking Session with Drone Space & Bright Gameli",
+						agenda: "Drone Demonstration using AI",
 						// participants: ["Drone Space", "Bright Gameli"],
 					},
 				},
@@ -81,7 +81,7 @@ const program = {
 						heading: "Hackathon Session",
 					},
 					desc: {
-						agenda: "Hackathon pitching and Judging (5 Teams)",
+						agenda: "This track is designed to showcase the industry's leading startups and provide an opportunity for Venture Capitalists (VCs) on industry trends. All startups (5 Teams) that will be participating on this track are hand picked by Startinev and AI Conference Nairobi Team as the up-and-comers to be on the lookout for. These sessions of Hackathon (building models) and preparing presentations will be conducted in 48 hours and a showdown session of the finalists will each conduct a 10 minute pitch style format of their idea with prize totals of up to Kshs. 200,000.",
 						// participants: [
 						// 	"Mary Ndinda (Judge)",
 						// 	"Sandeep (Judge)",
@@ -119,7 +119,7 @@ const program = {
 				{
 					title: { duration: "11.00 AM – 11.30 AM", heading: "Plenary Session" },
 					desc: {
-						agenda: "AI and climate change.",
+						agenda: "Understanding the Difference between ChatGPT and Microsoft Copilot, and Advantages of Azuri AI.",
 						// participants: ["Ministry of Environment", "Climate Change Summit Organizers"],
 					},
 				},
@@ -166,7 +166,7 @@ const program = {
 					},
 				},
 				{
-					title: { duration: "02.30 PM – 03.10 PM", heading: "Plenary / Panel" },
+					title: { duration: "02.30 PM – 03.10 PM", heading: "Panel Session" },
 					desc: {
 						agenda: "How can organizations successfully navigate the era of AI powered automation? or Exploring emerging AI Market trends.",
 						// participants: [
@@ -178,9 +178,9 @@ const program = {
 					},
 				},
 				{
-					title: { duration: "03.10 PM – 03.40 PM", heading: "Plenary Session" },
+					title: { duration: "03.10 PM – 03.40 PM", heading: "Panel Session" },
 					desc: {
-						agenda: "Understanding the Difference between ChatGPT and Microsoft Copilot, and Advantages of Azuri AI.",
+						agenda: "What are the Venture Capitalists/Investors Perspectives on AI?",
 						// participants: ["Microsoft (Kenya)"],
 					},
 				},
@@ -191,11 +191,15 @@ const program = {
 					},
 				},
 				{
-					title: { duration: "04.00PM – 05.00PM", heading: "Panel Session" },
+					title: { duration: "04.00PM – 04.40PM", heading: "Panel Session" },
 					desc: {
 						agenda: "Chatbots for Change: Using Conversational AI to transform rural communities in Kenya?",
-						// participants: ["Strathmore School", "Google (Kenya)", "Safaricom", "Britam Insurance"],
-						// moderator: "TBC",
+					},
+				},
+				{
+					title: { duration: "04.50PM – 05.00PM", heading: "Plenary Session" },
+					desc: {
+						agenda: "The future of Work. Don’t give human a Robot.",
 					},
 				},
 			],
@@ -234,7 +238,7 @@ const program = {
 				{
 					title: { duration: "10:30 AM – 11.00 AM", heading: "Coffee Break" },
 					desc: {
-						agenda: "Official opening of the expo. Attendees split to various platforms.",
+						agenda: "Coffee break.",
 					},
 				},
 				{
@@ -277,7 +281,7 @@ const program = {
 					},
 				},
 				{
-					title: { duration: "11.50 AM – 12.50 PM", heading: "Panel Session" },
+					title: { duration: "11.50 AM – 12.50 PM", heading: "Plenary Session" },
 					desc: {
 						agenda: "How can UTM Systems enhance airspace safety for Unmanned Aircraft Systems (UAS) in Kenya?",
 						// participants: ["Thales Group", "KCAA", "Airbus", "ndra"],

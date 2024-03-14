@@ -21,7 +21,7 @@ export default function Agenda() {
 					<Stack gap={48}>
 						<Stack ta={"center"} gap={"xl"}>
 							<Title order={2} fz={40} c={"pri"}>
-								Agenda
+								Overview
 							</Title>
 							<Text>
 								Plan Your Conference Experience with Ease. Explore the sessions and tracks at the Ai
@@ -39,7 +39,7 @@ export default function Agenda() {
 								component="a"
 								href="#tracks"
 							>
-								View All Tracks
+								View Breakdown
 							</Button>
 						</Stack>
 						<Grid columns={21}>
@@ -163,7 +163,7 @@ export default function Agenda() {
 					<Stack gap={48}>
 						<Stack ta={"center"} gap={"xl"}>
 							<Title order={2} fz={40} c={"pri"}>
-								Tracks
+								Breakdown
 							</Title>
 							<Text>
 								Discover the latest trends, advancements, and best practices shaping the future of AI,
@@ -171,7 +171,7 @@ export default function Agenda() {
 								startups, investors, research labs take the stage.
 							</Text>
 						</Stack>
-						<Stack ta={"center"} gap={"xl"}>
+						{/* <Stack ta={"center"} gap={"xl"}>
 							<Title order={2} fz={40} c={"pri"}>
 								Hackathon / Innovation Stage
 							</Title>
@@ -184,7 +184,7 @@ export default function Agenda() {
 								of the finalists will each conduct a 10 minute pitch style format of their idea with
 								prize totals of up to Kshs. 200,000.
 							</Text>
-						</Stack>
+						</Stack> */}
 						<Grid gutter={96}>
 							<Grid.Col span={12}>
 								<Stack gap={"xl"}>
