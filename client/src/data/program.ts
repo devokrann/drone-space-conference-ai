@@ -22,6 +22,7 @@ const program = {
 						// 	"PS Eng. John Tanui (Opening Remarks and Keynote)",
 						// ],
 					},
+					common: true,
 				},
 				{
 					title: {
@@ -33,6 +34,7 @@ const program = {
 						// participants: ["Google (Kenya)", "Microsoft", "Samsung", "Oracle (Kenya)", "Meta"],
 						// moderator: "Brian George",
 					},
+					common: true,
 				},
 				{
 					title: {
@@ -42,6 +44,7 @@ const program = {
 					desc: {
 						agenda: "Official opening of the expo. Attendees split to respective platforms.",
 					},
+					common: true,
 				},
 			],
 			day2: [
@@ -53,6 +56,7 @@ const program = {
 					desc: {
 						agenda: "Lunch break",
 					},
+					common: true,
 				},
 				{
 					title: {
@@ -64,6 +68,7 @@ const program = {
 						// participants: ["Microsoft", "Google", "Intel", "Meta"],
 						// moderator: "Zee Gitahi",
 					},
+					common: true,
 				},
 				{
 					title: {
@@ -74,6 +79,7 @@ const program = {
 						agenda: "Drone Demonstration using AI",
 						// participants: ["Drone Space", "Bright Gameli"],
 					},
+					common: true,
 				},
 				{
 					title: {
@@ -89,6 +95,7 @@ const program = {
 						// 	"Laban Cliff (MC)",
 						// ],
 					},
+					common: true,
 				},
 				{
 					title: {
@@ -98,12 +105,14 @@ const program = {
 					desc: {
 						agenda: "Coffee break",
 					},
+					common: true,
 				},
 				{
 					title: { duration: "04.00 PM – 04.40 PM", heading: "Hackathon Winner Announcement Session" },
 					desc: {
 						agenda: "Announcement of hackathon winner.",
 					},
+					common: true,
 				},
 				{
 					title: { duration: "04.40 PM – 05.00 PM", heading: "Vote of Thanks" },
@@ -111,6 +120,7 @@ const program = {
 						agenda: "Official closing of the expo.",
 						// participants: ["Faith Maina"],
 					},
+					common: true,
 				},
 			],
 		},

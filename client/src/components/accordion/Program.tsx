@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { Accordion, Anchor, Container, Divider, Group, Stack, Text } from "@mantine/core";
+import { Accordion, Anchor, Center, Container, Divider, Grid, Group, Stack, Text } from "@mantine/core";
 
 import { typeSpeaker } from "@src/types/people";
 
@@ -16,15 +16,20 @@ export default function Program({
 	data: {
 		title: { duration: string; heading: string };
 		desc: { agenda: string; questions?: string[]; participants?: typeSpeaker[]; moderator?: typeSpeaker };
+		common?: boolean;
 	}[];
 }) {
 	const items = data.map(item => (
 		<Accordion.Item key={item.title.duration} value={item.title.duration}>
 			<Accordion.Control>
-				<Group>
-					<Text component="span">{item.title.duration}</Text>-
-					<Text component="span">{item.title.heading}</Text>
-				</Group>
+				<Grid gutter={0}>
+					<Grid.Col span={{ base: 12, xs: 4, md: item.common ? 2.5 : 5 }}>
+						<Text component="span">{item.title.duration}</Text>
+					</Grid.Col>
+					<Grid.Col span={{ base: 12, xs: 6 }}>
+						<Text component="span">{item.title.heading}</Text>
+					</Grid.Col>
+				</Grid>
 			</Accordion.Control>
 			<Accordion.Panel fz={"sm"}>
 				<Container>
