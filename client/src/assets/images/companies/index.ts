@@ -11,6 +11,7 @@ import aiStartup from "./logo-10.jpg";
 import statsspeak from "./logo-11.jpg";
 import kendrone from "./logo-12.png";
 import techMindsetAfrica from "./logo-13.webp";
+import microsoft from "./logo-14.png";
 
 const companies = {
 	dotsavvy,
@@ -26,6 +27,7 @@ const companies = {
 	statsspeak,
 	kendrone,
 	techMindsetAfrica,
+	microsoft,
 };
 
 export default companies;

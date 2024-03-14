@@ -20,6 +20,8 @@ import washingtonOgol from "./speaker-19.webp";
 import antonyNgatia from "./speaker-20.webp";
 import craigCleave from "./speaker-21.webp";
 import joanMbesya from "./speaker-22.webp";
+import bethanyJepchumba from "./speaker-23.webp";
+import dennisMwighusa from "./speaker-24.webp";
 
 const moderators = {
 	michaelZimba,
@@ -44,6 +46,8 @@ const moderators = {
 	antonyNgatia,
 	craigCleave,
 	joanMbesya,
+	bethanyJepchumba,
+	dennisMwighusa,
 };
 
 export default moderators;

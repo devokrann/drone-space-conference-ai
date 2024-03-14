@@ -65,22 +65,20 @@ const people = [
 		category: ["speaker"],
 	},
 	{
-		name: "Lyela Mutisya",
+		name: "Bethany Jepchumba",
 		bio: [
-			"Lyela Mutisya graduated from Lewis University in 2017 with a B.S. in Aviation Administration and a minor in Unmanned Aircraft Systems (UAS). In 2015 during Lyela's junior year in college she took an elective that sparked her love for Uncrewed Aircraft Systems (UAS). As a result of her newfound passion for drones Lyela ended up minoring in UAS.",
-			"Over the years Lyela has been featured in several publications both local and international. She has also participated in several speaking engagements including the 2016 Drone World Expo's Women in Drones Panel.",
-			"In 2021 Lyela joined LifeBank as the Drone Pilot Lead. During her time at LifeBank Lyela learned how to fly Vertical Takeoff & Landing (VTOL) drones. She underwent trainings both in Germany and London. Lyela assisted LifeBank with establishing drone operations for last mile medical delivery in Ethiopia.",
-			"She has vast experience in BVLOS operations from assessing suitable areas for BVLOS operations, preflight planning, risk assessment, flight operations, cargo loading and unloading, communication, and post-flight procedures.",
-			"She is currently on the forefront of using drone technology for last mile medical delivery here in Kenya. As an entrepreneur Lyela's goal is to not only inspire young women and men but to empower them as well through drone education and employment.",
+			"Bethany is a Cloud Advocate at Microsoft, who engages with students, aspiring developers, and entrepreneurs to help them learn and grow in Artificial Intelligence (AI). She does this through writing articles, hosting workshops, and speaking at events about AI and cloud computing.",
+			"She has a strong background in community and skilling others, thanks to her previous roles as a Program Coordinator at Andela and Gold Microsoft Learn Student Ambassador which built her passion for community and skilling others.",
+			"She comes from a community of marathon runners but decided to run code instead. Outside tech she defines herself as creative. You will find her testing out new hobbies, sketching or deeply engrossed in a book.",
 		],
 		occupation: {
-			position: "Drone Expert",
-			pow: null,
-			image: null,
+			position: "Academic Cloud Advocate",
+			pow: "Microsoft",
+			image: image.companies.microsoft,
 		},
-		image: image.people.speakers.lyelaMutisya,
+		image: image.people.speakers.bethanyJepchumba,
 		contact: {
-			email: "lyela.mutisya@gmail.com",
+			email: "bethanycheum@microsoft.com",
 			phone: null,
 			socials: null,
 		},
@@ -163,21 +161,22 @@ const people = [
 	},
 	// eddie wapi pay
 	{
-		name: "Violet Ochieng",
+		name: "Lyela Mutisya",
 		bio: [
-			"Violet Ochieng, the STEM advocate and KCAA-Certified Remote Pilot, is also the winner of the Carol Ellison Science Award for 2021. She is an early-career researcher with interest in the use of digital technology in pest detection and management. She holds the position of Research Officer-Drone Technology at CABI where she utilizes her research capacity to address societal challenges while creating opportunities for innovation.",
-			"Motivated by her passion for environmental conservation and agricultural innovation, she pursued a Bachelor of Science in Environmental Conservation and Natural Resource Management, and a Master's of Science in Agricultural Entomology at the University of Nairobi, Kenya. During her master's program, she developed, designed, implemented and pioneered a project with the Centre for Agriculture and Bioscience International (CABI) focusing on piloting the use of drone technology for surveillance and control of Desert Locusts.",
-			"In addition to her  outstanding academic and research achievements, Violet is an active member of several  prestigious organizations, including the African Association of Insect Scientists (AAIS), Association of Kenyan Entomologists, Entomological Society of America (ESA), International Association of Black Entomologists (IABE), International Society of Precision  Agriculture, Nature Kenya, Greenpeace Africa, and the Global Locusts Initiative",
-			"With her unique blend of academic expertise, hands-on experience, and commitment to innovation, Violet is poised to make a meaningful impact in the field of precision agriculture. She is dedicated to advancing scientific and technological innovations that contribute to poverty alleviation and enhanced food security through agricultural research and innovation. She is intentionally dedicated to empowering youths to take a leading role in agriculture.",
+			"Lyela Mutisya graduated from Lewis University in 2017 with a B.S. in Aviation Administration and a minor in Unmanned Aircraft Systems (UAS). In 2015 during Lyela's junior year in college she took an elective that sparked her love for Uncrewed Aircraft Systems (UAS). As a result of her newfound passion for drones Lyela ended up minoring in UAS.",
+			"Over the years Lyela has been featured in several publications both local and international. She has also participated in several speaking engagements including the 2016 Drone World Expo's Women in Drones Panel.",
+			"In 2021 Lyela joined LifeBank as the Drone Pilot Lead. During her time at LifeBank Lyela learned how to fly Vertical Takeoff & Landing (VTOL) drones. She underwent trainings both in Germany and London. Lyela assisted LifeBank with establishing drone operations for last mile medical delivery in Ethiopia.",
+			"She has vast experience in BVLOS operations from assessing suitable areas for BVLOS operations, preflight planning, risk assessment, flight operations, cargo loading and unloading, communication, and post-flight procedures.",
+			"She is currently on the forefront of using drone technology for last mile medical delivery here in Kenya. As an entrepreneur Lyela's goal is to not only inspire young women and men but to empower them as well through drone education and employment.",
 		],
 		occupation: {
-			position: "Drone Tech Research Officer",
-			pow: "CABI",
+			position: "Drone Expert",
+			pow: null,
 			image: null,
 		},
-		image: image.people.speakers.violetOchieng,
+		image: image.people.speakers.lyelaMutisya,
 		contact: {
-			email: "v.ochieng@cabi.org",
+			email: "lyela.mutisya@gmail.com",
 			phone: null,
 			socials: null,
 		},
@@ -225,21 +224,23 @@ const people = [
 		category: ["speaker"],
 	},
 	{
-		name: "Pamela Adede",
+		name: "Violet Ochieng",
 		bio: [
-			"Pamela is a computer and data scientist, skilled in the acquisition, integration, storage, management, protection, use and extraction of data. She holds a BSC degree in Computer Science. Her professional goal is to leverage her expertise and skills to advance the field of data operations and support the utilization of high-quality data in making precise inferences. To this end, her current role is within a global CRO that offers statistical consulting, clinical trial reporting, data management, and data science services.",
-			"Pamela is an avid STEM advocate who is keen on sharing her knowledge by helping people understand new technologies to manage data intelligently, effectively, and safely. With the belief that technology affects all (regardless of industry) in this information age, she simplifies high-tech concepts and articulates complex ideas in an easy-to-understand manner.",
-			"She has been interviewed and featured on Women in Science by Outsourcing Pharma, a leading news source for the pharma industry. She enjoys writing and has had her latest article titled ‘Addressing Missing Data in Clinical Trials – The Data Science Approach’ published in the European Journal for Clinical Studies. The article discussed why the regular monitoring of real-time metrics is highly effective at preventing costly missing data in Clinical Trials.",
+			"Violet Ochieng, the STEM advocate and KCAA-Certified Remote Pilot, is also the winner of the Carol Ellison Science Award for 2021. She is an early-career researcher with interest in the use of digital technology in pest detection and management. She holds the position of Research Officer-Drone Technology at CABI where she utilizes her research capacity to address societal challenges while creating opportunities for innovation.",
+			"Motivated by her passion for environmental conservation and agricultural innovation, she pursued a Bachelor of Science in Environmental Conservation and Natural Resource Management, and a Master's of Science in Agricultural Entomology at the University of Nairobi, Kenya. During her master's program, she developed, designed, implemented and pioneered a project with the Centre for Agriculture and Bioscience International (CABI) focusing on piloting the use of drone technology for surveillance and control of Desert Locusts.",
+			"In addition to her  outstanding academic and research achievements, Violet is an active member of several  prestigious organizations, including the African Association of Insect Scientists (AAIS), Association of Kenyan Entomologists, Entomological Society of America (ESA), International Association of Black Entomologists (IABE), International Society of Precision  Agriculture, Nature Kenya, Greenpeace Africa, and the Global Locusts Initiative",
+			"With her unique blend of academic expertise, hands-on experience, and commitment to innovation, Violet is poised to make a meaningful impact in the field of precision agriculture. She is dedicated to advancing scientific and technological innovations that contribute to poverty alleviation and enhanced food security through agricultural research and innovation. She is intentionally dedicated to empowering youths to take a leading role in agriculture.",
 		],
 		occupation: {
-			position: "Computer & Data Scientist",
-			pow: "",
+			position: "Drone Tech Research Officer",
+			pow: "CABI",
 			image: null,
 		},
-		image: image.people.speakers.pamelaAdede,
+		image: image.people.speakers.violetOchieng,
 		contact: {
-			email: "adedejnr@gmail.com",
-			socials: [{ label: "linkedin", link: "https://www.linkedin.com/in/pamela-adede-40a28228/" }],
+			email: "v.ochieng@cabi.org",
+			phone: null,
+			socials: null,
 		},
 		category: ["speaker"],
 	},
@@ -338,26 +339,21 @@ const people = [
 		category: ["speaker"],
 	},
 	{
-		name: "Joan Mbesya",
+		name: "Pamela Adede",
 		bio: [
-			"Joan Mbesya is an esteemed author, founder, and CEO of Tech Mindset Africa Ltd (TMA). With a deep expertise in future technologies and a particular focus on leveraging artificial intelligence (AI) for sustainable living, Joan has emerged as a prominent figure in the field. Her unwavering commitment to transforming AI for African businesses, industries, and lifestyles has positioned her as a catalyst for economic prosperity on the continent.",
-			"Passionate about empowering marginalized communities, Joan actively advocates for girl child empowerment, persons with physical disabilities, orphans, and the intersex community. Firmly believing in the power of knowledge as the ultimate weapon against poverty, she spearheads TechMindset's mission to Sensitize, Empower & Educate Africa (S.E.E. Africa) through AI education initiatives.",
-			'Joan\'s accomplishments in the AI landscape are commendable. She recently co-hosted a virtual event, "The Future of Work in an AI-Enabled World," in collaboration with Konza Technopolis. Moreover, she led a panel of esteemed Toastmasters speakers in exploring AI as an enabler in communication. In partnership with the UK Kenya Tech Hub, TechMindset empowered and trained over 280 AI startups through the transformative Artificial Intelligence for Africa (AiFA) bootcamp program, propelling them towards investor readiness.',
-			"In recognition of her expertise and contributions, Joan has been invited to various prestigious platforms. She represented African women in digitized technology education as a panel speaker at the AGRF Ghana event, sponsored by AGRA. Her collaboration with institutions like eMobilis and Moringa has enabled the empowerment of women in technology through sponsored studies.",
-			"With more than 20 years of experience in technology entrepreneurship, leadership, and education, Joan is a formidable force in her field. She holds a Bachelor's Degree (Hons.) in Commerce and an MBA in Marketing and Strategic Management from the University of Nairobi. Additionally, she is certified as an AI and ML expert for businesses by Wharton University Pennsylvania and Duke University, respectively, while currently pursuing Deep Learning for Businesses at Yonsei University. Her certifications also include Business Transformation with Google Cloud, Python from Michigan University, and Fundamentals of Business Finance and Financial Planning from Goldman Sachs, along with Design-Led Strategy from the University of Sydney",
-			"Joan's extensive knowledge and passion for AI have been honed through participation in esteemed panels hosted by organizations and networks such as AGRF, Commonwealth Business Women Network, UK Embassy, Future Women Leaders Network, Centonomy, Women in Data, Capital FM, Hot96, Cybr Security forums and Twitter spaces. These experiences have contributed significantly to her expertise in the world of Artificial Intelligence.",
-			"Currently, Joan is spearheading an AI project aimed at benefiting indigenous communities by providing alternative livelihood opportunities. Her vision and dedication continue to shape the future of AI in Africa and inspire positive change on a global scale.",
+			"Pamela is a computer and data scientist, skilled in the acquisition, integration, storage, management, protection, use and extraction of data. She holds a BSC degree in Computer Science. Her professional goal is to leverage her expertise and skills to advance the field of data operations and support the utilization of high-quality data in making precise inferences. To this end, her current role is within a global CRO that offers statistical consulting, clinical trial reporting, data management, and data science services.",
+			"Pamela is an avid STEM advocate who is keen on sharing her knowledge by helping people understand new technologies to manage data intelligently, effectively, and safely. With the belief that technology affects all (regardless of industry) in this information age, she simplifies high-tech concepts and articulates complex ideas in an easy-to-understand manner.",
+			"She has been interviewed and featured on Women in Science by Outsourcing Pharma, a leading news source for the pharma industry. She enjoys writing and has had her latest article titled ‘Addressing Missing Data in Clinical Trials – The Data Science Approach’ published in the European Journal for Clinical Studies. The article discussed why the regular monitoring of real-time metrics is highly effective at preventing costly missing data in Clinical Trials.",
 		],
 		occupation: {
-			position: "CEO",
-			pow: "Tech Mindset Africa",
-			image: image.companies.techMindsetAfrica,
+			position: "Computer & Data Scientist",
+			pow: "",
+			image: null,
 		},
-		image: image.people.speakers.joanMbesya,
+		image: image.people.speakers.pamelaAdede,
 		contact: {
-			email: "joan@techmindset-ai.africa",
-			phone: null,
-			socials: null,
+			email: "adedejnr@gmail.com",
+			socials: [{ label: "linkedin", link: "https://www.linkedin.com/in/pamela-adede-40a28228/" }],
 		},
 		category: ["speaker"],
 	},
@@ -399,6 +395,30 @@ const people = [
 		image: image.people.speakers.koyundiBryan,
 		contact: {
 			email: "koyundibryan@gmail.com",
+			phone: null,
+			socials: null,
+		},
+		category: ["speaker"],
+	},
+	{
+		name: "Joan Mbesya",
+		bio: [
+			"Joan Mbesya is an esteemed author, founder, and CEO of Tech Mindset Africa Ltd (TMA). With a deep expertise in future technologies and a particular focus on leveraging artificial intelligence (AI) for sustainable living, Joan has emerged as a prominent figure in the field. Her unwavering commitment to transforming AI for African businesses, industries, and lifestyles has positioned her as a catalyst for economic prosperity on the continent.",
+			"Passionate about empowering marginalized communities, Joan actively advocates for girl child empowerment, persons with physical disabilities, orphans, and the intersex community. Firmly believing in the power of knowledge as the ultimate weapon against poverty, she spearheads TechMindset's mission to Sensitize, Empower & Educate Africa (S.E.E. Africa) through AI education initiatives.",
+			'Joan\'s accomplishments in the AI landscape are commendable. She recently co-hosted a virtual event, "The Future of Work in an AI-Enabled World," in collaboration with Konza Technopolis. Moreover, she led a panel of esteemed Toastmasters speakers in exploring AI as an enabler in communication. In partnership with the UK Kenya Tech Hub, TechMindset empowered and trained over 280 AI startups through the transformative Artificial Intelligence for Africa (AiFA) bootcamp program, propelling them towards investor readiness.',
+			"In recognition of her expertise and contributions, Joan has been invited to various prestigious platforms. She represented African women in digitized technology education as a panel speaker at the AGRF Ghana event, sponsored by AGRA. Her collaboration with institutions like eMobilis and Moringa has enabled the empowerment of women in technology through sponsored studies.",
+			"With more than 20 years of experience in technology entrepreneurship, leadership, and education, Joan is a formidable force in her field. She holds a Bachelor's Degree (Hons.) in Commerce and an MBA in Marketing and Strategic Management from the University of Nairobi. Additionally, she is certified as an AI and ML expert for businesses by Wharton University Pennsylvania and Duke University, respectively, while currently pursuing Deep Learning for Businesses at Yonsei University. Her certifications also include Business Transformation with Google Cloud, Python from Michigan University, and Fundamentals of Business Finance and Financial Planning from Goldman Sachs, along with Design-Led Strategy from the University of Sydney",
+			"Joan's extensive knowledge and passion for AI have been honed through participation in esteemed panels hosted by organizations and networks such as AGRF, Commonwealth Business Women Network, UK Embassy, Future Women Leaders Network, Centonomy, Women in Data, Capital FM, Hot96, Cybr Security forums and Twitter spaces. These experiences have contributed significantly to her expertise in the world of Artificial Intelligence.",
+			"Currently, Joan is spearheading an AI project aimed at benefiting indigenous communities by providing alternative livelihood opportunities. Her vision and dedication continue to shape the future of AI in Africa and inspire positive change on a global scale.",
+		],
+		occupation: {
+			position: "CEO",
+			pow: "Tech Mindset Africa",
+			image: image.companies.techMindsetAfrica,
+		},
+		image: image.people.speakers.joanMbesya,
+		contact: {
+			email: "joan@techmindset-ai.africa",
 			phone: null,
 			socials: null,
 		},
@@ -449,6 +469,29 @@ const people = [
 		category: ["speaker"],
 	},
 	{
+		name: "Dennis Mwighusa",
+		bio: [
+			"Dr. Mwighusa is an experienced Consultant and Researcher in both ICT and STI Policy. His primary research interests lie in the areas of Artificial Intelligence, e-Governance, ICT4D particularly ICT and (Education, Health and Finance), Information Systems Evaluation, Usability, Learning Management Systems, Innovation and Entrepreneurship in Smart Agriculture, Digital Technology, and Climate Change Technology. In STI policy he has experience in technical writing on complex policy issues, evaluations, research and analysis, problem solving, development and communication of the best evidence-based policy and practices for research, industry & governments. He is also very active in publishing in his areas of expertise – both in academic outlets such as journals and non-academic outlets that are more relevant to ICT and policy.",
+			"Mwighusa holds a PhD in Image Processing, MEng. in Signal and Information Processing and BEng. (Hons) in Computer Engineering. He also holds a Higher National Diploma in Artificial Intelligence and Cognitive Computing and a Certificate of Policy for Science, Technology & Innovation. Eng. Mwighusa is a Certified Project Management Professional, Researcher, Practitioner and Registered Consulting Engineer in Computer/ICTs.",
+			"Mwighusa is a member of different professional boards such as Institution of Engineers Tanzania (IET), International Federation of Consulting Engineers (FIDIC) - Geneva, Institute of Electrical & Electronics Engineers (IEEE) - Princeton, USA, Asia Pacific Signal & Information Processing Association (APSIPA) - Hung Hom, Kowloon, Hong Kong, International Association of Engineers (IAENG) - Hung to Road, Hong Kong, African Research Network on Economics of Learning, Innovation and Competence Building Systems (AfricaLics) few to mention.",
+			"Mwighusa is currently associated with Africa Research Institute For AI (ARIFA) as the Executive Director, Institute of Electrical and Electronics Engineers (IEEE) Tanzania Section as a Chairman & President. Previously worked with DEN Consult (T) Ltd as a Chief Executive Officer (CEO), Science, Technology and Innovation Policy Research Organization (STIPRO) – Tanzania as a Research Fellow, Tianjin Hylanda IT Co. in China as Information Technology Manager, Government of the United Republic of Tanzania as a Technical Analyst and Lectured at different Universities.",
+		],
+		occupation: {
+			position: "Executive Director",
+			pow: "Africa Research Institute For AI",
+			image: null,
+		},
+		image: image.people.speakers.dennisMwighusa,
+		contact: {
+			email: "mwighusa@arifa.org",
+			phone: null,
+			socials: null,
+		},
+		category: ["speaker"],
+	},
+
+	// row 6
+	{
 		name: "Solomon Wanjiru",
 		bio: [
 			"Mr. Solomon is a multi-talented professional excelling as a Land Surveyor, Drone Pilot Instructor and Cartographer. With a degree in surveying technology and a diploma in cartography, Solomon brings over 11 years of extensive experience to his craft.",
@@ -496,7 +539,6 @@ const people = [
 		},
 		category: ["speaker"],
 	},
-
 	{
 		name: "Michael Zimba",
 		bio: [
