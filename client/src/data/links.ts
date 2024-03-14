@@ -23,12 +23,8 @@ const links = {
 		{ link: "/", label: "Overview" },
 		{ link: "/exhibit", label: "Exhibit" },
 		{
-			link: "/agenda",
-			label: "Agenda",
-			// subLinks: [
-			// 	{ link: "/agenda", label: "Agenda" },
-			// 	{ link: "/hackathon", label: "Hackathon" },
-			// ],
+			link: "/program",
+			label: "Program",
 		},
 		{ link: "/speakers", label: "Speakers" },
 		{ link: "/sponsors", label: "Sponsors" },
@@ -40,7 +36,7 @@ const links = {
 				{ link: "/sponsors", label: "Sponsorship Opportunities" },
 				{ link: "/exhibit", label: "Exhibiting & Booths" },
 				{ link: "/", label: "Event Overview" },
-				{ link: "/agenda", label: "Event Program" },
+				{ link: "/program", label: "Event Program" },
 				{ link: "/speakers", label: "Speakers" },
 			],
 		},

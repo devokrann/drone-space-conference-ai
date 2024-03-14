@@ -24,9 +24,9 @@ export default function Speakers() {
 						</Title>
 						<Text>Our best Speakers will be added soon</Text>
 					</Stack> */}
-					<Grid justify="center">
+					<Grid justify="center" columns={20} gutter={"xl"}>
 						{data.people.map(person => (
-							<Grid.Col key={person.name} span={{ base: 12, xs: 6, sm: 4, md: 3 }}>
+							<Grid.Col key={person.name} span={{ base: 20, xs: 10, sm: 5, md: 4 }}>
 								<Component.Card.Speaker.Listing data={person} />
 							</Grid.Col>
 						))}
