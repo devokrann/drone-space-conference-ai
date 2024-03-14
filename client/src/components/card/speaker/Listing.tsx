@@ -13,43 +13,25 @@ import icons from "@src/data/icons";
 
 export default function Listing({ data }: { data: typeSpeaker }) {
 	return (
-		<Card className={classes.card}>
-			<Box className={classes.imageContainer}>
+		<Stack gap={"xs"} className={classes.card}>
+			<Anchor
+				className={classes.imageContainer}
+				component={Link}
+				to={data.bio ? `${hook.useLinkify(data.name)}` : `#`}
+			>
 				<Image src={data.image} alt={data.name} className={classes.image} />
-				{data.contact && data.contact.socials && (
-					<Group justify="center" gap={"xs"} className={classes.socials}>
-						{data.contact.socials.map(social => (
-							<Anchor key={social.link} inherit href={social.link} target="_blank">
-								<Image
-									src={icons.social.find(i => i.label == social.label)?.icon}
-									w={24}
-									h={24}
-									alt={social.label}
-									className={classes.icon}
-								/>
-							</Anchor>
-						))}
-					</Group>
+			</Anchor>
+			<Stack gap={0} align="center" ta={"center"} fw={500}>
+				<Text className={classes.title}>{data.name}</Text>
+				<Text inherit fz={"xs"}>
+					{data.occupation.position}
+				</Text>
+				{data.occupation.pow && (
+					<Text inherit fz={"xs"}>
+						{data.occupation.pow}
+					</Text>
 				)}
-			</Box>
-			<Stack gap={0} mt={"xl"} align="center" ta={"center"}>
-				<Anchor
-					className={classes.title}
-					component={Link}
-					to={data.bio ? `${hook.useLinkify(data.name)}` : `#`}
-				>
-					{data.name}
-				</Anchor>
-				<Stack gap={0}>
-					<Text fz={"sm"}>{data.occupation.position}</Text>
-					{data.occupation.pow && (
-						<Text fz={"xs"}>
-							{data.occupation.pow}
-							{data.nationality && `, ${data.nationality}`}
-						</Text>
-					)}
-				</Stack>
 			</Stack>
-		</Card>
+		</Stack>
 	);
 }

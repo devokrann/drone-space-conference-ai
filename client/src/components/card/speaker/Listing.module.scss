@@ -1,24 +1,16 @@
 .card {
 	height: 100%;
-	background-color: light-dark(var(--mantine-color-pri-6), var(--mantine-color-gray-light));
-	color: light-dark(var(--mantine-color-body), var(--mantine-color-white));
+	// background-color: light-dark(var(--mantine-color-pri-6), var(--mantine-color-gray-light));
+	background-color: transparent;
 	transition: 0.25s all ease;
+	padding: 0;
 
 	&:hover {
-		background-color: light-dark(var(--mantine-color-sec-6), var(--mantine-color-pri-6));
+		// background-color: light-dark(var(--mantine-color-sec-6), var(--mantine-color-pri-6));
 		color: light-dark(var(--mantine-color-dark-6), var(--mantine-color-white));
-
-		.image {
-			transform: scale(1.05);
-		}
 
 		.title {
 			color: light-dark(var(--mantine-color-pri-6), var(--mantine-color-sec-6));
-			text-decoration: underline;
-
-			&:hover {
-				text-decoration: none;
-			}
 		}
 
 		.socials {
@@ -29,21 +21,30 @@
 }
 
 .title {
-	color: light-dark(var(--mantine-color-sec-6), var(--mantine-color-sec-6));
+	color: light-dark(var(--mantine-color-pri-6), var(--mantine-color-sec-6));
 	font-weight: bold;
-	font-size: var(--mantine-font-size-md);
+	font-size: var(--mantine-font-size-xs);
 	text-transform: uppercase;
 }
 
 .imageContainer {
 	border-radius: 999px;
-	border: 4px solid light-dark(var(--mantine-color-sec-6), var(--mantine-color-pri-6));
+	border: 3px solid light-dark(var(--mantine-color-pri-6), var(--mantine-color-pri-6));
 	overflow: hidden;
 	position: relative;
+	transition: 0.25s all ease;
+
+	&:hover {
+		border: 3px solid light-dark(var(--mantine-color-sec-6), var(--mantine-color-sec-6));
+
+		.image {
+			transform: scale(1.1);
+		}
+	}
 }
 
 .image {
-	transform: scale(1.1);
+	transform: scale(1.05);
 	transition: 0.25s all ease;
 }
 

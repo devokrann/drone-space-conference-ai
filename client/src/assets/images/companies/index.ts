@@ -10,6 +10,7 @@ import topCoder from "./logo-9.svg";
 import aiStartup from "./logo-10.jpg";
 import statsspeak from "./logo-11.jpg";
 import kendrone from "./logo-12.png";
+import techMindsetAfrica from "./logo-13.webp";
 
 const companies = {
 	dotsavvy,
@@ -24,6 +25,7 @@ const companies = {
 	aiStartup,
 	statsspeak,
 	kendrone,
+	techMindsetAfrica,
 };
 
 export default companies;
