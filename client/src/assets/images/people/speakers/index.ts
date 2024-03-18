@@ -22,6 +22,12 @@ import craigCleave from "./speaker-21.webp";
 import joanMbesya from "./speaker-22.webp";
 import bethanyJepchumba from "./speaker-23.webp";
 import dennisMwighusa from "./speaker-24.webp";
+import winnieNjeri from "./speaker-25.jpeg";
+import ezekielOnyango from "./speaker-26.webp";
+import brianGeorge from "./speaker-27.webp";
+import mercyMakau from "./speaker-28.webp";
+import jasonMasai from "./speaker-29.webp";
+import sandeepMain from "./speaker-30.webp";
 
 const moderators = {
 	michaelZimba,
@@ -48,6 +54,12 @@ const moderators = {
 	joanMbesya,
 	bethanyJepchumba,
 	dennisMwighusa,
+	winnieNjeri,
+	ezekielOnyango,
+	brianGeorge,
+	mercyMakau,
+	jasonMasai,
+	sandeepMain,
 };
 
 export default moderators;

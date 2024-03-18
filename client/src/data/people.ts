@@ -100,7 +100,6 @@ const people = [
 		category: ["speaker"],
 	},
 
-	// row 2
 	{
 		name: "Antony Ngatia",
 		bio: [
@@ -183,7 +182,6 @@ const people = [
 		category: ["speaker"],
 	},
 
-	// row 3
 	{
 		name: "Washington Ogol",
 		bio: [
@@ -197,6 +195,7 @@ const people = [
 			image: image.companies.statsspeak,
 		},
 		image: image.people.speakers.washingtonOgol,
+		poster: image.poster.speaker.washingtonOgol,
 		contact: {
 			email: "wokumu@statsspeak.co.ke",
 			socials: null,
@@ -245,6 +244,25 @@ const people = [
 		category: ["speaker"],
 	},
 	{
+		name: "Brian George",
+		bio: [
+			"Brian George alias Branji, 26, is a Kenyan journalist currently with Nation Media Group’s NTV, the listed Media House’s broadcasting division. He is a Business Journalist who’s majored in Tech, Startups, Innovations, Climate Financing and Renewable Energy. He hosts a tech show, 'Techover' on NTV.",
+			"He is a speaker, global moderator, corporate master of ceremonies and communicator and previously a Startup judge for Techstars Startup Weekend. As a moderator he has worked with numerous corporate firms, non-governmental organisations, development partners and government agencies in steering conversations that have influenced policy and shaped impactful discourses globally.",
+			"Prior to being at NTV he was at KTN-Standard Group where he pioneered and hosted a Startup show ‘The Innovator’ and a tech show ‘Techfile’ for 3 years. He now hosts a tech and startups show at NTV Kenya dubbed 'Techover', a show that focuses on technology, e-mobility, renewable energy and startups. ",
+		],
+		occupation: {
+			position: "Journalist & News Anchor",
+			pow: "NTV",
+			image: null,
+		},
+		image: image.people.speakers.brianGeorge,
+		contact: {
+			email: "briangeorge9776@gmail.com",
+			socials: null,
+		},
+		category: ["speaker"],
+	},
+	{
 		name: "Dennis Mutua",
 		bio: [
 			"As the Founder & Managing Director of Geo Cart Surveys & Engineering Solutions Ltd, Dennis Mutua boasts a decade of experience in Geospatial Engineering and over 8 years as a specialist in providing Unmanned Aerial Systems (UAS) solutions. Dennis possesses an in-depth understanding of various aerial mapping methodologies and excels in analyzing and presenting data using various software. His expertise spans across a variety of UAS platforms, sensors, and the proficient management of associated datasets.",
@@ -264,6 +282,7 @@ const people = [
 		},
 		category: ["speaker"],
 	},
+
 	{
 		name: "Craig Cleave",
 		bio: [
@@ -280,8 +299,6 @@ const people = [
 		contact: { email: "craig@kendrone.co.ke" },
 		category: ["speaker"],
 	},
-
-	// row 4
 	{
 		name: "Tawanda Chihambakwe",
 		bio: [
@@ -357,6 +374,7 @@ const people = [
 		},
 		category: ["speaker"],
 	},
+
 	{
 		name: "Robert Blair",
 		bio: [
@@ -375,8 +393,6 @@ const people = [
 		contact: null,
 		category: ["speaker"],
 	},
-
-	// row 5
 	{
 		name: "Koyundi Bryan",
 		bio: [
@@ -417,10 +433,54 @@ const people = [
 			image: image.companies.techMindsetAfrica,
 		},
 		image: image.people.speakers.joanMbesya,
+		poster: image.poster.speaker.joanMbesya,
 		contact: {
 			email: "joan@techmindset-ai.africa",
 			phone: null,
 			socials: null,
+		},
+		category: ["speaker"],
+	},
+	{
+		name: "Jason Masai",
+		bio: [
+			"Jason Masai is a digital transformation Leader working at the intersection of technology, customer, business, and design. He is a digital leader with a career spanning over 15 years in Banking, Telco and Fintech with experience in leveraging technology to drive a competitive advantage for organizations through innovation while delivering customer value.",
+			"He is currently the Head of Product Digital at M-Pesa Africa where he is leading the digital transformation of M-Pesa across Africa, by offering innovative solutions on the M-Pesa super app across 6 markets in Africa.",
+			"As a Product and Innovation manager at Absa bank Kenya PLC (formerly Barclays Bank) he led the successful development, market launch and growth of a mobile first virtual digital bank proposition called Timiza, which offered micro lending, payments, savings, Insurance, transactional and lifestyle solutions.",
+			"He is a graduate of The University of Nairobi, MIT Executive Education (Innovation of Products & Services) and is a Certified SAFe® Product Manager and agile practitioner.",
+		],
+		occupation: {
+			position: "Head of Product Digital",
+			pow: "M-Pesa Africa",
+			image: image.companies.mpesaAfrica,
+		},
+		image: image.people.speakers.jasonMasai,
+		contact: {
+			email: "jason.masai@m-pesa.africa",
+			phone: null,
+			socials: null,
+		},
+		category: ["speaker"],
+	},
+	{
+		name: "Ezekiel Onyango",
+		bio: [
+			"Ezekiel Onyango, fondly known as Ezy, is a prominent figure in Kenya's Cultural and Creative Industries. Renowned as an award-winning Executive Producer in Film and TV, a Creative Economy Knowledge Management and Stakeholder Engagement specialist, and a Cultural and Creative Researcher.",
+			"Currently serving as the Chairperson of the Kenya Film and Television Professionals Association (KFTPA), Ezy advocates tirelessly for the rights and welfare of industry practitioners. His leadership is characterized by a commitment to professionalism, innovation, and inclusivity, driving initiatives that elevate standards and promote collaboration within the industry.",
+			"With a master's degree in Cultural and Creative Industries from the University of Manchester, Ezy brings a wealth of academic insights to his practical endeavors. His research-driven approach informs his strategic decision-making, enabling him to navigate the complexities of the global cultural and creative landscape effectively.",
+			"As a Cultural and Creative Researcher, Ezy is committed to exploring Kenya's cultural heritage's richness and intersection with sustainable development.",
+			"Ezy's creative vision and dedication to excellence have earned him numerous accolades. His work as an Executive Producer has garnered critical acclaim and resonated with audiences both locally and internationally, cementing his reputation as a trailblazer in Kenyan entertainment.",
+			"Driven by a passion for storytelling and a vision for a vibrant and sustainable creative economy, Ezy continues to shape the future of Kenya's cultural and creative industries, leaving an indelible mark on the landscape and inspiring generations to come.",
+		],
+		occupation: {
+			position: "Executive Producer",
+			pow: "Kenya Film & Television Professionals Association",
+			image: null,
+		},
+		image: image.people.speakers.ezekielOnyango,
+		contact: {
+			email: "ezekiel@filmcrewinafrica.com",
+			socials: [{ label: "linkedin", link: "https://www.linkedin.com/in/ezekiel-ezy-onyango-a0493b18" }],
 		},
 		category: ["speaker"],
 	},
@@ -443,6 +503,7 @@ const people = [
 		},
 		category: ["speaker"],
 	},
+
 	{
 		name: "Joel Onditi",
 		bio: [
@@ -469,6 +530,41 @@ const people = [
 		category: ["speaker"],
 	},
 	{
+		name: "Mercy Makau",
+		bio: [
+			"Mercy Makau is a visionary thought leader in African aviation, championing youth empowerment, gender equality, and advanced air mobility. Boasting over 15 years of experience, she demonstrates excellence in executive management and holds pilot licenses for both crewed and uncrewed aircraft.",
+			"Mercy advocates tirelessly for reliable intra-Africa air transport, accessible aviation training, environmental conservation, and mental health. As the Founder of the Young Aviators Club of Africa (YACAfrican) and Chairperson of both the Association of Women in Business and Corporate Aviation and Drone Club Kenya, she spearheads transformative initiatives shaping the future of the industry.",
+		],
+		occupation: {
+			position: "Founder",
+			pow: "Young Aviators Club of Africa",
+			image: null,
+		},
+		image: image.people.speakers.mercyMakau,
+		contact: null,
+		category: ["speaker"],
+	},
+	{
+		name: "Sandeep Main",
+		bio: [
+			"Sandeep Main is a Tax Partner at KPMG East Africa. He possesses a wealth of extensive experience in strategic tax planning, tax advisory services, and resolving tax disputes.",
+			"He also doubles up as the Head of the KPMG Private Enterprise in East Africa, where he is dedicated to providing innovative business solutions to startups, MSMEs, and family businesses.",
+			"Sandeep chairs the ACCA Advisory Board and leads the Public Policy Committee. In these roles, he offers valuable guidance and strategic direction to shape the industry's future.",
+		],
+		occupation: {
+			position: "Head of Private Enterprise",
+			pow: "KPMG East Africa",
+			image: image.companies.kpmg,
+		},
+		image: image.people.speakers.sandeepMain,
+		contact: {
+			email: "sandeepmain@kpmg.co.ke",
+			phone: null,
+			socials: null,
+		},
+		category: ["speaker"],
+	},
+	{
 		name: "Dennis Mwighusa",
 		bio: [
 			"Dr. Mwighusa is an experienced Consultant and Researcher in both ICT and STI Policy. His primary research interests lie in the areas of Artificial Intelligence, e-Governance, ICT4D particularly ICT and (Education, Health and Finance), Information Systems Evaluation, Usability, Learning Management Systems, Innovation and Entrepreneurship in Smart Agriculture, Digital Technology, and Climate Change Technology. In STI policy he has experience in technical writing on complex policy issues, evaluations, research and analysis, problem solving, development and communication of the best evidence-based policy and practices for research, industry & governments. He is also very active in publishing in his areas of expertise – both in academic outlets such as journals and non-academic outlets that are more relevant to ICT and policy.",
@@ -489,8 +585,6 @@ const people = [
 		},
 		category: ["speaker"],
 	},
-
-	// row 6
 	{
 		name: "Solomon Wanjiru",
 		bio: [
@@ -516,6 +610,7 @@ const people = [
 		},
 		category: ["speaker"],
 	},
+
 	{
 		name: "Robinson Muiru",
 		bio: [
@@ -559,6 +654,19 @@ const people = [
 		},
 		category: ["speaker"],
 	},
+	// row 7
+	// {
+	// 	name: "Winnie Njeri",
+	// 	bio: null,
+	// 	occupation: {
+	// 		position: null,
+	// 		pow: null,
+	// 		image: null,
+	// 	},
+	// 	image: image.people.speakers.winnieNjeri,
+	// 	contact: null,
+	// 	category: ["speaker"],
+	// },
 ];
 
 export default people;

@@ -12,6 +12,8 @@ import statsspeak from "./logo-11.jpg";
 import kendrone from "./logo-12.png";
 import techMindsetAfrica from "./logo-13.webp";
 import microsoft from "./logo-14.png";
+import mpesaAfrica from "./logo-15.webp";
+import kpmg from "./logo-16.png";
 
 const companies = {
 	dotsavvy,
@@ -28,6 +30,8 @@ const companies = {
 	kendrone,
 	techMindsetAfrica,
 	microsoft,
+	mpesaAfrica,
+	kpmg,
 };
 
 export default companies;

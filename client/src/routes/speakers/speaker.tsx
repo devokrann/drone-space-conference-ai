@@ -26,10 +26,14 @@ export default function Speaker() {
 		<Layout.Body header={<Partial.Header.Main />} nav={<Partial.Navbar.Main />} footer={<Partial.Footer.Main />}>
 			<Layout.Page hero={<Layout.Hero.Route />}>
 				<Layout.Section containerized margined>
-					<Grid gutter={48}>
-						<Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
+					<Grid>
+						<Grid.Col span={{ base: 12, sm: 6, md: personDetails?.poster ? 5.5 : 4 }}>
 							<Stack gap={"xl"} pb={personDetails?.contact ? "xl" : undefined} className={classes.card}>
-								<Image src={personDetails?.image} w={"100%"} className={classes.image} />
+								<Image
+									src={personDetails?.poster ? personDetails?.poster : personDetails?.image}
+									w={"100%"}
+									className={classes.image}
+								/>
 
 								{personDetails?.contact && (
 									<Stack px={"xl"}>
@@ -71,7 +75,11 @@ export default function Speaker() {
 								)}
 							</Stack>
 						</Grid.Col>
-						<Grid.Col span={{ base: 12, sm: 6, md: 8 }} ta={{ base: "center", xs: "start" }}>
+						<Grid.Col
+							span={{ base: 12, sm: 6, md: personDetails?.poster ? 6.5 : 8 }}
+							ta={{ base: "center", xs: "start" }}
+							pl={{ md: "md" }}
+						>
 							<Stack gap={"xl"}>
 								<Stack gap={0}>
 									<Grid align="end">

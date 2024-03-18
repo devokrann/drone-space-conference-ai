@@ -3,6 +3,7 @@ export interface typeSpeaker {
 	bio: string[];
 	occupation: { position?: string; pow?: string; image?: string };
 	image: string;
+	poster: string;
 	contact?: {
 		email: string;
 		phone?: string | string[];
