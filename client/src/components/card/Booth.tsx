@@ -11,7 +11,7 @@ import modal from "../modals";
 export default function Booth({
 	data,
 }: {
-	data: { title: string; price: string; desc: { list: string[]; dimentions: string } };
+	data: { title: string; price: string; desc: { list: string[]; dimentions: string }; sold?: boolean };
 }) {
 	return (
 		<Stack className={classes.card} gap={"xl"} justify="space-between">
@@ -55,8 +55,9 @@ export default function Booth({
 				inquiry="Booth Registration"
 				booth={data.title}
 				boothSize={data.desc.dimentions}
+				sold={data.sold}
 			>
-				Book {data.title} Booth
+				{data.sold ? `Sold Out` : `Book ${data.title} Booth`}
 			</modal.Contact>
 		</Stack>
 	);

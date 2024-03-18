@@ -1,8 +1,3 @@
-import people from "./people";
-
-const selectorPerson = (category: string, name: string) =>
-	people.filter(p => p.category.find(c => c == category)).find(m => m.name == name);
-
 const program = {
 	schedule: {
 		common: {

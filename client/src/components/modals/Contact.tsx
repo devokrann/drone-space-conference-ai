@@ -13,6 +13,7 @@ export default function Contact({
 	booth,
 	sponsorPackage,
 	boothSize,
+	sold,
 	children,
 	...restProps
 }: {
@@ -21,6 +22,7 @@ export default function Contact({
 	booth?: string;
 	sponsorPackage?: string;
 	boothSize?: string;
+	sold?: boolean;
 	children: React.ReactNode;
 } & React.ComponentProps<typeof Button>) {
 	const [opened, { open, close }] = useDisclosure(false);
@@ -46,7 +48,7 @@ export default function Contact({
 				/>
 			</Modal>
 
-			<Button onClick={open} fullWidth {...restProps}>
+			<Button onClick={open} fullWidth {...restProps} disabled={sold}>
 				{children}
 			</Button>
 		</>

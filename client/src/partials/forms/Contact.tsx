@@ -586,8 +586,8 @@ export default function Contact({
 								value: "",
 							},
 							{
-								label: "Startup Booth",
-								value: "Startup",
+								label: "Startup II Booth",
+								value: "Startup II",
 							},
 							{
 								label: "University Booth",

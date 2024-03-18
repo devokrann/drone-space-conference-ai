@@ -2,9 +2,25 @@ const additional = "(Additional participants have to purchase ticket)";
 
 const exhibition = {
 	booths: [
+		// {
+		// 	title: "Startup I",
+		// 	price: "15,000",
+		// 	desc: {
+		// 		list: [
+		// 			`2 x Regular Tickets ${additional}`,
+		// 			"1 x 0.24M Fascia with Exhibitor name",
+		// 			"2 x Spotlight",
+		// 			"1 x Round/Rectangular table",
+		// 			"1 x 13-amp power point",
+		// 			"2 x venue chairs",
+		// 		],
+		// 		dimentions: "3M by 2M",
+		// 	},
+		// 	sold: true,
+		// },
 		{
-			title: "Startup",
-			price: "15,000",
+			title: "Startup II",
+			price: "25,000",
 			desc: {
 				list: [
 					`2 x Regular Tickets ${additional}`,
