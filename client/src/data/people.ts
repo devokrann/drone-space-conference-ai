@@ -158,7 +158,18 @@ const people = [
 		},
 		category: ["speaker"],
 	},
-	// eddie wapi pay
+	{
+		name: "Edward Ndichu",
+		bio: null,
+		occupation: {
+			position: "CEO & Co-Founder",
+			pow: "Wapi Pay",
+			image: null,
+		},
+		image: image.people.speakers.eddieNdichu,
+		contact: null,
+		category: ["speaker"],
+	},
 	{
 		name: "Lyela Mutisya",
 		bio: [
@@ -314,6 +325,7 @@ const people = [
 			image: null,
 		},
 		image: image.people.speakers.tawandaChihambakwe,
+		poster: image.poster.speaker.tawandaChihambakwe,
 		contact: null,
 		category: ["speaker"],
 	},

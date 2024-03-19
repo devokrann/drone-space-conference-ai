@@ -28,6 +28,7 @@ import brianGeorge from "./speaker-27.webp";
 import mercyMakau from "./speaker-28.webp";
 import jasonMasai from "./speaker-29.webp";
 import sandeepMain from "./speaker-30.webp";
+import eddieNdichu from "./speaker-31.webp";
 
 const moderators = {
 	michaelZimba,
@@ -60,6 +61,7 @@ const moderators = {
 	mercyMakau,
 	jasonMasai,
 	sandeepMain,
+	eddieNdichu,
 };
 
 export default moderators;
