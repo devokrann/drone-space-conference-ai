@@ -160,13 +160,18 @@ const people = [
 	},
 	{
 		name: "Edward Ndichu",
-		bio: null,
+		bio: [
+			"Eddie is a prominent figure in revolutionizing financial services in Kenya and Africa. With a background spanning over 15 years, he has held leadership roles in major banks like Standard Chartered and KCB. Noteworthy accomplishments include spearheading various mobile money integrations, mobile banking deployments, and launching innovative digital products. Eddie's initiatives also include introducing the first teller-less branch and a mobile virtual network dedicated to financial services. His notable feat includes conducting the highest digital banking transaction in Africa while ascending Mt. Kilimanjaro using a mobile phone.",
+			"Transitioning from the banking sector, Eddie served as the Managing Director for Opera Software, where he led the deployment of several platforms across Africa. He later founded Wapi Pay, the first Africa-Asia payments platform supporting trade and cross-border commerce.",
+			"Eddie's journey began in Australia, where he spent a decade pursuing education and gaining experience in mobile technology software development. He holds a Bachelor of Science degree in Information Systems and Applied Statistics from Murdoch University in Perth, Australia. Currently, he is completing an MBA in Technology and Innovation at the Massachusetts Institute of Technology, focusing on AI for financial services.",
+		],
 		occupation: {
 			position: "CEO & Co-Founder",
 			pow: "Wapi Pay",
 			image: null,
 		},
 		image: image.people.speakers.eddieNdichu,
+		poster: image.poster.speaker.eddieNdichu,
 		contact: null,
 		category: ["speaker"],
 	},
@@ -406,7 +411,37 @@ const people = [
 		category: ["speaker"],
 	},
 	{
-		name: "Koyundi Bryan",
+		name: "Priscah Kinyanjui",
+		bio: null,
+		occupation: {
+			position: "Business Development Lead",
+			pow: "Drone Space",
+			image: image.companies.droneSpace,
+		},
+		image: image.people.speakers.priscahKinyanjui,
+		contact: null,
+		category: ["speaker"],
+	},
+	{
+		name: "Tosh Gitonga",
+		bio: [
+			"Tosh Gitonga is a director, producer and founder of the production house, Primary Pictures. He has been on the Kenyan and African film. Having directed award winning films like Nairobi Half Life, which was selected as Kenya’s entry to the 85th Academy Awards for Best Foreign Language Film, Tosh is easily one of the most celebrated filmmakers in Kenya and Africa.",
+			"David Tosh Gitonga is Kenyan by birth and residence. He terms his journey into film as a beautiful coincidence. He is self-taught, gaining his experience from working closely with respected film producers and directors like award winning, Tom Tykwer (Run Lola Run (1998), The International (2009).",
+			"Tosh treasures the learnings from his humble beginnings as the tea boy and handy man on sets. He rose through the ranks and, in 2009, got his big break when he directed a thirteen-episode series, Changes, for one of Africa’s highest-ranking broadcasting and production houses, MNet.",
+			"One of Tosh’s strong points is his versatility, directing not just films and TV series, but commercials for top tier companies in Kenya and East Africa. Always challenging himself and reaching for more, Tosh’s latest film, Disconnect (2018) was nominated for several Kalasha Kenya Film and Television Awards (2019), taking home Director Of Cinematography and Sound Design  awards.",
+			"Tosh’s greatest belief and mantra is that …. He maintains that we must always tell our stories, because our stories hold our power, and our power, our future.",
+		],
+		occupation: {
+			position: "Director, Producer & Founder",
+			pow: "Primary Pictures",
+			image: null,
+		},
+		image: image.people.speakers.toshGitonga,
+		contact: null,
+		category: ["speaker"],
+	},
+	{
+		name: "Bryan Koyundi",
 		bio: [
 			"In the dynamic realm of AI, one name stands out - Koyundi Bryan, a distinguished AI researcher, passionate ethicist, and the visionary founder of a groundbreaking AI startup. With over a decade of experience, Koyundi is an influential force, contributing to the field of AI, particularly in the fascinating domain of computer vision.",
 			"As an AI researcher, Koyundi has left an indelible mark on the landscape of artificial intelligence. His journey is marked by groundbreaking contributions in the realms of natural language processing, computer vision, and machine learning. He has delved deep into the intricate web of AI algorithms and models, advancing the boundaries of what AI can achieve. His impressive portfolio includes numerous papers published in leading academic journals, each offering innovative solutions to complex problems. His unrelenting commitment to pushing the frontiers of AI has not gone unnoticed, as he's garnered several prestigious awards and accolades for his pioneering work.",
@@ -453,6 +488,7 @@ const people = [
 		},
 		category: ["speaker"],
 	},
+
 	{
 		name: "Jason Masai",
 		bio: [
@@ -497,9 +533,24 @@ const people = [
 		category: ["speaker"],
 	},
 	{
+		name: "Brian Omwenga",
+		bio: [
+			"The founder of Tech Innovators Network (THiNK) is focused on the development of a strong and inclusive ICT ecosystem in Africa. He has worked fruitfully in the private and the public sector with over 25 years experience. As a software engineer and project manager he has successfully created notable inventions and filed various patents.",
+			"In the public sector he successfully designed the Government Wide Enterprise Architecture and developed the local ICT sector Masterplan. As a result of these experiences, he champions the open innovation philosophy through collaboration, inclusiveness and quality output. He is extremely passionate about the role and power of COMMUNITY in the context of the ICT ecosystem. Together we can do great things!",
+		],
+		occupation: {
+			position: "CEO",
+			pow: "Tech Innovators Network",
+			image: null,
+		},
+		image: image.people.speakers.brianOmwenga,
+		contact: null,
+		category: ["speaker"],
+	},
+	{
 		name: "George Ogada",
 		bio: [
-			" George Ogada specializes in Planning, Program Management, and Providing Crucial Support to startups and innovation initiatives. With a wealth of experience in the FMCG planning space, George has developed the skills needed to navigate the intricate landscape of program management. His skills extend beyond traditional planning, encompassing a keen focus on startup ecosystems and fostering innovation.",
+			"George Ogada specializes in Planning, Program Management, and Providing Crucial Support to startups and innovation initiatives. With a wealth of experience in the FMCG planning space, George has developed the skills needed to navigate the intricate landscape of program management. His skills extend beyond traditional planning, encompassing a keen focus on startup ecosystems and fostering innovation.",
 			"George's expertise lies in developing and implementing strategies that drive both operational efficiency and creative problem solving. His commitment to the realms of program management, coupled with a passion for people, supporting startups and fostering innovation, positions him as a valuable asset capable of steering projects toward success in dynamic and evolving environments.",
 		],
 		occupation: {
@@ -515,7 +566,6 @@ const people = [
 		},
 		category: ["speaker"],
 	},
-
 	{
 		name: "Joel Onditi",
 		bio: [
@@ -556,6 +606,7 @@ const people = [
 		contact: null,
 		category: ["speaker"],
 	},
+
 	{
 		name: "Sandeep Main",
 		bio: [
@@ -622,7 +673,26 @@ const people = [
 		},
 		category: ["speaker"],
 	},
-
+	{
+		name: "Douglas Okwemba",
+		bio: [
+			"Douglas Okwemba is a passionate tech enthusiast dedicated to exploring the transformative potential of artificial intelligence (AI) in developing economies. With a keen interest in leveraging technology for social impact, Douglas actively seeks ways to harness AI to address challenges and foster innovation in underserved communities.",
+			"In addition to his work in AI, Douglas is an accomplished drone pilot, with a deep fascination for the unmanned aerial systems (UAS) space. He combines his expertise in both AI and drone technology to pioneer solutions that enhance efficiency and productivity across various industries, ranging from agriculture to disaster management.",
+			"With a commitment to continuous learning and innovation, Douglas remains at the forefront of emerging technologies, driving positive change and empowering communities through his multifaceted approach to technology adoption and implementation.",
+		],
+		occupation: {
+			position: "Researcher",
+			pow: "LightKing Technologies",
+			image: null,
+		},
+		image: image.people.speakers.douglasOkwemba,
+		contact: {
+			email: "dokwemba@gmail.com",
+			phone: null,
+			socials: null,
+		},
+		category: ["speaker"],
+	},
 	{
 		name: "Robinson Muiru",
 		bio: [
@@ -646,6 +716,7 @@ const people = [
 		},
 		category: ["speaker"],
 	},
+
 	{
 		name: "Michael Zimba",
 		bio: [

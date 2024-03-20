@@ -32,8 +32,8 @@ export default function Speakers() {
 						))}
 					</Grid>
 				</Layout.Section>
-				<Divider />
-				<Layout.Section containerized containerSize="sm" margined>
+				{/* <Divider /> */}
+				{/* <Layout.Section containerized containerSize="sm" margined>
 					<Stack gap={"xl"}>
 						<Title order={3} ta={"center"} fz={32} c={"pri"}>
 							Call to Speakers
@@ -41,7 +41,7 @@ export default function Speakers() {
 						<Text ta={"center"}>Fill the form below and request to speak</Text>
 						<Partial.Form.Contact defaultInquiry="Speaker Registration" />
 					</Stack>
-				</Layout.Section>
+				</Layout.Section> */}
 			</Layout.Page>
 		</Layout.Body>
 	);
