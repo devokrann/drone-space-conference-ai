@@ -14,6 +14,7 @@ import techMindsetAfrica from "./logo-13.webp";
 import microsoft from "./logo-14.png";
 import mpesaAfrica from "./logo-15.webp";
 import kpmg from "./logo-16.png";
+import droneSpace from "./logo-17.png";
 
 const companies = {
 	dotsavvy,
@@ -32,6 +33,7 @@ const companies = {
 	microsoft,
 	mpesaAfrica,
 	kpmg,
+	droneSpace,
 };
 
 export default companies;
