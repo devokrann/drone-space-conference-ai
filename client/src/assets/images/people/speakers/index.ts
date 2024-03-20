@@ -29,6 +29,10 @@ import mercyMakau from "./speaker-28.webp";
 import jasonMasai from "./speaker-29.webp";
 import sandeepMain from "./speaker-30.webp";
 import eddieNdichu from "./speaker-31.webp";
+import douglasOkwemba from "./speaker-32.webp";
+import toshGitonga from "./speaker-33.webp";
+import priscahKinyanjui from "./speaker-34.webp";
+import brianOmwenga from "./speaker-35.webp";
 
 const moderators = {
 	michaelZimba,
@@ -62,6 +66,10 @@ const moderators = {
 	jasonMasai,
 	sandeepMain,
 	eddieNdichu,
+	douglasOkwemba,
+	toshGitonga,
+	priscahKinyanjui,
+	brianOmwenga,
 };
 
 export default moderators;
