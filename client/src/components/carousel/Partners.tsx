@@ -81,7 +81,7 @@ export default function Partners() {
 					<Carousel.Slide key={Math.random()}>
 						<AspectRatio ratio={2 / 1}>
 							<Box w={item.width} mx={"auto"} component="a" href={item.link} target="_blank">
-								<Image src={item.image} alt={item.title} w={"100%"} />
+								<Image src={item.image} alt={item.title} w={"100%"} loading="lazy" />
 							</Box>
 						</AspectRatio>
 					</Carousel.Slide>

@@ -15,15 +15,20 @@ export default function Program({
 }: {
 	data: {
 		title: { duration: string; heading: string };
-		desc: { agenda: string; questions?: string[]; participants?: typeSpeaker[]; moderator?: typeSpeaker };
-		common?: boolean;
+		desc: {
+			agenda: string;
+			questions?: string[];
+			participants?: typeSpeaker[];
+			moderators?: typeSpeaker[];
+			speaker?: typeSpeaker;
+		};
 	}[];
 }) {
 	const items = data.map(item => (
 		<Accordion.Item key={item.title.duration} value={item.title.duration}>
 			<Accordion.Control>
 				<Grid gutter={0}>
-					<Grid.Col span={{ base: 12, xs: 4, md: item.common ? 2.5 : 5 }}>
+					<Grid.Col span={{ base: 12, xs: 4, md: 5 }}>
 						<Text component="span">{item.title.duration}</Text>
 					</Grid.Col>
 					<Grid.Col span={{ base: 12, xs: 6 }}>
@@ -58,7 +63,7 @@ export default function Program({
 
 						{item.desc.participants && item.desc.participants?.filter(p => p != undefined).length > 0 && (
 							<Stack gap={"xs"}>
-								<Divider variant="dashed" label={`Participants`} labelPosition="left" />
+								<Divider variant="dashed" label={`Panelists`} labelPosition="left" />
 								{/* <Stack gap={"xs"}>
 									{item.desc.participants?.map(participant => (
 										<Text inherit key={participant}>
@@ -67,34 +72,75 @@ export default function Program({
 									))}
 								</Stack> */}
 								<Group>
-									{item.desc.participants.map(participant => (
-										<Anchor
-											key={participant.name}
-											underline="never"
-											w={"fit-content"}
-											component={Link}
-											to={`/speakers/${hook.useLinkify(participant.name)}`}
-										>
-											<card.Speaker.Agenda data={participant} />
-										</Anchor>
-									))}
+									{item.desc.participants.map(
+										participant =>
+											participant && (
+												<Anchor
+													key={participant.name}
+													underline="never"
+													w={"fit-content"}
+													component={Link}
+													to={`/speakers/${hook.useLinkify(participant.name)}`}
+													target="_blank"
+												>
+													<card.Speaker.Agenda data={participant} />
+												</Anchor>
+											)
+									)}
 								</Group>
 							</Stack>
 						)}
 
-						{item.desc.moderator && (
+						{item.desc.moderators && item.desc.moderators?.filter(m => m != undefined).length > 0 && (
 							<Stack gap={"xs"}>
-								<Divider variant="dashed" label="Moderator" labelPosition="left" />
+								<Divider variant="dashed" label={`Moderator`} labelPosition="left" />
+								{/* <Stack gap={"xs"}>
+									{item.desc.moderators?.map(participant => (
+										<Text inherit key={participant}>
+											{participant}
+										</Text>
+									))}
+								</Stack> */}
 								<Group>
-									<Anchor
-										underline="never"
-										w={"fit-content"}
-										component={Link}
-										to={`/speakers/${hook.useLinkify(item.desc.moderator.name)}`}
-									>
-										<card.Speaker.Agenda data={item.desc.moderator} />
-									</Anchor>
+									{item.desc.moderators.map(
+										moderator =>
+											moderator && (
+												<Anchor
+													key={moderator.name}
+													underline="never"
+													w={"fit-content"}
+													component={Link}
+													to={`/speakers/${hook.useLinkify(moderator.name)}`}
+													target="_blank"
+												>
+													<card.Speaker.Agenda data={moderator} />
+												</Anchor>
+											)
+									)}
 								</Group>
+							</Stack>
+						)}
+
+						{item.desc.speaker && (
+							<Stack gap={"xs"}>
+								<Divider variant="dashed" label={`Speaker`} labelPosition="left" />
+								{/* <Stack gap={"xs"}>
+									{item.desc.moderators?.map(participant => (
+										<Text inherit key={participant}>
+											{participant}
+										</Text>
+									))}
+								</Stack> */}
+								<Anchor
+									key={item.desc.speaker.name}
+									underline="never"
+									w={"fit-content"}
+									component={Link}
+									to={`/speakers/${hook.useLinkify(item.desc.speaker.name)}`}
+									target="_blank"
+								>
+									<card.Speaker.Agenda data={item.desc.speaker} />
+								</Anchor>
 							</Stack>
 						)}
 					</Stack>

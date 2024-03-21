@@ -19,7 +19,7 @@ export default function Listing({ data }: { data: typeSpeaker }) {
 				component={Link}
 				to={data.bio ? `${hook.useLinkify(data.name)}` : `#`}
 			>
-				<Image src={data.image} alt={data.name} className={classes.image} />
+				<Image src={data.image} alt={data.name} className={classes.image} loading="lazy" />
 			</Anchor>
 			<Stack gap={0} align="center" ta={"center"} fw={500}>
 				<Text className={classes.title}>{data.name}</Text>
