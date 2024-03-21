@@ -15,6 +15,9 @@ import microsoft from "./logo-14.png";
 import mpesaAfrica from "./logo-15.webp";
 import kpmg from "./logo-16.png";
 import droneSpace from "./logo-17.png";
+import safaricom from "./logo-18.jpg";
+import fahariAviation from "./logo-19.png";
+import quikkApi from "./logo-20.webp";
 
 const companies = {
 	dotsavvy,
@@ -34,6 +37,9 @@ const companies = {
 	mpesaAfrica,
 	kpmg,
 	droneSpace,
+	safaricom,
+	fahariAviation,
+	quikkApi,
 };
 
 export default companies;

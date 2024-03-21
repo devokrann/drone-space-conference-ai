@@ -33,6 +33,11 @@ import douglasOkwemba from "./speaker-32.webp";
 import toshGitonga from "./speaker-33.webp";
 import priscahKinyanjui from "./speaker-34.webp";
 import brianOmwenga from "./speaker-35.webp";
+import chepkemoiMagdaline from "./speaker-36.webp";
+import emmanAtwa from "./speaker-37.webp";
+import mercyMau from "./speaker-38.webp";
+import hawkinsMusili from "./speaker-39.webp";
+import deanGichukie from "./speaker-40.webp";
 
 const moderators = {
 	michaelZimba,
@@ -70,6 +75,11 @@ const moderators = {
 	toshGitonga,
 	priscahKinyanjui,
 	brianOmwenga,
+	chepkemoiMagdaline,
+	emmanAtwa,
+	mercyMau,
+	hawkinsMusili,
+	deanGichukie,
 };
 
 export default moderators;

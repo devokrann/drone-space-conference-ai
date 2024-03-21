@@ -199,6 +199,23 @@ const people = [
 	},
 
 	{
+		name: "Emman Atwa",
+		bio: [
+			"Emman is the Lead M-PESA Product Manager at Safaricom. He is passionate about Product Management and leads a team of Product Managers on how to deliver the best user experiences through products and services developed around and within the M-PESA Ecosystem in Safaricom. He is currently developing the first ever Kenyan Devolved Government Digital Ecosystem that offers a unified experience for citizens on consumption of Goverment Services while growing Own Source Revenue for County Governments in Kenya.",
+			"Together with his team, he has developed an AI Model to power up the citizen engagement with Government officials by filtering out toxic feedback in real time on the multiple user channels. Before Safaricom, Emman headed Innovations for I&M Bank Group, where among other several Innovative Products and Process Improvements, delivered the first ever WhatsApp Banking bot for I&M Bank Rwand and I&amp;M Bank Tanzania in their respective markets.",
+			"Before banking, Emman worked in the Fintech Startup space developing products for different industries across Africa such as Nigeria, Egypt, Rwanda, Zambia, Uganda and Tanzania. He holds a Bachelors's degree in Business Information Technology and a Master's degree in Mobile Teechnology and Innovation - both from Strathmore University, Kenya. He's a professional cyclist away from work.",
+		],
+		occupation: {
+			position: "Lead M-PESA Product Manager",
+			pow: "Safaricom PLC",
+			image: image.companies.safaricom,
+		},
+		image: image.people.speakers.emmanAtwa,
+		poster: null,
+		contact: null,
+		category: ["speaker"],
+	},
+	{
 		name: "Washington Ogol",
 		bio: [
 			"Washington Ogol, CEO of Statsspeak and a seasoned data and technology leader with over 8 years of experience, has played an instrumental role in driving companies and consultancy projects towards operational excellence and innovation. Under his leadership, Statsspeak has become a leader in analytics and deployment of practical AI solutions.",
@@ -260,6 +277,29 @@ const people = [
 		category: ["speaker"],
 	},
 	{
+		name: "Hawkins Musili",
+		bio: [
+			'Hawkins is an accomplished engineering and innovation expert with over 10 years experience in managing projects and teams across various functions within the Kenya Airways (KQ) group. His visionary perspective has earned him opportunities to work on prominent projects, such as Fahari Aviation, the emerging technologies subsidiary of Kenya Airways PLC "KQ", of which he is a founding member.',
+			"Hawkins currently, serves as the General Manager with overall responsibility of Fahari Aviation.",
+			"Fahari Aviation isleading the use of Unmanned Aerial Systems, UAS, in the country, with use cases in Critical Infrastructural Inspections, Surveillance, Agriculture, Mapping, Research and Conservation as well as logistics.",
+			"Previously, as Head of Engineering Services at KQ, Hawkins led all continuous airworthiness; maintenance cost management and Asset management activities across the entire fleet of Aircraft and Engines.",
+			"He has held responsibility for fleet acquisition and disposal, led the team responsible for Powerplant engineering, OEM and vendor negotiations, engine cost analysis and Asset Management.",
+			"Hawkins holds an MSc in Aeronautical Engineering with specialization in Aircraft Powerplants.",
+		],
+		occupation: {
+			position: "	General Manager",
+			pow: "Fahari Aviation",
+			image: image.companies.fahariAviation,
+		},
+		image: image.people.speakers.hawkinsMusili,
+		contact: {
+			email: "hawkins.musili@fahariaviation.com",
+			phone: null,
+			socials: null,
+		},
+		category: ["speaker"],
+	},
+	{
 		name: "Brian George",
 		bio: [
 			"Brian George alias Branji, 26, is a Kenyan journalist currently with Nation Media Group’s NTV, the listed Media House’s broadcasting division. He is a Business Journalist who’s majored in Tech, Startups, Innovations, Climate Financing and Renewable Energy. He hosts a tech show, 'Techover' on NTV.",
@@ -276,6 +316,24 @@ const people = [
 			email: "briangeorge9776@gmail.com",
 			socials: null,
 		},
+		category: ["speaker"],
+	},
+
+	{
+		name: "Mercy Mau",
+		bio: [
+			"Mercy Mau is a seasoned leader and expert in leveraging technology for digital transformation within the financial services industry. With over a decade of experience at Britam, a leading financial services provider in Kenya, Mercy leads the development of new products and partnerships in the digital space. She is also a champion for the use of AI and data analytics to improve customer experience and operational efficiency.",
+			"As the Head of Partnerships and Digital Innovation, Mercy spearheads the development of groundbreaking products and strategies that harness the power of emerging technologies. Her expertise lies in bridging the gap between business objectives and technological advancements, ensuring seamless integration and optimal outcomes.",
+			"Mercy's expertise bridges the gap between business needs and technological advancements. She has a proven track record of formulating IT strategies, managing complex digital channel implementations, and ensuring seamless technology integration for maximum impact.",
+		],
+		occupation: {
+			position: "Head of Partnerships & Digital Innovation",
+			pow: "Britam",
+			image: null,
+		},
+		image: image.people.speakers.mercyMau,
+		poster: null,
+		contact: null,
 		category: ["speaker"],
 	},
 	{
@@ -298,7 +356,6 @@ const people = [
 		},
 		category: ["speaker"],
 	},
-
 	{
 		name: "Craig Cleave",
 		bio: [
@@ -354,6 +411,7 @@ const people = [
 		},
 		category: ["speaker"],
 	},
+
 	{
 		name: "Benaiah Wepundi",
 		bio: [
@@ -391,7 +449,6 @@ const people = [
 		},
 		category: ["speaker"],
 	},
-
 	{
 		name: "Robert Blair",
 		bio: [
@@ -441,6 +498,23 @@ const people = [
 		category: ["speaker"],
 	},
 	{
+		name: "Dean Gichukie",
+		bio: [
+			"Dean Gichukie is a Co-Founder & Chief Growth Officer at Quikk API. Quikk API is an API platform for Africa, making it easy to use MPESA, Pesalink, Airtel & more APIs. Through Quikk API, tech companies receive & pay billions of shillings.",
+			"Prior to Quikk, Dean scaled a data API startup as CMO, helping onboard 40 million plus data profiles from tech companies, telcos & fintechs (in Nigeria & Kenya). Before that, he worked at a wealth tech fintech, enabling Africans to Invest in global financial markets.",
+			"He is a 3X founder and operator, building companies & startups in fintech, technology & creative categories over the past decade. He has also mentored, trained & advised dozens of tech companies through accelerators & incubator programs. He is a semifinalist of the Thiel Fellowship (offered by Peter Thiel’s Thiel Foundation) and the Mastercard Future Forward Innovations program.",
+		],
+		occupation: {
+			position: "Co-Founder",
+			pow: "Quikk API",
+			image: image.companies.quikkApi,
+		},
+		image: image.people.speakers.deanGichukie,
+		contact: { email: "dean@quikk.dev" },
+		category: ["speaker"],
+	},
+
+	{
 		name: "Bryan Koyundi",
 		bio: [
 			"In the dynamic realm of AI, one name stands out - Koyundi Bryan, a distinguished AI researcher, passionate ethicist, and the visionary founder of a groundbreaking AI startup. With over a decade of experience, Koyundi is an influential force, contributing to the field of AI, particularly in the fascinating domain of computer vision.",
@@ -488,7 +562,6 @@ const people = [
 		},
 		category: ["speaker"],
 	},
-
 	{
 		name: "Jason Masai",
 		bio: [
@@ -547,6 +620,7 @@ const people = [
 		contact: null,
 		category: ["speaker"],
 	},
+
 	{
 		name: "George Ogada",
 		bio: [
@@ -606,7 +680,6 @@ const people = [
 		contact: null,
 		category: ["speaker"],
 	},
-
 	{
 		name: "Sandeep Main",
 		bio: [
@@ -646,6 +719,23 @@ const people = [
 			phone: null,
 			socials: null,
 		},
+		category: ["speaker"],
+	},
+
+	{
+		name: "Magdaline Chepkemoi",
+		bio: [
+			"Chepkemoi Magdaline is a visionary computer scientist and the Founder and Executive Director of EldoHub, a pioneering educational technology platform in Kenya. With over a decade of diverse technical experience, she has dedicated herself to leveraging technology, entrepreneurship, and research to address the unique challenges faced in Africa, especially in rural areas. Chepkemoi's remarkable achievements include co-designing the Sasakazi initiative, which empowers over 4,000 young tech professionals and has a 90% success rate in securing employment opportunities.",
+			"She also serves as the Chairperson of the Association of Countrywide Innovation Hubs in Kenya, playing a crucial role in catalyzing innovation and entrepreneurship across the nation. Chepkemoi's inspiring journey from a rural village to a tech leader underscores her unwavering commitment to creating opportunities and nurturing talent in underserved communities.",
+		],
+		occupation: {
+			position: "Founder and Executive Director",
+			pow: "EldoHub",
+			image: null,
+		},
+		image: image.people.speakers.chepkemoiMagdaline,
+		poster: null,
+		contact: { email: "mchepkemoi@eldohub.co.ke" },
 		category: ["speaker"],
 	},
 	{
@@ -716,7 +806,6 @@ const people = [
 		},
 		category: ["speaker"],
 	},
-
 	{
 		name: "Michael Zimba",
 		bio: [
@@ -737,6 +826,7 @@ const people = [
 		},
 		category: ["speaker"],
 	},
+
 	// row 7
 	// {
 	// 	name: "Winnie Njeri",
