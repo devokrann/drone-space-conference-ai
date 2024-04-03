@@ -8,6 +8,7 @@ import image from "@src/assets/images";
 import data from "@src/data";
 import Card from "@src/components/card";
 import { IconArrowDown } from "@tabler/icons-react";
+import Component from "@src/components";
 
 // export async function loader() {
 // 	return "data";
@@ -72,7 +73,27 @@ export default function Exhibit() {
 						</Grid.Col>
 					</Grid>
 				</Layout.Section>
-				<Layout.Section containerized margined padded id="booths">
+				<Layout.Section containerized margined id="exhibitors">
+					<Stack gap={48}>
+						<Stack ta={"center"} gap={"xl"}>
+							<Title order={2} fz={40} c={"pri"}>
+								Our Exhibitors
+							</Title>
+							{/* <Text>
+								Additional tickets to the quantity listed in each package will have to be purchased
+								separately; i.e. Additional participants will have to purchase a ticket.
+							</Text> */}
+						</Stack>
+						<Grid>
+							{data.exhibition.exhibitors.map(exhibitor => (
+								<Grid.Col span={{ base: 6, xs: 4, md: 3 }} key={exhibitor.name}>
+									<Component.Image.Exhibitor data={exhibitor} />
+								</Grid.Col>
+							))}
+						</Grid>
+					</Stack>
+				</Layout.Section>
+				<Layout.Section containerized margined id="booths">
 					<Stack gap={48}>
 						<Stack ta={"center"} gap={"xl"}>
 							<Title order={2} fz={40} c={"pri"}>

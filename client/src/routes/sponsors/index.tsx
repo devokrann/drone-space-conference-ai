@@ -8,6 +8,7 @@ import { Container, Divider, Grid, Stack, Text, Title } from "@mantine/core";
 
 import data from "@src/data";
 import image from "@src/assets/images";
+import Component from "@src/components";
 
 // export async function loader() {
 // 	return sponsorship.packages;
@@ -19,7 +20,26 @@ export default function Sponsors() {
 	return (
 		<Layout.Body header={<Partial.Header.Main />} nav={<Partial.Navbar.Main />} footer={<Partial.Footer.Main />}>
 			<Layout.Page hero={<Layout.Hero.Route />}>
-				<Partial.Cta.Partners />
+				<Layout.Section containerized padded id="sponsors">
+					<Stack gap={48}>
+						{/* <Stack ta={"center"} gap={"xl"}>
+							<Title order={2} fz={40} c={"pri"}>
+								Sponsors
+							</Title>
+							<Text>
+								Additional tickets to the quantity listed in each package will have to be purchased
+								separately; i.e. Additional participants will have to purchase a ticket.
+							</Text>
+						</Stack> */}
+						<Grid>
+							{data.sponsorship.sponsors.map(sponsor => (
+								<Grid.Col span={{ base: 6, xs: 6, md: 3 }} key={sponsor.name}>
+									<Component.Image.Sponsor data={sponsor} />
+								</Grid.Col>
+							))}
+						</Grid>
+					</Stack>
+				</Layout.Section>
 				{/* <Layout.Section containerized padded id="partners">
 					<Stack gap={48}>
 						<Stack ta={"center"} gap={"xl"}>
@@ -72,22 +92,40 @@ export default function Sponsors() {
 						</Text>
 					</Stack>
 				</Layout.Section> */}
-				<Layout.Section containerized margined>
-					<Stack ta={"center"} gap={"xl"}>
-						<Title order={2} fz={40} c={"pri"}>
-							Sponsorship Opportunities
-						</Title>
-						<Text>Select a sponsorship package from our list and become one of our proud affiliates.</Text>
+				{/* <Layout.Section containerized margined padded id="exhibitors">
+					<Stack gap={48}>
+						<Stack ta={"center"} gap={"xl"}>
+							<Title order={2} fz={40} c={"pri"}>
+								Our Sponsors
+							</Title>
+						</Stack>
+						<Grid>
+							{data.sponsorship.sponsors.map(sponsor => (
+								<Grid.Col span={{ base: 12, xs: 6, md: 3 }} key={sponsor.name}>
+									<Component.Image.Sponsor data={sponsor} />
+								</Grid.Col>
+							))}
+						</Grid>
 					</Stack>
-				</Layout.Section>
+				</Layout.Section> */}
 				<Layout.Section containerized margined>
-					<Grid justify="center" gutter={"xl"}>
-						{data.sponsorship.packages.map(item => (
-							<Grid.Col span={{ base: 12, sm: 6 }} key={item.title}>
-								<Card.Sponsorship data={item} />
-							</Grid.Col>
-						))}
-					</Grid>
+					<Stack gap={48}>
+						<Stack ta={"center"} gap={"xl"}>
+							<Title order={2} fz={40} c={"pri"}>
+								Sponsorship Opportunities
+							</Title>
+							<Text>
+								Select a sponsorship package from our list and become one of our proud affiliates.
+							</Text>
+						</Stack>
+						<Grid justify="center" gutter={"xl"}>
+							{data.sponsorship.packages.map(item => (
+								<Grid.Col span={{ base: 12, sm: 6 }} key={item.title}>
+									<Card.Sponsorship data={item} />
+								</Grid.Col>
+							))}
+						</Grid>
+					</Stack>
 				</Layout.Section>
 			</Layout.Page>
 		</Layout.Body>

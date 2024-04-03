@@ -11,6 +11,7 @@ import { Button, Divider, Grid, Group, Image, Stack, Text, Title, useMantineColo
 import data from "@src/data";
 import Card from "@src/components/card";
 import image from "@src/assets/images";
+import Component from "@src/components";
 
 // export async function loader() {
 // 	return list;
@@ -52,26 +53,6 @@ export default function Home() {
 						</Group>
 					</Stack>
 				</Layout.Section>
-				{/* <Layout.Section containerized id="significance">
-					<Stack gap={48}>
-						<Stack ta={"center"} gap={"xl"}>
-							<Title order={2} fz={40} c={"pri"}>
-								Fusion Significance
-							</Title>
-							<Text>
-								AI, Drones and Data collectively play a significant role in various fields, contributing
-								to advancements and innovations in technology, business and society.
-							</Text>
-						</Stack>
-						<Grid justify="center">
-							{data.content.significance.map(objective => (
-								<Grid.Col key={objective.title} span={{ base: 12, sm: 6 }}>
-									<Card.Significance data={objective} />
-								</Grid.Col>
-							))}
-						</Grid>
-					</Stack>
-				</Layout.Section> */}
 				<Layout.Section containerized padded id="objectives">
 					<Stack gap={48}>
 						<Stack ta={"center"} gap={"xl"}>
@@ -135,6 +116,46 @@ export default function Home() {
 						</Grid>
 					</Stack>
 				</Layout.Section>
+				<Layout.Section containerized id="partners">
+					<Stack gap={48}>
+						<Stack ta={"center"} gap={"xl"}>
+							<Title order={2} fz={40} c={"pri"}>
+								Partners
+							</Title>
+							{/* <Text>
+								Additional tickets to the quantity listed in each package will have to be purchased
+								separately; i.e. Additional participants will have to purchase a ticket.
+							</Text> */}
+						</Stack>
+						<Grid>
+							{data.partners.map(partner => (
+								<Grid.Col span={{ base: 6, sm: 3 }} key={partner.name}>
+									<Component.Image.Sponsor data={partner} />
+								</Grid.Col>
+							))}
+						</Grid>
+					</Stack>
+				</Layout.Section>
+				<Layout.Section containerized padded id="sponsors">
+					<Stack gap={48}>
+						<Stack ta={"center"} gap={"xl"}>
+							<Title order={2} fz={40} c={"pri"}>
+								Sponsors
+							</Title>
+							{/* <Text>
+								Additional tickets to the quantity listed in each package will have to be purchased
+								separately; i.e. Additional participants will have to purchase a ticket.
+							</Text> */}
+						</Stack>
+						<Grid>
+							{data.sponsorship.sponsors.map(sponsor => (
+								<Grid.Col span={{ base: 6, sm: 3 }} key={sponsor.name}>
+									<Component.Image.Sponsor data={sponsor} />
+								</Grid.Col>
+							))}
+						</Grid>
+					</Stack>
+				</Layout.Section>
 				<Layout.Section containerized padded>
 					<Stack gap={"xs"}>
 						{/* <Stack ta={"center"} gap={"xl"}>
@@ -167,7 +188,7 @@ export default function Home() {
 						</Grid>
 					</Stack>
 				</Layout.Section>
-				<Partial.Cta.Partners />
+				{/* <Partial.Cta.Partners /> */}
 			</Layout.Page>
 		</Layout.Body>
 	);
