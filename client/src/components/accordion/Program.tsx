@@ -63,7 +63,9 @@ export default function Program({
 
 						{item.desc.participants && item.desc.participants?.filter(p => p != undefined).length > 0 && (
 							<Stack gap={"xs"}>
-								<Divider variant="dashed" label={`Panelists`} labelPosition="left" />
+								{item.title.heading != "Welcome & Opening Keynote" && (
+									<Divider variant="dashed" label={`Panelists`} labelPosition="left" />
+								)}
 								{/* <Stack gap={"xs"}>
 									{item.desc.participants?.map(participant => (
 										<Text inherit key={participant}>
@@ -80,7 +82,11 @@ export default function Program({
 													underline="never"
 													w={"fit-content"}
 													component={Link}
-													to={`/speakers/${hook.useLinkify(participant.name)}`}
+													to={
+														participant.bio
+															? `/speakers/${hook.useLinkify(participant.name)}`
+															: `/speakers`
+													}
 													target="_blank"
 												>
 													<card.Speaker.Agenda data={participant} />
@@ -110,7 +116,11 @@ export default function Program({
 													underline="never"
 													w={"fit-content"}
 													component={Link}
-													to={`/speakers/${hook.useLinkify(moderator.name)}`}
+													to={
+														moderator.bio
+															? `/speakers/${hook.useLinkify(moderator.name)}`
+															: `/speakers`
+													}
 													target="_blank"
 												>
 													<card.Speaker.Agenda data={moderator} />
@@ -136,7 +146,11 @@ export default function Program({
 									underline="never"
 									w={"fit-content"}
 									component={Link}
-									to={`/speakers/${hook.useLinkify(item.desc.speaker.name)}`}
+									to={
+										item.desc.speaker.bio
+											? `/speakers/${hook.useLinkify(item.desc.speaker.name)}`
+											: `/speakers`
+									}
 									target="_blank"
 								>
 									<card.Speaker.Agenda data={item.desc.speaker} />

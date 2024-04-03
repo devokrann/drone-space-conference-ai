@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 
 import { Grid, Stack, Text } from "@mantine/core";
 import useCountdown from "@src/hooks/timers/countdown";
+import data from "@src/data";
 
 export default function Countdown() {
-	const targetDate = new Date(2024, 2, 25, 23, 59, 59);
+	const targetDate = data.date.eventDay;
 
 	const [time, setTime] = useState(useCountdown(targetDate));
 
@@ -18,8 +19,8 @@ export default function Countdown() {
 
 	const values = [
 		// { label: "Months", value: time.months },
-		{ label: "Days", value: time.days + time.months * 30 },
-		{ label: "Hours", value: time.hours },
+		// { label: "Days", value: time.days + time.months * 30 },
+		{ label: "Hours", value: time.hours + time.days * 24 },
 		{ label: "Minutes", value: time.minutes },
 		{ label: "Seconds", value: time.seconds },
 	];

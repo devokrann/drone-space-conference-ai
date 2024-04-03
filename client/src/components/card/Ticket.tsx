@@ -33,8 +33,17 @@ export default function Ticket({ data }: { data: { title: string; price: string;
 					</Stack>
 				)}
 			</Stack>
-			<Button fullWidth color="sec" c={"dark.9"} component="a" href={link} target="_blank">
-				Buy {data.title} Ticket
+			<Button
+				fullWidth
+				color="sec"
+				c={"dark.9"}
+				component="a"
+				href={link}
+				target="_blank"
+				onClick={e => e.preventDefault()}
+			>
+				{/* Buy {data.title} Ticket */}
+				Sold Out
 			</Button>
 		</Stack>
 	);

@@ -7,7 +7,7 @@ import { IconCheck, IconChevronRight } from "@tabler/icons-react";
 
 import modal from "../modals";
 
-export default function Sponsorship({ data }: { data: { title: string; price: string; desc: string[] } }) {
+export default function Sponsorship({ data }: { data: { title: string; price: string; desc: string[]; sold?: true } }) {
 	return (
 		<Stack className={classes.card} gap={"xl"} justify="space-between">
 			<Stack gap={"xl"}>
@@ -43,6 +43,7 @@ export default function Sponsorship({ data }: { data: { title: string; price: st
 				title={`${data.title} Sponsorship`}
 				inquiry="Sponsorship Application"
 				sponsorPackage={data.title}
+				sold={data.sold}
 			>
 				Apply For {data.title} Sponsorship
 			</modal.Contact>

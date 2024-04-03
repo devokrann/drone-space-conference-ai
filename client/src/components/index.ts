@@ -7,6 +7,7 @@ import counter from "./counter";
 import input from "./inputs";
 import modal from "./modals";
 import compSwitch from "./switches";
+import image from "./image";
 
 const Component = {
 	Accordion: accordion,
@@ -18,6 +19,7 @@ const Component = {
 	Input: input,
 	Modal: modal,
 	Switch: compSwitch,
+	Image: image,
 };
 
 export default Component;

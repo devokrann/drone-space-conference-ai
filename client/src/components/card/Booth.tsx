@@ -57,7 +57,7 @@ export default function Booth({
 				boothSize={data.desc.dimentions}
 				sold={data.sold}
 			>
-				{data.sold ? `Sold Out` : `Book ${data.title} Booth`}
+				Book {data.title} Booth
 			</modal.Contact>
 		</Stack>
 	);

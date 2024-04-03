@@ -48,7 +48,7 @@ export default function Contact({
 				/>
 			</Modal>
 
-			<Button onClick={open} fullWidth {...restProps} disabled={sold}>
+			<Button disabled={sold} fullWidth {...restProps}>
 				{children}
 			</Button>
 		</>
