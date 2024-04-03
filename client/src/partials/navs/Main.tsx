@@ -91,14 +91,14 @@ export default function Main() {
 							</Link>
 						</Box>
 					</Grid.Col>
-					<Grid.Col span={{ md: 6 }} visibleFrom="md">
-						<Group justify="center" gap={"xl"}>
+					<Grid.Col span={{ md: 9 }} visibleFrom="md">
+						<Group justify="end" gap={"xl"}>
 							{anchors}
 						</Group>
 					</Grid.Col>
-					<Grid.Col span={{ md: 3 }} visibleFrom="md">
+					{/* <Grid.Col span={{ md: 3 }} visibleFrom="md">
 						<Group justify="end">{cta}</Group>
-					</Grid.Col>
+					</Grid.Col> */}
 					<Grid.Col span={3} hiddenFrom="md">
 						<Group justify="end" gap={0}>
 							<Burger opened={opened} onClick={open} size="sm	" aria-label="toggle navigation" />

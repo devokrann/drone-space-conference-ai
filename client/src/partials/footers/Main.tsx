@@ -12,11 +12,25 @@ import { IconChevronRight } from "@tabler/icons-react";
 import Counter from "@src/components/counter";
 
 import cta from "../cta";
+import Component from "@src/components";
+import utility from "@src/utilities";
 
 export default function Main() {
+	const now = new Date();
+	const eventDay = data.date.eventDay;
+	const timeDifference = Math.max(eventDay.getTime() - now.getTime(), 0);
+
 	return (
 		<>
-			<cta.Main />
+			<Component.Carousel.Gallery
+				delay={2000}
+				data={utility.shuffle.arrayCopy(data.gallery.conference.concat(data.gallery.expo)).array}
+			/>
+			<Component.Carousel.Gallery
+				delay={3000}
+				data={utility.shuffle.arrayCopy(data.gallery.expo.concat(data.gallery.conference)).arrayCopy}
+			/>
+			{timeDifference > 0 && <cta.Main />}
 			<Box className={classes.footer}>
 				<Container>
 					<Stack gap={"xl"}>

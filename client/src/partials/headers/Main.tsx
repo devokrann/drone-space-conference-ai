@@ -10,6 +10,7 @@ import classes from "./Main.module.scss";
 import data from "@src/data";
 
 import Switch from "@src/components/switches";
+import Component from "@src/components";
 
 export default function Main() {
 	return (
@@ -38,7 +39,8 @@ export default function Main() {
 						<Text component="span" inherit visibleFrom="xs">
 							|
 						</Text>
-						<Switch.Theme />
+						<Component.Modal.Consent />
+						{/* <Switch.Theme /> */}
 					</Flex>
 				</Flex>
 			</Container>

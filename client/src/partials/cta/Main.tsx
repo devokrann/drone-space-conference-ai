@@ -7,6 +7,7 @@ import Counter from "@src/components/counter";
 import classes from "./Main.module.scss";
 import { Link } from "react-router-dom";
 
+import data from "@src/data";
 export default function Main() {
 	return (
 		<Box className={classes.cta} py={"xl"}>
@@ -16,14 +17,14 @@ export default function Main() {
 						Don't Wait Too Long!
 					</Title> */}
 					<Counter.Countdown />
-					<Group gap={"xl"} justify="center">
+					{/* <Group gap={"xl"} justify="center">
 						<Button component={Link} to={"/registration/tickets"}>
 							Buy Ticket
 						</Button>
 						<Button component={Link} to={"/registration/booths"} color="sec" c={"dark.9"}>
 							Book Booth
 						</Button>
-					</Group>
+					</Group> */}
 				</Stack>
 			</Container>
 		</Box>
