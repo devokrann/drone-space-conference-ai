@@ -7,6 +7,11 @@ import image6 from "./media-6.png";
 import image7 from "./media-7.png";
 import image8 from "./media-8.jpg";
 import image9 from "./media-9.png";
+import image10 from "./media-10.webp";
+import image11 from "./media-11.webp";
+import image12 from "./media-12.webp";
+import image13 from "./media-13.webp";
+import image14 from "./media-14.webp";
 
 const media = {
 	image1: image1,
@@ -18,6 +23,11 @@ const media = {
 	image7: image7,
 	image8: image8,
 	image9: image9,
+	image10: image10,
+	image11: image11,
+	image12: image12,
+	image13: image13,
+	image14: image14,
 };
 
 export default media;

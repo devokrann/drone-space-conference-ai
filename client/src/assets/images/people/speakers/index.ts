@@ -38,6 +38,16 @@ import emmanAtwa from "./speaker-37.webp";
 import mercyMau from "./speaker-38.webp";
 import hawkinsMusili from "./speaker-39.webp";
 import deanGichukie from "./speaker-40.webp";
+import martinMirero from "./speaker-41.webp";
+import ednaKarijo from "./speaker-42.webp";
+import charlesMurito from "./speaker-43.webp";
+import kamauMaina from "./speaker-44.webp";
+import sharonHoli from "./speaker-45.webp";
+import georgeMatuthu from "./speaker-46.webp";
+import loiseMwangi from "./speaker-47.webp";
+import alfredOngere from "./speaker-48.webp";
+import hillaryWangila from "./speaker-49.webp";
+import francisOmondi from "./speaker-50.webp";
 
 const moderators = {
 	michaelZimba,
@@ -80,6 +90,16 @@ const moderators = {
 	mercyMau,
 	hawkinsMusili,
 	deanGichukie,
+	martinMirero,
+	ednaKarijo,
+	charlesMurito,
+	kamauMaina,
+	sharonHoli,
+	georgeMatuthu,
+	loiseMwangi,
+	alfredOngere,
+	hillaryWangila,
+	francisOmondi,
 };
 
 export default moderators;
