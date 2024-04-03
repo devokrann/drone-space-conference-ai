@@ -27,7 +27,8 @@ const links = {
 			label: "Program",
 		},
 		{ link: "/speakers", label: "Speakers" },
-		{ link: "/sponsors", label: "Sponsors" },
+		{ link: "/sponsors", label: "Sponsorship" },
+		{ link: "/gallery", label: "Gallery" },
 	],
 	footer: [
 		{

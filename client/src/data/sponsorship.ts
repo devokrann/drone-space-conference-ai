@@ -1,3 +1,5 @@
+import image from "@src/assets/images";
+
 const sponsorship = {
 	packages: [
 		{
@@ -10,6 +12,7 @@ const sponsorship = {
 				"Access to new tech",
 				"Thought leadership",
 			],
+			sold: true,
 		},
 		{
 			title: "5G Wi-Fi",
@@ -20,6 +23,7 @@ const sponsorship = {
 				"Recognition in event communications",
 				"Opportunity to provide branded splash pages or login messages",
 			],
+			sold: true,
 		},
 		{
 			title: "Coffee Break",
@@ -30,6 +34,7 @@ const sponsorship = {
 				"Recognition in event communications",
 				"Opportunity to distribute branded materials during coffee breaks",
 			],
+			sold: true,
 		},
 		{
 			title: "Bronze",
@@ -42,6 +47,7 @@ const sponsorship = {
 				"Mention in event communications",
 				"Access to VIP Coffee Break Area",
 			],
+			sold: true,
 		},
 		{
 			title: "Silver",
@@ -56,6 +62,7 @@ const sponsorship = {
 				"Access to VIP Coffee Break Area",
 				"Access to event data analytics for post-event analysis",
 			],
+			sold: true,
 		},
 		{
 			title: "Gold",
@@ -70,6 +77,7 @@ const sponsorship = {
 				"Access to VIP Coffee Break Area",
 				"Access to event data analytics for post-event analysis",
 			],
+			sold: true,
 		},
 		{
 			title: "Platinum",
@@ -86,6 +94,7 @@ const sponsorship = {
 				"Lanyard Branding of logo",
 				"Priority access to event data analytics for post-event analysis",
 			],
+			sold: true,
 		},
 		{
 			title: "Title",
@@ -103,6 +112,29 @@ const sponsorship = {
 				"Lanyard Branding of logo",
 				"Exclusive access to event data analytics for post-event analysis",
 			],
+			sold: true,
+		},
+	],
+	sponsors: [
+		{
+			name: "Safaricom",
+			image: image.partners.media.image10,
+			width: "70%",
+		},
+		{
+			name: "Kenya Airways",
+			image: image.partners.media.image14,
+			width: "80%",
+		},
+		{
+			name: "Fahari Abviation",
+			image: image.partners.media.image11,
+			width: "70%",
+		},
+		{
+			name: "Wapi Pay",
+			image: image.companies.wapiPay,
+			width: "70%",
 		},
 	],
 };

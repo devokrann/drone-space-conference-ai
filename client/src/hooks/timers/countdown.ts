@@ -16,11 +16,7 @@ export default function useCountdown(targetDate: Date) {
 		let months = 0;
 
 		while (remainingDays >= 30) {
-			const targetMonthDays = new Date(
-				targetDate.getFullYear(),
-				targetDate.getMonth() + months + 1,
-				0
-			).getDate();
+			const targetMonthDays = new Date(targetDate.getFullYear(), targetDate.getMonth() + months + 1, 0).getDate();
 			if (remainingDays >= targetMonthDays) {
 				remainingDays -= targetMonthDays;
 				months++;

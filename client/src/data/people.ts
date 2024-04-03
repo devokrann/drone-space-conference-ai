@@ -2,6 +2,59 @@ import image from "@src/assets/images";
 
 const people = [
 	{
+		name: "Charles Murito",
+		bio: [
+			"Charles Murito is Google's Regional Director, Government Affairs & Policy, Sub Saharan Africa.",
+			"In this capacity, Charles is responsible for overseeing engagement with Governments & Regulators to promote digital transformation through progressive policy, to achieve economic growth.",
+			"Charles assumed this role after almost six years as Google’s Country Director for Kenya. Before Google, he held senior roles at MTV, Warner Bros., and Turner Broadcasting. Charles also serves as a Board Director for Absa Bank Kenya, and previously served as a Board Director for CSQuared, a Google portfolio company.",
+			"Outside of work, Charles loves art, food, and farming",
+		],
+		occupation: {
+			position: "Regional Director",
+			pow: "Google",
+			image: image.companies.google,
+		},
+		image: image.people.speakers.charlesMurito,
+		contact: null,
+		category: ["speaker"],
+	},
+	{
+		name: "Bethany Jepchumba",
+		bio: [
+			"Bethany is a Cloud Advocate at Microsoft, who engages with students, aspiring developers, and entrepreneurs to help them learn and grow in Artificial Intelligence (AI). She does this through writing articles, hosting workshops, and speaking at events about AI and cloud computing.",
+			"She has a strong background in community and skilling others, thanks to her previous roles as a Program Coordinator at Andela and Gold Microsoft Learn Student Ambassador which built her passion for community and skilling others.",
+			"She comes from a community of marathon runners but decided to run code instead. Outside tech she defines herself as creative. You will find her testing out new hobbies, sketching or deeply engrossed in a book.",
+		],
+		occupation: {
+			position: "Academic Cloud Advocate",
+			pow: "Microsoft",
+			image: image.companies.microsoft,
+		},
+		image: image.people.speakers.bethanyJepchumba,
+		contact: {
+			email: "bethanycheum@microsoft.com",
+			phone: null,
+			socials: null,
+		},
+		category: ["speaker"],
+	},
+	{
+		name: "Martin Mirero",
+		bio: [
+			"A technology executive with 18+ years’ industry experience in the public and private sectors, adept at managing and delivering business strategies under a wide variety of organizational environments. His experience spans the governance of enterprise information technology, digital transformation, product development leadership, customer experience digitization and public sector e-Service delivery.",
+			"He’s been fortunate to work closely with the governments and public sector agencies of some vibrant economies in Africa, including Nigeria, Ghana, Ethiopia, and Kenya (where he is currently based), and also had fairly extensive experience with pan-African start-ups and scale-ups in diverse business sectors including fintech, govtech and customer experience.",
+			"As Director of ICT at Communications Authority, he’s lately taken to exploring the nexus of emerging technologies and responsive regulation. This convergence may represent one of the more compelling levers with which to objectively and flexibly drive some of the most exciting innovations (in recent times) for the human socio-economic arrangement.",
+		],
+		occupation: {
+			position: "Director of ICT",
+			pow: "Communications Authority of Kenya",
+			image: null,
+		},
+		image: image.people.speakers.martinMirero,
+		contact: null,
+		category: ["speaker"],
+	},
+	{
 		name: "Bright Gameli",
 		bio: [
 			"Dr. Bright Gameli Mawudor is a trailblazing CEO of CyberGuard Africa LTD, Africa's vanguard in Cyber resilience services organization. With a strong commitment to shaping Africa's CyberSecurity landscape, he is the visionary founder of Africahackon, a Cyber Security collective dedicated to nurturing excellence through capacity building and fostering a vibrant community of experts across the continent",
@@ -65,26 +118,6 @@ const people = [
 		category: ["speaker"],
 	},
 	{
-		name: "Bethany Jepchumba",
-		bio: [
-			"Bethany is a Cloud Advocate at Microsoft, who engages with students, aspiring developers, and entrepreneurs to help them learn and grow in Artificial Intelligence (AI). She does this through writing articles, hosting workshops, and speaking at events about AI and cloud computing.",
-			"She has a strong background in community and skilling others, thanks to her previous roles as a Program Coordinator at Andela and Gold Microsoft Learn Student Ambassador which built her passion for community and skilling others.",
-			"She comes from a community of marathon runners but decided to run code instead. Outside tech she defines herself as creative. You will find her testing out new hobbies, sketching or deeply engrossed in a book.",
-		],
-		occupation: {
-			position: "Academic Cloud Advocate",
-			pow: "Microsoft",
-			image: image.companies.microsoft,
-		},
-		image: image.people.speakers.bethanyJepchumba,
-		contact: {
-			email: "bethanycheum@microsoft.com",
-			phone: null,
-			socials: null,
-		},
-		category: ["speaker"],
-	},
-	{
 		name: "Mwangi Kirubi",
 		bio: [
 			"Mwangi Kirubi aka Mwarv has been telling stories through photography and film for over 20 years. Starting off as an advertising copywriter, Mwarv transitioned into creating photo and video documentaries for clients across the globe.",
@@ -99,7 +132,22 @@ const people = [
 		contact: null,
 		category: ["speaker"],
 	},
-
+	{
+		name: "Loise Mwangi",
+		bio: [
+			"Loise is the Chief State Safety Programme (SSP) Coordinator at Kenya Civil Aviation Authority (KCAA). Where she ensures that Kenya proactively manages Aviation Safety as required by ICAO Standards and Recommended practices. In her capacity, she also provides guidance on the effective implementation of Safety Management Systems (SMS) by aviation service providers.",
+			"She was an active Air Traffic Controller for 12 years before heading the SSP, and holds a M.Sc in Aeronautics from Embry-Riddle Aeronautical University specializing in AviationAerospace Safety Systems and a B.Sc - Mathematics & Computer Science from Jomo Kenyatta University of Agriculture and Technology.",
+			"Loise is passionate about aviation and especially in Africa - she is involved in mentorship activities, women empowerment initiatives and currently serves as an Advisor for the WAI-Kenya chapter. In addition, she is the chairperson of the African Civil Aviation Commission (AFCAC) Safety Management Experts Workgroup.",
+		],
+		occupation: {
+			position: "State Safety Programme Coordinator",
+			pow: "Tech Innovators Network",
+			image: image.companies.think,
+		},
+		image: image.people.speakers.loiseMwangi,
+		contact: null,
+		category: ["speaker"],
+	},
 	{
 		name: "Antony Ngatia",
 		bio: [
@@ -197,7 +245,85 @@ const people = [
 		},
 		category: ["speaker"],
 	},
-
+	{
+		name: "Francis Omondi",
+		bio: [
+			"Omondi Agar is a nuclear engineer with the Thorium Network (Switzerland) and a Project Engineer with RadKor (Turkey). His academic background in Nuclear and Quantum Engineering is from the Korea Advanced Institute of Science and Technology (KAIST) in Daejeon South Korea, KTH Royal Institute of Technology in Stockholm Sweden, and Universite Paris-Saclay in Paris France.",
+			"His professional experience is in the design of advanced nuclear reactors such as Lead Bismuth Eutectic Cooled MYRRHA Reactor currently under construction at the Belgian Nuclear Research Centre (SCK-CEN) and currently with the proposed Molten Salt system being developed by Thorium Network. He is also the founder of the Nuclear Society of Kenya.",
+			"He also likes playing video games, enjoys reading science fiction novels/movies/series and is an animal welfare enthusiast.",
+		],
+		occupation: {
+			position: "Nuclear Engineer",
+			pow: "Thorium Network",
+			image: null,
+		},
+		image: image.people.speakers.francisOmondi,
+		contact: {
+			email: "foagar@kth.se",
+			phone: null,
+			socials: null,
+		},
+		category: ["speaker"],
+	},
+	{
+		name: "Kamau Maina",
+		bio: [
+			"I'm a software engineer by training, but my heart beats to the rhythm of data engineering. With over a decade of diverse experience—spanning software development, systems support, software sales, and diving deep into the realms of data engineering and big data analytics—I've woven my expertise across the utilities, financial services, and telecommunications sectors.",
+			"My passion for data goes beyond the lines of code; it extends to its profound impact on decision-making and society at large. In the dance of data, I discover fulfillment and joy, sparking unconventional thought processes that inspire and innovate. I served as the CVM(Customer Value Management) Technology team lead and Big Data & AI Technical Tribe Lead and I currently lead the Machine Learning Engineering practice in Safaricom.",
+		],
+		occupation: {
+			position: "Data Engineer",
+			pow: "Safaricom PLC",
+			image: image.companies.safaricom2,
+		},
+		image: image.people.speakers.kamauMaina,
+		contact: {
+			email: "kmaina2@safaricom.co.ke",
+			phone: null,
+			socials: null,
+		},
+		category: ["speaker"],
+	},
+	{
+		name: "Sharon Holi",
+		bio: [
+			"Sharon Holi has over 25 years extensive experience working with Corporates in Kenya in managing their risks, optimising their processes and strengthening their controls.  She is a certified ISO 27701 Privacy Information Management System implementer. In addition, she has qualified as a Certified Information Privacy Professional (CIPP) and Certified Information Privacy Manager (CIPM) with the IAPP (International Association of Privacy Professionals).",
+			"Customer privacy, in her opinion, is not just an area of compliance. For truly effective change to happen she believes a culture of privacy is essential, in order to create meaningful and lasting change in our society.",
+		],
+		occupation: {
+			position: "Data Protection Officer",
+			pow: "Safaricom PLC",
+			image: image.companies.safaricom,
+		},
+		image: image.people.speakers.sharonHoli,
+		contact: {
+			email: "sholi@safaricom.co.ke",
+			phone: null,
+			socials: null,
+		},
+		category: ["speaker"],
+	},
+	{
+		name: "George Matuthu",
+		bio: [
+			"I’m a seasoned tech professional with 17 years of work experience that includes 7 years in the dynamic field of Big Data. I currently lead the DataOps Engineering team within the Digital Engineering and AI Tribe at Safaricom PLC.",
+			"I specialize in designing robust and scalable data architectures. From conceptualizing data pipelines to optimizing storage solutions, I thrive on creating efficient systems that empower organizations to harness the power of their data. Whether it's ETL (Extract, Transform, Load) processes, data cleansing, or streamlining workflows, I've got the technical prowess to make it happen.",
+			"I've navigated the ever-evolving landscape of data platforms. From data ingestion engines to Hadoop clusters to cloud-based solutions, I've built and maintained platforms that serve as the backbone of data-driven decision-making.",
+			"My passion lies in turning raw data into actionable insights.",
+		],
+		occupation: {
+			position: "Big Data",
+			pow: "Safaricom PLC",
+			image: image.companies.safaricom,
+		},
+		image: image.people.speakers.georgeMatuthu,
+		contact: {
+			email: "gmatuthu@safaricom.co.ke",
+			phone: null,
+			socials: null,
+		},
+		category: ["speaker"],
+	},
 	{
 		name: "Emman Atwa",
 		bio: [
@@ -287,7 +413,7 @@ const people = [
 			"Hawkins holds an MSc in Aeronautical Engineering with specialization in Aircraft Powerplants.",
 		],
 		occupation: {
-			position: "	General Manager",
+			position: "General Manager",
 			pow: "Fahari Aviation",
 			image: image.companies.fahariAviation,
 		},
@@ -318,12 +444,12 @@ const people = [
 		},
 		category: ["speaker"],
 	},
-
 	{
 		name: "Mercy Mau",
 		bio: [
-			"Mercy Mau is a seasoned leader and expert in leveraging technology for digital transformation within the financial services industry. With over a decade of experience at Britam, a leading financial services provider in Kenya, Mercy leads the development of new products and partnerships in the digital space. She is also a champion for the use of AI and data analytics to improve customer experience and operational efficiency.",
-			"As the Head of Partnerships and Digital Innovation, Mercy spearheads the development of groundbreaking products and strategies that harness the power of emerging technologies. Her expertise lies in bridging the gap between business objectives and technological advancements, ensuring seamless integration and optimal outcomes.",
+			"Mercy Mau is a seasoned leader and expert in leveraging technology for digital transformation within the financial services industry. With over a decade of experience at Britam, a leading financial services provider in Kenya.",
+			"Mercy is a champion for the use of AI and data analytics to improve customer experience and operational efficiency.",
+			"As the Head of Partnerships and Digital Innovation, Mercy spearheads the development of groundbreaking products and strategies that harness the power of emerging technologies.",
 			"Mercy's expertise bridges the gap between business needs and technological advancements. She has a proven track record of formulating IT strategies, managing complex digital channel implementations, and ensuring seamless technology integration for maximum impact.",
 		],
 		occupation: {
@@ -411,7 +537,24 @@ const people = [
 		},
 		category: ["speaker"],
 	},
-
+	{
+		name: "Hillary Wangila",
+		bio: [
+			"Hillary, is a seasoned data scientist with a Master's degree in Applied Statistics, boasting over a decade of hands-on experience in crafting cutting-edge AI solutions to tackle multifaceted business challenges.",
+			"With a rich background spanning telecommunications and technology sectors across Africa, Hillary has honed his expertise in combatting fraud and money laundering, architecting sophisticated machine learning models, optimizing network infrastructure, and delving into the intricacies of customer value management and credit assessment.",
+			"Armed with a blend of technical prowess and strategic acumen, Hillary stands as an expert in applied data science, driving tangible impact and transformative change across diverse industries.",
+		],
+		occupation: {
+			position: "Data Science & AI",
+			pow: "Safaricom PLC",
+			image: image.companies.safaricom,
+		},
+		image: image.people.speakers.hillaryWangila,
+		contact: {
+			email: "hmwangila@safaricom.co.ke",
+		},
+		category: ["speaker"],
+	},
 	{
 		name: "Benaiah Wepundi",
 		bio: [
@@ -513,7 +656,37 @@ const people = [
 		contact: { email: "dean@quikk.dev" },
 		category: ["speaker"],
 	},
-
+	{
+		name: "Alfred Ongere",
+		bio: [
+			"Alfred Ongere is an AI consultant, founder and programs lead of Ai Kenya. He has been leading capacity development and general ecosystem building in artificial intelligence in Kenya for the past 7 years.  As a key thought leader in Artificial intelligence in Africa, he has been dedicated to helping individuals and organizations understand how best to leverage and be part of the AI revolution.",
+		],
+		occupation: {
+			position: "AI Consultant",
+			pow: "Ai Kenya",
+			image: null,
+		},
+		image: image.people.speakers.alfredOngere,
+		contact: null,
+		category: ["speaker"],
+	},
+	{
+		name: "Edna Karijo",
+		bio: [
+			"Ms. Edna Karijo, is a Technologist, Public Policy and Program management professional, who has been championing Digital/ICT Skills for Youh in Kenya for the last 8 years.",
+			"Karijo is the Program Manager at eMobilis, a 14-year-old award-winning Technology and Digital Training Institution and Hub, who's Mission is to create opportunities for African Youth by training them on digital, software and other technologies that prepare them for the future of work.",
+			"She also serves as a Board of Trustee of the Internet Society of Kenya; a technical community of over 2,200 ICT professionals.",
+			"Karijo is an award-winning Mentor with the Presidential Digital Talent Program (PDTP) in Kenya, a Hernetwork 2023 Honoree, a finalist of the Women in Tech Africa Awards 2021 and an Alumna of the Young African Leadership Initiative (YALI) East Africa.",
+		],
+		occupation: {
+			position: "Program Manager",
+			pow: "eMobilis",
+			image: null,
+		},
+		image: image.people.speakers.ednaKarijo,
+		contact: { email: "edna@emobilis.org" },
+		category: ["speaker"],
+	},
 	{
 		name: "Bryan Koyundi",
 		bio: [
@@ -620,7 +793,6 @@ const people = [
 		contact: null,
 		category: ["speaker"],
 	},
-
 	{
 		name: "George Ogada",
 		bio: [
@@ -680,26 +852,26 @@ const people = [
 		contact: null,
 		category: ["speaker"],
 	},
-	{
-		name: "Sandeep Main",
-		bio: [
-			"Sandeep Main is a Tax Partner at KPMG East Africa. He possesses a wealth of extensive experience in strategic tax planning, tax advisory services, and resolving tax disputes.",
-			"He also doubles up as the Head of the KPMG Private Enterprise in East Africa, where he is dedicated to providing innovative business solutions to startups, MSMEs, and family businesses.",
-			"Sandeep chairs the ACCA Advisory Board and leads the Public Policy Committee. In these roles, he offers valuable guidance and strategic direction to shape the industry's future.",
-		],
-		occupation: {
-			position: "Head of Private Enterprise",
-			pow: "KPMG East Africa",
-			image: image.companies.kpmg,
-		},
-		image: image.people.speakers.sandeepMain,
-		contact: {
-			email: "sandeepmain@kpmg.co.ke",
-			phone: null,
-			socials: null,
-		},
-		category: ["speaker"],
-	},
+	// {
+	// 	name: "Sandeep Main",
+	// 	bio: [
+	// 		"Sandeep Main is a Tax Partner at KPMG East Africa. He possesses a wealth of extensive experience in strategic tax planning, tax advisory services, and resolving tax disputes.",
+	// 		"He also doubles up as the Head of the KPMG Private Enterprise in East Africa, where he is dedicated to providing innovative business solutions to startups, MSMEs, and family businesses.",
+	// 		"Sandeep chairs the ACCA Advisory Board and leads the Public Policy Committee. In these roles, he offers valuable guidance and strategic direction to shape the industry's future.",
+	// 	],
+	// 	occupation: {
+	// 		position: "Head of Private Enterprise",
+	// 		pow: "KPMG East Africa",
+	// 		image: image.companies.kpmg,
+	// 	},
+	// 	image: image.people.speakers.sandeepMain,
+	// 	contact: {
+	// 		email: "sandeepmain@kpmg.co.ke",
+	// 		phone: null,
+	// 		socials: null,
+	// 	},
+	// 	category: ["speaker"],
+	// },
 	{
 		name: "Dennis Mwighusa",
 		bio: [
@@ -721,7 +893,6 @@ const people = [
 		},
 		category: ["speaker"],
 	},
-
 	{
 		name: "Magdaline Chepkemoi",
 		bio: [
@@ -739,7 +910,7 @@ const people = [
 		category: ["speaker"],
 	},
 	{
-		name: "Solomon Wanjiru",
+		name: "Solomon Karuiki",
 		bio: [
 			"Mr. Solomon is a multi-talented professional excelling as a Land Surveyor, Drone Pilot Instructor and Cartographer. With a degree in surveying technology and a diploma in cartography, Solomon brings over 11 years of extensive experience to his craft.",
 			"He holds a license as a Drone Pilot Instructor and approved KCAA examiner, boasting over 5 years of expertise in aerial mapping. Currently serving as the chief drone pilot at Geoid Technologies Ltd, Solomon's work transcends various industries, including real estate, agriculture, construction, and thermal inspections.",
