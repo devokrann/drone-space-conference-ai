@@ -1,7 +1,9 @@
 import Partners from "./Partners";
+import Gallery from "./Gallery";
 
 const carousel = {
-	Partners: Partners,
+	Partners,
+	Gallery,
 };
 
 export default carousel;

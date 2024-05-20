@@ -13,6 +13,7 @@ import Sponsors from "./routes/sponsors";
 import Tickets from "./routes/registration/tickets";
 import Booths from "./routes/registration/booths";
 import Hackathon from "./routes/hackathon";
+import Gallery from "./routes/gallery";
 // import Contact from "./routes/contact";
 // import Signup from "./routes/auth/signup";
 // import Login from "./routes/auth/login";
@@ -27,13 +28,14 @@ const router = createBrowserRouter(
 			<Route index element={<Home />} />
 			{/* <Route path="about" element={<About />} /> */}
 			<Route path="exhibit" element={<Exhibit />} />
-			<Route path="agenda" element={<Agenda />} />
-			<Route path="hackathon" element={<Hackathon />} />
+			<Route path="program" element={<Agenda />} />
+			{/* <Route path="hackathon" element={<Hackathon />} /> */}
 			<Route path="speakers">
 				<Route index element={<Speakers />} />
 				<Route path=":speaker" element={<Speaker />} />
 			</Route>
 			<Route path="sponsors" element={<Sponsors />} />
+			<Route path="gallery" element={<Gallery />} />
 			<Route path="registration">
 				<Route path="tickets" element={<Tickets />} />
 				<Route path="booths" element={<Booths />} />

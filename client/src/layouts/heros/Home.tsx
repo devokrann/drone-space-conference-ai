@@ -6,11 +6,15 @@ import classes from "./Home.module.scss";
 import image from "@src/assets/images";
 import Counter from "@src/components/counter";
 import { useMediaQuery } from "@mantine/hooks";
+import data from "@src/data";
 
 export default function Home() {
 	const mobile = useMediaQuery("(max-width: 36em)");
 	const heroImage = mobile ? image.poster.poster1 : image.poster.poster2;
 
+	const now = new Date();
+	const eventDay = data.date.eventDay;
+	const timeDifference = Math.max(eventDay.getTime() - now.getTime(), 0);
 	return (
 		<Box component="section" className={classes.hero}>
 			{/* <Center h={"100%"}>
@@ -52,11 +56,13 @@ export default function Home() {
 				</Container>
 			</Center> */}
 			<Image src={heroImage} w={"100%"} alt="banner" />
-			<Box bg={"pri.6"} pt={"xs"} pb={"lg"}>
-				<Container size={"md"}>
-					<Counter.Countdown />
-				</Container>
-			</Box>
+			{timeDifference > 0 && (
+				<Box bg={"pri.6"} pt={"xs"} pb={"lg"}>
+					<Container size={"md"}>
+						<Counter.Countdown />
+					</Container>
+				</Box>
+			)}
 		</Box>
 	);
 }

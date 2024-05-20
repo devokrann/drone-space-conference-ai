@@ -8,7 +8,9 @@ import { IconPointFilled } from "@tabler/icons-react";
 import classes from "./Main.module.scss";
 
 import data from "@src/data";
+
 import Switch from "@src/components/switches";
+import Component from "@src/components";
 
 export default function Main() {
 	return (
@@ -22,22 +24,24 @@ export default function Main() {
 						</Text>
 						<Text inherit>Sarit Expo Centre, Westlands</Text>
 					</Flex>
-					<Group>
-						<Group>
-							<Group gap={"xs"}>
-								{data.links.social.map(link => (
-									<Text key={link.link} component="a" href={link.link} target="_blank">
-										<Image
-											src={link.icon}
-											alt={`social icon ${data.links.social.indexOf(link)}`}
-											w={24}
-										/>
-									</Text>
-								))}
-							</Group>
-							<Switch.Theme />
+					<Flex align={"center"} gap={"sm"} direction={{ base: "column", xs: "row" }}>
+						<Group gap={"xs"}>
+							{data.links.social.map(link => (
+								<Text key={link.link} component="a" href={link.link} target="_blank">
+									<Image
+										src={link.icon}
+										alt={`social icon ${data.links.social.indexOf(link)}`}
+										w={24}
+									/>
+								</Text>
+							))}
 						</Group>
-					</Group>
+						<Text component="span" inherit visibleFrom="xs">
+							|
+						</Text>
+						<Component.Modal.Consent />
+						{/* <Switch.Theme /> */}
+					</Flex>
 				</Flex>
 			</Container>
 		</Box>

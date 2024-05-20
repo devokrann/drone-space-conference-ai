@@ -14,22 +14,34 @@ export default function Partners() {
 
 	const partners = [
 		{
+			image: image.partners.media.image10,
+			link: "https://safaricom.co.ke/",
+			title: "Safaricom",
+			width: "60%",
+		},
+		{
+			image: image.partners.media.image14,
+			link: "https://www.kenya-airways.com/en-ke/",
+			title: "Kenya Airways",
+			width: "80%",
+		},
+		{
 			image: image.partners.media.image5,
 			link: "https://kiss100.co.ke/",
 			title: "Kiss",
-			width: "80%",
+			width: "70%",
 		},
 		{
 			image: image.partners.media.image4,
 			link: "https://classic105.com/",
 			title: "Classic",
-			width: "80%",
+			width: "70%",
 		},
 		{
 			image: image.partners.media.image2,
 			link: "https://eastfm.com/",
 			title: "East",
-			width: "80%",
+			width: "70%",
 		},
 		{
 			image: image.partners.media.image1,
@@ -62,13 +74,31 @@ export default function Partners() {
 			image: colorScheme == "dark" ? image.partners.media.image7 : null,
 			link: "https://startinev.com/",
 			title: "Startinev",
-			width: "50%",
+			width: "70%",
 		},
 		{
 			image: image.partners.media.image9,
 			link: "http://www.thearcrayon.com/",
 			title: "Arcrayon",
+			width: "70%",
+		},
+		{
+			image: image.partners.media.image11,
+			link: "https://www.fahariaviation.com/",
+			title: "Fahari Aviation",
 			width: "80%",
+		},
+		{
+			image: image.partners.media.image12,
+			link: "https://www.theafricablockchaincenter.com/",
+			title: "Africa Blockchain Center",
+			width: "70%",
+		},
+		{
+			image: image.partners.media.image13,
+			link: "https://www.adanianlabs.io/",
+			title: "Adanian Labs",
+			width: "70%",
 		},
 	];
 
@@ -81,7 +111,7 @@ export default function Partners() {
 					<Carousel.Slide key={Math.random()}>
 						<AspectRatio ratio={2 / 1}>
 							<Box w={item.width} mx={"auto"} component="a" href={item.link} target="_blank">
-								<Image src={item.image} alt={item.title} w={"100%"} />
+								<Image src={item.image} alt={item.title} w={"100%"} loading="lazy" />
 							</Box>
 						</AspectRatio>
 					</Carousel.Slide>

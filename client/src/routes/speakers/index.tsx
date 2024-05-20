@@ -24,16 +24,16 @@ export default function Speakers() {
 						</Title>
 						<Text>Our best Speakers will be added soon</Text>
 					</Stack> */}
-					<Grid justify="center">
+					<Grid justify="center" columns={20} gutter={"xl"}>
 						{data.people.map(person => (
-							<Grid.Col key={person.name} span={{ base: 12, xs: 6, sm: 4, md: 3 }}>
+							<Grid.Col key={person.name} span={{ base: 20, xs: 10, sm: 5, md: 4 }}>
 								<Component.Card.Speaker.Listing data={person} />
 							</Grid.Col>
 						))}
 					</Grid>
 				</Layout.Section>
-				<Divider />
-				<Layout.Section containerized containerSize="sm" margined>
+				{/* <Divider /> */}
+				{/* <Layout.Section containerized containerSize="sm" margined>
 					<Stack gap={"xl"}>
 						<Title order={3} ta={"center"} fz={32} c={"pri"}>
 							Call to Speakers
@@ -41,7 +41,7 @@ export default function Speakers() {
 						<Text ta={"center"}>Fill the form below and request to speak</Text>
 						<Partial.Form.Contact defaultInquiry="Speaker Registration" />
 					</Stack>
-				</Layout.Section>
+				</Layout.Section> */}
 			</Layout.Page>
 		</Layout.Body>
 	);

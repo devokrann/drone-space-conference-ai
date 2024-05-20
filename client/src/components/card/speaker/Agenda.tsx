@@ -10,11 +10,11 @@ export default function Agenda({ data }: { data: typeSpeaker }) {
 	return (
 		<Card className={classes.card}>
 			<Group gap={"xs"}>
-				<Image src={data.image} alt={data.name} className={classes.image} />
+				<Image src={data.image} alt={data.name} className={classes.image} loading="lazy" />
 				<Stack gap={0}>
 					<Text inherit>{data.name}</Text>
 					<Text inherit className={classes.occupation}>
-						{data.occupation.position}, {data.occupation.pow}
+						{data.occupation.position} {data.occupation.pow && `, ${data.occupation.pow}`}
 					</Text>
 				</Stack>
 			</Group>
