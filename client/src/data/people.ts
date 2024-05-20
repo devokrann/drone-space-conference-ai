@@ -162,7 +162,7 @@ const people = [
 		},
 		image: image.people.speakers.antonyNgatia,
 		contact: {
-			email: "angatia@statsspeak.co.ke",
+			email: "awachira@statsspeak.co.ke",
 			socials: null,
 		},
 		category: ["speaker"],
